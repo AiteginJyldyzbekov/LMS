@@ -18,8 +18,8 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: 14.x
-            - name: npm ci
-              run: npm ci
+            # - name: npm ci
+            #   run: npm ci
             - name: test
               run: npm test
             - name: format
