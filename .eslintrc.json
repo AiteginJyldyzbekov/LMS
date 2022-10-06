@@ -1,9 +1,15 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest/globals": true
   },
-  "extends": ["airbnb", "prettier"],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "airbnb",
+    "prettier"
+  ],
   "parser": "@typescript-eslint/parser",
   "overrides": [],
   "parserOptions": {
@@ -17,7 +23,7 @@
       }
     }
   },
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "react", "jest"],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -25,8 +31,6 @@
         "endOfLine": "auto"
       }
     ],
-    "react/prop-types": 0,
-    "react/jsx-props-no-spreading": 0,
     "no-use-before-define": 0,
     "react/function-component-definition": [
       "error",
@@ -50,6 +54,7 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
   }
 }
