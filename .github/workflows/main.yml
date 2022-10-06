@@ -26,7 +26,7 @@ jobs:
             #   run: npm run prettier
             - name: lint
               run: npm run lint
-            - name: typescript
-              run: npm run typescript
+            # - name: typescript
+            #   run: npm run typescript
             - name: build
               run: npm run build --if-present
