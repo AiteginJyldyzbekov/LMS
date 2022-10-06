@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["jest", "node", "@testing-library/jest-dom"],
     "target": "es5", // Specify ECMAScript target version
     "allowJs": true, // Allow JavaScript files to be compiled
     "skipLibCheck": true, // Skip type checking of all declaration files
@@ -12,8 +13,6 @@
     "isolatedModules": true, // Unconditionally emit imports for unresolved files
     "resolveJsonModule": true, // Include modules imported with .json extension
     "jsx": "react", // Support JSX in .tsx files
-    "sourceMap": true, // Generate corrresponding .map file
-    "declaration": true, // Generate corresponding .d.ts file
     "noUnusedLocals": true, // Report errors on unused locals
     "noUnusedParameters": true, // Report errors on unused parameters
     "incremental": true, // Enable incremental compilation by reading/writing information from prior compilations to a file on disk
