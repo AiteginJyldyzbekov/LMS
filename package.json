@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint-staged": "lint-staged --config lint-staged.js",
     "lint": "eslint --ext .ts,.js,.tsx,.jsx src",
     "lint:fix": "eslint --ext .ts,.js,.tsx,.jsx --fix src",
     "webpack": "webpack",
