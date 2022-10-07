@@ -8,4 +8,5 @@ module.exports = {
   coverageDirectory: 'coverage',
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/globals.d.ts'],
+  modulePathIgnorePatterns: ['<rootDir>/src/index.tsx', '<rootDir>/src/theme.ts'],
 };
