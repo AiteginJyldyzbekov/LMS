@@ -25,6 +25,7 @@
   },
   "plugins": ["prettier", "react", "jest"],
   "rules": {
+    "no-param-reassign": 0,
     "prettier/prettier": [
       "error",
       {
