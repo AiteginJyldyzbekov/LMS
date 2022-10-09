@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.scss';
 import { useAppDispatch, useAppSelector } from './hook';
 import { addText } from './store/testSlice';
 
