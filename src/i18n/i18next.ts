@@ -13,7 +13,7 @@ i18n.use(initReactI18next).init({
       translations: ns2,
     },
   },
-  lng: 'en',
+  lng: 'ru',
   fallbackLng: 'en',
   ns: ['translations'],
 
