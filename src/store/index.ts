@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import testReducer from './testSlice';
+import rootSlice from './RootSlice';
 
 const store = configureStore({
   reducer: {
-    test: testReducer,
+    root: rootSlice,
   },
 });
 
