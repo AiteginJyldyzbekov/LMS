@@ -7,6 +7,7 @@ import { CssBaseline } from '@mui/material';
 import store from './store';
 import App from './App';
 import theme from './theme';
+import './i18n/i18next';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

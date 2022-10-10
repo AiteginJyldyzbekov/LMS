@@ -1,6 +1,7 @@
 import React, { FC, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import './i18n/i18next';
 import { Provider } from 'react-redux';
 import store from './store';
 
