@@ -28,8 +28,10 @@
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.6",
     "@mui/material": "^5.10.8",
+    "i18next": "^21.10.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-i18next": "^11.18.6"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
