@@ -19,11 +19,20 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     }
   },
-  "plugins": ["prettier", "react", "jest"],
+  "plugins": [
+    "prettier",
+    "react",
+    "jest"
+  ],
   "rules": {
     "no-param-reassign": 0,
     "prettier/prettier": [
@@ -42,10 +51,21 @@
     ],
     "react/jsx-filename-extension": [
       1,
-      { "extensions": [".js", ".jsx", ".tsx"] }
+      {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".tsx"
+        ]
+      }
     ],
     "react/no-unknown-property": 0,
-    "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
     "import/extensions": [
       "error",
       "ignorePackages",
@@ -56,6 +76,11 @@
         "tsx": "never"
       }
     ],
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }]
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true
+      }
+    ]
   }
 }
