@@ -1,26 +1,22 @@
 import React from 'react';
-import { useAppDispatch, useAppSelector } from './hook';
+import { useAppDispatch, useAppSelector } from './hooks/hook';
 import { addText } from './store/testSlice';
 
 const App = () => {
+  const txt = useAppSelector((state) => state.test.text);
   const dispatch = useAppDispatch();
 
-  const txt = useAppSelector((state) => state.test.text);
-
   const handleChangeText = () => {
-    const test: string = 'world';
-    dispatch(addText(test));
+    dispatch(addText('world'));
   };
 
-  const btn = React.createElement(
-    'button',
-    { type: 'button', onClick: handleChangeText },
-    'ClickHere'
-  );
   return (
     <div className="App">
-      {btn}
+      <button type="button" onClick={handleChangeText}>
+        Click
+      </button>
       <h2>{txt}</h2>
+      Hello LMS
     </div>
   );
 };

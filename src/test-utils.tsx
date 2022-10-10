@@ -1,9 +1,12 @@
 import React, { FC, ReactElement } from 'react';
 import { render, RenderOptions } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
+import { Provider } from 'react-redux';
+import store from './store';
 
-const AllTheProviders: FC<{ children: React.ReactElement }> = ({ children }) =>
-  children;
+const AllTheProviders: FC<{ children: React.ReactElement }> = ({
+  children,
+}) => <Provider store={store}>{children}</Provider>;
 
 const customRender = (
   ui: ReactElement,
