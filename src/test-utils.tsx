@@ -4,10 +4,11 @@ import '@testing-library/jest-dom/extend-expect';
 import './i18n/i18next';
 import { Provider } from 'react-redux';
 import store from './store';
+import { BrowserRouter } from "react-router-dom";
 
 const AllTheProviders: FC<{ children: React.ReactElement }> = ({
   children,
-}) => <Provider store={store}>{children}</Provider>;
+}) => <Provider store={store}><BrowserRouter>{children}</BrowserRouter></Provider>;
 
 const customRender = (
   ui: ReactElement,

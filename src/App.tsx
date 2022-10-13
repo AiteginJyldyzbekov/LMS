@@ -1,10 +1,12 @@
-import React from 'react';
 import './App.scss';
-import { useTranslation } from 'react-i18next';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
 
-const App = () => {
-  const { t } = useTranslation();
-  return <div>{t('LMS')}</div>;
-};
+const App: React.FC = () => (
+  <Routes>
+    <Route path="/" element={<HomePage />} />
+  </Routes>
+);
 
 export default App;
