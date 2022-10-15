@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import {
   adminRoutes,
   mentorRoutes,
@@ -8,25 +8,39 @@ import {
   studentRoutes,
 } from '../constants/routes';
 import { UserRole } from '../types/types';
+import { useAppSelector } from './hook';
 
 const useRoutes = (): ReactNode => {
   // TODO: implement with redux auth role state
-  const role = 'admin'; // 'mentor' | 'student' | 'admin'
-  const auth = false;
+  const auth = true;
+  const { data } = useAppSelector((state) => state.auth);
+  const role = data?.role; // 'mentor' | 'student' | 'admin'
 
   const renderComponent = ({ path, Component }: RouteType) => (
-    <Route path={path} element={<Component />} />
+    <Route key={path} path={path} element={<Component />} />
+  );
+  const renderContainerRout = (routes: RouteType[]) => (
+    <>
+      {auth && <h2>Navbar</h2>}
+      <Routes>
+        {routes.map(renderComponent)}
+        <Route path="*" element="404 PAGE" />
+      </Routes>
+    </>
   );
 
-  const renderAdminRoutes = () => adminRoutes.map(renderComponent);
-  const renderMentorRoutes = () => mentorRoutes.map(renderComponent);
-  const renderStudentRoutes = () => studentRoutes.map(renderComponent);
-  const renderNotAuthRoutes = () => notAuthRoutes.map(renderComponent);
+  const renderAdminRoutes = () => renderContainerRout(adminRoutes);
+  const renderMentorRoutes = () => renderContainerRout(mentorRoutes);
+  const renderStudentRoutes = () => renderContainerRout(studentRoutes);
+  const renderNotAuthRoutes = () => renderContainerRout(notAuthRoutes);
 
   if (!auth) return renderNotAuthRoutes();
-  if (role === UserRole.admin) return renderAdminRoutes();
-  if (role === UserRole.mentor) return renderMentorRoutes();
-  return renderStudentRoutes();
+  if (role) {
+    if (role === UserRole.admin) return renderAdminRoutes();
+    if (role === UserRole.mentor) return renderMentorRoutes();
+    return renderStudentRoutes();
+  }
+  return renderNotAuthRoutes();
 };
 
 export default useRoutes;
