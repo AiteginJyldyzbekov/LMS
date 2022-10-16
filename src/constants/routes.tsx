@@ -7,15 +7,21 @@ export interface RouteType {
   path: string;
   Component: React.FC;
 }
+
 export const adminRoutes: RouteType[] = [
   {
     title: 'Main Page',
     path: '/',
     Component: HomePage,
   },
+  {
+    title: 'Main Page',
+    path: '/test',
+    Component: HomePage,
+  },
 ];
 
-export const mentorRoutes = [
+export const mentorRoutes: RouteType[] = [
   {
     title: 'Main Page',
     path: '/',
@@ -23,7 +29,7 @@ export const mentorRoutes = [
   },
 ];
 
-export const studentRoutes = [
+export const studentRoutes: RouteType[] = [
   {
     title: 'Main Page',
     path: '/',
@@ -31,7 +37,7 @@ export const studentRoutes = [
   },
 ];
 
-export const notAuthRoutes = [
+export const notAuthRoutes: RouteType[] = [
   {
     title: 'Main Page',
     path: '/',

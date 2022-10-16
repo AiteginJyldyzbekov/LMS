@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import Page from '../components/Page/Page';
 import {
   adminRoutes,
   mentorRoutes,
@@ -16,18 +16,7 @@ const useRoutes = (): ReactNode => {
   const { data } = useAppSelector((state) => state.auth);
   const role = data?.role; // 'mentor' | 'student' | 'admin'
 
-  const renderComponent = ({ path, Component }: RouteType) => (
-    <Route key={path} path={path} element={<Component />} />
-  );
-  const renderContainerRout = (routes: RouteType[]) => (
-    <>
-      {auth && <h2>Navbar</h2>}
-      <Routes>
-        {routes.map(renderComponent)}
-        <Route path="*" element="404 PAGE" />
-      </Routes>
-    </>
-  );
+  const renderContainerRout = (routes: RouteType[]) => <Page routes={routes} />;
 
   const renderAdminRoutes = () => renderContainerRout(adminRoutes);
   const renderMentorRoutes = () => renderContainerRout(mentorRoutes);
