@@ -5,6 +5,6 @@ import { render } from './test-utils';
 describe('App tests', () => {
   it('should contains the heading 1', () => {
     const component = render(<App />);
-    expect(component.getByText(/Login Page/)).toBeInTheDocument();
+    expect(component.getByText(/Привет LMS/)).toBeInTheDocument();
   });
 });
