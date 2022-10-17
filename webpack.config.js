@@ -14,6 +14,10 @@ module.exports = ({ mode } = { mode: 'production' }) => {
       devServer: {
         hot: true,
         open: true,
+        static: {
+          directory: path.join(__dirname, 'dist'),
+        },
+        historyApiFallback: true,
       },
       resolve: {
         alias: {

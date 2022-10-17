@@ -1,4 +1,4 @@
-export interface icons {
+export interface Iicons {
   id: number;
   img: string;
 }
@@ -8,17 +8,17 @@ export interface form {
   showPassword: boolean;
 }
 
-export const icons: icons[] = [
+export const icons: Iicons[] = [
   {
     id: 1,
-    img: './images/loginImgs/google.png'
+    img: './images/loginImgs/google.png',
   },
   {
     id: 2,
-    img: './images/loginImgs/facebook.png'
+    img: './images/loginImgs/facebook.png',
   },
   {
     id: 3,
-    img: "./images/loginImgs/twitter.png"
-  }
-]
+    img: './images/loginImgs/twitter.png',
+  },
+];
