@@ -11,13 +11,8 @@ export interface RouteType {
 export const adminRoutes: RouteType[] = [
   {
     title: 'Main Page',
-    path: '/',
-    Component: HomePage,
-  },
-  {
-    title: 'Main Page',
-    path: '/test',
-    Component: HomePage,
+    path: '/login',
+    Component: LoginPage,
   },
 ];
 

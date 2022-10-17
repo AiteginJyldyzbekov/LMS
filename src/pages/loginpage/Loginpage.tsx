@@ -1,5 +1,4 @@
 import React, { FC, useState } from 'react';
-// import './LoginPage.scss';
 import {
   FormControlLabel,
   Checkbox,
@@ -15,11 +14,13 @@ import {
 } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
 import { icons } from '../../constants/loginPage';
+import useStyles from './Login.styles';
 
 interface state {
   password: string;
   showPassword: boolean;
 }
+console.log(icons);
 
 const LoginPage: FC = () => {
   const [values, setValues] = useState<state>({
@@ -44,9 +45,9 @@ const LoginPage: FC = () => {
   ) => {
     event.preventDefault();
   };
-
+  const css = useStyles();
   return (
-    <div className="main">
+    <div className={css.main}>
       <Grid
         container
         direction="row"
@@ -56,12 +57,19 @@ const LoginPage: FC = () => {
           gap: '15%',
         }}
       >
-        <div className="left">
-          <Typography component="h3">Hi, Welcome back</Typography>
-          <img src="./images/loginImgs/illustration_login.png" alt="login" />
+        <div className={css.left}>
+          <Typography sx={{
+            margin: '80px 0px 40px',
+            fontWeight: '700',
+            lineHeight: '1.5',
+            fontSize: '2rem',
+            paddingLeft: '40px',
+            paddingRight: '40px',
+          }} component="h3">Hi, Welcome back</Typography>
+          <img style={{ width: '100%' }} src="./images/loginImgs/illustration_login.png" alt="login" />
         </div>
-        <div id="rightAd" className="right">
-          <div className="top">
+        <div id={css.rightAd} className={css.rightCl}>
+          <div className={css.top}>
             <Grid
               rowSpacing={3}
               width="100%"
@@ -70,9 +78,15 @@ const LoginPage: FC = () => {
               alignItems="center"
               justifyContent="flex-end"
             >
-              <Typography sx={{ ml: 2 }} fontWeight="lg">
+              <Typography sx={{
+                ml: 2,
+                margin: '0px',
+                lineHeight: '1.57143',
+                fontSize: '0.790rem',
+                fontWeight: '400'
+              }} fontWeight="lg">
                 Don’t have an account?
-                <a href="/">Get Started</a>
+                <a className={css.topA} href="/">Get Started</a>
               </Typography>
             </Grid>
           </div>
@@ -131,10 +145,10 @@ const LoginPage: FC = () => {
               ))}
             </Grid>
           </Box>
-          <div className="line">
-            <span />
-            <h1>OR</h1>
-            <span />
+          <div className={css.line}>
+            <span className={css.lineSpan} />
+            <h1 className={css.lineH1}>OR</h1>
+            <span className={css.lineSpan} />
           </div>
           <Box
             sx={{
@@ -175,7 +189,7 @@ const LoginPage: FC = () => {
                       onMouseDown={handleMouseDownPassword}
                       edge="end"
                     >
-                      {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                      {values.showPassword ? <Visibility /> : <VisibilityOff />}
                     </IconButton>
                   </InputAdornment>
                 }
@@ -192,7 +206,7 @@ const LoginPage: FC = () => {
               alignItems="center"
             >
               <FormControlLabel control={<Checkbox />} label="Remember Me" />
-              <a id="forgot" href="/">
+              <a className={css.forgot} href="/">
                 Forgot Password
               </a>
             </Grid>
@@ -207,7 +221,7 @@ const LoginPage: FC = () => {
               Login
             </Button>
           </Box>
-          <div id="bottom">
+          <div className={css.bottom}>
             <Grid
               rowSpacing={3}
               width="100%"
@@ -216,15 +230,21 @@ const LoginPage: FC = () => {
               alignItems="center"
               justifyContent="flex-end"
             >
-              <Typography sx={{ ml: 2 }} fontWeight="lg">
+              <Typography sx={{
+                ml: 2,
+                display: 'flex',
+                jystifyContent: 'space-between',
+                width: '100%',
+                margin: '0'
+              }} fontWeight="lg">
                 Don’t have an account?
-                <a href="/">Get Started</a>
+                <a className={css.topA} href="/">Get Started</a>
               </Typography>
             </Grid>
           </div>
         </div>
-      </Grid>
-    </div>
+      </Grid >
+    </div >
   );
 };
 

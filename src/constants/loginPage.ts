@@ -11,14 +11,14 @@ export interface form {
 export const icons: Iicons[] = [
   {
     id: 1,
-    img: './images/loginImgs/google.png',
+    img: '',
   },
   {
     id: 2,
-    img: './images/loginImgs/facebook.png',
+    img: '/images/loginImgs/facebook.png',
   },
   {
     id: 3,
-    img: './images/loginImgs/twitter.png',
+    img: '/images/loginImgs/twitter.png',
   },
 ];
