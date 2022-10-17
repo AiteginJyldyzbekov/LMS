@@ -11,7 +11,7 @@ export interface form {
 export const icons: Iicons[] = [
   {
     id: 1,
-    img: '',
+    img: '/images/loginImgs/google.png',
   },
   {
     id: 2,

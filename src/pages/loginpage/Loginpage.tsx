@@ -20,7 +20,6 @@ interface state {
   password: string;
   showPassword: boolean;
 }
-console.log(icons);
 
 const LoginPage: FC = () => {
   const [values, setValues] = useState<state>({
@@ -58,15 +57,24 @@ const LoginPage: FC = () => {
         }}
       >
         <div className={css.left}>
-          <Typography sx={{
-            margin: '80px 0px 40px',
-            fontWeight: '700',
-            lineHeight: '1.5',
-            fontSize: '2rem',
-            paddingLeft: '40px',
-            paddingRight: '40px',
-          }} component="h3">Hi, Welcome back</Typography>
-          <img style={{ width: '100%' }} src="./images/loginImgs/illustration_login.png" alt="login" />
+          <Typography
+            sx={{
+              margin: '80px 0px 40px',
+              fontWeight: '700',
+              lineHeight: '1.5',
+              fontSize: '2rem',
+              paddingLeft: '40px',
+              paddingRight: '40px',
+            }}
+            component="h3"
+          >
+            Hi, Welcome back
+          </Typography>
+          <img
+            style={{ width: '100%' }}
+            src="./images/loginImgs/illustration_login.png"
+            alt="login"
+          />
         </div>
         <div id={css.rightAd} className={css.rightCl}>
           <div className={css.top}>
@@ -78,15 +86,20 @@ const LoginPage: FC = () => {
               alignItems="center"
               justifyContent="flex-end"
             >
-              <Typography sx={{
-                ml: 2,
-                margin: '0px',
-                lineHeight: '1.57143',
-                fontSize: '0.790rem',
-                fontWeight: '400'
-              }} fontWeight="lg">
+              <Typography
+                sx={{
+                  ml: 2,
+                  margin: '0px',
+                  lineHeight: '1.57143',
+                  fontSize: '0.790rem',
+                  fontWeight: '400',
+                }}
+                fontWeight="lg"
+              >
                 Don’t have an account?
-                <a className={css.topA} href="/">Get Started</a>
+                <a className={css.topA} href="/">
+                  Get Started
+                </a>
               </Typography>
             </Grid>
           </div>
@@ -230,21 +243,26 @@ const LoginPage: FC = () => {
               alignItems="center"
               justifyContent="flex-end"
             >
-              <Typography sx={{
-                ml: 2,
-                display: 'flex',
-                jystifyContent: 'space-between',
-                width: '100%',
-                margin: '0'
-              }} fontWeight="lg">
+              <Typography
+                sx={{
+                  ml: 2,
+                  display: 'flex',
+                  jystifyContent: 'space-between',
+                  width: '100%',
+                  margin: '0',
+                }}
+                fontWeight="lg"
+              >
                 Don’t have an account?
-                <a className={css.topA} href="/">Get Started</a>
+                <a className={css.topA} href="/">
+                  Get Started
+                </a>
               </Typography>
             </Grid>
           </div>
         </div>
-      </Grid >
-    </div >
+      </Grid>
+    </div>
   );
 };
 

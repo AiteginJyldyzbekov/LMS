@@ -19,7 +19,7 @@ const Page: React.FC<PropsTypes> = ({ routes }) => {
       {auth && (
         <Grid item xs={2}>
           <h2 className={classes.wrapper}>
-            Navbar Navbar Navbar Navbar Navbar Navbar
+            Привет LMS
           </h2>
         </Grid>
       )}
