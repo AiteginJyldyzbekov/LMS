@@ -34,8 +34,10 @@ module.exports = ({ mode } = { mode: 'production' }) => {
           },
           {
             test: /\.jpe?g|png$/,
-            exclude: /node_modules/,
-            use: ['url-loader', 'file-loader'],
+            type: 'asset/resource',
+            generator: {
+              filename: 'images/[name]-[hash][ext]',
+            },
           },
           {
             test: /\.(js|jsx)$/,
@@ -48,6 +50,7 @@ module.exports = ({ mode } = { mode: 'production' }) => {
         publicPath: '/',
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundled.js',
+        clean: true,
       },
       plugins: [
         new HtmlWebpackPlugin({
