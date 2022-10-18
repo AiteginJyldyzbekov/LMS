@@ -8,7 +8,7 @@ interface PropsTypes {
   routes: RouteType[];
 }
 const Page: React.FC<PropsTypes> = ({ routes }) => {
-  const auth = true;
+  const auth = false;
   const classes = useStyles();
 
   const renderComponent = ({ path, Component }: RouteType) => (

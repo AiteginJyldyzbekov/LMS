@@ -12,7 +12,7 @@ interface AuthState {
 }
 
 const initialState: AuthState = {
-  isPending: true,
+  isPending: false,
   // TODO: remove object when BE side will be ready
   data: {
     email: 'lms@gmail.com',

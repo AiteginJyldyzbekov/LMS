@@ -65,24 +65,6 @@ const useStyles = makeStyles(() => ({
   right: {
     width: '100%',
   },
-  line: {
-    display: 'flex',
-    alignItems: 'center',
-    margin: '20px 0',
-  },
-  lineH1: {
-    fontSize: '0.875rem',
-    fontWeight: '400',
-    color: 'rgb(99, 115, 129)',
-    padding: '0 5px',
-    width: '10%',
-    textAlign: 'center',
-  },
-  lineSpan: {
-    width: '45%',
-    height: '1px',
-    background: 'rgb(99, 115, 129)',
-  },
   forgot: {
     margin: '0px 0px 0px 5px',
     fontWeight: '600',

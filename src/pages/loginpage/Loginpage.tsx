@@ -13,8 +13,8 @@ import {
   IconButton,
 } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
-import { icons } from '../../constants/loginPage';
 import useStyles from './Login.styles';
+import img from '../../../public/images/loginImgs/login.png';
 
 interface state {
   password: string;
@@ -68,13 +68,9 @@ const LoginPage: FC = () => {
             }}
             component="h3"
           >
-            Hi, Welcome back
+            Привет,С Возврвщением
           </Typography>
-          <img
-            style={{ width: '100%' }}
-            src="./images/loginImgs/illustration_login.png"
-            alt="login"
-          />
+          <img style={{ width: '100%' }} src={img} alt="login" />
         </div>
         <div id={css.rightAd} className={css.rightCl}>
           <div className={css.top}>
@@ -96,9 +92,9 @@ const LoginPage: FC = () => {
                 }}
                 fontWeight="lg"
               >
-                Don’t have an account?
+                Нет аккаунта?
                 <a className={css.topA} href="/">
-                  Get Started
+                  Начать
                 </a>
               </Typography>
             </Grid>
@@ -119,7 +115,7 @@ const LoginPage: FC = () => {
               }}
               component="h4"
             >
-              Sign in to Minimal
+              Зарегистрироваться
             </Typography>
             <Typography
               sx={{
@@ -129,40 +125,10 @@ const LoginPage: FC = () => {
                 color: 'rgb(99, 115, 129)',
               }}
             >
-              Enter your details below.
+              Введите свои данные ниже
             </Typography>
           </Grid>
-          <Box>
-            <Grid
-              direction="row"
-              justifyContent="space-between"
-              alignItems="center"
-              container
-            >
-              {icons.map((el) => (
-                <Button
-                  sx={{
-                    borderRadius: 2,
-                    backgroundColor: '',
-                    width: '28%',
-                  }}
-                  variant="outlined"
-                  size="large"
-                >
-                  <img
-                    style={{ width: '30px', height: '30px' }}
-                    src={el.img}
-                    alt="#"
-                  />
-                </Button>
-              ))}
-            </Grid>
-          </Box>
-          <div className={css.line}>
-            <span className={css.lineSpan} />
-            <h1 className={css.lineH1}>OR</h1>
-            <span className={css.lineSpan} />
-          </div>
+          <Box />
           <Box
             sx={{
               width: '100%',
@@ -218,9 +184,9 @@ const LoginPage: FC = () => {
               }}
               alignItems="center"
             >
-              <FormControlLabel control={<Checkbox />} label="Remember Me" />
+              <FormControlLabel control={<Checkbox />} label="Запомнить меня" />
               <a className={css.forgot} href="/">
-                Forgot Password
+                Забыли пароль
               </a>
             </Grid>
             <Button
@@ -231,7 +197,7 @@ const LoginPage: FC = () => {
                 mt: 3,
               }}
             >
-              Login
+              Войти
             </Button>
           </Box>
           <div className={css.bottom}>
@@ -253,9 +219,9 @@ const LoginPage: FC = () => {
                 }}
                 fontWeight="lg"
               >
-                Don’t have an account?
+                Нет аккаунта?
                 <a className={css.topA} href="/">
-                  Get Started
+                  Начать
                 </a>
               </Typography>
             </Grid>
