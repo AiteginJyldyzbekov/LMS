@@ -44,6 +44,16 @@ const LoginPage: FC = () => {
   ) => {
     event.preventDefault();
   };
+  const [email, setEmail] = useState<string>('');
+  const handleEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
+
+  const [password, setPassword] = useState<string>('');
+  const handlePssword = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(event.target.value);
+  };
+
   const css = useStyles();
   return (
     <div className={css.main}>
@@ -56,7 +66,7 @@ const LoginPage: FC = () => {
           gap: '15%',
         }}
       >
-        <div className={css.left}>
+        <div className={css.mainL}>
           <Typography
             sx={{
               margin: '80px 0px 40px',
@@ -72,8 +82,8 @@ const LoginPage: FC = () => {
           </Typography>
           <img style={{ width: '100%' }} src={img} alt="login" />
         </div>
-        <div id={css.rightAd} className={css.rightCl}>
-          <div className={css.top}>
+        <div id={css.mainR} className={css.mainRcl}>
+          <div className={css.mainTopSide}>
             <Grid
               rowSpacing={3}
               width="100%"
@@ -93,7 +103,7 @@ const LoginPage: FC = () => {
                 fontWeight="lg"
               >
                 Нет аккаунта?
-                <a className={css.topA} href="/">
+                <a className={css.start} href="/">
                   Начать
                 </a>
               </Typography>
@@ -106,17 +116,7 @@ const LoginPage: FC = () => {
             container
             width="100%"
           >
-            <Typography
-              sx={{
-                mb: 2,
-                fontSize: 25,
-                fontWeight: 700,
-                lineHeight: 1.5,
-              }}
-              component="h4"
-            >
-              Зарегистрироваться
-            </Typography>
+            <h3 className={css.text}>Зарегистрироваться</h3>
             <Typography
               sx={{
                 mb: 4,
@@ -134,7 +134,12 @@ const LoginPage: FC = () => {
               width: '100%',
             }}
           >
-            <FormControl sx={{ mb: 4, width: '100%' }} variant="outlined">
+            <FormControl
+              required
+              onChange={handleEmail}
+              sx={{ mb: 4, width: '100%' }}
+              variant="outlined"
+            >
               <InputLabel htmlFor="outlined-adornment-password">
                 Email
               </InputLabel>
@@ -151,7 +156,12 @@ const LoginPage: FC = () => {
                 label="Email"
               />
             </FormControl>
-            <FormControl sx={{ width: '100%' }} variant="outlined">
+            <FormControl
+              onChange={handlePssword}
+              required
+              sx={{ width: '100%' }}
+              variant="outlined"
+            >
               <InputLabel htmlFor="outlined-adornment-password">
                 Password
               </InputLabel>
@@ -189,18 +199,32 @@ const LoginPage: FC = () => {
                 Забыли пароль
               </a>
             </Grid>
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: 'rgb(32, 101, 209)',
-                width: '100%',
-                mt: 3,
-              }}
-            >
-              Войти
-            </Button>
+            {email.includes('@gmail.com') && password.length > 8 ? (
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: 'rgb(32, 101, 209)',
+                  width: '100%',
+                  mt: 3,
+                }}
+              >
+                Войти
+              </Button>
+            ) : (
+              <Button
+                disabled
+                variant="contained"
+                sx={{
+                  backgroundColor: 'rgb(32, 101, 209)',
+                  width: '100%',
+                  mt: 3,
+                }}
+              >
+                Войти
+              </Button>
+            )}
           </Box>
-          <div className={css.bottom}>
+          <div className={css.under}>
             <Grid
               rowSpacing={3}
               width="100%"
@@ -220,7 +244,7 @@ const LoginPage: FC = () => {
                 fontWeight="lg"
               >
                 Нет аккаунта?
-                <a className={css.topA} href="/">
+                <a className={css.start} href="/">
                   Начать
                 </a>
               </Typography>

@@ -2,12 +2,16 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
   main: {
-    width: 'gray',
+    width: '100%',
     height: '100vh',
     backgroundColor: 'rgb(249, 250, 251)',
     padding: '15px',
+    '@media(max-width: 880px)': {
+      padding: '0px',
+      width: '100%',
+    },
   },
-  left: {
+  mainL: {
     width: '34%',
     margin: '0px 0px 16px 16px',
     height: '95vh',
@@ -19,26 +23,27 @@ const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'flex-start',
-    '@media (max-width: 780px)': {
+    '@media (max-width: 880px)': {
       display: 'none',
     },
   },
-  rightAd: {
-    '@media (max-width: 780px)': {
-      width: '90%',
-      heigth: '100%',
+  mainR: {
+    '@media (max-width: 880px)': {
+      width: '100%',
+      heigth: '80vh !imporant',
       marginTop: '50px',
     },
   },
-  top: {
-    '@media(max-width: 780px)': {
+  mainTopSide: {
+    '@media(max-width: 880px)': {
       display: 'none',
+      heigth: '80vh',
     },
     a: {
       color: 'green',
     },
   },
-  topA: {
+  start: {
     margin: '0px 0px 0px 5px',
     fontWeight: '600',
     fontSize: '0.875rem',
@@ -46,24 +51,21 @@ const useStyles = makeStyles(() => ({
     color: 'rgb(32, 101, 209)',
     textDecoration: 'underline rgba(32, 101, 209, 0.4)',
   },
-  bottom: {
+  under: {
     display: 'none',
-    '@media(max-width: 780px)': {
+    '@media(max-width: 880px)': {
       display: 'block',
       width: '100%',
       marginTop: '40px',
     },
   },
   p: {
-    '@media(max-width:780px)': {
+    '@media(max-width:880px)': {
       display: 'flex',
       justifyContent: 'space-between',
       width: '100%',
       margin: '0',
     },
-  },
-  right: {
-    width: '100%',
   },
   forgot: {
     margin: '0px 0px 0px 5px',
@@ -73,8 +75,20 @@ const useStyles = makeStyles(() => ({
     color: 'rgb(32, 101, 209)',
     textDecoration: ' underline rgba(32, 101, 209, 0.4)',
   },
-  rightCl: {
+  mainRcl: {
     width: '40%',
+    '@media(max-width:880px)': {
+      width: '100%',
+      padding: '0px',
+      heigth: '80vh',
+      marginTop: '20px',
+    },
+  },
+  text: {
+    marginBottom: '20px',
+    fontSize: '25px',
+    fontWeight: 700,
+    color: 'black',
   },
 }));
 

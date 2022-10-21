@@ -24,7 +24,7 @@ const Page: React.FC<PropsTypes> = ({ routes }) => {
       <Grid item xs={auth ? 10 : 12}>
         <Routes>
           {routes.map(renderComponent)}
-          <Route path="*" element="404 PAGE" />
+          <Route path="*" element="Привет LMS" />
         </Routes>
       </Grid>
     </Grid>
