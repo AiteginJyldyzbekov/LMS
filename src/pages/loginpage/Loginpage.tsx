@@ -154,6 +154,10 @@ const LoginPage: FC = () => {
                   </InputAdornment>
                 }
                 label="Email"
+                type="email"
+                required
+                name="email"
+                autoComplete="email"
               />
             </FormControl>
             <FormControl
@@ -183,6 +187,9 @@ const LoginPage: FC = () => {
                   </InputAdornment>
                 }
                 label="Password"
+                required
+                name="password"
+                autoComplete="password"
               />
             </FormControl>
             <Grid
@@ -199,7 +206,7 @@ const LoginPage: FC = () => {
                 Забыли пароль
               </a>
             </Grid>
-            {email.includes('@gmail.com') && password.length > 8 ? (
+            {email && password.length > 8 ? (
               <Button
                 variant="contained"
                 sx={{
