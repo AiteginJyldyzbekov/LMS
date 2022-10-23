@@ -33,7 +33,7 @@ module.exports = ({ mode } = { mode: 'production' }) => {
             exclude: /node_modules/,
           },
           {
-            test: /\.jpe?g|png$/,
+            test: /\.jpe?g|png$|svg$/,
             type: 'asset/resource',
             generator: {
               filename: 'images/[name]-[hash][ext]',
