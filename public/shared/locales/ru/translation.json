@@ -1,3 +1,13 @@
 {
-  "LMS": "Привет LMS"
+  "LMS": "Привет LMS",
+  "LoginPage": {
+    "greating": "Привет, С Возвращением",
+    "signUp": "Зарегистрироваться",
+    "haveNoAc": "Нет аккаунта?",
+    "start": "Начать",
+    "enterYourEmail": "Введите свои данные ниже",
+    "rememberMe": "Запомнить меня",
+    "forgotPassword": "Забыли пароль",
+    "enter": "Войти"
+  }
 }

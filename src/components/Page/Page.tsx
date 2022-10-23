@@ -8,7 +8,7 @@ interface PropsTypes {
   routes: RouteType[];
 }
 const Page: React.FC<PropsTypes> = ({ routes }) => {
-  const auth = true;
+  const auth = false;
   const classes = useStyles();
 
   const renderComponent = ({ path, Component }: RouteType) => (
@@ -18,15 +18,13 @@ const Page: React.FC<PropsTypes> = ({ routes }) => {
     <Grid container>
       {auth && (
         <Grid item xs={2}>
-          <h2 className={classes.wrapper}>
-            Navbar Navbar Navbar Navbar Navbar Navbar
-          </h2>
+          <h2 className={classes.wrapper}>Привет LMS</h2>
         </Grid>
       )}
       <Grid item xs={auth ? 10 : 12}>
         <Routes>
           {routes.map(renderComponent)}
-          <Route path="*" element="404 PAGE" />
+          <Route path="*" element="Привет LMS" />
         </Routes>
       </Grid>
     </Grid>
