@@ -13,6 +13,7 @@ import {
   IconButton,
 } from '@mui/material';
 import { VisibilityOff, Visibility } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
 import useStyles from './Login.styles';
 import img from '../../../public/images/loginImgs/login.png';
 
@@ -55,6 +56,7 @@ const LoginPage: FC = () => {
   };
 
   const css = useStyles();
+  const { t } = useTranslation();
   return (
     <div className={css.main}>
       <Grid
@@ -78,7 +80,7 @@ const LoginPage: FC = () => {
             }}
             component="h3"
           >
-            Привет,С Возврвщением
+            {t('LoginPage.greating')}
           </Typography>
           <img style={{ width: '100%' }} src={img} alt="login" />
         </div>
@@ -102,9 +104,9 @@ const LoginPage: FC = () => {
                 }}
                 fontWeight="lg"
               >
-                Нет аккаунта?
+                {t('LoginPage.haveNoAc')}
                 <a className={css.start} href="/">
-                  Начать
+                  {t('LoginPage.start')}
                 </a>
               </Typography>
             </Grid>
@@ -116,7 +118,7 @@ const LoginPage: FC = () => {
             container
             width="100%"
           >
-            <h3 className={css.text}>Зарегистрироваться</h3>
+            <h3 className={css.text}>{t('LoginPage.signUp')}</h3>
             <Typography
               sx={{
                 mb: 4,
@@ -125,7 +127,7 @@ const LoginPage: FC = () => {
                 color: 'rgb(99, 115, 129)',
               }}
             >
-              Введите свои данные ниже
+              {t('LoginPage.enterYourEmail')}
             </Typography>
           </Grid>
           <Box />
@@ -203,7 +205,7 @@ const LoginPage: FC = () => {
             >
               <FormControlLabel control={<Checkbox />} label="Запомнить меня" />
               <a className={css.forgot} href="/">
-                Забыли пароль
+                {t('LoginPage.forgotPassword')}
               </a>
             </Grid>
             {email && password.length > 8 ? (
@@ -215,7 +217,7 @@ const LoginPage: FC = () => {
                   mt: 3,
                 }}
               >
-                Войти
+                {t('LoginPage.enter')}
               </Button>
             ) : (
               <Button
@@ -227,7 +229,7 @@ const LoginPage: FC = () => {
                   mt: 3,
                 }}
               >
-                Войти
+                {t('LoginPage.enter')}
               </Button>
             )}
           </Box>
@@ -250,9 +252,9 @@ const LoginPage: FC = () => {
                 }}
                 fontWeight="lg"
               >
-                Нет аккаунта?
+                {t('LoginPage.haveNoAc')}
                 <a className={css.start} href="/">
-                  Начать
+                  {t('LoginPage.start')}
                 </a>
               </Typography>
             </Grid>
