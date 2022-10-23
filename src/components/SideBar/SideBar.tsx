@@ -33,9 +33,6 @@ const SideBar: React.FC = () => {
                                 }
                             </div>
                             <div className={isActive ? classes.active_wrapper : classes.wrapper}>
-                                {
-                                    isActive ? <WestIcon /> : ''
-                                }
                                 <div className={classes.content_wrapper}>
                                     <div className={classes.name_block}>
                                         <div className={classes.avatar_container}>
