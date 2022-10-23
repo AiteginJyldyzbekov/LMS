@@ -19,7 +19,7 @@ const Page: React.FC<PropsTypes> = ({ routes }) => {
     <Grid container>
       {auth && (
         <Grid item xs={2}>
-            <SideBar />
+          <SideBar />
         </Grid>
       )}
       <Grid item xs={auth ? 10 : 12}>

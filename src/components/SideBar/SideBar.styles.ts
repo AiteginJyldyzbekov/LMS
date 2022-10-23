@@ -68,6 +68,10 @@ const useStyles = makeStyles(() => ({
         width: '30px',
         height: '30px'
     },
+    back_arrow: {
+        width: '25px',
+        height: '25px',
+    },
     inactive_burger: {
         display: 'none'
     },
@@ -75,6 +79,9 @@ const useStyles = makeStyles(() => ({
         display: 'none'
     },
     inactive_burger_container: {
+        display: 'none'
+    },
+    arrow_container: {
         display: 'none'
     },
     ['@media (max-width: 1200px)']: {
@@ -100,11 +107,20 @@ const useStyles = makeStyles(() => ({
         burger: {
             width: '25px',
             height: '25px',
-            marginTop: '5px',
-            marginRight: '5px'
+            marginTop: '15px',
+            marginRight: '15px'
         },
         active_wrapper: {
             transition: '0.5s',
+        },
+        back_arrow: {
+            width: '25px',
+            height: '25px',
+            marginTop: '15px'
+        },
+        arrow_container: {
+            width: '100%',
+            height: '100%'
         }
     }
 }));

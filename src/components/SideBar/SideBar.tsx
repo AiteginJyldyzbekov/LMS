@@ -2,12 +2,10 @@ import React from 'react';
 import { Grid } from '@mui/material';
 import useStyles from './SideBar.styles';
 import { useAppSelector } from '../../hooks/hook';
-// import mentors from '../../../public/images/sideBar/mentors.png'
-// import group from '../../../public/images/sideBar/group.png'
 import avatar from '../../../public/images/sideBar/avatar.jpg'
-// import students from '../../../public/images/sideBar/students.png'
 import burger from '../../../public/images/sideBar/burger.png'
 import arrow from '../../../public/images/sideBar/arrow.png'
+import WestIcon from '@mui/icons-material/West';
 import { useState } from 'react';
 import { admin } from '../../constants/sideBar'
 import { mentor } from '../../constants/sideBar'
@@ -16,7 +14,7 @@ import { student } from '../../constants/sideBar'
 const SideBar: React.FC = () => {
     const classes = useStyles();
     const { data } = useAppSelector((state) => state.auth);
-    const role = data?.role; // 'mentor' | 'student' | 'admin'
+    const role = data?.role;
     const [isActive, setIsActive] = useState(false)
     return (
         <div className={classes.container}>
@@ -28,9 +26,16 @@ const SideBar: React.FC = () => {
                     role === 'mentor' ? (
                         <div>
                             <div className={isActive ? classes.inactive_burger_container : classes.burger_container} onClick={() => setIsActive(!isActive)}>
-                                <img src={isActive ? arrow : burger} alt='burger' className={classes.burger} />
+                                {
+                                    isActive ? <WestIcon className={classes.burger} /> : (
+                                        <img src={burger} alt='burger' className={classes.burger} />
+                                    )
+                                }
                             </div>
                             <div className={isActive ? classes.active_wrapper : classes.wrapper}>
+                                {
+                                    isActive ? <WestIcon /> : ''
+                                }
                                 <div className={classes.content_wrapper}>
                                     <div className={classes.name_block}>
                                         <div className={classes.avatar_container}>
@@ -41,12 +46,13 @@ const SideBar: React.FC = () => {
                                 </div>
                                 <div className={classes.content_wrapper}>
                                     {
-                                        mentor.map((item) => (
+                                        mentor.map(({ title, Icon }) => (
                                             <div className={classes.card_content}>
                                                 <div className={classes.icon_container}>
-                                                    <img src={item.img} alt='mentors-logo' className={classes.icons} />
+                                                    {/* <img src={item.img} alt='mentors-logo' className={classes.icons} /> */}
+                                                    <Icon className={classes.icons} />
                                                 </div>
-                                                <p>{item.title}</p>
+                                                <p>{title}</p>
                                             </div>
                                         ))
                                     }
@@ -69,12 +75,13 @@ const SideBar: React.FC = () => {
                                 </div>
                                 <div className={classes.content_wrapper}>
                                     {
-                                        student.map((item) => (
+                                        student.map(({ title, Icon }) => (
                                             <div className={classes.card_content}>
                                                 <div className={classes.icon_container}>
-                                                    <img src={item.img} alt='mentors-logo' className={classes.icons} />
+                                                    {/* <img src={item.img} alt='mentors-logo' className={classes.icons} /> */}
+                                                    <Icon className={classes.icons} />
                                                 </div>
-                                                <p>{item.title}</p>
+                                                <p>{title}</p>
                                             </div>
                                         ))
                                     }
@@ -97,12 +104,14 @@ const SideBar: React.FC = () => {
                                 </div>
                                 <div className={classes.content_wrapper}>
                                     {
-                                        admin.map((item) => (
+                                        admin.map(({ title, Icon }) => (
                                             <div className={classes.card_content}>
                                                 <div className={classes.icon_container}>
-                                                    <img src={item.img} alt='mentors-logo' className={classes.icons} />
+                                                    {/* <img src={item.img} alt='mentors-logo' className={classes.icons} /> */}
+                                                    <Icon className={classes.icons} />
+
                                                 </div>
-                                                <p>{item.title}</p>
+                                                <p>{title}</p>
                                             </div>
                                         ))
                                     }
