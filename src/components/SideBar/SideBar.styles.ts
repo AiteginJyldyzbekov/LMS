@@ -3,16 +3,14 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(() => ({
     container: {
         height: '100vh',
-        width: '100%',
     },
     wrapper: {
         height: '100vh',
-        width: '100%',
         background: '#F4F4F4',
     },
     active_wrapper: {
         height: '100vh',
-        width: '100%',
+        width: '16.7%',
         background: '#F4F4F4',
     },
     content_wrapper: {
@@ -94,15 +92,16 @@ const useStyles = makeStyles(() => ({
         },
         inactive_burger_container: {
             width: '100%',
-            height: '100%',
             background: '#F4F4F4',
             display: 'flex',
             justifyContent: 'flex-end',
             alignItems: 'center',
         },
         wrapper: {
-            display: 'none',
-            transition: '0.5s'
+            position: 'fixed',
+            top: '0',
+            left: '-100%',
+            transition: '850ms',
         },
         burger: {
             width: '25px',
@@ -111,7 +110,10 @@ const useStyles = makeStyles(() => ({
             marginRight: '15px'
         },
         active_wrapper: {
-            transition: '0.5s',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            transition: '700ms',
         },
         back_arrow: {
             width: '25px',
