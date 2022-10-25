@@ -2,7 +2,6 @@ import { Grid } from '@mui/material';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { RouteType } from '../../constants/routes';
-// import useStyles from './Page.styles';
 import SideBar from '../SideBar/SideBar';
 
 interface PropsTypes {
@@ -10,7 +9,6 @@ interface PropsTypes {
 }
 const Page: React.FC<PropsTypes> = ({ routes }) => {
   const auth = true;
-  // const classes = useStyles();
 
   const renderComponent = ({ path, Component }: RouteType) => (
     <Route key={path} path={path} element={<Component />} />
