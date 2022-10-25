@@ -2,13 +2,14 @@ import { Grid } from '@mui/material';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { RouteType } from '../../constants/routes';
-import SideBar from '../SideBar/SideBar';
+import NotFoundPage from '../../pages/404/NotFoundPage';
+
 
 interface PropsTypes {
   routes: RouteType[];
 }
 const Page: React.FC<PropsTypes> = ({ routes }) => {
-  const auth = true;
+  const auth = false;
 
   const renderComponent = ({ path, Component }: RouteType) => (
     <Route key={path} path={path} element={<Component />} />
@@ -23,7 +24,7 @@ const Page: React.FC<PropsTypes> = ({ routes }) => {
       <Grid item xs={auth ? 10 : 12}>
         <Routes>
           {routes.map(renderComponent)}
-          <Route path="*" element="404 PAGE" />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Grid>
     </Grid>

@@ -1,6 +1,6 @@
 import React from 'react';
 import HomePage from '../pages/HomePage';
-import Login from '../pages/login/Login';
+import LoginPage from '../pages/loginpage/Loginpage';
 
 export interface RouteType {
   title: string;
@@ -12,11 +12,6 @@ export const adminRoutes: RouteType[] = [
   {
     title: 'Main Page',
     path: '/',
-    Component: HomePage,
-  },
-  {
-    title: 'Main Page',
-    path: '/test',
     Component: HomePage,
   },
 ];
@@ -39,8 +34,8 @@ export const studentRoutes: RouteType[] = [
 
 export const notAuthRoutes: RouteType[] = [
   {
-    title: 'Main Page',
+    title: 'Login Page',
     path: '/',
-    Component: Login,
+    Component: LoginPage,
   },
 ];

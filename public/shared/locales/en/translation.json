@@ -1,1 +1,13 @@
-{}
+{
+  "LMS": "Hello LMS",
+  "LoginPage": {
+    "greating": "Hello, Welcome Back",
+    "signUp": "Sign Up",
+    "haveNoAc": "Dont have account?",
+    "start": "Start",
+    "enterYourEmail": "Enter your details below",
+    "rememberMe": "To remember me",
+    "forgotPassword": "Forgot your password",
+    "enter": "Enter"
+  }
+}
