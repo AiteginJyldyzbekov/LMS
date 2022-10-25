@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { RouteType } from '../../constants/routes';
 import NotFoundPage from '../../pages/404/NotFoundPage';
-
+import SideBar from '../SideBar/SideBar';
 
 interface PropsTypes {
   routes: RouteType[];
