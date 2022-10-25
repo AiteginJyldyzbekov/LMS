@@ -2,6 +2,7 @@ import { Grid } from '@mui/material';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { RouteType } from '../../constants/routes';
+import NotFoundPage from '../../pages/404/NotFoundPage';
 import useStyles from './Page.styles';
 
 interface PropsTypes {
@@ -24,7 +25,7 @@ const Page: React.FC<PropsTypes> = ({ routes }) => {
       <Grid item xs={auth ? 10 : 12}>
         <Routes>
           {routes.map(renderComponent)}
-          <Route path="*" element="Привет LMS" />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Grid>
     </Grid>

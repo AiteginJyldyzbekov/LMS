@@ -35,7 +35,7 @@ export const studentRoutes: RouteType[] = [
 export const notAuthRoutes: RouteType[] = [
   {
     title: 'Login Page',
-    path: '/login',
+    path: '/',
     Component: LoginPage,
   },
 ];
