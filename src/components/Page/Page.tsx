@@ -3,14 +3,13 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { RouteType } from '../../constants/routes';
 import NotFoundPage from '../../pages/404/NotFoundPage';
-import useStyles from './Page.styles';
+import SideBar from '../SideBar/SideBar';
 
 interface PropsTypes {
   routes: RouteType[];
 }
 const Page: React.FC<PropsTypes> = ({ routes }) => {
   const auth = false;
-  const classes = useStyles();
 
   const renderComponent = ({ path, Component }: RouteType) => (
     <Route key={path} path={path} element={<Component />} />
@@ -19,7 +18,7 @@ const Page: React.FC<PropsTypes> = ({ routes }) => {
     <Grid container>
       {auth && (
         <Grid item xs={2}>
-          <h2 className={classes.wrapper}>Привет LMS</h2>
+          <SideBar />
         </Grid>
       )}
       <Grid item xs={auth ? 10 : 12}>
