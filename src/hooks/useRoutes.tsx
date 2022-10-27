@@ -12,7 +12,7 @@ import { useAppSelector } from './hook';
 
 const useRoutes = (): ReactNode => {
   // TODO: implement with redux auth role state
-  const auth = false;
+  const auth = true;
   const { data } = useAppSelector((state) => state.auth);
   const role = data?.role; // 'mentor' | 'student' | 'admin'
 
