@@ -20,7 +20,10 @@ const GroupPage: FC = () => {
   const handleChange = (event: SelectChangeEvent) => {
     setData(event.target.value);
   };
-  const handler = (e: React.ChangeEvent<HTMLInputElement>, setState: (s: string) => void) => {
+  const handler = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    setState: (s: string) => void
+  ) => {
     setState(e.target.value);
   };
 
@@ -61,23 +64,11 @@ const GroupPage: FC = () => {
         >
           <Grid item xs={12} sm={6}>
             <FormControl required fullWidth>
-              <InputLabel id="demo-simple-select-label">
-                Department
-              </InputLabel>
-              <Select
-                value={data}
-                label="Department"
-                onChange={handleChange}
-              >
-                <MenuItem value="frontend">
-                  Front-End
-                </MenuItem>
-                <MenuItem value="backend">
-                  Back-End
-                </MenuItem>
-                <MenuItem value="uxuidesign">
-                  UX/UI Design
-                </MenuItem>
+              <InputLabel id="demo-simple-select-label">Department</InputLabel>
+              <Select value={data} label="Department" onChange={handleChange}>
+                <MenuItem value="frontend">Front-End</MenuItem>
+                <MenuItem value="backend">Back-End</MenuItem>
+                <MenuItem value="uxuidesign">UX/UI Design</MenuItem>
               </Select>
             </FormControl>
           </Grid>
@@ -105,43 +96,21 @@ const GroupPage: FC = () => {
           </Grid>
           <Grid item xs={12} sm={6}>
             <FormControl required fullWidth>
-              <InputLabel id="demo-simple-select-label">
-                Mentors
-              </InputLabel>
-              <Select
-                value={data}
-                label="Mentor"
-                onChange={handleChange}
-              >
-                <MenuItem value="frontend">
-                  Anuar/Aman
-                </MenuItem>
+              <InputLabel id="demo-simple-select-label">Mentors</InputLabel>
+              <Select value={data} label="Mentor" onChange={handleChange}>
+                <MenuItem value="frontend">Anuar/Aman</MenuItem>
                 <MenuItem value="backend">Ulan</MenuItem>
-                <MenuItem value="uxuidesign">
-                  Aziz
-                </MenuItem>
+                <MenuItem value="uxuidesign">Aziz</MenuItem>
               </Select>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
             <FormControl required fullWidth>
-              <InputLabel id="demo-simple-select-label">
-                Status
-              </InputLabel>
-              <Select
-                value={data}
-                label="Status"
-                onChange={handleChange}
-              >
-                <MenuItem value="frontend">
-                  High
-                </MenuItem>
-                <MenuItem value="backend">
-                  Medium
-                </MenuItem>
-                <MenuItem value="uxuidesign">
-                  Low
-                </MenuItem>
+              <InputLabel id="demo-simple-select-label">Status</InputLabel>
+              <Select value={data} label="Status" onChange={handleChange}>
+                <MenuItem value="frontend">High</MenuItem>
+                <MenuItem value="backend">Medium</MenuItem>
+                <MenuItem value="uxuidesign">Low</MenuItem>
               </Select>
             </FormControl>
           </Grid>
