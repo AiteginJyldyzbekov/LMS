@@ -9,21 +9,5 @@
     "rememberMe": "To remember me",
     "forgotPassword": "Forgot your password",
     "enter": "Enter"
-  },
-  "CreateGroupPage": {
-    "department": "Department",
-    "front": "Front-End",
-    "back": "Back-End",
-    "uxui": "UX/UI Design",
-    "mentor": "Mentor",
-    "amanAnuar": "Aman/Anuar",
-    "ulan": "Ulan",
-    "aziz": "Aziz",
-    "status": "Status",
-    "high": "High",
-    "medium": "Medium",
-    "low": "Low",
-    "save": "Save",
-    "delete": "Delete"
   }
 }
