@@ -11,12 +11,13 @@ import {
   Button,
   SelectChangeEvent,
 } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 
 const GroupPage: FC = () => {
   const [data, setData] = useState<string>('');
   const [groupName, setGroupName] = useState<string>('');
   const [startDate, setStartDate] = useState<string>('');
-
+  const { t } = useTranslation();
   const handleChange = (event: SelectChangeEvent) => {
     setData(event.target.value);
   };
@@ -50,7 +51,7 @@ const GroupPage: FC = () => {
         }}
       >
         <Typography component="h5" variant="h5">
-          Group data
+          {t('CreateGroupPage.groupDate')}
         </Typography>
         <Grid
           mt={3}
@@ -64,11 +65,11 @@ const GroupPage: FC = () => {
         >
           <Grid item xs={12} sm={6}>
             <FormControl required fullWidth>
-              <InputLabel id="demo-simple-select-label">Department</InputLabel>
+              <InputLabel id="demo-simple-select-label">
+                {t('CreateGroupPage.department')}
+              </InputLabel>
               <Select value={data} label="Department" onChange={handleChange}>
-                <MenuItem value="frontend">Front-End</MenuItem>
-                <MenuItem value="backend">Back-End</MenuItem>
-                <MenuItem value="uxuidesign">UX/UI Design</MenuItem>
+                <MenuItem value="nothing" />
               </Select>
             </FormControl>
           </Grid>
@@ -80,7 +81,10 @@ const GroupPage: FC = () => {
               required
               fullWidth
             >
-              <TextField value={groupName} label="Group Name" />
+              <TextField
+                value={groupName}
+                label={t('CreateGroupPage.groupName')}
+              />
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
@@ -91,26 +95,29 @@ const GroupPage: FC = () => {
               required
               fullWidth
             >
-              <TextField value={startDate} label="Start Date" />
+              <TextField
+                value={startDate}
+                label={t('CreateGroupPage.startDate')}
+              />
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
             <FormControl required fullWidth>
-              <InputLabel id="demo-simple-select-label">Mentors</InputLabel>
+              <InputLabel id="demo-simple-select-label">
+                {t('CreateGroupPage.mentor')}
+              </InputLabel>
               <Select value={data} label="Mentor" onChange={handleChange}>
-                <MenuItem value="frontend">Anuar/Aman</MenuItem>
-                <MenuItem value="backend">Ulan</MenuItem>
-                <MenuItem value="uxuidesign">Aziz</MenuItem>
+                <MenuItem value="nothing" />
               </Select>
             </FormControl>
           </Grid>
           <Grid item xs={12} sm={6}>
             <FormControl required fullWidth>
-              <InputLabel id="demo-simple-select-label">Status</InputLabel>
+              <InputLabel id="demo-simple-select-label">
+                {t('CreateGroupPage.status')}
+              </InputLabel>
               <Select value={data} label="Status" onChange={handleChange}>
-                <MenuItem value="frontend">High</MenuItem>
-                <MenuItem value="backend">Medium</MenuItem>
-                <MenuItem value="uxuidesign">Low</MenuItem>
+                <MenuItem value="nothing" />
               </Select>
             </FormControl>
           </Grid>
@@ -145,7 +152,7 @@ const GroupPage: FC = () => {
               variant="contained"
               color="success"
             >
-              Save
+              {t('CreateGroupPage.save')}
             </Button>
           </Grid>
           <Grid
@@ -166,7 +173,7 @@ const GroupPage: FC = () => {
               variant="contained"
               color="error"
             >
-              Delete
+              {t('CreateGroupPage.delete')}
             </Button>
           </Grid>
         </Grid>
