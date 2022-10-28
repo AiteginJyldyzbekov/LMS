@@ -3,14 +3,14 @@ import useStyles from './PageContainer.styles';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-interface ViewPageProps {
+interface PageContainerProps {
     children: React.ReactNode,
     name: string,
     puth: string,
     btn_text: string,
 }
 
-const ViewPage: React.FC<ViewPageProps> = ({ children, name, puth, btn_text }) => {
+const PageContainer: React.FC<PageContainerProps> = ({ children, name, puth, btn_text }) => {
     const classes = useStyles();
     return (
         <div className={classes.container}>
@@ -27,4 +27,4 @@ const ViewPage: React.FC<ViewPageProps> = ({ children, name, puth, btn_text }) =
     );
 };
 
-export default ViewPage;
+export default PageContainer;
