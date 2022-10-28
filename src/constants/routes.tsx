@@ -1,6 +1,7 @@
 import React from 'react';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/loginpage/Loginpage';
+import GroupPage from '../pages/groupPage/GroupPage';
 
 export interface RouteType {
   title: string;
@@ -21,6 +22,11 @@ export const mentorRoutes: RouteType[] = [
     title: 'Main Page',
     path: '/',
     Component: HomePage,
+  },
+  {
+    title: 'Create Group',
+    path: '/createGroup',
+    Component: GroupPage,
   },
 ];
 

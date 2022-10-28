@@ -9,7 +9,7 @@ interface PropsTypes {
   routes: RouteType[];
 }
 const Page: React.FC<PropsTypes> = ({ routes }) => {
-  const auth = false;
+  const auth = true;
 
   const renderComponent = ({ path, Component }: RouteType) => (
     <Route key={path} path={path} element={<Component />} />
