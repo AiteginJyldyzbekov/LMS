@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 interface AuthState {
   isPending: boolean;
+  isAuth: boolean;
   // TODO: replace type with BE responce
   data: null | {
     email: string;
@@ -13,10 +14,11 @@ interface AuthState {
 
 const initialState: AuthState = {
   isPending: false,
+  isAuth: true,
   // TODO: remove object when BE side will be ready
   data: {
     email: 'lms@gmail.com',
-    role: 'mentor',
+    role: 'admin',
     token: '',
   },
   error: null,
