@@ -27,7 +27,7 @@ const useStyles = makeStyles(() => ({
     '@media (max-width: 375px)': {
       paddingRight: '15px',
       paddingLeft: '15px',
-    }
+    },
   },
   wrapper: {
     paddingRight: '100px',
@@ -46,7 +46,7 @@ const useStyles = makeStyles(() => ({
     '@media (max-width: 375px)': {
       paddingRight: '15px',
       paddingLeft: '15px',
-    }
+    },
   },
 }));
 
