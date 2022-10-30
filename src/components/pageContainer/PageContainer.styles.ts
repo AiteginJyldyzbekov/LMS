@@ -13,14 +13,40 @@ const useStyles = makeStyles(() => ({
     fontSize: '10px',
   },
   content_wrapper: {
-    width: '100%',
-    margin: '20px auto',
+    paddingRight: '100px',
+    paddingLeft: '100px',
+    marginTop: '20px',
+    '@media (max-width: 1200px)': {
+      paddingRight: '50px',
+      paddingLeft: '50px',
+    },
+    '@media (max-width: 768px)': {
+      paddingRight: '25px',
+      paddingLeft: '25px',
+    },
+    '@media (max-width: 375px)': {
+      paddingRight: '15px',
+      paddingLeft: '15px',
+    }
   },
   wrapper: {
-    width: '80%',
-    margin: '40px auto',
+    paddingRight: '100px',
+    paddingLeft: '100px',
+    marginTop: '40px',
     display: 'flex',
     justifyContent: 'space-between',
+    '@media (max-width: 1200px)': {
+      paddingRight: '50px',
+      paddingLeft: '50px',
+    },
+    '@media (max-width: 768px)': {
+      paddingRight: '25px',
+      paddingLeft: '25px',
+    },
+    '@media (max-width: 375px)': {
+      paddingRight: '15px',
+      paddingLeft: '15px',
+    }
   },
 }));
 
