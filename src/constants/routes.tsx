@@ -2,6 +2,7 @@ import React from 'react';
 import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/loginpage/Loginpage';
 import GroupPage from '../pages/groupPage/GroupPage';
+import CreateMentor from '../pages/createMentorPage/CreateMentor';
 
 export interface RouteType {
   title: string;
@@ -14,6 +15,11 @@ export const adminRoutes: RouteType[] = [
     title: 'Main Page',
     path: '/',
     Component: HomePage,
+  },
+  {
+    title: 'Create Mentor Page',
+    path: '/createMentor',
+    Component: CreateMentor,
   },
 ];
 

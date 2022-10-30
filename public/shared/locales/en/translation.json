@@ -19,5 +19,17 @@
     "startDate": "Start Date",
     "save": "Save",
     "delete": "Delete"
+  },
+  "CreateMentor": {
+    "createMentorTitle": "Create Mentor",
+    "department": "Department",
+    "name": "Name",
+    "surname": "Surname",
+    "number": "Number",
+    "mail": "Mail",
+    "status": "Status",
+    "autoGenerate": "Auto Generate Password",
+    "save": "Save",
+    "delete": "Delete"
   }
 }
