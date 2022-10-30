@@ -13,11 +13,11 @@ const useStyles = makeStyles(() => ({
     fontSize: '10px',
   },
   content_wrapper: {
-    width: '80%',
+    width: '100%',
     margin: '20px auto',
   },
   wrapper: {
-    width: '100%',
+    width: '80%',
     margin: '40px auto',
     display: 'flex',
     justifyContent: 'space-between',
