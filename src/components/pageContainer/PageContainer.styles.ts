@@ -13,8 +13,8 @@ const useStyles = makeStyles(() => ({
     fontSize: '10px',
   },
   content_wrapper: {
-    paddingRight: '70px',
-    paddingLeft: '70px',
+    paddingRight: '60px',
+    paddingLeft: '60px',
     marginTop: '20px',
     '@media (max-width: 1200px)': {
       paddingRight: '40px',
@@ -30,8 +30,8 @@ const useStyles = makeStyles(() => ({
     },
   },
   wrapper: {
-    paddingRight: '70px',
-    paddingLeft: '70px',
+    paddingRight: '60px',
+    paddingLeft: '60px',
     marginTop: '40px',
     display: 'flex',
     justifyContent: 'space-between',
