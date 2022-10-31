@@ -11,9 +11,7 @@ import { UserRole } from '../types/types';
 import { useAppSelector } from './hook';
 
 const useRoutes = (): ReactNode => {
-  // TODO: implement with redux auth role state
-  const auth = true;
-  const { data } = useAppSelector((state) => state.auth);
+  const { data, isAuth } = useAppSelector((state) => state.auth);
   const role = data?.role; // 'mentor' | 'student' | 'admin'
 
   const renderContainerRout = (routes: RouteType[]) => <Page routes={routes} />;
@@ -23,7 +21,7 @@ const useRoutes = (): ReactNode => {
   const renderStudentRoutes = () => renderContainerRout(studentRoutes);
   const renderNotAuthRoutes = () => renderContainerRout(notAuthRoutes);
 
-  if (!auth) return renderNotAuthRoutes();
+  if (!isAuth) return renderNotAuthRoutes();
   if (role) {
     if (role === UserRole.admin) return renderAdminRoutes();
     if (role === UserRole.mentor) return renderMentorRoutes();

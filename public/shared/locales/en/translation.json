@@ -9,5 +9,27 @@
     "rememberMe": "To remember me",
     "forgotPassword": "Forgot your password",
     "enter": "Enter"
+  },
+  "CreateGroupPage": {
+    "groupDate": "Group data",
+    "department": "Department",
+    "groupName": "Group Name",
+    "mentor": "Mentor",
+    "status": "Status",
+    "startDate": "Start Date",
+    "save": "Save",
+    "delete": "Delete"
+  },
+  "CreateMentor": {
+    "createMentorTitle": "Create Mentor",
+    "department": "Department",
+    "name": "Name",
+    "surname": "Surname",
+    "number": "Number",
+    "mail": "Mail",
+    "status": "Status",
+    "autoGenerate": "Auto Generate Password",
+    "save": "Save",
+    "delete": "Delete"
   }
 }

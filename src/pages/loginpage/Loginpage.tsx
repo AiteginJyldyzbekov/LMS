@@ -142,19 +142,8 @@ const LoginPage: FC = () => {
               sx={{ mb: 4, width: '100%' }}
               variant="outlined"
             >
-              <InputLabel htmlFor="outlined-adornment-password">
-                Email
-              </InputLabel>
+              <InputLabel>Email</InputLabel>
               <OutlinedInput
-                id="outlined-adornment-password"
-                endAdornment={
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="toggle password visibility"
-                      edge="end"
-                    />
-                  </InputAdornment>
-                }
                 label="Email"
                 type="email"
                 required
