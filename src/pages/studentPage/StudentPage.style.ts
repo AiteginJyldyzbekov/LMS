@@ -12,24 +12,16 @@ const useStyles = makeStyles(() => ({
         width: '100%',
         gap: '20px',
     },
-    textField: {
-        width: '40%',
-    },
     title: {
-        width: '20%',
-        margin: '30px auto',
+        marginTop: '30px',
+        marginBottom: '30px',
         fontWeight: '500',
-    },
-    select: {
-        width: '30%',
+        textAlign: 'center'
     },
     btnsContainer: {
-        display: 'flex',
-        justifyContent: 'center',
-        marginTop: '30px',
-    },
-    saveBtn: {
-        marginRight: '50px'
+        marginTop: '15px',
+        textAlign: 'center',
+        flexWrap: 'wrap'
     }
 }));
 
