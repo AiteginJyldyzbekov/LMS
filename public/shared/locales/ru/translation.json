@@ -33,5 +33,17 @@
     "startDate": "Начало",
     "save": "Сохранить",
     "delete": "Удалить"
+  },
+  "CreateMentor": {
+    "createMentorTitle": "Создать Ментора",
+    "department": "Направление",
+    "name": "Имя",
+    "surname": "Фамилия",
+    "number": "Номер",
+    "mail": "Почта",
+    "status": "Статус",
+    "autoGenerate": "Автогенирация пароля",
+    "save": "Сохранить",
+    "delete": "Удалить"
   }
 }
