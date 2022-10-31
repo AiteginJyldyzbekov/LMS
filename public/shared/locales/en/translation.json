@@ -31,5 +31,11 @@
     "autoGenerate": "Auto Generate Password",
     "save": "Save",
     "delete": "Delete"
+  },
+  "StudentPage": {
+    "title": "Student Data",
+    "status": "Status",
+    "save": "Save",
+    "delete": "Delete"
   }
 }
