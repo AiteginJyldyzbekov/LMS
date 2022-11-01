@@ -45,5 +45,11 @@
     "autoGenerate": "Автогенирация пароля",
     "save": "Сохранить",
     "delete": "Удалить"
+  },
+  "StudentPage": {
+    "title": "Данные Студента",
+    "status": "Status",
+    "save": "Сохранить",
+    "delete": "Удалить"
   }
 }

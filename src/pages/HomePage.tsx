@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import PageContainer from '../components/pageContainer/PageContainer';
+import PageContainer from './pageContainer/PageContainer';
 
 const HomePage: React.FC = () => {
   const { t } = useTranslation();
