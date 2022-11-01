@@ -183,8 +183,7 @@ const CreateMentor: FC = () => {
                   display: 'flex',
                   gap: '10px',
                 }}
-                variant="contained"
-                color="success"
+                variant="outlined"
               >
                 {t('CreateMentor.save')}
               </Button>
@@ -204,8 +203,7 @@ const CreateMentor: FC = () => {
                   width: '45%',
                   minHeight: '50px',
                 }}
-                variant="contained"
-                color="error"
+                variant="outlined"
               >
                 {t('CreateMentor.delete')}
               </Button>
