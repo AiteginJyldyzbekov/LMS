@@ -1,11 +1,11 @@
 import React from 'react';
 import useStyles from './MainPageContainer.styles';
 
-interface MainPageContainer {
+interface IMainPageContainer {
   children: React.ReactNode;
 }
 
-const MainPageContainer: React.FC<MainPageContainer> = ({ children }) => {
+const MainPageContainer: React.FC<IMainPageContainer> = ({ children }) => {
   const css = useStyles();
   return (
     <div className={css.container}>
