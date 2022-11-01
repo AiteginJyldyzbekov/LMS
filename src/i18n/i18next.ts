@@ -6,15 +6,15 @@ import ns2 from '../../public/shared/locales/en/translation.json';
 
 i18n.use(initReactI18next).init({
   resources: {
-    en: {
+    ru: {
       translations: ns1,
     },
-    ru: {
+    en: {
       translations: ns2,
     },
   },
   lng: 'ru',
-  fallbackLng: 'en',
+  fallbackLng: 'ru',
   ns: ['translations'],
 
   interpolation: {

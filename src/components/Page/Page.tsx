@@ -18,11 +18,11 @@ const Page: React.FC<PropsTypes> = ({ routes }) => {
   return (
     <Grid container>
       {isAuth && (
-        <Grid item xs={2}>
+        <Grid item xs={0} lg={2} position="relative">
           <SideBar />
         </Grid>
       )}
-      <Grid item xs={isAuth ? 10 : 12}>
+      <Grid item xs={12} lg={isAuth ? 10 : 12}>
         <Routes>
           {routes.map(renderComponent)}
           <Route path="*" element={<NotFoundPage />} />
