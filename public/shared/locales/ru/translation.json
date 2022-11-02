@@ -51,5 +51,14 @@
     "status": "Status",
     "save": "Сохранить",
     "delete": "Удалить"
+  },
+  "Groups": {
+    "title": "Группы",
+    "id": "ID",
+    "department": "Направление",
+    "name": "Имя",
+    "startDate": "Дата начало",
+    "amount": "Количество",
+    "duration": "Длительность"
   }
 }

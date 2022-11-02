@@ -3,6 +3,7 @@ import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/loginpage/Loginpage';
 import GroupPage from '../pages/groupPage/GroupPage';
 import CreateMentor from '../pages/createMentorPage/CreateMentor';
+import GroupsPage from '../pages/groupsPage/GroupsPage';
 
 export interface RouteType {
   title: string;
@@ -14,7 +15,7 @@ export const adminRoutes: RouteType[] = [
   {
     title: 'Main Page',
     path: '/',
-    Component: HomePage,
+    Component: GroupsPage,
   },
   {
     title: 'Create Mentor Page',
