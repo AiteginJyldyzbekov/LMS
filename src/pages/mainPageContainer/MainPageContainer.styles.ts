@@ -3,10 +3,10 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(() => ({
   container: {
     width: '100%',
-    height: '100vh',
+    minHeight: '100vh',
   },
   content_wrapper: {
-    padding: '0 15%',
+    padding: '0 50px',
     minHeight: '100vh',
     background: 'none',
     display: 'flex',

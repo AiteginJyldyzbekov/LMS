@@ -21,6 +21,11 @@ export const adminRoutes: RouteType[] = [
     path: '/createMentor',
     Component: CreateMentor,
   },
+  {
+    title: 'Create Group',
+    path: '/createGroup',
+    Component: GroupPage,
+  },
 ];
 
 export const mentorRoutes: RouteType[] = [
@@ -28,11 +33,6 @@ export const mentorRoutes: RouteType[] = [
     title: 'Main Page',
     path: '/',
     Component: HomePage,
-  },
-  {
-    title: 'Create Group',
-    path: '/createGroup',
-    Component: GroupPage,
   },
 ];
 

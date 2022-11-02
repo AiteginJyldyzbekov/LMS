@@ -3,14 +3,20 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(() => ({
   container: {
     height: '100vh',
+    position: 'sticky',
+    top: 0,
+    left: 0,
+    right: 0,
+    zIndex: 99,
   },
   wrapper: {
-    height: '100vh',
+    minWidth: '180px',
+    minHeight: '100vh',
     background: '#F4F4F4',
+    padding: '0 10px',
   },
   active_wrapper: {
-    height: '100vh',
-    width: '16.7%',
+    minHeight: '100vh',
     background: '#F4F4F4',
   },
   content_wrapper: {
@@ -26,7 +32,7 @@ const useStyles = makeStyles(() => ({
     background: '#EAEAEA',
     borderRadius: '10px',
     height: '50px',
-    width: '90%',
+    width: '100%',
     marginTop: '10px',
     cursor: 'pointer',
     textDecoration: 'none',
@@ -41,12 +47,12 @@ const useStyles = makeStyles(() => ({
     alignItems: 'center',
     justifyContent: 'center',
     background: '#EAEAEA',
-    width: '95%',
+    width: '100%',
     height: '80px',
     borderRadius: '10px',
-    marginTop: '40px',
-    marginBottom: '40px',
+    margin: '40px 0px',
     fontWeight: '500',
+    padding: '10px',
   },
   icon_container: {
     width: '30%',
@@ -76,6 +82,9 @@ const useStyles = makeStyles(() => ({
     display: 'none',
   },
   '@media (max-width: 1200px)': {
+    container: {
+      position: 'absolute',
+    },
     wrapper: {
       position: 'fixed',
       top: '0',
@@ -87,6 +96,7 @@ const useStyles = makeStyles(() => ({
       top: '0',
       left: '0',
       transition: '700ms',
+      padding: '0 10px',
     },
     burger_container: {
       width: '60px',
