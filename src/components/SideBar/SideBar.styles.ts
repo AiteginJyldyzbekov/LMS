@@ -12,12 +12,12 @@ const useStyles = makeStyles(() => ({
   wrapper: {
     minWidth: '180px',
     minHeight: '100vh',
-    background: '#F4F4F4',
+    borderRight: '1px dashed rgb(205 221 237)',
     padding: '0 10px',
   },
   active_wrapper: {
     minHeight: '100vh',
-    background: '#F4F4F4',
+    background: 'rgba(145, 158, 171, 0.16)',
   },
   content_wrapper: {
     display: 'flex',
@@ -29,7 +29,7 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    background: '#EAEAEA',
+    background: 'rgba(145, 158, 171, 0.16)',
     borderRadius: '10px',
     height: '50px',
     width: '100%',
@@ -46,7 +46,7 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    background: '#EAEAEA',
+    background: 'rgba(145, 158, 171, 0.16)',
     width: '100%',
     height: '80px',
     borderRadius: '10px',
