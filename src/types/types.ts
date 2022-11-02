@@ -12,13 +12,10 @@ export interface SideBarLink {
 }
 
 export interface mentorsPageAdmin {
-  name: string,
   id: number,
+  department: string,
+  name: string,
   surname: string,
   number: number,
   mail: string,
-  age: number,
-  point: number,
-  price: number,
-  date: string
 }

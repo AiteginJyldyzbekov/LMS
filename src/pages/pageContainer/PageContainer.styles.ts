@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
     height: '30px',
   },
   btnText: {
-    fontSize: '10px',
+    fontSize: '13px',
   },
   content_wrapper: {
     paddingRight: '60px',

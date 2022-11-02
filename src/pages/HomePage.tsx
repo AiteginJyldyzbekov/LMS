@@ -7,7 +7,7 @@ const HomePage: React.FC = () => {
   const { t } = useTranslation();
   return (
     <div>
-      <PageContainer name="User" puth="*" btnText="Click here">
+      <PageContainer name="Mentors" puth="*" btnText="Add">
         <AdminMentorsPage />
       </PageContainer>
     </div>
