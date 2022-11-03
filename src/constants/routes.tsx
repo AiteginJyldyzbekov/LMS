@@ -4,7 +4,7 @@ import LoginPage from '../pages/loginpage/Loginpage';
 import GroupPage from '../pages/groupPage/GroupPage';
 import CreateMentor from '../pages/createMentorPage/CreateMentor';
 import GroupsPage from '../pages/groupsPage/GroupsPage';
-import AdminMentorsPage from '../components/mentorsPageAdmin/AdminMentorsPage';
+import AdminMentorsPage from '../pages/mentorsPageAdmin/AdminMentorsPage';
 
 export interface RouteType {
   title: string;

@@ -10,12 +10,3 @@ export interface SideBarLink {
   puth: string;
   id: number;
 }
-
-export interface mentorsPageAdmin {
-  id: number;
-  department: string;
-  name: string;
-  surname: string;
-  number: number;
-  mail: string;
-}

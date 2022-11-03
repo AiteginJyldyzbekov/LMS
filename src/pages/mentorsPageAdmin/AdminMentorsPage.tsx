@@ -1,9 +1,9 @@
 import { TableCell, TableRow } from '@mui/material';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import PageContainer from '../PageContainer/PageContainer';
-import TableContainer from '../TableContainer/TableContainer';
-import MentorsTable from '../Tables/MentorsTable';
+import PageContainer from '../../components/PageContainer/PageContainer';
+import TableContainer from '../../components/TableContainer/TableContainer';
+import MentorsTable from '../../components/Tables/MentorsTable';
 
 const createData = (
   id: number,
@@ -23,7 +23,7 @@ const rows = [
 const AdminMentorsPage: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <PageContainer name="Mentors" puth="/createGroup" btnText="+Add mentor">
+    <PageContainer name={t('Mentors.title')} puth="/createGroup" btnText={t('Mentors.btnText')}>
       <TableContainer
         Header={
           <TableRow>

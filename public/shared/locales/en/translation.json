@@ -53,6 +53,7 @@
     "department": "Department",
     "name": "Name",
     "surname": "Surname",
-    "number": "Number"
+    "number": "Number",
+    "btnText": "+Add mentor"
   }
 }
