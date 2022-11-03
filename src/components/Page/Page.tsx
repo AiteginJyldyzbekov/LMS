@@ -18,7 +18,7 @@ const Page: React.FC<PropsTypes> = ({ routes }) => {
   return (
     <Grid container>
       {isAuth && (
-        <Grid item xs={0} lg={2} position="relative">
+        <Grid item xs={0} lg={2}>
           <SideBar />
         </Grid>
       )}

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 import useStyles from './PageContainer.styles';
 
 interface PageContainerProps {
-  children: React.ReactNode;
+  children: React.ReactNode | string;
   name: string;
   puth: string;
   btnText: string;
@@ -20,10 +20,10 @@ const PageContainer: React.FC<PageContainerProps> = ({
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
-        <h3>{name}</h3>
+        <Typography variant="h5">{name}</Typography>
         <Link to={puth} style={{ textDecoration: 'none' }}>
-          <Button variant="contained" className={classes.btn}>
-            <span className={classes.btnText}>{btnText}</span>
+          <Button variant="contained" size="large">
+            {btnText}
           </Button>
         </Link>
       </div>

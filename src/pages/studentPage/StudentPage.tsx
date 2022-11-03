@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useTranslation } from 'react-i18next';
-import { inputsData } from '../../constants/studentPage';
+import { inputsData } from '../../constants/StudentPage';
 import useStyles from './StudentPage.style';
 
 const StudentPage: React.FC = () => {

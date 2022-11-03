@@ -8,16 +8,16 @@ import { SideBarLink } from '../types/types';
 
 export const admin: SideBarLink[] = [
   {
+    title: 'Groups',
+    Icon: GroupsIcon,
+    puth: '/',
+    id: 1,
+  },
+  {
     title: 'Mentors',
     Icon: SupervisorAccountIcon,
     puth: '/mentors',
     id: 0,
-  },
-  {
-    title: 'Groups',
-    Icon: GroupsIcon,
-    puth: '/groups',
-    id: 1,
   },
   {
     title: 'Students',
