@@ -25,6 +25,7 @@
   },
   "plugins": ["prettier", "react", "jest", "@typescript-eslint"],
   "rules": {
+    "react/jsx-props-no-spreading": "off",
     "no-shadow": "off",
     "import/prefer-default-export": "off",
     "no-unused-vars": "off",

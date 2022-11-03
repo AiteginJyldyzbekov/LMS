@@ -3,19 +3,11 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(() => ({
   container: {
     width: '100%',
-    height: '100%',
-  },
-  btn: {
-    width: '100px',
-    height: '30px',
-  },
-  btnText: {
-    fontSize: '10px',
   },
   content_wrapper: {
     paddingRight: '60px',
     paddingLeft: '60px',
-    marginTop: '20px',
+    marginTop: '60px',
     '@media (max-width: 1200px)': {
       paddingRight: '40px',
       paddingLeft: '40px',
@@ -35,6 +27,7 @@ const useStyles = makeStyles(() => ({
     marginTop: '40px',
     display: 'flex',
     justifyContent: 'space-between',
+    alignItems: 'center',
     '@media (max-width: 1200px)': {
       paddingRight: '40px',
       paddingLeft: '40px',

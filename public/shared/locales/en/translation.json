@@ -37,5 +37,14 @@
     "status": "Status",
     "save": "Save",
     "delete": "Delete"
+  },
+  "Groups": {
+    "title": "Groups",
+    "id": "ID",
+    "department": "Department",
+    "name": "Name",
+    "startDate": "Start Date",
+    "amount": "Amount",
+    "duration": "Duration"
   }
 }
