@@ -23,7 +23,11 @@ const rows = [
 const AdminMentorsPage: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <PageContainer name={t('Mentors.title')} puth="/createGroup" btnText={t('Mentors.btnText')}>
+    <PageContainer
+      name={t('Mentors.title')}
+      puth="/createGroup"
+      btnText={t('Mentors.btnText')}
+    >
       <TableContainer
         Header={
           <TableRow>
