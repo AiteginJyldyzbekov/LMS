@@ -15,10 +15,16 @@ const TableContainer: React.FC<Props> = ({ Header, Body }) => (
   <TableWrapper component={Paper}>
     <Grid container sx={{ padding: '15px' }} alignItems="center">
       <Grid item lg={11.5} xs={10} sm={11}>
-        <TextField label="Search" placeholder="Search..." variant="outlined" />
+        <TextField
+          label="Search"
+          placeholder="Search..."
+          variant="outlined"
+          size="small"
+          sx={{ width: '250px' }}
+        />
       </Grid>
       <Grid item alignSelf="right">
-        <IconButton>
+        <IconButton color="primary">
           <FilterListIcon />
         </IconButton>
       </Grid>
