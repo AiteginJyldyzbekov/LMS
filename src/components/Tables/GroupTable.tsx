@@ -40,7 +40,7 @@ const GroupTable: React.FC<Props> = ({
       <TableCell align="right">{amount}</TableCell>
       <TableCell align="right">{duration}</TableCell>
       <TableCell align="right">
-        <IconButton>
+        <IconButton color="primary">
           <EditOffIcon />
         </IconButton>
       </TableCell>
