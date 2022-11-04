@@ -46,5 +46,14 @@
     "startDate": "Start Date",
     "amount": "Amount",
     "duration": "Duration"
+  },
+  "Mentors": {
+    "title": "Mentors",
+    "id": "Mentor ID",
+    "department": "Department",
+    "name": "Name",
+    "surname": "Surname",
+    "number": "Number",
+    "btnText": "+Add mentor"
   }
 }
