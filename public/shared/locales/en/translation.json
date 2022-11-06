@@ -55,5 +55,19 @@
     "surname": "Surname",
     "number": "Number",
     "btnText": "+Add mentor"
+  },
+  "AdminGroup": {
+    "title": "Group Students",
+    "btnText": "+Add student",
+    "id": "ID",
+    "name": "Full name",
+    "number": "Number",
+    "mail": "Mail",
+    "age": "Age",
+    "points": "Points",
+    "price": "Price",
+    "date": "Start Date",
+    "group": "Group",
+    "mentor": "Mentor"
   }
 }

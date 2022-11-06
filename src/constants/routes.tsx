@@ -5,6 +5,7 @@ import GroupPage from '../pages/groupPage/GroupPage';
 import CreateMentor from '../pages/createMentorPage/CreateMentor';
 import GroupsPage from '../pages/groupsPage/GroupsPage';
 import AdminMentorsPage from '../pages/mentorsPageAdmin/AdminMentorsPage';
+import GroupPageAdmin from '../pages/adminGroupPage/GroupPageAdmin';
 
 export interface RouteType {
   title: string;
@@ -32,6 +33,11 @@ export const adminRoutes: RouteType[] = [
     title: 'Mentors',
     path: '/mentors',
     Component: AdminMentorsPage,
+  },
+  {
+    title: 'Group',
+    path: '/group',
+    Component: GroupPageAdmin,
   },
 ];
 
