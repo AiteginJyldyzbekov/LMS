@@ -69,5 +69,14 @@
     "date": "Start Date",
     "group": "Group",
     "mentor": "Mentor"
+  },
+  "GroupsPageMentor": {
+    "title": "Select a group history",
+    "id": "Group ID",
+    "department": "Department",
+    "groupName": "Group Name",
+    "startDate": "Start Date",
+    "studentAmount": "Student Amount",
+    "duration": "Duration"
   }
 }
