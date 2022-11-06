@@ -23,7 +23,7 @@ const StudentsTable: React.FC<Props> = ({
   number,
   mail,
   age,
-  point
+  point,
 }) => {
   const navigate = useNavigate();
   return (
@@ -40,14 +40,30 @@ const StudentsTable: React.FC<Props> = ({
       <TableCell component="th" scope="row" sx={{ padding: '16px 16px' }}>
         {id}
       </TableCell>
-      <TableCell sx={{ padding: '16px 10px' }} align="center">{department}</TableCell>
-      <TableCell sx={{ padding: '16px 10px' }} align="center">{groupName}</TableCell>
-      <TableCell sx={{ padding: '16px 10px' }} align="center">{name}</TableCell>
-      <TableCell sx={{ padding: '16px 10px' }} align="center">{surname}</TableCell>
-      <TableCell sx={{ padding: '16px 10px' }} align="center">{number}</TableCell>
-      <TableCell sx={{ padding: '16px 10px' }} align="center">{mail}</TableCell>
-      <TableCell sx={{ padding: '16px 10px' }} align="center">{age}</TableCell>
-      <TableCell sx={{ padding: '16px 10px' }} align="center">{point}</TableCell>
+      <TableCell sx={{ padding: '16px 10px' }} align="center">
+        {department}
+      </TableCell>
+      <TableCell sx={{ padding: '16px 10px' }} align="center">
+        {groupName}
+      </TableCell>
+      <TableCell sx={{ padding: '16px 10px' }} align="center">
+        {name}
+      </TableCell>
+      <TableCell sx={{ padding: '16px 10px' }} align="center">
+        {surname}
+      </TableCell>
+      <TableCell sx={{ padding: '16px 10px' }} align="center">
+        {number}
+      </TableCell>
+      <TableCell sx={{ padding: '16px 10px' }} align="center">
+        {mail}
+      </TableCell>
+      <TableCell sx={{ padding: '16px 10px' }} align="center">
+        {age}
+      </TableCell>
+      <TableCell sx={{ padding: '16px 10px' }} align="center">
+        {point}
+      </TableCell>
       <TableCell sx={{ padding: '16px 10px' }} align="center">
         <IconButton>
           <EditOffIcon />

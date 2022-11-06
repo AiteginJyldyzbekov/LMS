@@ -41,10 +41,10 @@ export const adminRoutes: RouteType[] = [
     Component: GroupPageAdmin,
   },
   {
-    title: "All Students Page",
+    title: 'All Students Page',
     path: '/students',
     Component: AllStudentssupAdmin,
-  }
+  },
 ];
 
 export const mentorRoutes: RouteType[] = [
