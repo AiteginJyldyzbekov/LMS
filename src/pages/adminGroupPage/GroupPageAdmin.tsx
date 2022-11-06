@@ -16,15 +16,7 @@ const createData = (
 ) => ({ id, name, number, mail, age, point, date });
 // TODO: test data, should be removed after implementing with BE
 const rows = [
-  createData(
-    1,
-    'Solid',
-    +996010101,
-    'test@gmail.com',
-    17,
-    100,
-    '4 November'
-  ),
+  createData(1, 'Solid', +996010101, 'test@gmail.com', 17, 100, '4 November'),
 ];
 
 const GroupPageAdmin: React.FC = () => {
@@ -35,19 +27,29 @@ const GroupPageAdmin: React.FC = () => {
       puth="/createGroup"
       btnText={t('AdminGroup.btnText')}
     >
-      <Grid sx={{
-        marginBottom: '20px'
-      }}>
-        <Typography textAlign="left" component="p" sx={{
-          fontSize: '20px',
-          fontWeight: '400'
-        }}>
+      <Grid
+        sx={{
+          marginBottom: '20px',
+        }}
+      >
+        <Typography
+          textAlign="left"
+          component="p"
+          sx={{
+            fontSize: '20px',
+            fontWeight: '400',
+          }}
+        >
           Group: Design
         </Typography>
-        <Typography textAlign="left" component="p" sx={{
-          fontSize: '20px',
-          fontWeight: '400'
-        }}>
+        <Typography
+          textAlign="left"
+          component="p"
+          sx={{
+            fontSize: '20px',
+            fontWeight: '400',
+          }}
+        >
           Mentor: Aziz Azizovich
         </Typography>
       </Grid>
