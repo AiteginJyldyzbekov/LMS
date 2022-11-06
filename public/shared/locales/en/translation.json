@@ -66,6 +66,8 @@
     "age": "Age",
     "points": "Points",
     "price": "Price",
-    "date": "Start Date"
+    "date": "Start Date",
+    "group": "Group",
+    "mentor": "Mentor"
   }
 }

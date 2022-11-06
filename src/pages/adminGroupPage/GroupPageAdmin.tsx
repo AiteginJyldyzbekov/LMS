@@ -40,7 +40,7 @@ const GroupPageAdmin: React.FC = () => {
             fontWeight: '400',
           }}
         >
-          Group: Design
+          {t('AdminGroup.group')}: Design
         </Typography>
         <Typography
           textAlign="left"
@@ -50,7 +50,7 @@ const GroupPageAdmin: React.FC = () => {
             fontWeight: '400',
           }}
         >
-          Mentor: Aziz Azizovich
+          {t('AdminGroup.mentor')}: Aziz Azizovich
         </Typography>
       </Grid>
       <TableContainer
