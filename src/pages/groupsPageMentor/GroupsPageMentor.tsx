@@ -2,7 +2,7 @@ import { Grid, TableCell, TableRow, Typography } from '@mui/material';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import TableContainer from '../../components/TableContainer/TableContainer';
-import GroupsAdminTable from '../../components/Tables/GroupsPageMentor';
+import GroupsAdminTable from '../../components/Tables/GroupsMentorTable';
 
 const createData = (
   id: number,
@@ -19,7 +19,7 @@ const rows = [
   createData(3, 'Front-end', 'solid-3', '11 September', 20, '2 month'),
 ];
 
-const AdminMentorsPage: React.FC = () => {
+const GroupsPageMentor: React.FC = () => {
   const { t } = useTranslation();
   return (
     <>
@@ -81,4 +81,4 @@ const AdminMentorsPage: React.FC = () => {
   );
 };
 
-export default AdminMentorsPage;
+export default GroupsPageMentor;

@@ -11,7 +11,7 @@ interface Props {
   amount: number;
   duration: string;
 }
-const GroupsAdminTable: React.FC<Props> = ({
+const GroupsMentorTable: React.FC<Props> = ({
   id,
   department,
   name,
@@ -22,7 +22,7 @@ const GroupsAdminTable: React.FC<Props> = ({
   const navigate = useNavigate();
   return (
     <TableRow
-      onClick={() => navigate(`/mentor/${id}`)}
+      onClick={() => navigate(`/group/${id}`)}
       sx={{
         cursor: 'pointer',
         '&:hover': {
@@ -49,4 +49,4 @@ const GroupsAdminTable: React.FC<Props> = ({
   );
 };
 
-export default GroupsAdminTable;
+export default GroupsMentorTable;
