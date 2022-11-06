@@ -83,5 +83,17 @@
     "date": "Дата начала",
     "group": "Группа",
     "mentor": "Ментор"
+  },
+  "AllStudents": {
+    "title": "Все Студенты",
+    "studentsId": "ID Студента",
+    "department": "Направление",
+    "groupName": "Имя Группы",
+    "name": "Имя",
+    "surname": "Фамилия",
+    "number": "Номер",
+    "mail": "Почта",
+    "age": "Возраст",
+    "point": "Баллы"
   }
 }

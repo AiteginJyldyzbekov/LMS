@@ -69,5 +69,17 @@
     "date": "Start Date",
     "group": "Group",
     "mentor": "Mentor"
+  },
+  "AllStudents": {
+    "title": "All Students",
+    "studentsId": "Students ID",
+    "department": "Department",
+    "groupName": "Group Name",
+    "name": "Name",
+    "surname": "Surname",
+    "number": "Number",
+    "mail": "Mail",
+    "age": "Age",
+    "point": "Point"
   }
 }
