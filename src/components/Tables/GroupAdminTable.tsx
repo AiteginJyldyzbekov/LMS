@@ -6,23 +6,19 @@ import { useNavigate } from 'react-router-dom';
 interface Props {
   id: number;
   name: string;
-  surname: string;
   number: number;
   mail: string;
   age: number | string;
   point: number | string;
-  price: number | string;
   date: string;
 }
 const GroupAdminTable: React.FC<Props> = ({
   id,
   name,
-  surname,
   number,
   mail,
   age,
   point,
-  price,
   date,
 }) => {
   const navigate = useNavigate();
@@ -41,13 +37,11 @@ const GroupAdminTable: React.FC<Props> = ({
         {id}
       </TableCell>
       <TableCell scope="row">{name}</TableCell>
-      <TableCell align="left">{surname}</TableCell>
+      <TableCell align="center">{age}</TableCell>
       <TableCell align="center">{number}</TableCell>
       <TableCell align="center">{mail}</TableCell>
-      <TableCell align="center">{age}</TableCell>
       <TableCell align="center">{point}</TableCell>
-      <TableCell align="center">{price}</TableCell>
-      <TableCell align="center">{date}</TableCell>
+      <TableCell align="right">{date}</TableCell>
       <TableCell align="right" />
       <TableCell align="right">
         <IconButton color="primary">
