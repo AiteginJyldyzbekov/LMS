@@ -45,7 +45,8 @@
     "name": "Name",
     "startDate": "Start Date",
     "amount": "Amount",
-    "duration": "Duration"
+    "duration": "Duration",
+    "addGroup": "+Add group"
   },
   "Mentors": {
     "title": "Mentors",

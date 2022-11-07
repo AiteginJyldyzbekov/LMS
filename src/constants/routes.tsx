@@ -37,7 +37,7 @@ export const adminRoutes: RouteType[] = [
   },
   {
     title: 'Group',
-    path: '/group',
+    path: '/group/:id',
     Component: GroupPageAdmin,
   },
   {

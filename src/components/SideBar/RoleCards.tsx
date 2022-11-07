@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import WestIcon from '@mui/icons-material/West';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import useStyles from './SideBar.styles';
 import avatar from '../../../public/images/sideBar/avatar.jpg';
@@ -15,6 +15,8 @@ const RoleCard: React.FC<SideBarProps> = ({ role }) => {
   const { t } = useTranslation();
   const classes = useStyles();
   const [isActive, setIsActive] = useState(false);
+  const { pathname } = useLocation();
+
   return (
     <div className={classes.container}>
       <div
@@ -42,8 +44,14 @@ const RoleCard: React.FC<SideBarProps> = ({ role }) => {
           </div>
         </div>
         <div className={classes.content_wrapper}>
-          {role.map(({ title, Icon, puth, id }) => (
-            <Link to={puth} className={classes.card_content} key={id}>
+          {role.map(({ title, Icon, path, id }) => (
+            <Link
+              to={path}
+              className={`${classes.card_content} ${
+                path === pathname && classes.active_card
+              }`}
+              key={id}
+            >
               <div className={classes.icon_container}>
                 <Icon className={classes.icons} />
               </div>
