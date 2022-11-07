@@ -38,27 +38,13 @@ const StudentsTable: React.FC<Props> = ({
       <TableCell component="th" scope="row" sx={{ padding: '16px 16px' }}>
         {id}
       </TableCell>
-      <TableCell align="center">
-        {department}
-      </TableCell>
-      <TableCell align="center">
-        {groupName}
-      </TableCell>
-      <TableCell align="center">
-        {name}
-      </TableCell>
-      <TableCell align="center">
-        {number}
-      </TableCell>
-      <TableCell align="center">
-        {mail}
-      </TableCell>
-      <TableCell align="center">
-        {age}
-      </TableCell>
-      <TableCell align="center">
-        {point}
-      </TableCell>
+      <TableCell align="center">{department}</TableCell>
+      <TableCell align="center">{groupName}</TableCell>
+      <TableCell align="center">{name}</TableCell>
+      <TableCell align="center">{number}</TableCell>
+      <TableCell align="center">{mail}</TableCell>
+      <TableCell align="center">{age}</TableCell>
+      <TableCell align="center">{point}</TableCell>
       <TableCell align="center">
         <IconButton>
           <EditOffIcon />
