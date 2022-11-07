@@ -28,11 +28,11 @@ const StudentsTable: React.FC<Props> = ({
     <TableRow
       onClick={() => navigate(`/student/${id}`)}
       sx={{
+        cursor: 'pointer',
         '&:hover': {
           background: 'rgba(145, 158, 171, 0.16)',
         },
         '&:last-child td, &:last-child th': { border: 0 },
-        cursor: 'pointer',
       }}
     >
       <TableCell component="th" scope="row" sx={{ padding: '16px 16px' }}>
