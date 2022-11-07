@@ -25,7 +25,7 @@ const AdminMentorsPage: React.FC = () => {
   return (
     <PageContainer
       name={t('Mentors.title')}
-      puth="/createGroup"
+      puth="/createMentor"
       btnText={t('Mentors.btnText')}
     >
       <TableContainer
@@ -41,7 +41,7 @@ const AdminMentorsPage: React.FC = () => {
           </TableRow>
         }
         Body={rows.map((row) => (
-          <MentorsTable {...row} />
+          <MentorsTable key={row.id} {...row} />
         ))}
       />
     </PageContainer>

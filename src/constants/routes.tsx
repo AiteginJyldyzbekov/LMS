@@ -37,14 +37,14 @@ export const adminRoutes: RouteType[] = [
   },
   {
     title: 'Group',
-    path: '/group',
+    path: '/group/:id',
     Component: GroupPageAdmin,
   },
   {
     title: 'All Students Page',
     path: '/students',
     Component: AllStudentssupAdmin,
-  },
+  }
 ];
 
 export const mentorRoutes: RouteType[] = [
