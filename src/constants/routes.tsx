@@ -44,7 +44,7 @@ export const adminRoutes: RouteType[] = [
     title: 'All Students Page',
     path: '/students',
     Component: AllStudentssupAdmin,
-  }
+  },
 ];
 
 export const mentorRoutes: RouteType[] = [
