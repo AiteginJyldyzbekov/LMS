@@ -10,20 +10,18 @@ const createData = (
   department: string,
   groupName: string,
   name: string,
-  surname: string,
   number: string | number,
   mail: string,
   age: number,
   point: number
-) => ({ id, department, groupName, name, surname, number, mail, age, point });
+) => ({ id, department, groupName, name, number, mail, age, point });
 
 const rows = [
   createData(
     1,
     'Front-End',
     'Amans',
-    'Azos',
-    'Azosovich',
+    'Azos wordl',
     450546554,
     'azizLybitParney@mail.ru',
     13,
@@ -33,8 +31,7 @@ const rows = [
     2,
     'Front-End',
     'Amans',
-    'Amin',
-    'Azosovich',
+    'Amin toyxsjnx',
     '0500353521',
     'azizLybitParney@mail.ru',
     13,
@@ -44,8 +41,7 @@ const rows = [
     3,
     'Front-End',
     'Amans',
-    'Autegin',
-    'Azosovich',
+    'Autegin auteginvo',
     5646545465,
     'azizLybitParney@mail.ru',
     13,
@@ -55,8 +51,7 @@ const rows = [
     4,
     'Front-End',
     'Amans',
-    'amanHTML',
-    'Azosovich',
+    'amanHTML hello',
     '0500353521',
     'azizLybitParney@mail.ru',
     13,
@@ -75,7 +70,6 @@ const AllStudentssupAdmin: React.FC = () => {
             <TableCell align="center">{t('AllStudents.department')}</TableCell>
             <TableCell align="center">{t('AllStudents.groupName')}</TableCell>
             <TableCell align="center">{t('AllStudents.name')}</TableCell>
-            <TableCell align="center">{t('AllStudents.surname')}</TableCell>
             <TableCell align="center">{t('AllStudents.number')}</TableCell>
             <TableCell align="center">{t('AllStudents.mail')}</TableCell>
             <TableCell align="center">{t('AllStudents.age')}</TableCell>

@@ -8,7 +8,6 @@ interface Props {
   department: string;
   groupName: string;
   name: string;
-  surname: string;
   number: string | number;
   mail: string;
   age: number;
@@ -19,7 +18,6 @@ const StudentsTable: React.FC<Props> = ({
   department,
   groupName,
   name,
-  surname,
   number,
   mail,
   age,
@@ -48,9 +46,6 @@ const StudentsTable: React.FC<Props> = ({
       </TableCell>
       <TableCell sx={{ padding: '16px 10px' }} align="center">
         {name}
-      </TableCell>
-      <TableCell sx={{ padding: '16px 10px' }} align="center">
-        {surname}
       </TableCell>
       <TableCell sx={{ padding: '16px 10px' }} align="center">
         {number}

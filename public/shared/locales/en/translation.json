@@ -72,14 +72,13 @@
   },
   "AllStudents": {
     "title": "All Students",
-    "studentsId": "Students ID",
+    "studentsId": "ID",
     "department": "Department",
-    "groupName": "Group Name",
+    "groupName": "Group",
     "name": "Name",
-    "surname": "Surname",
     "number": "Number",
     "mail": "Mail",
     "age": "Age",
-    "point": "Point"
+    "point": "Points"
   }
 }
