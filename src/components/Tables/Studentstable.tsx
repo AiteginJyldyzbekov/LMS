@@ -20,8 +20,8 @@ const StudentsTable: React.FC<Props> = ({
   name,
   number,
   mail,
-  age,
   point,
+  age,
 }) => {
   const navigate = useNavigate();
   return (
