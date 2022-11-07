@@ -19,8 +19,8 @@ const TableContainer: React.FC<Props> = ({ Header, Body }) => (
           label="Search"
           placeholder="Search..."
           variant="outlined"
-          size="small"
           sx={{ width: '250px' }}
+          size="small"
         />
       </Grid>
       <Grid item alignSelf="right">
