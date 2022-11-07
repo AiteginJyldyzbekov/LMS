@@ -62,7 +62,7 @@ const rows = [
 const AllStudentssupAdmin: React.FC = () => {
   const { t } = useTranslation();
   return (
-    <PageContainer btnText="" name={t('AllStudents.title')} puth="/students">
+    <PageContainer name={t('AllStudents.title')} puth="/students">
       <TableContainer
         Header={
           <TableRow>

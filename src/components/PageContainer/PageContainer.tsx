@@ -7,7 +7,7 @@ interface PageContainerProps {
   children: React.ReactNode | string;
   name: string;
   puth: string;
-  btnText: string;
+  btnText?: string;
 }
 
 const PageContainer: React.FC<PageContainerProps> = ({
@@ -22,7 +22,7 @@ const PageContainer: React.FC<PageContainerProps> = ({
       <div className={classes.wrapper}>
         <Typography variant="h5">{name}</Typography>
         <Link to={puth} style={{ textDecoration: 'none' }}>
-          {btnText.length > 1 && (
+          {btnText && (
             <Button variant="contained" size="large">
               {btnText}
             </Button>
