@@ -6,6 +6,7 @@ import CreateMentor from '../pages/createMentorPage/CreateMentor';
 import GroupsPage from '../pages/groupsPage/GroupsPage';
 import AdminMentorsPage from '../pages/mentorsPageAdmin/AdminMentorsPage';
 import GroupPageAdmin from '../pages/adminGroupPage/GroupPageAdmin';
+import AllStudentssupAdmin from '../pages/allStudentsPageForSupAdmin/AllStudentssupAdmin';
 import GroupsPageMentor from '../pages/groupsPageMentor/GroupsPageMentor';
 import HomeWorks from '../pages/homeWorksMentor/HomeWorksMentor';
 import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
@@ -43,9 +44,9 @@ export const adminRoutes: RouteType[] = [
     Component: GroupPageAdmin,
   },
   {
-    title: 'Create Student',
-    path: '/createStudent',
-    Component: CreateStudentPage,
+    title: 'All Students Page',
+    path: '/students',
+    Component: AllStudentssupAdmin,
   },
 ];
 
