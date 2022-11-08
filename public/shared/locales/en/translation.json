@@ -78,5 +78,8 @@
     "startDate": "Start Date",
     "studentAmount": "Amount",
     "duration": "Duration"
+  },
+  "HomeWorksMentor": {
+    "title": "Front-End Home Works"
   }
 }
