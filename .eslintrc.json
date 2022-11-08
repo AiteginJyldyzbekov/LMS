@@ -19,14 +19,25 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     }
   },
-  "plugins": ["prettier", "react", "jest", "@typescript-eslint"],
+  "plugins": [
+    "prettier",
+    "react",
+    "jest",
+    "@typescript-eslint"
+  ],
   "rules": {
     "react/jsx-props-no-spreading": "off",
     "no-shadow": "off",
+    "react/require-default-props": "off",
     "import/prefer-default-export": "off",
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": "error",
@@ -48,7 +59,11 @@
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".js", ".jsx", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".tsx"
+        ]
       }
     ],
     "react/no-unknown-property": 0,

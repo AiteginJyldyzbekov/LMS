@@ -85,6 +85,17 @@
     "group": "Группа",
     "mentor": "Ментор"
   },
+  "AllStudents": {
+    "title": "Все Студенты",
+    "studentsId": "ID",
+    "department": "Направление",
+    "groupName": "Группа",
+    "name": "ФИО",
+    "number": "Номер",
+    "mail": "Почта",
+    "age": "Возраст",
+    "point": "Баллы"
+  },
   "GroupsPageMentor": {
     "title": "Выберите журнал группы",
     "id": "ID",

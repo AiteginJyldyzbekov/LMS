@@ -71,6 +71,17 @@
     "group": "Group",
     "mentor": "Mentor"
   },
+  "AllStudents": {
+    "title": "All Students",
+    "studentsId": "ID",
+    "department": "Department",
+    "groupName": "Group",
+    "name": "Name",
+    "number": "Number",
+    "mail": "Mail",
+    "point": "Points",
+    "age": "Age"
+  },
   "GroupsPageMentor": {
     "title": "Select a group history",
     "id": "ID",
@@ -78,6 +89,8 @@
     "groupName": "Group",
     "startDate": "Start Date",
     "studentAmount": "Amount",
-    "duration": "Duration"
+    "duration": "Duration",
+    "age": "Age",
+    "point": "Points"
   }
 }
