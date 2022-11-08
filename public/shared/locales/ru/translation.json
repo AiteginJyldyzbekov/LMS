@@ -59,7 +59,8 @@
     "name": "Имя",
     "startDate": "Дата начала",
     "amount": "Количество",
-    "duration": "Длительность"
+    "duration": "Длительность",
+    "addGroup": "+Добавить группу"
   },
   "Mentors": {
     "title": "Ментора",
@@ -83,6 +84,17 @@
     "date": "Дата начала",
     "group": "Группа",
     "mentor": "Ментор"
+  },
+  "AllStudents": {
+    "title": "Все Студенты",
+    "studentsId": "ID",
+    "department": "Направление",
+    "groupName": "Группа",
+    "name": "ФИО",
+    "number": "Номер",
+    "mail": "Почта",
+    "age": "Возраст",
+    "point": "Баллы"
   },
   "GroupsPageMentor": {
     "title": "Выберите журнал группы",

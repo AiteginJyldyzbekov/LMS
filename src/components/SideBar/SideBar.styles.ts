@@ -29,14 +29,16 @@ const useStyles = makeStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    background: 'rgba(145, 158, 171, 0.16)',
-    borderRadius: '10px',
     height: '50px',
     width: '100%',
     marginTop: '10px',
     cursor: 'pointer',
     textDecoration: 'none',
     color: 'rgb(33, 43, 54)',
+  },
+  active_card: {
+    background: 'rgba(145, 158, 171, 0.16)',
+    borderRadius: '10px',
   },
   name: {
     marginLeft: '10px',
@@ -55,7 +57,9 @@ const useStyles = makeStyles(() => ({
     padding: '10px',
   },
   icon_container: {
-    width: '30%',
+    marginRight: '10px',
+    display: 'flex',
+    alignItems: 'center',
   },
   icons: {
     width: '30px',

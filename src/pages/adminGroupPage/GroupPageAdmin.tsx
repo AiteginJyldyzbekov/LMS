@@ -24,7 +24,7 @@ const GroupPageAdmin: React.FC = () => {
   return (
     <PageContainer
       name={t('AdminGroup.title')}
-      puth="/createGroup"
+      puth="/createStudent"
       btnText={t('AdminGroup.btnText')}
     >
       <Grid
@@ -68,7 +68,7 @@ const GroupPageAdmin: React.FC = () => {
           </TableRow>
         }
         Body={rows.map((row) => (
-          <GroupAdminTable {...row} />
+          <GroupAdminTable key={row.id} {...row} />
         ))}
       />
     </PageContainer>
