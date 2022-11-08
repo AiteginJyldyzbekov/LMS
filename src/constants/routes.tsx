@@ -6,6 +6,7 @@ import CreateMentor from '../pages/createMentorPage/CreateMentor';
 import GroupsPage from '../pages/groupsPage/GroupsPage';
 import AdminMentorsPage from '../pages/mentorsPageAdmin/AdminMentorsPage';
 import GroupPageAdmin from '../pages/adminGroupPage/GroupPageAdmin';
+import GroupsPageMentor from '../pages/groupsPageMentor/GroupsPageMentor';
 import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
 
 export interface RouteType {
@@ -52,6 +53,11 @@ export const mentorRoutes: RouteType[] = [
     title: 'Main Page',
     path: '/',
     Component: HomePage,
+  },
+  {
+    title: 'Group Page',
+    path: '/group',
+    Component: GroupsPageMentor,
   },
 ];
 
