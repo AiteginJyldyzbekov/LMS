@@ -28,7 +28,7 @@ const GroupsPage: React.FC = () => {
     <PageContainer
       name={t('Groups.title')}
       puth="/createGroup"
-      btnText="+Add group"
+      btnText={t('Groups.addGroup')}
     >
       <TableContainer
         Header={
@@ -43,7 +43,7 @@ const GroupsPage: React.FC = () => {
           </TableRow>
         }
         Body={rows.map((row) => (
-          <GroupTable {...row} />
+          <GroupTable key={row.id} {...row} />
         ))}
       />
     </PageContainer>

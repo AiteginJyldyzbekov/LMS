@@ -7,6 +7,6 @@ export enum UserRole {
 export interface SideBarLink {
   title: string;
   Icon: any;
-  puth: string;
+  path: string;
   id: number;
 }
