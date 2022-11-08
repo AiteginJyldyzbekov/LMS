@@ -53,6 +53,11 @@ export const mentorRoutes: RouteType[] = [
     path: '/',
     Component: HomePage,
   },
+  {
+    title: 'Group Page',
+    path: '/group',
+    Component: GroupsPageMentor,
+  },
 ];
 
 export const studentRoutes: RouteType[] = [
