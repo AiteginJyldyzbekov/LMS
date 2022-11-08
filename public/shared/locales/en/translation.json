@@ -81,5 +81,14 @@
     "mail": "Mail",
     "point": "Points",
     "age": "Age"
+  },
+  "GroupsPageMentor": {
+    "title": "Select a group history",
+    "id": "ID",
+    "department": "Department",
+    "groupName": "Group",
+    "startDate": "Start Date",
+    "studentAmount": "Amount",
+    "duration": "Duration"
   }
 }
