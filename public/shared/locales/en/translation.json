@@ -79,7 +79,7 @@
     "name": "Name",
     "number": "Number",
     "mail": "Mail",
-    "age": "Age",
-    "point": "Points"
+    "point": "Points",
+    "age": "Age"
   }
 }
