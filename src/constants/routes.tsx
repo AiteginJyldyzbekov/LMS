@@ -9,7 +9,6 @@ import GroupPageAdmin from '../pages/adminGroupPage/GroupPageAdmin';
 import AllStudentssupAdmin from '../pages/allStudentsPageForSupAdmin/AllStudentssupAdmin';
 import GroupsPageMentor from '../pages/groupsPageMentor/GroupsPageMentor';
 import HomeWorks from '../pages/homeWorksMentor/HomeWorksMentor';
-import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
 
 export interface RouteType {
   title: string;
