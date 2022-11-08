@@ -93,5 +93,8 @@
   },
   "HomeWorksMentor": {
     "title": "Home Works Front-End"
+  },
+  "StudyPlanMentor": {
+    "title": "Study Plan Front-end"
   }
 }

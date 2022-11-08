@@ -3,27 +3,27 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import AccordiomMentor from '../../components/AccordionMentor/AccordionMentor';
 
-const HomeWorksMentor: React.FC = () => {
+const StudyPlanMentor: React.FC = () => {
   const { t } = useTranslation();
   const data = [
     {
-      title: 'Home work 1',
+      title: 'Study Plan 1',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
     },
     {
-      title: 'Home work 2',
+      title: 'Study Plan 2',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
     },
     {
-      title: 'Home work 3',
+      title: 'Study Plan 3',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
     },
     {
-      title: 'Home work 4',
+      title: 'Study Plan 4',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
     },
     {
-      title: 'Home work 5',
+      title: 'Study Plan 5',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
     },
   ];
@@ -38,7 +38,7 @@ const HomeWorksMentor: React.FC = () => {
           marginTop: '30px',
         }}
       >
-        {t('HomeWorksMentor.title')}
+        {t('StudyPlanMentor.title')}
       </Typography>
       <Grid
         sx={{
@@ -67,4 +67,4 @@ const HomeWorksMentor: React.FC = () => {
   );
 };
 
-export default HomeWorksMentor;
+export default StudyPlanMentor;

@@ -107,5 +107,8 @@
   },
   "HomeWorksMentor": {
     "title": "Домашние задания Front-End"
+  },
+  "StudyPlanMentor": {
+    "title": "Учебный План Front-end"
   }
 }
