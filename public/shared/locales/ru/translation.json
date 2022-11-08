@@ -104,5 +104,8 @@
     "date": "Дата начало",
     "amount": "Количество",
     "duration": "Длительность"
+  },
+  "HomeWorksMentor": {
+    "title": "Домашние задания Front-End"
   }
 }

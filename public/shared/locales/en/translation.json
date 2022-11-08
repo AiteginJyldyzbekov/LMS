@@ -86,11 +86,12 @@
     "title": "Select a group history",
     "id": "ID",
     "department": "Department",
-    "groupName": "Group",
-    "startDate": "Start Date",
-    "studentAmount": "Amount",
-    "duration": "Duration",
-    "age": "Age",
-    "point": "Points"
+    "name": "Group",
+    "date": "Start Date",
+    "amount": "Amount",
+    "duration": "Duration"
+  },
+  "HomeWorksMentor": {
+    "title": "Home Works Front-End"
   }
 }
