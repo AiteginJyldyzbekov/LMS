@@ -48,7 +48,7 @@ interface HomeWorksProps {
   title: string;
   text: string;
 }
-const AccordiomMentor: React.FC<HomeWorksProps> = ({ title, text }) => {
+const AccordionMentor: React.FC<HomeWorksProps> = ({ title, text }) => {
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
   const handleChange = (panel: string, newExpanded: boolean) => {
@@ -75,4 +75,4 @@ const AccordiomMentor: React.FC<HomeWorksProps> = ({ title, text }) => {
   );
 };
 
-export default AccordiomMentor;
+export default AccordionMentor;

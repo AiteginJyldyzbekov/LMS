@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import AccordiomMentor from '../../components/AccordionMentor/AccordionMentor';
+import AccordionMentor from '../../components/AccordionMentor/AccordionMentor';
 
 const HomeWorksMentor: React.FC = () => {
   const { t } = useTranslation();
@@ -60,7 +60,7 @@ const HomeWorksMentor: React.FC = () => {
         }}
       >
         {data.map((item) => (
-          <AccordiomMentor title={item.title} text={item.text} />
+          <AccordionMentor title={item.title} text={item.text} />
         ))}
       </Grid>
     </div>
