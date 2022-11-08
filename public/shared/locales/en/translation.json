@@ -89,6 +89,8 @@
     "groupName": "Group",
     "startDate": "Start Date",
     "studentAmount": "Amount",
-    "duration": "Duration"
+    "duration": "Duration",
+    "age": "Age",
+    "point": "Points"
   }
 }
