@@ -86,9 +86,9 @@
     "title": "Select a group history",
     "id": "ID",
     "department": "Department",
-    "groupName": "Group",
-    "startDate": "Start Date",
-    "studentAmount": "Amount",
+    "name": "Group",
+    "date": "Start Date",
+    "amount": "Amount",
     "duration": "Duration"
   },
   "HomeWorksMentor": {
