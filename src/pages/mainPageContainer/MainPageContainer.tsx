@@ -5,11 +5,14 @@ interface IMainPageContainer {
   children: React.ReactNode;
 }
 
-const MainPageContainer: React.FC<IMainPageContainer> = ({ children }) => {
+const MainPageContainer: React.FC<IMainPageContainer> = ({
+  children,
+  ...props
+}) => {
   const css = useStyles();
   return (
-    <div className={css.container}>
-      <div className={css.content_wrapper}>{children}</div>
+    <div className={css.container} {...props}>
+      {children}
     </div>
   );
 };
