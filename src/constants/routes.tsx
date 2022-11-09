@@ -75,8 +75,8 @@ export const mentorRoutes: RouteType[] = [
   {
     title: 'Student Book Page',
     path: '/studentbook',
-    Component: StudentBookForMentor
-  }
+    Component: StudentBookForMentor,
+  },
 ];
 
 export const studentRoutes: RouteType[] = [
