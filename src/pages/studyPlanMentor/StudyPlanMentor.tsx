@@ -40,7 +40,7 @@ const StudyPlanMentor: React.FC = () => {
             marginBottom: '20px',
           }}
         >
-          {t('StudyPlanMentor.title')}
+          {t('StudyPlan.title')}
         </Typography>
         {data.map((item) => (
           <AccordionMentor title={item.title} text={item.text} />

@@ -91,10 +91,10 @@
     "amount": "Amount",
     "duration": "Duration"
   },
-  "HomeWorksMentor": {
+  "HomeWorks": {
     "title": "Home Works"
   },
-  "StudyPlanMentor": {
+  "StudyPlan": {
     "title": "Study Plan"
   },
   "StudentBook": {
