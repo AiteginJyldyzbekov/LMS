@@ -106,7 +106,10 @@
     "duration": "Длительность"
   },
   "HomeWorksMentor": {
-    "title": "Домашние задания Front-End"
+    "title": "Домашние задания"
+  },
+  "StudyPlanMentor": {
+    "title": "Учебный План"
   },
   "StudentBook": {
     "title": "Студенческая Книжка",

@@ -9,6 +9,7 @@ import GroupPageAdmin from '../pages/adminGroupPage/GroupPageAdmin';
 import AllStudentssupAdmin from '../pages/allStudentsPageForSupAdmin/AllStudentssupAdmin';
 import GroupsPageMentor from '../pages/groupsPageMentor/GroupsPageMentor';
 import HomeWorks from '../pages/homeWorksMentor/HomeWorksMentor';
+import StudyPlanMentor from '../pages/studyPlanMentor/StudyPlanMentor';
 import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
 import StudentBookForMentor from '../pages/studentBookForMentor/StudentBookForMentor';
 
@@ -71,6 +72,11 @@ export const mentorRoutes: RouteType[] = [
     title: 'Home works Page',
     path: '/home-works',
     Component: HomeWorks,
+  },
+  {
+    title: 'Study plan Page',
+    path: '/study-plan',
+    Component: StudyPlanMentor,
   },
   {
     title: 'Student Book Page',
