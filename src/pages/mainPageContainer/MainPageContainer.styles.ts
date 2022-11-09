@@ -2,17 +2,21 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
   container: {
-    width: '100%',
-    minHeight: '100vh',
-  },
-  content_wrapper: {
-    padding: '0 50px',
-    minHeight: '100vh',
-    background: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    flexDirection: 'column',
+    paddingRight: '60px',
+    paddingLeft: '60px',
+    marginTop: '60px',
+    '@media (max-width: 1200px)': {
+      paddingRight: '40px',
+      paddingLeft: '40px',
+    },
+    '@media (max-width: 768px)': {
+      paddingRight: '20px',
+      paddingLeft: '20px',
+    },
+    '@media (max-width: 375px)': {
+      paddingRight: '10px',
+      paddingLeft: '10px',
+    },
   },
 }));
 

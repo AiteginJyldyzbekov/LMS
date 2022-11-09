@@ -96,5 +96,16 @@
   },
   "StudyPlanMentor": {
     "title": "Study Plan Front-end"
+  },
+  "StudentBook": {
+    "title": "Student Book",
+    "studentsId": "ID",
+    "department": "Department",
+    "groupName": "Group",
+    "name": "Name",
+    "number": "Number",
+    "mail": "Mail",
+    "point": "Points",
+    "age": "Age"
   }
 }

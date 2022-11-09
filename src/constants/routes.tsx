@@ -10,6 +10,8 @@ import AllStudentssupAdmin from '../pages/allStudentsPageForSupAdmin/AllStudents
 import GroupsPageMentor from '../pages/groupsPageMentor/GroupsPageMentor';
 import HomeWorks from '../pages/homeWorksMentor/HomeWorksMentor';
 import StudyPlanMentor from '../pages/studyPlanMentor/StudyPlanMentor';
+import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
+import StudentBookForMentor from '../pages/studentBookForMentor/StudentBookForMentor';
 
 export interface RouteType {
   title: string;
@@ -32,6 +34,11 @@ export const adminRoutes: RouteType[] = [
     title: 'Create Group',
     path: '/createGroup',
     Component: GroupPage,
+  },
+  {
+    title: 'Create Group',
+    path: '/createStudent',
+    Component: CreateStudentPage,
   },
   {
     title: 'Mentors',
@@ -70,6 +77,11 @@ export const mentorRoutes: RouteType[] = [
     title: 'Study plan Page',
     path: '/study-plan',
     Component: StudyPlanMentor,
+  },
+  {
+    title: 'Student Book Page',
+    path: '/studentbook',
+    Component: StudentBookForMentor,
   },
 ];
 
