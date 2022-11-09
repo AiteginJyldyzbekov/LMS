@@ -107,5 +107,16 @@
   },
   "HomeWorksMentor": {
     "title": "Домашние задания Front-End"
+  },
+  "StudentBook": {
+    "title": "Студенческая Книжка",
+    "studentsId": "ID",
+    "department": "Направление",
+    "groupName": "Группа",
+    "name": "Имя",
+    "number": "Номер",
+    "mail": "Почта",
+    "point": "Баллы",
+    "age": "Возраст"
   }
 }

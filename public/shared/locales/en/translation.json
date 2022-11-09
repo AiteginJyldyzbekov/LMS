@@ -93,5 +93,16 @@
   },
   "HomeWorksMentor": {
     "title": "Home Works Front-End"
+  },
+  "StudentBook": {
+    "title": "Student Book",
+    "studentsId": "ID",
+    "department": "Department",
+    "groupName": "Group",
+    "name": "Name",
+    "number": "Number",
+    "mail": "Mail",
+    "point": "Points",
+    "age": "Age"
   }
 }

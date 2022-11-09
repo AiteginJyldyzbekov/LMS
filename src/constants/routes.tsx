@@ -10,6 +10,7 @@ import AllStudentssupAdmin from '../pages/allStudentsPageForSupAdmin/AllStudents
 import GroupsPageMentor from '../pages/groupsPageMentor/GroupsPageMentor';
 import HomeWorks from '../pages/homeWorksMentor/HomeWorksMentor';
 import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
+import StudentBookForMentor from '../pages/studentBookForMentor/StudentBookForMentor';
 
 export interface RouteType {
   title: string;
@@ -70,6 +71,11 @@ export const mentorRoutes: RouteType[] = [
     title: 'Home works Page',
     path: '/home-works',
     Component: HomeWorks,
+  },
+  {
+    title: 'Student Book Page',
+    path: '/studentbook',
+    Component: StudentBookForMentor,
   },
 ];
 
