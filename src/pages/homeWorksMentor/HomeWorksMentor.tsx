@@ -30,18 +30,18 @@ const HomeWorksMentor: React.FC = () => {
   ];
   return (
     <div>
-      <Typography
-        textAlign="center"
-        component="p"
-        sx={{
-          fontSize: '30px',
-          fontWeight: '400',
-          marginTop: '30px',
-        }}
-      >
-        {t('HomeWorksMentor.title')}
-      </Typography>
       <MainPageContainer>
+        <Typography
+          textAlign="center"
+          component="p"
+          sx={{
+            fontSize: '30px',
+            fontWeight: '400',
+            marginBottom: '20px',
+          }}
+        >
+          {t('HomeWorksMentor.title')}
+        </Typography>
         {data.map((item) => (
           <AccordionMentor title={item.title} text={item.text} />
         ))}
