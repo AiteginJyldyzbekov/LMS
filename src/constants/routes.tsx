@@ -12,6 +12,7 @@ import HomeWorks from '../pages/homeWorksMentor/HomeWorksMentor';
 import StudyPlanMentor from '../pages/studyPlanMentor/StudyPlanMentor';
 import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
 import StudentBookForMentor from '../pages/studentBookForMentor/StudentBookForMentor';
+import StudyPlanStudent from '../pages/studyPlanStudent/StudyPlanStudnet';
 
 export interface RouteType {
   title: string;
@@ -90,6 +91,11 @@ export const studentRoutes: RouteType[] = [
     title: 'Main Page',
     path: '/',
     Component: HomePage,
+  },
+  {
+    title: 'Study Plan Page',
+    path: '/study-plan',
+    Component: StudyPlanStudent,
   },
 ];
 

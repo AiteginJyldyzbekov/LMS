@@ -105,10 +105,10 @@
     "amount": "Количество",
     "duration": "Длительность"
   },
-  "HomeWorksMentor": {
+  "HomeWorks": {
     "title": "Домашние задания"
   },
-  "StudyPlanMentor": {
+  "StudyPlan": {
     "title": "Учебный План"
   },
   "StudentBook": {
