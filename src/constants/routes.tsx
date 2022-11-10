@@ -13,6 +13,7 @@ import StudyPlanMentor from '../pages/studyPlanMentor/StudyPlanMentor';
 import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
 import StudentBookForMentor from '../pages/studentBookForMentor/StudentBookForMentor';
 import StudyPlanStudent from '../pages/studyPlanStudent/StudyPlanStudnet';
+import HomeWorksStudent from '../pages/homeWorksStudent/HomeWorksStudent';
 
 export interface RouteType {
   title: string;
@@ -96,6 +97,11 @@ export const studentRoutes: RouteType[] = [
     title: 'Study Plan Page',
     path: '/study-plan',
     Component: StudyPlanStudent,
+  },
+  {
+    title: 'Home Works Page',
+    path: '/home-works',
+    Component: HomeWorksStudent,
   },
 ];
 
