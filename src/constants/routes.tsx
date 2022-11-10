@@ -15,7 +15,6 @@ import StudentBookForMentor from '../pages/studentBookForMentor/StudentBookForMe
 import StudyPlanStudent from '../pages/studyPlanStudent/StudyPlanStudnet';
 import HomeWorksStudent from '../pages/homeWorksStudent/HomeWorksStudent';
 
-
 export interface RouteType {
   title: string;
   path: string;
