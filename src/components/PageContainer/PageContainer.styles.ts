@@ -3,10 +3,11 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(() => ({
   container: {
     width: '100%',
-  },
-  content_wrapper: {
     paddingRight: '60px',
     paddingLeft: '60px',
+    marginTop: '30px',
+  },
+  content_wrapper: {
     marginTop: '30px',
     '@media (max-width: 1200px)': {
       paddingRight: '40px',
@@ -22,9 +23,6 @@ const useStyles = makeStyles(() => ({
     },
   },
   wrapper: {
-    paddingRight: '60px',
-    paddingLeft: '60px',
-    marginTop: '40px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
