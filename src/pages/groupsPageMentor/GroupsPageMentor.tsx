@@ -2,7 +2,7 @@ import { Grid, TableCell, TableRow, Typography } from '@mui/material';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import TableContainer from '../../components/TableContainer/TableContainer';
-import GroupsAdminTable from '../../components/Tables/GroupsMentorTable';
+import StudentBookTable from '../../components/Tables/StudentBookTable';
 
 const createData = (
   id: number,
@@ -68,12 +68,10 @@ const GroupsPageMentor: React.FC = () => {
               <TableCell align="center">
                 {t('GroupsPageMentor.duration')}
               </TableCell>
-              <TableCell align="right" />
-              <TableCell align="right" />
             </TableRow>
           }
           Body={rows.map((row) => (
-            <GroupsAdminTable {...row} />
+            <StudentBookTable {...row} />
           ))}
         />
       </Grid>

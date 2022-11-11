@@ -3,7 +3,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import TableContainer from '../../components/TableContainer/TableContainer';
-import GroupAdminTable from '../../components/Tables/GroupAdminTable';
+import GroupStudentTable from '../../components/Tables/GroupStudentTable';
 
 const createData = (
   id: number,
@@ -68,7 +68,7 @@ const GroupPageAdmin: React.FC = () => {
           </TableRow>
         }
         Body={rows.map((row) => (
-          <GroupAdminTable key={row.id} {...row} />
+          <GroupStudentTable key={row.id} {...row} />
         ))}
       />
     </PageContainer>

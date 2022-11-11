@@ -35,7 +35,9 @@ const TableContainer: React.FC<Props> = ({ Header, Body }) => (
       </Grid>
     </Grid>
     <Table sx={{ minWidth: 650 }} size="medium" aria-label="a dense table">
-      <TableHead sx={{ background: 'rgb(244 246 248)' }}>{Header}</TableHead>
+      <TableHead sx={(theme) => ({ background: theme.palette.grey[100] })}>
+        {Header}
+      </TableHead>
       <TableBody>{Body}</TableBody>
     </Table>
   </TableWrapper>
