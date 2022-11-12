@@ -26,6 +26,7 @@ const GroupPageAdmin: React.FC = () => {
       name={t('AdminGroup.title')}
       puth="/createStudent"
       btnText={t('AdminGroup.btnText')}
+      isGoBack
     >
       <Grid
         sx={{

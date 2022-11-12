@@ -12,7 +12,7 @@ import {
   SelectChangeEvent,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import MainPageContainer from '../mainPageContainer/MainPageContainer';
+import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
 
 const GroupPage: FC = () => {
   const [data, setData] = useState<string>('');
@@ -30,7 +30,7 @@ const GroupPage: FC = () => {
   };
 
   return (
-    <MainPageContainer>
+    <MainPageContainer isGoBack>
       <Typography textAlign="center" component="h5" variant="h5">
         {t('CreateGroupPage.groupDate')}
       </Typography>

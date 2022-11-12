@@ -10,14 +10,14 @@ import {
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useTranslation } from 'react-i18next';
 import { inputsData } from '../../constants/StudentPage';
-import MainPageContainer from '../mainPageContainer/MainPageContainer';
+import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
 import useStyles from './StudentPage.style';
 
 const CreateStudentPage: React.FC = () => {
   const classes = useStyles();
   const { t } = useTranslation();
   return (
-    <MainPageContainer>
+    <MainPageContainer isGoBack>
       <div className={classes.container}>
         <h1 className={classes.title}>{t('StudentPage.title')}</h1>
         <div className={classes.inputsContainer}>
