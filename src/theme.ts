@@ -7,6 +7,7 @@ declare module '@mui/styles/defaultTheme' {
 
 const theme = createTheme({
   palette: {
+    mode: 'light',
     primary: {
       main: '#556cd6',
     },
