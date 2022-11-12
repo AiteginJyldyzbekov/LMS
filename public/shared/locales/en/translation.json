@@ -18,7 +18,8 @@
     "status": "Status",
     "startDate": "Start Date",
     "save": "Save",
-    "delete": "Delete"
+    "delete": "Delete",
+    "duration": "Duration"
   },
   "CreateMentor": {
     "createMentorTitle": "Create Mentor",

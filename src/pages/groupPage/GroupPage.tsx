@@ -87,6 +87,14 @@ const GroupPage: FC = () => {
             </Select>
           </FormControl>
         </Grid>
+        <Grid item xs={12} sm={6}>
+          <FormControl required fullWidth>
+            <InputLabel>{t('CreateGroupPage.duration')}</InputLabel>
+            <Select value={data} label="duration" onChange={handleChange}>
+              <MenuItem value="nothing" />
+            </Select>
+          </FormControl>
+        </Grid>
       </Grid>
       <Grid container spacing={3} mt={5}>
         <Grid item xs={6} md>
