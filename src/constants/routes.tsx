@@ -9,8 +9,11 @@ import GroupPageAdmin from '../pages/adminGroupPage/GroupPageAdmin';
 import AllStudentssupAdmin from '../pages/allStudentsPageForSupAdmin/AllStudentssupAdmin';
 import GroupsPageMentor from '../pages/groupsPageMentor/GroupsPageMentor';
 import HomeWorks from '../pages/homeWorksMentor/HomeWorksMentor';
+import StudyPlanMentor from '../pages/studyPlanMentor/StudyPlanMentor';
 import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
 import StudentBookForMentor from '../pages/studentBookForMentor/StudentBookForMentor';
+import StudyPlanStudent from '../pages/studyPlanStudent/StudyPlanStudnet';
+import HomeWorksStudent from '../pages/homeWorksStudent/HomeWorksStudent';
 
 export interface RouteType {
   title: string;
@@ -73,6 +76,11 @@ export const mentorRoutes: RouteType[] = [
     Component: HomeWorks,
   },
   {
+    title: 'Study plan Page',
+    path: '/study-plan',
+    Component: StudyPlanMentor,
+  },
+  {
     title: 'Student Book Page',
     path: '/studentbook',
     Component: StudentBookForMentor,
@@ -83,8 +91,18 @@ export const studentRoutes: RouteType[] = [
   {
     title: 'Home Page',
     path: '/',
-    Component: HomePage
-  }
+    Component: HomePage,
+  },
+  {
+    title: 'Study Plan Page',
+    path: '/study-plan',
+    Component: StudyPlanStudent,
+  },
+  {
+    title: 'Home Works Page',
+    path: '/home-works',
+    Component: HomeWorksStudent,
+  },
 ];
 
 export const notAuthRoutes: RouteType[] = [

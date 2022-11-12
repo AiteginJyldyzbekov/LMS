@@ -92,8 +92,11 @@
     "amount": "Amount",
     "duration": "Duration"
   },
-  "HomeWorksMentor": {
-    "title": "Home Works Front-End"
+  "HomeWorks": {
+    "title": "Home Works"
+  },
+  "StudyPlan": {
+    "title": "Study Plan"
   },
   "StudentBook": {
     "title": "Student Book",

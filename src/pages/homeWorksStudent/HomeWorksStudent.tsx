@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import AccordionMentor from '../../components/AccordionMentor/AccordionMentor';
 import MainPageContainer from '../mainPageContainer/MainPageContainer';
 
-const HomeWorksMentor: React.FC = () => {
+const HomeWorksStudent: React.FC = () => {
   const { t } = useTranslation();
   const data = [
     {
@@ -50,4 +50,4 @@ const HomeWorksMentor: React.FC = () => {
   );
 };
 
-export default HomeWorksMentor;
+export default HomeWorksStudent;
