@@ -32,7 +32,8 @@
     "status": "Статус",
     "startDate": "Начало",
     "save": "Сохранить",
-    "delete": "Удалить"
+    "delete": "Удалить",
+    "duration": "Длительность"
   },
   "CreateMentor": {
     "createMentorTitle": "Создать Ментора",
