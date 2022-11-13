@@ -1,5 +1,4 @@
 import React from 'react';
-import HomePage from '../pages/HomePage';
 import LoginPage from '../pages/loginpage/Loginpage';
 import GroupPage from '../pages/groupPage/GroupPage';
 import CreateMentor from '../pages/createMentorPage/CreateMentor';
@@ -11,9 +10,9 @@ import GroupsPageMentor from '../pages/groupsPageMentor/GroupsPageMentor';
 import HomeWorks from '../pages/homeWorksMentor/HomeWorksMentor';
 import StudyPlanMentor from '../pages/studyPlanMentor/StudyPlanMentor';
 import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
-import StudentBookForMentor from '../pages/studentBookForMentor/StudentBookForMentor';
 import StudyPlanStudent from '../pages/studyPlanStudent/StudyPlanStudnet';
 import HomeWorksStudent from '../pages/homeWorksStudent/HomeWorksStudent';
+import ComingSoon from '../pages/ComingSoon';
 
 export interface RouteType {
   title: string;
@@ -57,18 +56,18 @@ export const adminRoutes: RouteType[] = [
     path: '/students',
     Component: AllStudentssupAdmin,
   },
+  {
+    title: 'Student detail page',
+    path: '/student/:id',
+    Component: ComingSoon,
+  },
 ];
 
 export const mentorRoutes: RouteType[] = [
   {
-    title: 'Main Page',
+    title: 'Main Page with some info for mentor',
     path: '/',
-    Component: HomePage,
-  },
-  {
-    title: 'Group Page',
-    path: '/group',
-    Component: GroupsPageMentor,
+    Component: ComingSoon,
   },
   {
     title: 'Home works Page',
@@ -83,7 +82,12 @@ export const mentorRoutes: RouteType[] = [
   {
     title: 'Student Book Page',
     path: '/studentbook',
-    Component: StudentBookForMentor,
+    Component: GroupsPageMentor,
+  },
+  {
+    title: 'Student Book Detail Page',
+    path: '/studentbook/:id',
+    Component: ComingSoon,
   },
 ];
 
@@ -91,7 +95,7 @@ export const studentRoutes: RouteType[] = [
   {
     title: 'Home Page',
     path: '/',
-    Component: HomePage,
+    Component: ComingSoon,
   },
   {
     title: 'Study Plan Page',

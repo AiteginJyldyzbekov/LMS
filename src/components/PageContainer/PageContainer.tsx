@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import useStyles from './PageContainer.styles';
 
 interface PageContainerProps {
@@ -8,6 +9,7 @@ interface PageContainerProps {
   name: string;
   puth: string;
   btnText?: string;
+  isGoBack?: boolean;
 }
 
 const PageContainer: React.FC<PageContainerProps> = ({
@@ -15,10 +17,18 @@ const PageContainer: React.FC<PageContainerProps> = ({
   name,
   puth,
   btnText,
+  isGoBack = false,
 }) => {
   const classes = useStyles();
+  const navigate = useNavigate();
   return (
     <div className={classes.container}>
+      {isGoBack && (
+        <Button onClick={() => navigate(-1)} size="medium">
+          <ArrowBackIcon />
+          Go back
+        </Button>
+      )}
       <div className={classes.wrapper}>
         <Typography variant="h5">{name}</Typography>
         <Link to={puth} style={{ textDecoration: 'none' }}>

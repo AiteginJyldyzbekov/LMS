@@ -32,7 +32,7 @@ const GroupPage: FC = () => {
     setState(e.target.value);
   };
   return (
-    <MainPageContainer>
+    <MainPageContainer isGoBack>
       <Typography textAlign="center" component="h5" variant="h5">
         {t('CreateGroupPage.groupDate')}
       </Typography>

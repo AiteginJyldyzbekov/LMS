@@ -42,7 +42,6 @@ const useStyles = makeStyles(() => ({
   },
   name: {
     marginLeft: '10px',
-    color: 'rgb(33, 43, 54)',
   },
   name_block: {
     display: 'flex',

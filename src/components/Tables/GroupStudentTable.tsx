@@ -1,7 +1,8 @@
 import React from 'react';
-import { IconButton, TableCell, TableRow } from '@mui/material';
+import { IconButton, TableCell } from '@mui/material';
 import EditOffIcon from '@mui/icons-material/EditOff';
 import { useNavigate } from 'react-router-dom';
+import TableCellContainer from './TableCellContainer';
 
 interface Props {
   id: number;
@@ -12,7 +13,7 @@ interface Props {
   point: number | string;
   date: string;
 }
-const GroupAdminTable: React.FC<Props> = ({
+const GroupStudentTable: React.FC<Props> = ({
   id,
   name,
   number,
@@ -23,16 +24,7 @@ const GroupAdminTable: React.FC<Props> = ({
 }) => {
   const navigate = useNavigate();
   return (
-    <TableRow
-      onClick={() => navigate(`/mentor/${id}`)}
-      sx={{
-        cursor: 'pointer',
-        '&:hover': {
-          background: 'rgba(145, 158, 171, 0.16)',
-        },
-        '&:last-child td, &:last-child th': { border: 0 },
-      }}
-    >
+    <TableCellContainer path={`/student/${id}`}>
       <TableCell component="th" scope="row">
         {id}
       </TableCell>
@@ -44,12 +36,18 @@ const GroupAdminTable: React.FC<Props> = ({
       <TableCell align="right">{date}</TableCell>
       <TableCell align="right" />
       <TableCell align="right">
-        <IconButton color="primary">
+        <IconButton
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(`/createStudent?id=${id}`);
+          }}
+          color="primary"
+        >
           <EditOffIcon />
         </IconButton>
       </TableCell>
-    </TableRow>
+    </TableCellContainer>
   );
 };
 
-export default GroupAdminTable;
+export default GroupStudentTable;

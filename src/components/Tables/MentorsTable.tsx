@@ -1,7 +1,8 @@
 import React from 'react';
-import { IconButton, TableCell, TableRow } from '@mui/material';
+import { IconButton, TableCell } from '@mui/material';
 import EditOffIcon from '@mui/icons-material/EditOff';
 import { useNavigate } from 'react-router-dom';
+import TableCellContainer from './TableCellContainer';
 
 interface Props {
   id: string | number;
@@ -19,16 +20,7 @@ const MentorsTable: React.FC<Props> = ({
 }) => {
   const navigate = useNavigate();
   return (
-    <TableRow
-      onClick={() => navigate(`/mentor/${id}`)}
-      sx={{
-        cursor: 'pointer',
-        '&:hover': {
-          background: 'rgba(145, 158, 171, 0.16)',
-        },
-        '&:last-child td, &:last-child th': { border: 0 },
-      }}
-    >
+    <TableCellContainer>
       <TableCell component="th" scope="row">
         {id}
       </TableCell>
@@ -38,11 +30,17 @@ const MentorsTable: React.FC<Props> = ({
       <TableCell align="center">{number}</TableCell>
       <TableCell align="right" />
       <TableCell align="right">
-        <IconButton color="primary">
+        <IconButton
+          onClick={(e) => {
+            e.stopPropagation();
+            navigate(`/createMentor?id=${id}`);
+          }}
+          color="primary"
+        >
           <EditOffIcon />
         </IconButton>
       </TableCell>
-    </TableRow>
+    </TableCellContainer>
   );
 };
 
