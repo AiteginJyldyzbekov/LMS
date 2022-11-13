@@ -13,6 +13,8 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import MainPageContainer from '../mainPageContainer/MainPageContainer';
+import { days } from "../../constants/days";
+import DaysItem from "./daysItem/DaysItem";
 
 const GroupPage: FC = () => {
   const [data, setData] = useState<string>('');
@@ -101,6 +103,19 @@ const GroupPage: FC = () => {
               type="number"
             />
           </FormControl>
+        </Grid>
+      </Grid>
+      <Grid container mt={4} justifyContent='center'>
+        <Grid sx={{
+          border: '1px solid gray',
+          borderRadius: '5px',
+          padding:'15px',
+        }} item xs={12} sm={6} container direction='row' justifyContent='space-between'>
+          {
+            days.map((el) => (
+              <DaysItem id={el.id} name={el.name} />
+            ))
+          }
         </Grid>
       </Grid>
       <Grid container spacing={3} mt={5}>
