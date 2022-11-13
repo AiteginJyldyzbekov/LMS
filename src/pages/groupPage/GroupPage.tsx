@@ -17,11 +17,11 @@ import DaysItem from './daysItem/DaysItem';
 import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
 
 const GroupPage: FC = () => {
+  const { t } = useTranslation();
   const [data, setData] = useState<string>('');
   const [groupName, setGroupName] = useState<string>('');
   const [startDate, setStartDate] = useState<string>('');
   const [duration, setDuration] = useState<string>('');
-  const { t } = useTranslation();
   const handleChange = (event: SelectChangeEvent) => {
     setData(event.target.value);
   };
