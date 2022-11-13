@@ -13,7 +13,7 @@ import {
   InputAdornment,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import MainPageContainer from '../mainPageContainer/MainPageContainer';
+import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
 
 const CreateMentor: FC = () => {
   const [data, setData] = useState<string>('');
@@ -36,7 +36,7 @@ const CreateMentor: FC = () => {
     setState(e.target.value);
   };
   return (
-    <MainPageContainer>
+    <MainPageContainer isGoBack>
       <Grid alignItems="center">
         <Typography textAlign="center" component="h5" variant="h5">
           {t('CreateMentor.createMentorTitle')}
