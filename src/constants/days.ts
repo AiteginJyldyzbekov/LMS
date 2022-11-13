@@ -6,29 +6,30 @@ export interface IDays {
 export const days: IDays[] = [
   {
     id: 1,
-    name: 'Md'
+    name: 'Md',
   },
   {
     id: 2,
-    name: 'Tu'
+    name: 'Tu',
   },
   {
     id: 3,
-    name: 'We'
+    name: 'We',
   },
   {
     id: 4,
-    name: 'Th'
+    name: 'Th',
   },
   {
     id: 5,
-    name: 'Fr'
+    name: 'Fr',
   },
   {
     id: 6,
-    name: 'Sa'
-  }, {
+    name: 'Sa',
+  },
+  {
     id: 7,
-    name: 'Su'
-  }
-]
+    name: 'Su',
+  },
+];

@@ -11,10 +11,11 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'center',
     cursor: 'pointer',
     color: 'gray',
+    background: 'none',
     transition: 'ease-in-out .3s',
-    "&:hover": {
-      cursor: 'pointer'
-    }
+    '&:hover': {
+      cursor: 'pointer',
+    },
   },
   circleAc: {
     width: '40px',
@@ -28,10 +29,10 @@ const useStyles = makeStyles(() => ({
     color: 'white',
     transition: 'ease-in-out .3s',
     background: '#556cd6',
-    "&:hover": {
-      cursor: 'pointer'
-    }
-  }
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  },
 }));
 
 export default useStyles;
