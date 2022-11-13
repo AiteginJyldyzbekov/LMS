@@ -107,17 +107,12 @@ const GroupPage: FC = () => {
       </Grid>
       <Grid container mt={4} justifyContent="center">
         <Grid
-          sx={{
-            border: '1px solid gray',
-            borderRadius: '5px',
-            padding: '15px',
-          }}
           item
           xs={12}
-          sm={6}
+          sm={5}
           container
           direction="row"
-          justifyContent="space-between"
+          justifyContent="space-evenly"
         >
           {days.map((el) => (
             <DaysItem id={el.id} name={el.name} />
