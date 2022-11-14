@@ -30,11 +30,13 @@ const TableContainer: React.FC<Props> = ({ Header, Body, Btn }) => (
         />
       </Grid>
       <Grid item alignSelf="right">
-        {
-          Btn ? '' : <IconButton color="primary">
+        {Btn ? (
+          ''
+        ) : (
+          <IconButton color="primary">
             <FilterListIcon />
           </IconButton>
-        }
+        )}
       </Grid>
     </Grid>
     <Table sx={{ minWidth: 650 }} size="medium" aria-label="a dense table">
