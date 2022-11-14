@@ -63,7 +63,8 @@ const AllStudentssupAdmin: React.FC = () => {
   const { t } = useTranslation();
   return (
     <PageContainer name={t('AllStudents.title')} puth="/students">
-      <TableContainer
+      <TableContainer 
+      isFilter={true}
         Header={
           <TableRow>
             <TableCell align="left">{t('AllStudents.studentsId')}</TableCell>
