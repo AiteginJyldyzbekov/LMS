@@ -10,3 +10,8 @@ export interface SideBarLink {
   path: string;
   id: number;
 }
+
+export interface IDays {
+  id: number;
+  name: string;
+}

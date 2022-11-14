@@ -33,7 +33,16 @@
     "startDate": "Начало",
     "save": "Сохранить",
     "delete": "Удалить",
-    "duration": "Длительность"
+    "duration": "Длительность",
+    "days": {
+      "md": "Пн",
+      "tu": "Вт",
+      "we": "Ср",
+      "th": "Чт",
+      "fr": "Пт",
+      "sa": "Сб",
+      "su": "Вс"
+    }
   },
   "CreateMentor": {
     "createMentorTitle": "Создать Ментора",

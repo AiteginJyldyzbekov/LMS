@@ -12,14 +12,16 @@ import {
   SelectChangeEvent,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { days } from '../../constants/days';
+import DaysItem from './daysItem/DaysItem';
 import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
 
 const GroupPage: FC = () => {
+  const { t } = useTranslation();
   const [data, setData] = useState<string>('');
   const [groupName, setGroupName] = useState<string>('');
   const [startDate, setStartDate] = useState<string>('');
   const [duration, setDuration] = useState<string>('');
-  const { t } = useTranslation();
   const handleChange = (event: SelectChangeEvent) => {
     setData(event.target.value);
   };
@@ -101,6 +103,20 @@ const GroupPage: FC = () => {
               type="number"
             />
           </FormControl>
+        </Grid>
+      </Grid>
+      <Grid container mt={4} justifyContent="center">
+        <Grid
+          item
+          xs={12}
+          sm={5}
+          container
+          direction="row"
+          justifyContent="space-evenly"
+        >
+          {days.map((el) => (
+            <DaysItem id={el.id} name={el.name} />
+          ))}
         </Grid>
       </Grid>
       <Grid container spacing={3} mt={5}>
