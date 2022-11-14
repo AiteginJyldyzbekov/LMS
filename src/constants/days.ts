@@ -1,4 +1,4 @@
-import { IDays } from "../types/types";
+import { IDays } from '../types/types';
 
 export const days: IDays[] = [
   {

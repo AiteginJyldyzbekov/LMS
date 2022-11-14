@@ -1,5 +1,5 @@
 import React from 'react';
-import { IDays } from '../../../types/types';;
+import { IDays } from '../../../types/types';
 import useStyles from './DaysItem.styles';
 
 const DaysItem: React.FC<IDays> = ({ id, name }) => {
