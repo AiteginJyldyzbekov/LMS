@@ -1,7 +1,4 @@
-export interface IDays {
-  id: number;
-  name: string;
-}
+import { IDays } from "../types/types";
 
 export const days: IDays[] = [
   {
