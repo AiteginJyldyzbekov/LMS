@@ -31,7 +31,7 @@ const GroupsPage: React.FC = () => {
       btnText={t('Groups.addGroup')}
     >
       <TableContainer
-        isFilter={true}
+        isFilter
         Header={
           <TableRow>
             <TableCell>{t('Groups.id')}</TableCell>
