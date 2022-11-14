@@ -25,8 +25,8 @@ const AdminMentorsPage: React.FC = () => {
   return (
     <PageContainer
       name={t('Mentors.title')}
-      puth="/createMentor"
       btnText={t('Mentors.btnText')}
+      puth="/createMentor"
     >
       <TableContainer
         Header={

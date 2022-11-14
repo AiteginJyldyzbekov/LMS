@@ -64,6 +64,7 @@ const AllStudentssupAdmin: React.FC = () => {
   return (
     <PageContainer name={t('AllStudents.title')} puth="/students">
       <TableContainer
+        isFilter
         Header={
           <TableRow>
             <TableCell align="left">{t('AllStudents.studentsId')}</TableCell>

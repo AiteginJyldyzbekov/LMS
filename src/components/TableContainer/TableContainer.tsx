@@ -10,8 +10,9 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 interface Props {
   Header: React.ReactNode;
   Body: React.ReactNode;
+  isFilter?: boolean;
 }
-const TableContainer: React.FC<Props> = ({ Header, Body }) => (
+const TableContainer: React.FC<Props> = ({ Header, Body, isFilter }) => (
   <TableWrapper component={Paper}>
     <Grid
       container
@@ -29,9 +30,11 @@ const TableContainer: React.FC<Props> = ({ Header, Body }) => (
         />
       </Grid>
       <Grid item alignSelf="right">
-        <IconButton color="primary">
-          <FilterListIcon />
-        </IconButton>
+        {isFilter && (
+          <IconButton color="primary">
+            <FilterListIcon />
+          </IconButton>
+        )}
       </Grid>
     </Grid>
     <Table sx={{ minWidth: 650 }} size="medium" aria-label="a dense table">
