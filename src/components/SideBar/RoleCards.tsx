@@ -55,7 +55,7 @@ const RoleCard: React.FC<SideBarProps> = ({ role }) => {
               <div className={classes.icon_container}>
                 <Icon className={classes.icons} />
               </div>
-              <p>{title}</p>
+              <p>{t(title)}</p>
             </Link>
           ))}
         </div>

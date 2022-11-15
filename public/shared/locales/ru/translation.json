@@ -2,9 +2,9 @@
   "LMS": "Привет LMS",
   "SideBar": {
     "name": "Solid Academy",
-    "Mentors": "Mentors",
-    "Groups": "Groups",
-    "Students": "Students",
+    "Mentors": "Менторы",
+    "Groups": "Группы",
+    "Students": "Студенты",
     "Student_book": "Student Book",
     "Study_plan": "Study Plan",
     "Home_works": "Home Works"
