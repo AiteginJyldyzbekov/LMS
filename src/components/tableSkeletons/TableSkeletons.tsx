@@ -1,8 +1,9 @@
 import React from 'react';
-import { Box, Grid, Skeleton, TableCell, TableRow } from '@mui/material';
+import { Box, Skeleton, TableCell, TableRow } from '@mui/material';
 import TableContainer from '../TableContainer/TableContainer';
+import SkeletonCell from './SkeletonCell';
 
-const TableSkeletons = () => (
+const TableSkeletons: React.FC = () => (
   <TableContainer
     isLoading={false}
     Header={
@@ -21,126 +22,10 @@ const TableSkeletons = () => (
     }
     Body={
       <Box>
-        <Grid
-          sx={{
-            height: '65px',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            paddingRight: '15px',
-            paddingLeft: '15px',
-            borderBottom: '1px solid rgb(205 221 237)',
-          }}
-        >
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="8%"
-            sx={{ borderRadius: '5px' }}
-          />
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="70%"
-            sx={{ borderRadius: '5px' }}
-          />
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="8%"
-            sx={{ borderRadius: '5px' }}
-          />
-        </Grid>
-        <Grid
-          sx={{
-            height: '65px',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            paddingRight: '15px',
-            paddingLeft: '15px',
-            borderBottom: '1px solid rgb(205 221 237)',
-          }}
-        >
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="8%"
-            sx={{ borderRadius: '5px' }}
-          />
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="70%"
-            sx={{ borderRadius: '5px' }}
-          />
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="8%"
-            sx={{ borderRadius: '5px' }}
-          />
-        </Grid>
-        <Grid
-          sx={{
-            height: '65px',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            paddingRight: '15px',
-            paddingLeft: '15px',
-            borderBottom: '1px solid rgb(205 221 237)',
-          }}
-        >
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="8%"
-            sx={{ borderRadius: '5px' }}
-          />
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="70%"
-            sx={{ borderRadius: '5px' }}
-          />
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="8%"
-            sx={{ borderRadius: '5px' }}
-          />
-        </Grid>
-        <Grid
-          sx={{
-            height: '65px',
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            paddingRight: '15px',
-            paddingLeft: '15px',
-            borderBottom: '1px solid rgb(205 221 237)',
-          }}
-        >
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="8%"
-            sx={{ borderRadius: '5px' }}
-          />
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="70%"
-            sx={{ borderRadius: '5px' }}
-          />
-          <Skeleton
-            variant="rectangular"
-            height="40%"
-            width="8%"
-            sx={{ borderRadius: '5px' }}
-          />
-        </Grid>
+        <SkeletonCell />
+        <SkeletonCell />
+        <SkeletonCell />
+        <SkeletonCell />
       </Box>
     }
   />
