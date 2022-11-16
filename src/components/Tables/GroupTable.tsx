@@ -11,6 +11,7 @@ interface Props {
   date: string;
   amount: string | number;
   duration: string | number;
+  status: string;
 }
 const GroupTable: React.FC<Props> = ({
   id,
@@ -19,6 +20,7 @@ const GroupTable: React.FC<Props> = ({
   date,
   amount,
   duration,
+  status,
 }) => {
   const navigate = useNavigate();
   return (
@@ -31,6 +33,7 @@ const GroupTable: React.FC<Props> = ({
       <TableCell align="right">{date}</TableCell>
       <TableCell align="right">{amount}</TableCell>
       <TableCell align="right">{duration}</TableCell>
+      <TableCell align="right">{status}</TableCell>
       <TableCell align="right">
         <IconButton
           onClick={(e) => {
