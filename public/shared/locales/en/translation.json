@@ -29,7 +29,17 @@
     "status": "Status",
     "startDate": "Start Date",
     "save": "Save",
-    "delete": "Delete"
+    "delete": "Delete",
+    "duration": "Duration",
+    "days": {
+      "md": "Md",
+      "tu": "Tu",
+      "we": "We",
+      "th": "Th",
+      "fr": "Fr",
+      "sa": "Sa",
+      "su": "Su"
+    }
   },
   "CreateMentor": {
     "createMentorTitle": "Create Mentor",
@@ -57,7 +67,8 @@
     "startDate": "Start Date",
     "amount": "Amount",
     "duration": "Duration",
-    "addGroup": "+Add group"
+    "addGroup": "+Add group",
+    "status": "Status"
   },
   "Mentors": {
     "title": "Mentors",

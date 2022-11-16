@@ -93,7 +93,7 @@ export const mentorRoutes: RouteType[] = [
 
 export const studentRoutes: RouteType[] = [
   {
-    title: 'Main Page',
+    title: 'Home Page',
     path: '/',
     Component: ComingSoon,
   },

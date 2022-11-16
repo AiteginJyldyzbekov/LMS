@@ -21,23 +21,16 @@ i18n.use(initReactI18next).init({
     escapeValue: false,
   },
 });
-
-declare module 'react-i18next' {
-  // eslint-disable-next-line
-  interface Resources {
-    ns1: typeof ns1;
-    ns2: typeof ns2;
-  }
-}
-
 declare module 'react-i18next' {
   // eslint-disable-next-line
   interface CustomTypeOptions {
     defaultNS: 'ns1';
-    resources: {
-      ns1: typeof ns1;
-      ns2: typeof ns2;
-    };
+    resources:
+      | {
+          ns1: typeof ns1;
+          ns2: typeof ns2;
+        }
+      | string;
   }
 }
 

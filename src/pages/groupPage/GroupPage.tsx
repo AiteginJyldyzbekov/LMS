@@ -12,23 +12,25 @@ import {
   SelectChangeEvent,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { days } from '../../constants/days';
+import DaysItem from './daysItem/DaysItem';
 import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
 
 const GroupPage: FC = () => {
+  const { t } = useTranslation();
   const [data, setData] = useState<string>('');
   const [groupName, setGroupName] = useState<string>('');
   const [startDate, setStartDate] = useState<string>('');
-  const { t } = useTranslation();
+  const [duration, setDuration] = useState<string>('');
   const handleChange = (event: SelectChangeEvent) => {
     setData(event.target.value);
   };
   const handler = (
     e: React.ChangeEvent<HTMLInputElement>,
-    setState: (s: string) => void
+    setState: (s: string) => void | string
   ) => {
     setState(e.target.value);
   };
-
   return (
     <MainPageContainer isGoBack>
       <Typography textAlign="center" component="h5" variant="h5">
@@ -86,6 +88,35 @@ const GroupPage: FC = () => {
               <MenuItem value="nothing" />
             </Select>
           </FormControl>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <FormControl
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+              handler(e, setDuration)
+            }
+            required
+            fullWidth
+          >
+            <TextField
+              value={duration}
+              label={t('CreateGroupPage.duration')}
+              type="number"
+            />
+          </FormControl>
+        </Grid>
+      </Grid>
+      <Grid container mt={4} justifyContent="center">
+        <Grid
+          item
+          xs={12}
+          sm={5}
+          container
+          direction="row"
+          justifyContent="space-evenly"
+        >
+          {days.map((el) => (
+            <DaysItem id={el.id} name={el.name} />
+          ))}
         </Grid>
       </Grid>
       <Grid container spacing={3} mt={5}>

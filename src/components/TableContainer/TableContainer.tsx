@@ -12,9 +12,18 @@ interface Props {
   Header: React.ReactNode;
   Body: React.ReactNode;
   isLoading: boolean;
+  isFilter?: boolean;
 }
-const TableContainer: React.FC<Props> = ({ Header, Body, isLoading }) =>
-  isLoading ? (
+const TableContainer: React.FC<Props> = ({
+  Header,
+  Body,
+  isLoading,
+  isFilter,
+}) => {
+  if (isLoading) {
+    return <TableSkeletons />;
+  }
+  return (
     <TableWrapper component={Paper}>
       <Grid
         container
@@ -32,9 +41,11 @@ const TableContainer: React.FC<Props> = ({ Header, Body, isLoading }) =>
           />
         </Grid>
         <Grid item alignSelf="right">
-          <IconButton color="primary">
-            <FilterListIcon />
-          </IconButton>
+          {isFilter && (
+            <IconButton color="primary">
+              <FilterListIcon />
+            </IconButton>
+          )}
         </Grid>
       </Grid>
       <Table sx={{ minWidth: 650 }} size="medium" aria-label="a dense table">
@@ -44,8 +55,7 @@ const TableContainer: React.FC<Props> = ({ Header, Body, isLoading }) =>
         <TableBody>{Body}</TableBody>
       </Table>
     </TableWrapper>
-  ) : (
-    <TableSkeletons />
   );
+};
 
 export default TableContainer;
