@@ -3,30 +3,30 @@ import { IDays } from '../types/types';
 export const days: IDays[] = [
   {
     id: 1,
-    name: 'Md',
+    name: 'CreateGroupPage.days.md',
   },
   {
     id: 2,
-    name: 'Tu',
+    name: 'CreateGroupPage.days.tu',
   },
   {
     id: 3,
-    name: 'We',
+    name: 'CreateGroupPage.days.we',
   },
   {
     id: 4,
-    name: 'Th',
+    name: 'CreateGroupPage.days.th',
   },
   {
     id: 5,
-    name: 'Fr',
+    name: 'CreateGroupPage.days.fr',
   },
   {
     id: 6,
-    name: 'Sa',
+    name: 'CreateGroupPage.days.sa',
   },
   {
     id: 7,
-    name: 'Su',
+    name: 'CreateGroupPage.days.su',
   },
 ];
