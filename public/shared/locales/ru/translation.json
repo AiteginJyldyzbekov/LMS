@@ -5,12 +5,10 @@
     "Mentors": "Менторы",
     "Groups": "Группы",
     "Students": "Студенты",
-    "Student_book": "Student Book",
-    "Study_plan": "Study Plan",
-    "Home_works": "Home Works",
-    "Dashboard": "Dashboard",
-    "Admin": "admin",
-    "Mentor": "mentor"
+    "Student_book": "Учебник",
+    "Study_plan": "Учебный план",
+    "Home_works": "Домашние задания",
+    "Dashboard": "Dashboard"
   },
   "LoginPage": {
     "greating": "Привет, С Возвращением",
