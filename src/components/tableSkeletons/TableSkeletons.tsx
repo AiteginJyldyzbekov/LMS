@@ -4,7 +4,7 @@ import TableContainer from '../TableContainer/TableContainer';
 
 const TableSkeletons = () => (
   <TableContainer
-    isLoading
+    isLoading={false}
     Header={
       <TableRow>
         <TableCell>
