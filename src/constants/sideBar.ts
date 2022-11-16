@@ -29,19 +29,19 @@ export const admin: SideBarLink[] = [
 
 export const mentor: SideBarLink[] = [
   {
-    title: 'Student Book',
+    title: 'SideBar.Student_book',
     Icon: BookIcon,
     path: '/studentbook',
     id: 0,
   },
   {
-    title: 'Study Plan',
+    title: 'SideBar.Study_plan',
     Icon: LibraryBooksIcon,
     path: '/study-plan',
     id: 1,
   },
   {
-    title: 'Home Works',
+    title: 'SideBar.Home_works',
     Icon: HomeWorkIcon,
     path: '/home-works',
     id: 2,
@@ -50,19 +50,19 @@ export const mentor: SideBarLink[] = [
 
 export const student: SideBarLink[] = [
   {
-    title: 'Dashboard',
+    title: 'SideBar.Dashboard',
     Icon: GroupsIcon,
     path: '/',
     id: 0,
   },
   {
-    title: 'Study Plan',
+    title: 'SideBar.Study_plan',
     Icon: LibraryBooksIcon,
     path: '/study-plan',
     id: 1,
   },
   {
-    title: 'Home Works',
+    title: 'SideBar.Home_works',
     Icon: HomeWorkIcon,
     path: '/home-works',
     id: 2,
