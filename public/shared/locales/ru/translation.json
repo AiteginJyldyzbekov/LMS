@@ -7,7 +7,9 @@
     "Students": "Students",
     "Student_book": "Student Book",
     "Study_plan": "Study Plan",
-    "Home_works": "Home Works"
+    "Home_works": "Home Works",
+    "Admin": "admin",
+    "Mentor": "mentor"
   },
   "LoginPage": {
     "greating": "Привет, С Возвращением",
