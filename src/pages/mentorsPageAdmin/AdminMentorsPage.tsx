@@ -29,6 +29,7 @@ const AdminMentorsPage: React.FC = () => {
       btnText={t('Mentors.btnText')}
     >
       <TableContainer
+        isLoading={false}
         Header={
           <TableRow>
             <TableCell>{t('Mentors.id')}</TableCell>

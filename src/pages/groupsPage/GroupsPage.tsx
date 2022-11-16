@@ -31,6 +31,7 @@ const GroupsPage: React.FC = () => {
       btnText={t('Groups.addGroup')}
     >
       <TableContainer
+        isLoading={false}
         Header={
           <TableRow>
             <TableCell>{t('Groups.id')}</TableCell>

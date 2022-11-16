@@ -55,6 +55,7 @@ const GroupPageAdmin: React.FC = () => {
         </Typography>
       </Grid>
       <TableContainer
+        isLoading={false}
         Header={
           <TableRow>
             <TableCell>{t('AdminGroup.id')}</TableCell>
