@@ -2,9 +2,9 @@
   "LMS": "Привет LMS",
   "SideBar": {
     "name": "Solid Academy",
-    "Mentors": "Mentors",
-    "Groups": "Groups",
-    "Students": "Students",
+    "Mentors": "Менторы",
+    "Groups": "Группы",
+    "Students": "Студенты",
     "Student_book": "Student Book",
     "Study_plan": "Study Plan",
     "Home_works": "Home Works"
@@ -32,7 +32,17 @@
     "status": "Статус",
     "startDate": "Начало",
     "save": "Сохранить",
-    "delete": "Удалить"
+    "delete": "Удалить",
+    "duration": "Длительность",
+    "days": {
+      "md": "Пн",
+      "tu": "Вт",
+      "we": "Ср",
+      "th": "Чт",
+      "fr": "Пт",
+      "sa": "Сб",
+      "su": "Вс"
+    }
   },
   "CreateMentor": {
     "createMentorTitle": "Создать Ментора",
