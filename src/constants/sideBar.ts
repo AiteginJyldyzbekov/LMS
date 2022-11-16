@@ -8,19 +8,19 @@ import { SideBarLink } from '../types/types';
 
 export const admin: SideBarLink[] = [
   {
-    title: 'Groups',
+    title: 'SideBar.Groups',
     Icon: GroupsIcon,
     path: '/',
     id: 1,
   },
   {
-    title: 'Mentors',
+    title: 'SideBar.Mentors',
     Icon: SupervisorAccountIcon,
     path: '/mentors',
     id: 0,
   },
   {
-    title: 'Students',
+    title: 'SideBar.Students',
     Icon: GroupIcon,
     path: '/students',
     id: 2,
