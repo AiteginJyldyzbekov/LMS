@@ -23,7 +23,7 @@ const TableSkeletons = () => (
       <Box>
         <Grid
           sx={{
-            height: '10vh',
+            height: '65px',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -53,7 +53,7 @@ const TableSkeletons = () => (
         </Grid>
         <Grid
           sx={{
-            height: '10vh',
+            height: '65px',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -83,7 +83,7 @@ const TableSkeletons = () => (
         </Grid>
         <Grid
           sx={{
-            height: '10vh',
+            height: '65px',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -113,7 +113,7 @@ const TableSkeletons = () => (
         </Grid>
         <Grid
           sx={{
-            height: '10vh',
+            height: '65px',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
