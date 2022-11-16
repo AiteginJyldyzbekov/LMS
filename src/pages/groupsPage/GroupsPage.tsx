@@ -32,6 +32,7 @@ const GroupsPage: React.FC = () => {
       btnText={t('Groups.addGroup')}
     >
       <TableContainer
+        isLoading={false}
         isFilter
         Header={
           <TableRow>

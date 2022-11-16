@@ -29,6 +29,7 @@ const AdminMentorsPage: React.FC = () => {
       puth="/createMentor"
     >
       <TableContainer
+        isLoading={false}
         Header={
           <TableRow>
             <TableCell>{t('Mentors.id')}</TableCell>
