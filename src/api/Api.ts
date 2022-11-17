@@ -1,22 +1,7 @@
-import axios from 'axios';
+import GroupService from './services/group.service';
 
-const test = axios;
+const Api = {
+  group: new GroupService(),
+};
 
-// const baseUrl = '';
-
-// const api = axios.create({
-//   baseUrl: baseUrl
-// })
-
-// api.interceptors.request.use((config) => {
-//   config.headers = {
-//     "token":
-//   }
-// })
-
-// const Api = {
-//   create: (data) => api.post('add', data)
-// }
-
-export default test;
-// Here should be Api instead of test after you can delete test;
+export default Api;
