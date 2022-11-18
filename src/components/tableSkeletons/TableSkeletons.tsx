@@ -1,12 +1,16 @@
 import React from 'react';
-import { Box, Skeleton, TableCell, TableRow } from '@mui/material';
-import TableContainer from '../TableContainer/TableContainer';
+import {
+  Skeleton,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+} from '@mui/material';
 import SkeletonCell from './SkeletonCell';
 
 const TableSkeletons: React.FC = () => (
-  <TableContainer
-    isLoading={false}
-    Header={
+  <>
+    <TableHead sx={(theme) => ({ background: theme.palette.grey[100] })}>
       <TableRow>
         <TableCell>
           <Skeleton
@@ -19,16 +23,22 @@ const TableSkeletons: React.FC = () => (
           />
         </TableCell>
       </TableRow>
-    }
-    Body={
-      <Box>
+    </TableHead>
+    <TableBody>
+      <TableRow>
         <SkeletonCell />
+      </TableRow>
+      <TableRow>
         <SkeletonCell />
+      </TableRow>
+      <TableRow>
         <SkeletonCell />
+      </TableRow>
+      <TableRow>
         <SkeletonCell />
-      </Box>
-    }
-  />
+      </TableRow>
+    </TableBody>
+  </>
 );
 
 export default TableSkeletons;
