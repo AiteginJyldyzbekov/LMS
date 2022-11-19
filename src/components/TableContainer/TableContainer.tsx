@@ -7,11 +7,12 @@ import Paper from '@mui/material/Paper';
 import { Grid, IconButton, TextField } from '@mui/material';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import TableSkeletons from '../tableSkeletons/TableSkeletons';
+import { LoadingStatus } from '../../types/types';
 
 interface Props {
   Header: React.ReactNode;
   Body: React.ReactNode;
-  isLoading: boolean;
+  isLoading: LoadingStatus | boolean;
   isFilter?: boolean;
 }
 const TableContainer: React.FC<Props> = ({
@@ -20,9 +21,22 @@ const TableContainer: React.FC<Props> = ({
   isLoading,
   isFilter,
 }) => {
-  if (isLoading) {
-    return <TableSkeletons />;
-  }
+  const render = () => {
+    if (
+      isLoading === LoadingStatus.pending ||
+      isLoading === LoadingStatus.idle
+    ) {
+      return <TableSkeletons />;
+    }
+    return (
+      <>
+        <TableHead sx={(theme) => ({ background: theme.palette.grey[100] })}>
+          {Header}
+        </TableHead>
+        <TableBody>{Body}</TableBody>
+      </>
+    );
+  };
   return (
     <TableWrapper component={Paper}>
       <Grid
@@ -49,10 +63,7 @@ const TableContainer: React.FC<Props> = ({
         </Grid>
       </Grid>
       <Table sx={{ minWidth: 650 }} size="medium" aria-label="a dense table">
-        <TableHead sx={(theme) => ({ background: theme.palette.grey[100] })}>
-          {Header}
-        </TableHead>
-        <TableBody>{Body}</TableBody>
+        {render()}
       </Table>
     </TableWrapper>
   );

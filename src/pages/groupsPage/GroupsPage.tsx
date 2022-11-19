@@ -1,30 +1,26 @@
 import { TableCell, TableRow } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import TableContainer from '../../components/TableContainer/TableContainer';
 import GroupTable from '../../components/Tables/GroupTable';
-
-const createData = (
-  id: number,
-  name: string,
-  department: string,
-  date: string,
-  amount: number,
-  duration: number,
-  status: string
-) => ({ id, name, department, date, amount, duration, status });
-// TODO: test data, should be removed after implementing with BE
-const rows = [
-  createData(1, 'Frozen yoghurt', 'React', '22.11.2000', 24, 4.0, 'good'),
-  createData(2, 'Ice cream sandwich', 'Node,js', '22.11.2000', 37, 4.3, 'sad'),
-  createData(3, 'Eclair', 'Desighn', '22.11.2000', 24, 6.0, 'nj'),
-  createData(4, 'Cupcake', 'Python', '22.11.2000', 67, 4.3, 'bad'),
-  createData(5, 'Gingerbread', 'Java', '22.11.2000', 49, 3.9, 'horosho'),
-];
+import { useAppDispatch } from '../../hooks/hook';
+import { useSelectorGroups } from '../../store/selectors';
+import { getAllGroups } from '../../store/slices/GroupSlice';
 
 const GroupsPage: React.FC = () => {
   const { t } = useTranslation();
+  const { result, loading } = useSelectorGroups();
+  const d = useAppDispatch();
+
+  useEffect(() => {
+    d(getAllGroups());
+  }, []);
+
+  const renderList = useMemo(
+    () => result.map((row) => <GroupTable key={row.id} {...row} />),
+    [result]
+  );
   return (
     <PageContainer
       name={t('Groups.title')}
@@ -32,7 +28,7 @@ const GroupsPage: React.FC = () => {
       btnText={t('Groups.addGroup')}
     >
       <TableContainer
-        isLoading={false}
+        isLoading={loading}
         isFilter
         Header={
           <TableRow>
@@ -46,9 +42,7 @@ const GroupsPage: React.FC = () => {
             <TableCell align="right" />
           </TableRow>
         }
-        Body={rows.map((row) => (
-          <GroupTable key={row.id} {...row} />
-        ))}
+        Body={renderList}
       />
     </PageContainer>
   );

@@ -3,22 +3,15 @@ import { IconButton, TableCell } from '@mui/material';
 import EditOffIcon from '@mui/icons-material/EditOff';
 import { useNavigate } from 'react-router-dom';
 import TableCellContainer from './TableCellContainer';
+import { GroupType } from '../../types/index.dto';
 
-interface Props {
-  id: string | number;
-  name: string;
-  department: string;
-  date: string;
-  amount: string | number;
-  duration: string | number;
-  status: string;
-}
+type Props = GroupType;
 const GroupTable: React.FC<Props> = ({
   id,
   name,
-  department,
-  date,
-  amount,
+  direction,
+  startDate,
+  quantity,
   duration,
   status,
 }) => {
@@ -29,9 +22,9 @@ const GroupTable: React.FC<Props> = ({
         {id}
       </TableCell>
       <TableCell scope="row">{name}</TableCell>
-      <TableCell align="left">{department}</TableCell>
-      <TableCell align="right">{date}</TableCell>
-      <TableCell align="right">{amount}</TableCell>
+      <TableCell align="left">{direction}</TableCell>
+      <TableCell align="right">{startDate?.toString() || ''}</TableCell>
+      <TableCell align="right">{quantity}</TableCell>
       <TableCell align="right">{duration}</TableCell>
       <TableCell align="right">{status}</TableCell>
       <TableCell align="right">

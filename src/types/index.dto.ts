@@ -3,9 +3,10 @@ export interface GroupType {
   createdAd: string;
   name: string;
   direction: string;
-  start_date: Date;
+  startDate: Date;
   quantity: number;
   duration: number;
   mentor: string;
   days: string | [];
+  status: string;
 }
