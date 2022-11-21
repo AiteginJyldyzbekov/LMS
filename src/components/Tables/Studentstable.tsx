@@ -3,17 +3,21 @@ import { TableCell, IconButton } from '@mui/material';
 import EditOffIcon from '@mui/icons-material/EditOff';
 import { useNavigate } from 'react-router-dom';
 import TableCellContainer from './TableCellContainer';
+import { AllStudentsType } from '../../types/index.dto';
 
-interface Props {
-  id: string | number;
-  department: string;
-  groupName: string;
-  name: string;
-  number: string | number;
-  mail: string;
-  age: number;
-  point: number;
-}
+// interface Props {
+//   id: string | number;
+//   department: string;
+//   groupName: string;
+//   name: string;
+//   number: string | number;
+//   mail: string;
+//   age: number;
+//   point: number;
+// }
+
+type Props = AllStudentsType;
+
 const StudentsTable: React.FC<Props> = ({
   id,
   department,
@@ -21,8 +25,8 @@ const StudentsTable: React.FC<Props> = ({
   name,
   number,
   mail,
-  point,
   age,
+  point,
 }) => {
   const navigate = useNavigate();
   return (
