@@ -15,7 +15,7 @@ export interface studentType {
   createdAt: string;
   name: string;
   avatar_name: string;
-  phone_number: string;
+  phoneNumber: string;
   email: string;
   age: number;
   price: number;
@@ -29,11 +29,11 @@ export interface studentType {
 
 export interface AllStudentsType {
   id: string | number;
-  department: string;
-  groupName: string;
+  direction: string;
+  group: string;
   name: string;
-  number: string | number;
-  mail: string;
+  phoneNumber: string;
+  email: string;
   age: number;
   point: number;
 }

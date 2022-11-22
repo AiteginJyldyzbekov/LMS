@@ -5,7 +5,7 @@ import { LoadingStatus } from '../../types/types';
 import { SliceDataType } from '../types';
 
 export const getAllStudents = createAsyncThunk('students', async () => {
-  const response = await Api.group.getAll();
+  const response = await Api.allStudents.getAll();
   return response;
 });
 
@@ -22,6 +22,10 @@ const authSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(getAllStudents.pending, (state) => {
       state.loading = LoadingStatus.pending;
+    });
+    builder.addCase(getAllStudents.fulfilled, (state, action) => {
+      state.loading = LoadingStatus.succeeded;
+      state.result = action.payload;
     });
     builder.addCase(getAllStudents.rejected, (state, action) => {
       state.loading = LoadingStatus.failed;

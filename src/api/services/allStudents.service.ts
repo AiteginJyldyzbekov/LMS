@@ -1,10 +1,12 @@
 import { AxiosResponse } from 'axios';
-import { GroupType } from '../../types/index.dto';
+import { AllStudentsType } from '../../types/index.dto';
 import { http } from '../http';
 
 class AllStudentsService {
   async getAll() {
-    const responce: AxiosResponse<GroupType[]> = await http.get('students');
+    const responce: AxiosResponse<[AllStudentsType]> = await http.get(
+      'students'
+    );
     return responce.data;
   }
 }
