@@ -27,7 +27,7 @@ export interface studentType {
   id: number;
 }
 
-export interface AllStudentsType {
+export interface StudentType {
   id: string | number;
   direction: string;
   group: string;

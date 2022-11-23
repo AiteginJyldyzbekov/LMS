@@ -1,14 +1,12 @@
 import { AxiosResponse } from 'axios';
-import { AllStudentsType } from '../../types/index.dto';
+import { StudentType } from '../../types/index.dto';
 import { http } from '../http';
 
-class AllStudentsService {
+class StudentService {
   async getAll() {
-    const responce: AxiosResponse<[AllStudentsType]> = await http.get(
-      'students'
-    );
+    const responce: AxiosResponse<[StudentType]> = await http.get('students');
     return responce.data;
   }
 }
 
-export default AllStudentsService;
+export default StudentService;

@@ -1,21 +1,21 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import Api from '../../api/Api';
-import { AllStudentsType } from '../../types/index.dto';
+import { StudentType } from '../../types/index.dto';
 import { LoadingStatus } from '../../types/types';
 import { SliceDataType } from '../types';
 
 export const getAllStudents = createAsyncThunk('students', async () => {
-  const response = await Api.allStudents.getAll();
+  const response = await Api.student.getAll();
   return response;
 });
 
-const initialState: SliceDataType<AllStudentsType> = {
+const initialState: SliceDataType<StudentType> = {
   loading: LoadingStatus.idle,
   result: [],
   error: null,
 };
 
-const authSlice = createSlice({
+const studentSlice = createSlice({
   name: 'students',
   initialState,
   reducers: {},
@@ -34,6 +34,6 @@ const authSlice = createSlice({
   },
 });
 
-export const root = authSlice.actions;
+export const root = studentSlice.actions;
 
-export default authSlice.reducer;
+export default studentSlice.reducer;

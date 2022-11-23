@@ -3,9 +3,9 @@ import { TableCell, IconButton } from '@mui/material';
 import EditOffIcon from '@mui/icons-material/EditOff';
 import { useNavigate } from 'react-router-dom';
 import TableCellContainer from './TableCellContainer';
-import { AllStudentsType } from '../../types/index.dto';
+import { StudentType } from '../../types/index.dto';
 
-type Props = AllStudentsType;
+type Props = StudentType;
 
 const StudentsTable: React.FC<Props> = ({
   id,
