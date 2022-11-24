@@ -11,7 +11,7 @@ export interface GroupType {
   status: string;
 }
 
-export interface studentType {
+export interface StudentType {
   createdAt: string;
   name: string;
   avatar_name: string;
@@ -25,15 +25,5 @@ export interface studentType {
   direction: string;
   group: string;
   id: number;
-}
-
-export interface StudentType {
-  id: string | number;
-  direction: string;
-  group: string;
-  name: string;
-  phoneNumber: string;
-  email: string;
-  age: number;
-  point: number;
+  point: number | string;
 }

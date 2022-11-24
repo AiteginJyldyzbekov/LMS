@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import AllStudentsSlice from './slices/AllStudentsSlice';
+import studentSlice from './slices/AllStudentsSlice';
 import AuthSlice from './slices/AuthSlice';
 import GroupSlice from './slices/GroupSlice';
 import rootSlice from './slices/RootSlice';
@@ -9,7 +9,7 @@ const store = configureStore({
     root: rootSlice,
     auth: AuthSlice,
     group: GroupSlice,
-    allStudents: AllStudentsSlice,
+    student: studentSlice,
   },
 });
 
