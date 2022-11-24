@@ -11,7 +11,7 @@ export interface GroupType {
   status: string;
 }
 
-export interface MentorsType {
+export interface MentorType {
   createdAt: string;
   name: string;
   direction: string;

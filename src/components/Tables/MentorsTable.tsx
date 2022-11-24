@@ -3,9 +3,9 @@ import { IconButton, TableCell } from '@mui/material';
 import EditOffIcon from '@mui/icons-material/EditOff';
 import { useNavigate } from 'react-router-dom';
 import TableCellContainer from './TableCellContainer';
-import { MentorsType } from '../../types/index.dto';
+import { MentorType } from '../../types/index.dto';
 
-type Props = MentorsType;
+type Props = MentorType;
 
 const MentorsTable: React.FC<Props> = ({
   id,

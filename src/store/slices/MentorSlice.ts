@@ -1,21 +1,21 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import Api from '../../api/Api';
-import { MentorsType } from '../../types/index.dto';
+import { MentorType } from '../../types/index.dto';
 import { LoadingStatus } from '../../types/types';
 import { SliceDataType } from '../types';
 
 export const getMentors = createAsyncThunk('students', async () => {
-  const response = await Api.mentors.getAll();
+  const response = await Api.mentor.getAll();
   return response;
 });
 
-const initialState: SliceDataType<MentorsType> = {
+const initialState: SliceDataType<MentorType> = {
   loading: LoadingStatus.idle,
   result: [],
   error: null,
 };
 
-const mentorsSlice = createSlice({
+const mentorSlice = createSlice({
   name: 'mentors',
   initialState,
   reducers: {},
@@ -34,6 +34,6 @@ const mentorsSlice = createSlice({
   },
 });
 
-export const root = mentorsSlice.actions;
+export const root = mentorSlice.actions;
 
-export default mentorsSlice.reducer;
+export default mentorSlice.reducer;

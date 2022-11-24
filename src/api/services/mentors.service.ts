@@ -1,13 +1,13 @@
 import { AxiosResponse } from 'axios';
-import { MentorsType } from '../../types/index.dto';
+import { MentorType } from '../../types/index.dto';
 
 import { http } from '../http';
 
-class MentorsService {
-  async getAll() {
-    const responce: AxiosResponse<[MentorsType]> = await http.get('students');
-    return responce.data;
-  }
+class MentorService {
+    async getAll() {
+        const responce: AxiosResponse<[MentorType]> = await http.get('mentors');
+        return responce.data;
+    }
 }
 
-export default MentorsService;
+export default MentorService;

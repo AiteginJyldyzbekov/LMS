@@ -6,7 +6,7 @@ import TableContainer from '../../components/TableContainer/TableContainer';
 import MentorsTable from '../../components/Tables/MentorsTable';
 import { useAppDispatch } from '../../hooks/hook';
 import { useSelectorMentors } from '../../store/selectors';
-import { getMentors } from '../../store/slices/MentorsSlice';
+import { getMentors } from '../../store/slices/MentorSlice';
 
 const AdminMentorsPage: React.FC = () => {
   const { t } = useTranslation();
