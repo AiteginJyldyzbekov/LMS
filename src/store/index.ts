@@ -2,12 +2,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import AuthSlice from './slices/AuthSlice';
 import GroupSlice from './slices/GroupSlice';
 import rootSlice from './slices/RootSlice';
+import MentorsSlice from './slices/MentorsSlice';
 
 const store = configureStore({
   reducer: {
     root: rootSlice,
     auth: AuthSlice,
     group: GroupSlice,
+    mentors: MentorsSlice,
   },
 });
 

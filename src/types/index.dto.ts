@@ -10,3 +10,15 @@ export interface GroupType {
   days: string | [];
   status: string;
 }
+
+export interface MentorsType {
+  createdAt: string;
+  name: string;
+  direction: string;
+  lastName: string;
+  phoneNumber: string;
+  email: string;
+  status: string;
+  password: string;
+  id: number;
+}
