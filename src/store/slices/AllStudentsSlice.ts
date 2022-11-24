@@ -15,7 +15,7 @@ const initialState: SliceDataType<StudentType> = {
   error: null,
 };
 
-const studentSlice = createSlice({
+const StudentSlice = createSlice({
   name: 'students',
   initialState,
   reducers: {},
@@ -34,6 +34,6 @@ const studentSlice = createSlice({
   },
 });
 
-export const root = studentSlice.actions;
+export const root = StudentSlice.actions;
 
-export default studentSlice.reducer;
+export default StudentSlice.reducer;
