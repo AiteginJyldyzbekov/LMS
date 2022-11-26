@@ -9,7 +9,7 @@ export const getMentors = createAsyncThunk('mentors', async () => {
   return response;
 });
 
-const initialState: SliceDataType<MentorType> = {
+const initialState: SliceDataType<MentorType[]> = {
   loading: LoadingStatus.idle,
   result: [],
   error: null,

@@ -9,10 +9,21 @@ export const getAllGroups = createAsyncThunk('group/getAllGroups', async () => {
   return response;
 });
 
-const initialState: SliceDataType<GroupType> = {
-  loading: LoadingStatus.idle,
-  result: [],
-  error: null,
+interface StateType {
+  groups: SliceDataType<GroupType[]>;
+  detailGroup: SliceDataType<GroupType | null>;
+}
+const initialState: StateType = {
+  groups: {
+    loading: LoadingStatus.idle,
+    result: [],
+    error: null,
+  },
+  detailGroup: {
+    loading: LoadingStatus.idle,
+    result: null,
+    error: null,
+  },
 };
 
 const authSlice = createSlice({
@@ -21,15 +32,15 @@ const authSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getAllGroups.pending, (state) => {
-      state.loading = LoadingStatus.pending;
+      state.groups.loading = LoadingStatus.pending;
     });
     builder.addCase(getAllGroups.fulfilled, (state, action) => {
-      state.loading = LoadingStatus.succeeded;
-      state.result = action.payload;
+      state.groups.loading = LoadingStatus.succeeded;
+      state.groups.result = action.payload;
     });
     builder.addCase(getAllGroups.rejected, (state, action) => {
-      state.loading = LoadingStatus.failed;
-      state.error = action.error;
+      state.groups.loading = LoadingStatus.failed;
+      state.groups.error = action.error;
     });
   },
 });

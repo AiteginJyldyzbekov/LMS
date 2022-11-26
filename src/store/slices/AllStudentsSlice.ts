@@ -9,7 +9,7 @@ export const getAllStudents = createAsyncThunk('students', async () => {
   return response;
 });
 
-const initialState: SliceDataType<StudentType> = {
+const initialState: SliceDataType<StudentType[]> = {
   loading: LoadingStatus.idle,
   result: [],
   error: null,
