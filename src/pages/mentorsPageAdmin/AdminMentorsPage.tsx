@@ -1,27 +1,27 @@
 import { TableCell, TableRow } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import TableContainer from '../../components/TableContainer/TableContainer';
 import MentorsTable from '../../components/Tables/MentorsTable';
-
-const createData = (
-  id: number,
-  department: string,
-  name: string,
-  surname: string,
-  number: number
-) => ({ id, department, name, surname, number });
-// TODO: test data, should be removed after implementing with BE
-const rows = [
-  createData(1, 'Front-end', 'Aman', 'Asylbekov', +996700010101),
-  createData(2, 'Front-end', 'Aman', 'Asylbekov', +996700010101),
-  createData(3, 'Front-end', 'Aman', 'Asylbekov', +996700010101),
-  createData(4, 'Front-end', 'Aman', 'Asylbekov', +996700010101),
-];
+import { useAppDispatch } from '../../hooks/hook';
+import { useSelectorMentors } from '../../store/selectors';
+import { getMentors } from '../../store/slices/MentorSlice';
 
 const AdminMentorsPage: React.FC = () => {
   const { t } = useTranslation();
+  const { result, loading } = useSelectorMentors();
+  const d = useAppDispatch();
+
+  useEffect(() => {
+    d(getMentors());
+  }, []);
+
+  const renderList = useMemo(
+    () => result.map((row) => <MentorsTable key={row.id} {...row} />),
+    [result]
+  );
+
   return (
     <PageContainer
       name={t('Mentors.title')}
@@ -29,7 +29,7 @@ const AdminMentorsPage: React.FC = () => {
       puth="/createMentor"
     >
       <TableContainer
-        isLoading={false}
+        isLoading={loading}
         Header={
           <TableRow>
             <TableCell>{t('Mentors.id')}</TableCell>
@@ -41,9 +41,7 @@ const AdminMentorsPage: React.FC = () => {
             <TableCell align="right" />
           </TableRow>
         }
-        Body={rows.map((row) => (
-          <MentorsTable key={row.id} {...row} />
-        ))}
+        Body={renderList}
       />
     </PageContainer>
   );

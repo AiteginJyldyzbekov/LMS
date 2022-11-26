@@ -11,6 +11,18 @@ export interface GroupType {
   status: string;
 }
 
+export interface MentorType {
+  createdAt: string;
+  name: string;
+  direction: string;
+  lastName: string;
+  phoneNumber: string;
+  email: string;
+  status: string;
+  password: string;
+  id: number;
+}
+
 export interface StudentType {
   createdAt: string;
   name: string;
