@@ -11,7 +11,7 @@ const store = configureStore({
     auth: AuthSlice,
     group: GroupSlice,
     mentor: MentorSlice,
-    student: studentSlice,
+    student: StudentSlice,
   },
 });
 
