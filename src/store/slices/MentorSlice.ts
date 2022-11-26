@@ -4,7 +4,7 @@ import { MentorType } from '../../types/index.dto';
 import { LoadingStatus } from '../../types/types';
 import { SliceDataType } from '../types';
 
-export const getMentors = createAsyncThunk('students', async () => {
+export const getMentors = createAsyncThunk('mentors', async () => {
   const response = await Api.mentor.getAll();
   return response;
 });
