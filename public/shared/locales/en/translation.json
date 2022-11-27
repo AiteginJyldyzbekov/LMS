@@ -128,5 +128,12 @@
     "mail": "Mail",
     "point": "Points",
     "age": "Age"
+  },
+  "StudentsDashboard": {
+    "greeting": "Hello",
+    "yourCourses": "Your Courses",
+    "lessonsLeft": "Lessons left",
+    "profile": "Profile",
+    "yourProgress":"Your Progress"
   }
 }

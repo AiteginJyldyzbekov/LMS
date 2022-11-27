@@ -133,5 +133,12 @@
     "mail": "Почта",
     "point": "Баллы",
     "age": "Возраст"
+  },
+  "StudentsDashboard": {
+    "greeting": "Привет",
+    "yourCourses": "Твои курсы",
+    "lessonsLeft": "Осталось уроков",
+    "profile": "Профиль",
+    "yourProgress":"Твой прогресс"
   }
 }
