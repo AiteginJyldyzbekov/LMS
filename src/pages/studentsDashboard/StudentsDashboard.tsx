@@ -58,12 +58,12 @@ const StudentsDashboard: React.FC = () => {
               alignItems="center"
               sx={{ width: '80%', margin: '0 auto', marginTop: '70px' }}
             >
-              <Typography sx={{ fontWeight: '600', fontSize: '36px' }}>
+              <Typography sx={{ fontWeight: '600', fontSize: '30px' }}>
                 {t('StudentsDashboard.greeting')} {el.name}!!!
               </Typography>
               <IconButton>
                 <NotificationsNoneIcon
-                  sx={{ width: '34px ', height: '34px', cursor: 'pointer' }}
+                  sx={{ width: '28px ', height: '28px', cursor: 'pointer' }}
                 />
               </IconButton>
             </Grid>
@@ -184,6 +184,8 @@ const StudentsDashboard: React.FC = () => {
                   sx={{
                     width: '100%',
                     height: '290px',
+                    display: 'flex',
+                    alignItems: 'start',
                   }}
                 >
                   <CalendarPicker

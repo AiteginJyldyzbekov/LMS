@@ -15,6 +15,12 @@ const useStyles = makeStyles(() => ({
     width: '60%',
     height: '102vh',
     marginLeft: '15px',
+    '@media (max-width: 500px)': {
+      display: 'block',
+      boxShadow: 'none',
+      width: '100%',
+      height: 'fit-content',
+    },
     '@media (max-width: 900px)': {
       display: 'block',
       boxShadow: 'none',
