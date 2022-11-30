@@ -121,7 +121,6 @@ const StudentsDashboard: React.FC = () => {
             item
             xs={12}
             md={4}
-            sx={{ padding: 0 }}
             direction="column"
             alignItems="center"
           >
