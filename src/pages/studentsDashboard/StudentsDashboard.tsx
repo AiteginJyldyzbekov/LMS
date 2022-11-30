@@ -84,8 +84,7 @@ const StudentsDashboard: React.FC = () => {
                     lineHeight: '29px',
                   }}
                 >
-                  {' '}
-                  {t('StudentsDashboard.yourCourses')}{' '}
+                  {t('StudentsDashboard.yourCourses')}
                 </Typography>
                 <Box
                   sx={{
@@ -113,7 +112,7 @@ const StudentsDashboard: React.FC = () => {
                   }}
                 >
                   {el.lessons}
-                  {t('StudentsDashboard.lessonsLeft')}{' '}
+                  {t('StudentsDashboard.lessonsLeft')}
                 </Typography>
               </Grid>
             </Grid>
