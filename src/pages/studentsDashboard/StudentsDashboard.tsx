@@ -117,13 +117,7 @@ const StudentsDashboard: React.FC = () => {
               </Grid>
             </Grid>
           </div>
-          <Grid
-            item
-            xs={12}
-            md={4}
-            direction="column"
-            alignItems="center"
-          >
+          <Grid item xs={12} md={4} direction="column" alignItems="center">
             <Grid
               container
               justifyContent="space-between"
