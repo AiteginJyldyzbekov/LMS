@@ -25,6 +25,42 @@ const useStyles = makeStyles(() => ({
       boxShadow: 'none',
     },
   },
+  active: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%',
+    borderRadius: '11px',
+    boxShadow: '0px 4px 4px rgba(34, 15, 148, 0.3)',
+    background: '#634CEE',
+    color: 'white',
+    height: '50px',
+    padding: '5px 15px',
+    alignItems: 'center',
+  },
+  disabled: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%',
+    borderRadius: '11px',
+    boxShadow: '0px 4px 4px rgba(34, 15, 148, 0.3)',
+    background: ' #C9C8CF',
+    color: 'white',
+    height: '50px',
+    padding: '5px 15px',
+    alignItems: 'center',
+  },
+  pActive: {
+    color: '#261493',
+    fontWeight: '600',
+    fontSize: '12px',
+    lineHeight: '15px',
+  },
+  pDisabled: {
+    color: 'gray',
+    fontweight: '600',
+    fontSize: '12px',
+    lineHeight: '15px',
+  },
 }));
 
 export default useStyles;

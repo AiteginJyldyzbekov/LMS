@@ -8,14 +8,26 @@ import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { CalendarPicker } from '@mui/x-date-pickers/CalendarPicker';
 import { useTranslation } from 'react-i18next';
 import StudentsProgressItem from './StudentsProgressItem';
-import { fakedata } from '../../types/types';
 import useStyles from './Studentsdashboard.style';
+
+export interface arrData {
+  done: number;
+  title: string;
+  classes: number;
+}
+
+interface fakeData {
+  name: string;
+  courses: string;
+  lessons: number;
+  progress: Array<arrData>;
+}
 
 const StudentsDashboard: React.FC = () => {
   const css = useStyles();
   const [date, setDate] = React.useState<Dayjs | null>(dayjs());
   const { t } = useTranslation();
-  const data: fakedata[] = [
+  const data: fakeData[] = [
     {
       name: 'Adilhan',
       courses: 'Front-End',
@@ -27,7 +39,7 @@ const StudentsDashboard: React.FC = () => {
           classes: 5,
         },
         {
-          done: 56,
+          done: 0,
           title: 'back-rnd',
           classes: 5,
         },

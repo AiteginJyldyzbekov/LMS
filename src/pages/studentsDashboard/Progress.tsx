@@ -36,7 +36,7 @@ const CircularProgressWithLabel = (
           variant="caption"
           component="p"
           color="#FFFBFB"
-          sx={{ margin: '0 auto' }}
+          sx={{ margin: '2px 0 0 2px' }}
         >{`${Math.round(value)}%`}</Typography>
       </Box>
     </Box>

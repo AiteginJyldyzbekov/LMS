@@ -28,18 +28,6 @@ export enum LoadingStatus {
   succeeded = 'succeeded',
   failed = 'failed',
 }
-export interface arrData {
-  done: number;
-  title: string;
-  classes: number;
-}
-
-export interface fakedata {
-  name: string;
-  courses: string;
-  lessons: number;
-  progress: Array<arrData>;
-}
 
 export type Loading =
   | LoadingStatus.idle
