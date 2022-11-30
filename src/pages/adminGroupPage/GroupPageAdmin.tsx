@@ -1,26 +1,32 @@
 import { Grid, TableCell, TableRow, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useParams } from 'react-router-dom';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import TableContainer from '../../components/TableContainer/TableContainer';
 import GroupStudentTable from '../../components/Tables/GroupStudentTable';
-
-const createData = (
-  id: number,
-  name: string,
-  number: number,
-  mail: string,
-  age: number | string,
-  point: number | string,
-  date: string
-) => ({ id, name, number, mail, age, point, date });
-// TODO: test data, should be removed after implementing with BE
-const rows = [
-  createData(1, 'Solid', +996010101, 'test@gmail.com', 17, 100, '4 November'),
-];
+import { useAppDispatch } from '../../hooks/hook';
+import { useSelectorGroup } from '../../store/selectors';
+import { getGroup } from '../../store/slices/GroupSlice';
 
 const GroupPageAdmin: React.FC = () => {
   const { t } = useTranslation();
+  const { result, loading } = useSelectorGroup();
+  const d = useAppDispatch();
+
+  const { id }: any = useParams();
+
+  useEffect(() => {
+    d(getGroup(id));
+  }, []);
+
+  const Arr = result?.students;
+
+  const renderList = useMemo(
+    () => Arr?.map((row: any) => <GroupStudentTable key={row.id} {...row} />),
+    [Arr]
+  );
+
   return (
     <PageContainer
       name={t('AdminGroup.title')}
@@ -41,7 +47,7 @@ const GroupPageAdmin: React.FC = () => {
             fontWeight: '400',
           }}
         >
-          {t('AdminGroup.group')}: Design
+          {t('AdminGroup.group')}: {result?.name}
         </Typography>
         <Typography
           textAlign="left"
@@ -51,11 +57,11 @@ const GroupPageAdmin: React.FC = () => {
             fontWeight: '400',
           }}
         >
-          {t('AdminGroup.mentor')}: Aziz Azizovich
+          {t('AdminGroup.mentor')}: {result?.direction}
         </Typography>
       </Grid>
       <TableContainer
-        isLoading={false}
+        isLoading={loading}
         Header={
           <TableRow>
             <TableCell>{t('AdminGroup.id')}</TableCell>
@@ -69,9 +75,7 @@ const GroupPageAdmin: React.FC = () => {
             <TableCell align="right" />
           </TableRow>
         }
-        Body={rows.map((row) => (
-          <GroupStudentTable key={row.id} {...row} />
-        ))}
+        Body={renderList}
       />
     </PageContainer>
   );

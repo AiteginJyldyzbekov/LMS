@@ -9,6 +9,7 @@ export interface GroupType {
   mentor: string;
   days: string | [];
   status: string;
+  students: [];
 }
 
 export interface MentorType {
