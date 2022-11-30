@@ -39,8 +39,8 @@ const useStyles = makeStyles(() => ({
     boxShadow: '0px 4px 4px rgba(34, 15, 148, 0.3)',
     background: '#634CEE',
     color: 'white',
-    height: '50px',
-    padding: '5px 15px',
+    // height: '50px',
+    padding: '15px 15px',
     alignItems: 'center',
   },
   disabled: {
@@ -51,8 +51,8 @@ const useStyles = makeStyles(() => ({
     boxShadow: '0px 4px 4px rgba(34, 15, 148, 0.3)',
     background: ' #C9C8CF',
     color: 'white',
-    height: '50px',
-    padding: '5px 15px',
+    // height: '50px',
+    padding: '15px 15px',
     alignItems: 'center',
   },
   pActive: {
