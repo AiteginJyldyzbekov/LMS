@@ -13,6 +13,7 @@ import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
 import StudyPlanStudent from '../pages/studyPlanStudent/StudyPlanStudnet';
 import HomeWorksStudent from '../pages/homeWorksStudent/HomeWorksStudent';
 import ComingSoon from '../pages/ComingSoon';
+import StudentsDashboard from '../pages/studentsDashboard/StudentsDashboard';
 
 export interface RouteType {
   title: string;
@@ -95,7 +96,7 @@ export const studentRoutes: RouteType[] = [
   {
     title: 'Home Page',
     path: '/',
-    Component: ComingSoon,
+    Component: StudentsDashboard,
   },
   {
     title: 'Study Plan Page',
