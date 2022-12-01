@@ -14,11 +14,11 @@ const GroupPageAdmin: React.FC = () => {
   const { result, loading } = useSelectorGroup();
   const d = useAppDispatch();
 
-  type QuizParams = {
+  type ParamsType = {
     id: string;
   };
 
-  const { id } = useParams() as QuizParams;
+  const { id } = useParams() as ParamsType;
 
   useEffect(() => {
     d(getGroup(id));
