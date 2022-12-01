@@ -14,17 +14,32 @@ const GroupPageAdmin: React.FC = () => {
   const { result, loading } = useSelectorGroup();
   const d = useAppDispatch();
 
-  const { id }: any = useParams();
+  type QuizParams = {
+    id: string;
+  };
+
+  const { id } = useParams() as QuizParams;
 
   useEffect(() => {
     d(getGroup(id));
   }, []);
 
-  const Arr = result?.students;
+  const studentsArr = result?.students;
 
   const renderList = useMemo(
-    () => Arr?.map((row: any) => <GroupStudentTable key={row.id} {...row} />),
-    [Arr]
+    () =>
+      studentsArr?.map(() => (
+        <GroupStudentTable
+          id={0}
+          name=""
+          number={0}
+          mail=""
+          age=""
+          point=""
+          date=""
+        />
+      )),
+    [studentsArr]
   );
 
   return (
