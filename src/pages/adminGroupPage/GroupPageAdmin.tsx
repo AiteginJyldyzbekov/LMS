@@ -29,7 +29,7 @@ const GroupPageAdmin: React.FC = () => {
 
   const renderList = useMemo(
     () =>
-      studentsArr?.map((row: StudentType) => <GroupStudentTable {...row} />),
+      studentsArr?.map((row: StudentType) => <GroupStudentTable key={row.id} {...row} />),
     [studentsArr]
   );
 
