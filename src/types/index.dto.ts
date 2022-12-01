@@ -32,7 +32,7 @@ export interface StudentType {
   email: string;
   age: number;
   price: number;
-  start_date: Date;
+  startDate: Date;
   status: string;
   password: string;
   direction: string;

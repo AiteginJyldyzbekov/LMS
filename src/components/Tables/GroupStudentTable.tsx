@@ -3,24 +3,17 @@ import { IconButton, TableCell } from '@mui/material';
 import EditOffIcon from '@mui/icons-material/EditOff';
 import { useNavigate } from 'react-router-dom';
 import TableCellContainer from './TableCellContainer';
+import { StudentType } from '../../types/index.dto';
 
-interface Props {
-  id: number;
-  name: string;
-  number: number;
-  mail: string;
-  age: number | string;
-  point: number | string;
-  date: string;
-}
+type Props = StudentType;
 const GroupStudentTable: React.FC<Props> = ({
   id,
   name,
-  number,
-  mail,
+  phoneNumber,
+  email,
   age,
   point,
-  date,
+  startDate,
 }) => {
   const navigate = useNavigate();
   return (
@@ -30,10 +23,10 @@ const GroupStudentTable: React.FC<Props> = ({
       </TableCell>
       <TableCell scope="row">{name}</TableCell>
       <TableCell align="center">{age}</TableCell>
-      <TableCell align="center">{number}</TableCell>
-      <TableCell align="center">{mail}</TableCell>
+      <TableCell align="center">{phoneNumber}</TableCell>
+      <TableCell align="center">{email}</TableCell>
       <TableCell align="center">{point}</TableCell>
-      <TableCell align="right">{date}</TableCell>
+      <TableCell align="right">{startDate.toString()}</TableCell>
       <TableCell align="right" />
       <TableCell align="right">
         <IconButton

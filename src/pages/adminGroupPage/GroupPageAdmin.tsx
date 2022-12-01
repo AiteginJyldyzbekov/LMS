@@ -8,6 +8,7 @@ import GroupStudentTable from '../../components/Tables/GroupStudentTable';
 import { useAppDispatch } from '../../hooks/hook';
 import { useSelectorGroup } from '../../store/selectors';
 import { getGroup } from '../../store/slices/GroupSlice';
+import { StudentType } from '../../types/index.dto';
 
 const GroupPageAdmin: React.FC = () => {
   const { t } = useTranslation();
@@ -28,17 +29,7 @@ const GroupPageAdmin: React.FC = () => {
 
   const renderList = useMemo(
     () =>
-      studentsArr?.map(() => (
-        <GroupStudentTable
-          id={0}
-          name=""
-          number={0}
-          mail=""
-          age=""
-          point=""
-          date=""
-        />
-      )),
+      studentsArr?.map((row: StudentType) => <GroupStudentTable {...row} />),
     [studentsArr]
   );
 
