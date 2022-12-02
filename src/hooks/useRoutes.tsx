@@ -16,18 +16,13 @@ const useRoutes = (): ReactNode => {
 
   const renderContainerRout = (routes: RouteType[]) => <Page routes={routes} />;
 
-  const renderAdminRoutes = () => renderContainerRout(adminRoutes);
-  const renderMentorRoutes = () => renderContainerRout(mentorRoutes);
-  const renderStudentRoutes = () => renderContainerRout(studentRoutes);
-  const renderNotAuthRoutes = () => renderContainerRout(notAuthRoutes);
-
-  if (!isAuth) return renderNotAuthRoutes();
+  if (!isAuth) return renderContainerRout(notAuthRoutes);
   if (role) {
-    if (role === UserRole.admin) return renderAdminRoutes();
-    if (role === UserRole.mentor) return renderMentorRoutes();
-    return renderStudentRoutes();
+    if (role === UserRole.admin) return renderContainerRout(adminRoutes);
+    if (role === UserRole.mentor) return renderContainerRout(mentorRoutes);
+    if (role === UserRole.student) return renderContainerRout(studentRoutes);
   }
-  return renderNotAuthRoutes();
+  return renderContainerRout(notAuthRoutes);
 };
 
 export default useRoutes;
