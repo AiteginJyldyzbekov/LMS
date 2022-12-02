@@ -13,6 +13,9 @@ import {
   InputAdornment,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { useAppDispatch } from '../../hooks/hook';
+import { createMentor } from '../../store/slices/MentorSlice';
+
 import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
 
 const CreateMentor: FC = () => {
@@ -22,19 +25,29 @@ const CreateMentor: FC = () => {
   const [number, setNumber] = useState<string>('');
   const [mail, setMail] = useState<string>('');
   const [autoGenerate, setAutoGenerate] = useState<string>('');
-
   const { t } = useTranslation();
-
+  const dispatch = useAppDispatch();
   const handleChange = (event: SelectChangeEvent) => {
     setData(event.target.value);
   };
-
+  const mentor = {
+    name,
+    direction: 'FrontEnd',
+    lastName: surname,
+    phoneNumber: number,
+    email: mail,
+    password: autoGenerate,
+  };
   const handler = (
     e: React.ChangeEvent<HTMLInputElement>,
     setState: (s: string) => void
   ) => {
     setState(e.target.value);
   };
+  const handleCreate = () => {
+    dispatch(createMentor(mentor));
+  };
+
   return (
     <MainPageContainer isGoBack>
       <Grid alignItems="center">
@@ -148,7 +161,12 @@ const CreateMentor: FC = () => {
           </Grid>
           <Grid item xs={6} md>
             <Box textAlign="center">
-              <Button fullWidth size="large" variant="outlined">
+              <Button
+                fullWidth
+                size="large"
+                onClick={handleCreate}
+                variant="outlined"
+              >
                 {t('CreateMentor.save')}
               </Button>
             </Box>
