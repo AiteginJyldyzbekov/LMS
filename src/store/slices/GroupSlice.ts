@@ -9,6 +9,14 @@ export const getAllGroups = createAsyncThunk('group/getAllGroups', async () => {
   return response;
 });
 
+export const getGroup = createAsyncThunk(
+  'group/getGroup',
+  async (id: string) => {
+    const responce = await Api.group.get(id);
+    return responce;
+  }
+);
+
 interface StateType {
   groups: SliceDataType<GroupType[]>;
   detailGroup: SliceDataType<GroupType | null>;
@@ -26,7 +34,7 @@ const initialState: StateType = {
   },
 };
 
-const authSlice = createSlice({
+const GroupSlice = createSlice({
   name: 'group',
   initialState,
   reducers: {},
@@ -42,9 +50,20 @@ const authSlice = createSlice({
       state.groups.loading = LoadingStatus.failed;
       state.groups.error = action.error;
     });
+    builder.addCase(getGroup.pending, (state) => {
+      state.detailGroup.loading = LoadingStatus.pending;
+    });
+    builder.addCase(getGroup.fulfilled, (state, action) => {
+      state.detailGroup.loading = LoadingStatus.succeeded;
+      state.detailGroup.result = action.payload;
+    });
+    builder.addCase(getGroup.rejected, (state, action) => {
+      state.detailGroup.loading = LoadingStatus.failed;
+      state.detailGroup.error = action.error;
+    });
   },
 });
 
-export const root = authSlice.actions;
+export const root = GroupSlice.actions;
 
-export default authSlice.reducer;
+export default GroupSlice.reducer;
