@@ -37,6 +37,7 @@ const CreateMentor: FC = () => {
     phoneNumber: number,
     email: mail,
     password: autoGenerate,
+    status: '',
   };
   const handler = (
     e: React.ChangeEvent<HTMLInputElement>,

@@ -12,7 +12,8 @@ export interface GroupType {
 }
 
 export interface MentorType {
-  createdAt: string;
+  id?: number;
+  createdAt?: string;
   name: string;
   direction: string;
   lastName: string;
@@ -20,7 +21,6 @@ export interface MentorType {
   email: string;
   status: string;
   password: string;
-  id: number;
 }
 
 export interface StudentType {
