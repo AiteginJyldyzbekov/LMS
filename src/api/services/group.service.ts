@@ -12,6 +12,11 @@ class GroupService {
     const responce: AxiosResponse<GroupType> = await http.get(`groups/${id}`);
     return responce.data;
   }
+
+  async createGroup(data: GroupType) {
+    const responce: AxiosResponse<GroupType> = await http.post('groups', data);
+    return responce;
+  }
 }
 
 export default GroupService;

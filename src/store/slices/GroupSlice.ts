@@ -17,9 +17,23 @@ export const getGroup = createAsyncThunk(
   }
 );
 
+export const createGroup = createAsyncThunk(
+  'groups/createGroup',
+  async (group: GroupType, { rejectWithValue }) => {
+    const response = await Api.group.createGroup(group as GroupType);
+
+    if (!response.statusText) {
+      return rejectWithValue("Can't add mentor. Server error.");
+    }
+
+    return response.data;
+  }
+);
+
 interface StateType {
   groups: SliceDataType<GroupType[]>;
   detailGroup: SliceDataType<GroupType | null>;
+  createGroup: SliceDataType<GroupType | null>;
 }
 const initialState: StateType = {
   groups: {
@@ -28,6 +42,11 @@ const initialState: StateType = {
     error: null,
   },
   detailGroup: {
+    loading: LoadingStatus.idle,
+    result: null,
+    error: null,
+  },
+  createGroup: {
     loading: LoadingStatus.idle,
     result: null,
     error: null,
@@ -60,6 +79,12 @@ const GroupSlice = createSlice({
     builder.addCase(getGroup.rejected, (state, action) => {
       state.detailGroup.loading = LoadingStatus.failed;
       state.detailGroup.error = action.error;
+    });
+    builder.addCase(createGroup.pending, (state) => {
+      state.createGroup.error = null;
+    });
+    builder.addCase(createGroup.fulfilled, (state, action) => {
+      state.createGroup.result = action.payload;
     });
   },
 });
