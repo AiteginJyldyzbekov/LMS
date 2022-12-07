@@ -15,6 +15,19 @@ const initialState: SliceDataType<MentorType[]> = {
   error: null,
 };
 
+export const createMentor = createAsyncThunk(
+  'mentors/createMentor',
+  async (mentor: MentorType, { rejectWithValue }) => {
+    const response = await Api.mentor.createMentor(mentor);
+
+    if (!response.statusText) {
+      return rejectWithValue("Can't add mentor. Server error.");
+    }
+
+    return response.data;
+  }
+);
+
 const mentorSlice = createSlice({
   name: 'mentors',
   initialState,
@@ -30,6 +43,12 @@ const mentorSlice = createSlice({
     builder.addCase(getMentors.rejected, (state, action) => {
       state.loading = LoadingStatus.failed;
       state.error = action.error;
+    });
+    builder.addCase(createMentor.pending, (state) => {
+      state.error = null;
+    });
+    builder.addCase(createMentor.fulfilled, (state, action) => {
+      state.result.push(action.payload);
     });
   },
 });

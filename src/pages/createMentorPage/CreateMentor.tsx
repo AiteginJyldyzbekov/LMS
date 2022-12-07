@@ -13,6 +13,9 @@ import {
   InputAdornment,
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
+import { useAppDispatch } from '../../hooks/hook';
+import { createMentor } from '../../store/slices/MentorSlice';
 import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
 
 const CreateMentor: FC = () => {
@@ -22,19 +25,38 @@ const CreateMentor: FC = () => {
   const [number, setNumber] = useState<string>('');
   const [mail, setMail] = useState<string>('');
   const [autoGenerate, setAutoGenerate] = useState<string>('');
-
+  const [error, setError] = useState<number>(0);
   const { t } = useTranslation();
-
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const handleChange = (event: SelectChangeEvent) => {
     setData(event.target.value);
   };
-
+  const mentor = {
+    name,
+    direction: 'FrontEnd',
+    lastName: surname,
+    phoneNumber: number,
+    email: mail,
+    password: autoGenerate,
+    status: '',
+  };
   const handler = (
     e: React.ChangeEvent<HTMLInputElement>,
     setState: (s: string) => void
   ) => {
     setState(e.target.value);
   };
+  const handleCreate = () => {
+    if (name.length > 0) {
+      dispatch(createMentor(mentor));
+      navigate('/mentors');
+      setError(0);
+    } else {
+      setError(1);
+    }
+  };
+
   return (
     <MainPageContainer isGoBack>
       <Grid alignItems="center">
@@ -148,7 +170,13 @@ const CreateMentor: FC = () => {
           </Grid>
           <Grid item xs={6} md>
             <Box textAlign="center">
-              <Button fullWidth size="large" variant="outlined">
+              <Button
+                fullWidth
+                size="large"
+                onClick={handleCreate}
+                variant="outlined"
+                color={error === 0 ? 'primary' : 'error'}
+              >
                 {t('CreateMentor.save')}
               </Button>
             </Box>
