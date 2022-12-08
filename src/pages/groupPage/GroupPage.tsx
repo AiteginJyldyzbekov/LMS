@@ -22,13 +22,13 @@ import { GroupType } from '../../types/index.dto';
 
 const GroupPage: FC = () => {
   const { t } = useTranslation();
-  const [groupName, setGroupName] = useState<string>('');
-  const [startDate, setStartDate] = useState<string>('');
-  const [duration, setDuration] = useState<string>('');
-  const [direction, setDirection] = useState<string>('');
-  const [mentor, setMentor] = useState<string>('');
-  const [status, setStatus] = useState<string>('');
-  const [error, setError] = useState<number>(0);
+  const [groupName, setGroupName] = useState('');
+  const [startDate, setStartDate] = useState('');
+  const [duration, setDuration] = useState('');
+  const [direction, setDirection] = useState('');
+  const [mentor, setMentor] = useState('');
+  const [status, setStatus] = useState('');
+  const [error, setError] = useState(0);
 
   const navigate = useNavigate();
   const dispatch = useAppDispatch();

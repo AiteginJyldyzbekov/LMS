@@ -25,10 +25,10 @@ const DurationPageAdmin: React.FC = () => {
       <Grid mt={3} container spacing={3}>
         <Grid item xs={12} sm={6}>
           <FormControl required fullWidth>
-            <InputLabel>{t('CreateGroupPage.department')}</InputLabel>
+            <InputLabel>{t('Groups.status')}</InputLabel>
             <Select
               value={direction}
-              label="Direction"
+              label="Status"
               onChange={(e: SelectChangeEvent<string>) => {
                 setDirection(e.target.value);
               }}
@@ -45,10 +45,7 @@ const DurationPageAdmin: React.FC = () => {
             required
             fullWidth
           >
-            <TextField
-              value={groupName}
-              label={t('CreateGroupPage.groupName')}
-            />
+            <TextField value={groupName} label={t('Groups.name')} />
           </FormControl>
         </Grid>
       </Grid>
