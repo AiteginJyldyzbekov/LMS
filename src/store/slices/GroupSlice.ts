@@ -9,9 +9,31 @@ export const getAllGroups = createAsyncThunk('group/getAllGroups', async () => {
   return response;
 });
 
+export const getGroup = createAsyncThunk(
+  'group/getGroup',
+  async (id: string) => {
+    const responce = await Api.group.get(id);
+    return responce;
+  }
+);
+
+export const createGroup = createAsyncThunk(
+  'groups/createGroup',
+  async (group: GroupType, { rejectWithValue }) => {
+    const response = await Api.group.createGroup(group as GroupType);
+
+    if (!response.statusText) {
+      return rejectWithValue("Can't add mentor. Server error.");
+    }
+
+    return response.data;
+  }
+);
+
 interface StateType {
   groups: SliceDataType<GroupType[]>;
   detailGroup: SliceDataType<GroupType | null>;
+  createGroup: SliceDataType<GroupType | null>;
 }
 const initialState: StateType = {
   groups: {
@@ -24,9 +46,14 @@ const initialState: StateType = {
     result: null,
     error: null,
   },
+  createGroup: {
+    loading: LoadingStatus.idle,
+    result: null,
+    error: null,
+  },
 };
 
-const authSlice = createSlice({
+const GroupSlice = createSlice({
   name: 'group',
   initialState,
   reducers: {},
@@ -42,9 +69,26 @@ const authSlice = createSlice({
       state.groups.loading = LoadingStatus.failed;
       state.groups.error = action.error;
     });
+    builder.addCase(getGroup.pending, (state) => {
+      state.detailGroup.loading = LoadingStatus.pending;
+    });
+    builder.addCase(getGroup.fulfilled, (state, action) => {
+      state.detailGroup.loading = LoadingStatus.succeeded;
+      state.detailGroup.result = action.payload;
+    });
+    builder.addCase(getGroup.rejected, (state, action) => {
+      state.detailGroup.loading = LoadingStatus.failed;
+      state.detailGroup.error = action.error;
+    });
+    builder.addCase(createGroup.pending, (state) => {
+      state.createGroup.error = null;
+    });
+    builder.addCase(createGroup.fulfilled, (state, action) => {
+      state.createGroup.result = action.payload;
+    });
   },
 });
 
-export const root = authSlice.actions;
+export const root = GroupSlice.actions;
 
-export default authSlice.reducer;
+export default GroupSlice.reducer;

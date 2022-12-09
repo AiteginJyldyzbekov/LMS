@@ -9,8 +9,13 @@ class GroupService {
   }
 
   async get(id: number | string) {
-    const responce: AxiosResponse<GroupType[]> = await http.get(`groups/${id}`);
+    const responce: AxiosResponse<GroupType> = await http.get(`groups/${id}`);
     return responce.data;
+  }
+
+  async createGroup(data: GroupType) {
+    const responce: AxiosResponse<GroupType> = await http.post('groups', data);
+    return responce;
   }
 }
 

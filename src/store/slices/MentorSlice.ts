@@ -15,39 +15,18 @@ const initialState: SliceDataType<MentorType[]> = {
   error: null,
 };
 
-export const createMentor = createAsyncThunk<
-  MentorType,
-  any,
-  { rejectValue: string }
->('mentors/createMentor', async (mentor, { rejectWithValue }) => {
-  const { name, direction, lastName, phoneNumber, email, password } = mentor;
-  const teacher = {
-    name,
-    direction,
-    lastName,
-    phoneNumber,
-    email,
-    status: 'V activnom poiske',
-    password,
-  };
+export const createMentor = createAsyncThunk(
+  'mentors/createMentor',
+  async (mentor: MentorType, { rejectWithValue }) => {
+    const response = await Api.mentor.createMentor(mentor);
 
-  const response = await fetch(
-    'https://626d32c850a310b8a34bdca8.mockapi.io/mentors',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(teacher),
+    if (!response.statusText) {
+      return rejectWithValue("Can't add mentor. Server error.");
     }
-  );
 
-  if (!response.ok) {
-    return rejectWithValue("Can't add mentor. Server error.");
+    return response.data;
   }
-
-  return (await response.json()) as MentorType;
-});
+);
 
 const mentorSlice = createSlice({
   name: 'mentors',

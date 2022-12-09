@@ -21,6 +21,7 @@ const GroupsPage: React.FC = () => {
     () => result.map((row) => <GroupTable key={row.id} {...row} />),
     [result]
   );
+
   return (
     <PageContainer
       name={t('Groups.title')}
