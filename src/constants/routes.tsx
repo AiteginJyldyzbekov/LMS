@@ -16,7 +16,6 @@ import ComingSoon from '../pages/ComingSoon';
 import StudentsDashboard from '../pages/studentsDashboard/StudentsDashboard';
 import DirectionPage from '../pages/directionPageForAdmin/DirectionPage';
 
-
 export interface RouteType {
   title: string;
   path: string;
