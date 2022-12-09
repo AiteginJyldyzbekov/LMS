@@ -9,10 +9,12 @@ export interface GroupType {
   mentor: string;
   days: string | [];
   status: string;
+  students: [];
 }
 
 export interface MentorType {
-  createdAt: string;
+  id?: number;
+  createdAt?: string;
   name: string;
   direction: string;
   lastName: string;
@@ -20,7 +22,6 @@ export interface MentorType {
   email: string;
   status: string;
   password: string;
-  id: number;
 }
 
 export interface StudentType {
@@ -31,7 +32,7 @@ export interface StudentType {
   email: string;
   age: number;
   price: number;
-  start_date: Date;
+  startDate: Date;
   status: string;
   password: string;
   direction: string;
@@ -39,3 +40,15 @@ export interface StudentType {
   id: number;
   point: number | string;
 }
+
+// export interface GroupOneType {
+//   createdAd: string;
+//   name: string;
+//   direction: string;
+//   startDate: Date;
+//   duration: number;
+//   mentor: string;
+//   days: string | [];
+//   status: string;
+//   students: [];
+// }
