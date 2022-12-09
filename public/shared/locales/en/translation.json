@@ -8,6 +8,7 @@
     "Student_book": "Student Book",
     "Study_plan": "Study Plan",
     "Home_works": "Home Works",
+    "Direction": "Direction",
     "Dashboard": "Dashboard"
   },
   "LoginPage": {
@@ -134,6 +135,13 @@
     "yourCourses": "Your Courses",
     "lessonsLeft": "Lessons left",
     "profile": "Profile",
-    "yourProgress":"Your Progress"
+    "yourProgress": "Your Progress"
+  },
+  "DirectionPage": {
+    "name": "Direction",
+    "id": "ID",
+    "groups": "Group",
+    "count": "Number of students",
+    "addDirection":"+Add Direction"
   }
 }

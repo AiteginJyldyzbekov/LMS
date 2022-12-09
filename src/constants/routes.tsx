@@ -14,6 +14,7 @@ import StudyPlanStudent from '../pages/studyPlanStudent/StudyPlanStudnet';
 import HomeWorksStudent from '../pages/homeWorksStudent/HomeWorksStudent';
 import ComingSoon from '../pages/ComingSoon';
 import StudentsDashboard from '../pages/studentsDashboard/StudentsDashboard';
+import DirectionPage from '../pages/directionPageForAdmin/DirectionPage';
 
 export interface RouteType {
   title: string;
@@ -61,6 +62,11 @@ export const adminRoutes: RouteType[] = [
     title: 'Student detail page',
     path: '/student/:id',
     Component: ComingSoon,
+  },
+  {
+    title: 'Direction page',
+    path: '/direction',
+    Component: DirectionPage,
   },
 ];
 

@@ -15,7 +15,6 @@ import {
 import { useTranslation } from 'react-i18next';
 import { useAppDispatch } from '../../hooks/hook';
 import { createMentor } from '../../store/slices/MentorSlice';
-
 import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
 
 const CreateMentor: FC = () => {
