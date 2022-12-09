@@ -30,9 +30,7 @@ const TableContainer: React.FC<Props> = ({
     }
     return (
       <>
-        <TableHead 
-        sx={(theme) => ({ background: theme.palette.grey[100]})}
-        >
+        <TableHead sx={(theme) => ({ background: theme.palette.grey[100] })}>
           {Header}
         </TableHead>
         <TableBody>{Body}</TableBody>

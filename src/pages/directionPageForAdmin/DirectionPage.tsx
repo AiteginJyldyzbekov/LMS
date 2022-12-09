@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
+import { TableRow, TableCell } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import TableContainer from '../../components/TableContainer/TableContainer';
-import { TableRow, TableCell } from '@mui/material';
 import DirectionTable from '../../components/Tables/DirectionTable';
-import { useTranslation } from 'react-i18next';
 
 export interface Result {
   id: number;
@@ -42,14 +42,18 @@ const DirectionPage: React.FC = () => {
   );
 
   return (
-    <PageContainer name={t("DirectionPage.name")} puth="/direction" btnText={t("DirectionPage.addDirection")}>
+    <PageContainer
+      name={t('DirectionPage.name')}
+      puth="/direction"
+      btnText={t('DirectionPage.addDirection')}
+    >
       <TableContainer
         Header={
           <TableRow>
-            <TableCell>{t("DirectionPage.id")}</TableCell>
-            <TableCell>{t("DirectionPage.groups")}</TableCell>
-            <TableCell>{t("DirectionPage.count")}</TableCell>
-            <TableCell align="right"></TableCell>
+            <TableCell>{t('DirectionPage.id')}</TableCell>
+            <TableCell>{t('DirectionPage.groups')}</TableCell>
+            <TableCell>{t('DirectionPage.count')}</TableCell>
+            <TableCell align="right" />
           </TableRow>
         }
         Body={renderList}
