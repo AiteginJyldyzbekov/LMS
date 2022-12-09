@@ -1,4 +1,5 @@
 import {
+  Button,
   FormControl,
   Grid,
   InputLabel,
@@ -47,6 +48,23 @@ const DurationPageAdmin: React.FC = () => {
           >
             <TextField value={groupName} label={t('Groups.name')} />
           </FormControl>
+        </Grid>
+        <Grid
+          sx={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            marginTop: '30px',
+          }}
+        >
+          <Button
+            sx={{
+              width: '20%',
+            }}
+            variant="outlined"
+          >
+            {t('CreateMentor.save')}
+          </Button>
         </Grid>
       </Grid>
     </MainPageContainer>
