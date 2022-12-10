@@ -1,10 +1,10 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import AccordionMentor from '../../components/AccordionMentor/AccordionMentor';
-import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
+import AccordionMentor from '../../../components/AccordionMentor/AccordionMentor';
+import MainPageContainer from '../../../components/mainPageContainer/MainPageContainer';
 
-const HomeWorksMentor: React.FC = () => {
+const HomeWorksStudent: React.FC = () => {
   const { t } = useTranslation();
   const data = [
     {
@@ -50,4 +50,4 @@ const HomeWorksMentor: React.FC = () => {
   );
 };
 
-export default HomeWorksMentor;
+export default HomeWorksStudent;

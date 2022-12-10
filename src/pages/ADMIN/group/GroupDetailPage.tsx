@@ -2,15 +2,15 @@ import { Grid, TableCell, TableRow, Typography } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import PageContainer from '../../components/PageContainer/PageContainer';
-import TableContainer from '../../components/TableContainer/TableContainer';
-import GroupStudentTable from '../../components/Tables/GroupStudentTable';
-import { useAppDispatch } from '../../hooks/hook';
-import { useSelectorGroup } from '../../store/selectors';
-import { getGroup } from '../../store/slices/GroupSlice';
-import { StudentType } from '../../types/index.dto';
+import PageContainer from '../../../components/PageContainer/PageContainer';
+import TableContainer from '../../../components/TableContainer/TableContainer';
+import GroupStudentTable from '../../../components/Tables/GroupStudentTable';
+import { useAppDispatch } from '../../../hooks/hook';
+import { useSelectorGroup } from '../../../store/selectors';
+import { getGroup } from '../../../store/slices/GroupSlice';
+import { StudentType } from '../../../types/index.dto';
 
-const GroupPageAdmin: React.FC = () => {
+const GroupPageDetail: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorGroup();
   const d = useAppDispatch();
@@ -89,4 +89,4 @@ const GroupPageAdmin: React.FC = () => {
   );
 };
 
-export default GroupPageAdmin;
+export default GroupPageDetail;

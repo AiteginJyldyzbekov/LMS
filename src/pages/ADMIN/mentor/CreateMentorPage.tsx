@@ -14,9 +14,9 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { useAppDispatch } from '../../hooks/hook';
-import { createMentor } from '../../store/slices/MentorSlice';
-import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
+import { useAppDispatch } from '../../../hooks/hook';
+import { createMentor } from '../../../store/slices/MentorSlice';
+import MainPageContainer from '../../../components/mainPageContainer/MainPageContainer';
 
 const CreateMentor: FC = () => {
   const [data, setData] = useState<string>('');

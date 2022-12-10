@@ -1,8 +1,8 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import AccordionMentor from '../../components/AccordionMentor/AccordionMentor';
-import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
+import AccordionMentor from '../../../components/AccordionMentor/AccordionMentor';
+import MainPageContainer from '../../../components/mainPageContainer/MainPageContainer';
 
 const StudyPlanMentor: React.FC = () => {
   const { t } = useTranslation();

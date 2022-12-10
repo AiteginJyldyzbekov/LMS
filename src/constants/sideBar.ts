@@ -31,7 +31,7 @@ export const mentor: SideBarLink[] = [
   {
     title: 'SideBar.Student_book',
     Icon: BookIcon,
-    path: '/studentbook',
+    path: '/',
     id: 0,
   },
   {
