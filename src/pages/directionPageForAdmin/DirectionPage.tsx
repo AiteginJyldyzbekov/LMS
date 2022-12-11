@@ -7,6 +7,7 @@ import DirectionTable from '../../components/Tables/DirectionTable';
 
 export interface Result {
   id: number;
+  name: string;
   group: string;
   countOfStudents: number;
 }
@@ -16,21 +17,25 @@ const DirectionPage: React.FC = () => {
   const result: Result[] = [
     {
       id: 1,
+      name: 'Anuars',
       group: 'Frontend',
       countOfStudents: 25,
     },
     {
       id: 2,
+      name: 'Amans',
       group: 'Backend',
       countOfStudents: 20,
     },
     {
       id: 3,
+      name: 'Ulans',
       group: 'Disign UI/UX',
       countOfStudents: 1,
     },
     {
       id: 4,
+      name: 'Azizis',
       group: 'Disign UI/UX',
       countOfStudents: 1,
     },
@@ -43,7 +48,7 @@ const DirectionPage: React.FC = () => {
 
   return (
     <PageContainer
-      name={t('DirectionPage.name')}
+      name={t('DirectionPage.title')}
       puth="/direction"
       btnText={t('DirectionPage.addDirection')}
     >
@@ -51,6 +56,7 @@ const DirectionPage: React.FC = () => {
         Header={
           <TableRow>
             <TableCell>{t('DirectionPage.id')}</TableCell>
+            <TableCell>{t('DirectionPage.name')}</TableCell>
             <TableCell>{t('DirectionPage.groups')}</TableCell>
             <TableCell>{t('DirectionPage.count')}</TableCell>
             <TableCell align="right" />

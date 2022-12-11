@@ -138,10 +138,11 @@
     "yourProgress": "Your Progress"
   },
   "DirectionPage": {
-    "name": "Direction",
+    "title": "Direction",
     "id": "ID",
     "groups": "Group",
     "count": "Number of students",
-    "addDirection":"+Add Direction"
+    "addDirection": "+Add Direction",
+    "name": "Name"
   }
 }

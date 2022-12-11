@@ -6,13 +6,19 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import TableCellContainer from './TableCellContainer';
 import { Result } from '../../pages/directionPageForAdmin/DirectionPage';
 
-const DirectionTable: React.FC<Result> = ({ id, group, countOfStudents }) => {
+const DirectionTable: React.FC<Result> = ({
+  id,
+  group,
+  countOfStudents,
+  name,
+}) => {
   const navigate = useNavigate();
   return (
     <TableCellContainer path={`/direction/${id}`}>
       <TableCell component="th" scope="row">
         {id}
       </TableCell>
+      <TableCell scope="row">{name}</TableCell>
       <TableCell scope="row">{group}</TableCell>
       <TableCell sx={{ paddingLeft: '7%' }} align="left">
         {countOfStudents}

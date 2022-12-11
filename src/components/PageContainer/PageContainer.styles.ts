@@ -34,9 +34,10 @@ const useStyles = makeStyles(() => ({
       paddingRight: '20px',
       paddingLeft: '20px',
     },
-    '@media (max-width: 375px)': {
-      paddingRight: '10px',
-      paddingLeft: '10px',
+    '@media (max-width: 580px)': {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '15px',
     },
   },
 }));

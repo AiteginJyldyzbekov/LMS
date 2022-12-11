@@ -17,7 +17,6 @@ import DirectionPage from '../pages/directionPageForAdmin/DirectionPage';
 import StudentsDashboard from '../pages/STUDENT/studentsDashboard/StudentsDashboard';
 import CreateDurationPage from '../pages/ADMIN/duration/CreateDurationPage';
 
-
 export interface RouteType {
   title: string;
   path: string;
@@ -66,7 +65,6 @@ export const adminRoutes: RouteType[] = [
     Component: ComingSoon,
   },
   {
-
     title: 'Direction page',
     path: '/direction',
     Component: DirectionPage,
