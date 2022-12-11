@@ -1,8 +1,8 @@
 import { Grid, TableCell, TableRow, Typography } from '@mui/material';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import TableContainer from '../../components/TableContainer/TableContainer';
-import StudentBookTable from '../../components/Tables/StudentBookTable';
+import TableContainer from '../../../components/TableContainer/TableContainer';
+import StudentBookTable from '../../../components/Tables/StudentBookTable';
 
 const createData = (
   id: number,

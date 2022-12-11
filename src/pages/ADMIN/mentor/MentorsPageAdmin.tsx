@@ -1,12 +1,12 @@
 import { TableCell, TableRow } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import PageContainer from '../../components/PageContainer/PageContainer';
-import TableContainer from '../../components/TableContainer/TableContainer';
-import MentorsTable from '../../components/Tables/MentorsTable';
-import { useAppDispatch } from '../../hooks/hook';
-import { useSelectorMentors } from '../../store/selectors';
-import { getMentors } from '../../store/slices/MentorSlice';
+import PageContainer from '../../../components/PageContainer/PageContainer';
+import TableContainer from '../../../components/TableContainer/TableContainer';
+import MentorsTable from '../../../components/Tables/MentorsTable';
+import { useAppDispatch } from '../../../hooks/hook';
+import { useSelectorMentors } from '../../../store/selectors';
+import { getMentors } from '../../../store/slices/MentorSlice';
 
 const AdminMentorsPage: React.FC = () => {
   const { t } = useTranslation();

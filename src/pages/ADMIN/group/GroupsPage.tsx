@@ -1,12 +1,12 @@
 import { TableCell, TableRow } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import PageContainer from '../../components/PageContainer/PageContainer';
-import TableContainer from '../../components/TableContainer/TableContainer';
-import GroupTable from '../../components/Tables/GroupTable';
-import { useAppDispatch } from '../../hooks/hook';
-import { useSelectorGroups } from '../../store/selectors';
-import { getAllGroups } from '../../store/slices/GroupSlice';
+import PageContainer from '../../../components/PageContainer/PageContainer';
+import TableContainer from '../../../components/TableContainer/TableContainer';
+import GroupTable from '../../../components/Tables/GroupTable';
+import { useAppDispatch } from '../../../hooks/hook';
+import { useSelectorGroups } from '../../../store/selectors';
+import { getAllGroups } from '../../../store/slices/GroupSlice';
 
 const GroupsPage: React.FC = () => {
   const { t } = useTranslation();

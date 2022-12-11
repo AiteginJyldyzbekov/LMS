@@ -13,14 +13,14 @@ import {
 } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { days } from '../../constants/days';
+import { days } from '../../../constants/days';
 import DaysItem from './daysItem/DaysItem';
-import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
-import { useAppDispatch } from '../../hooks/hook';
-import { createGroup } from '../../store/slices/GroupSlice';
-import { GroupType } from '../../types/index.dto';
+import MainPageContainer from '../../../components/mainPageContainer/MainPageContainer';
+import { useAppDispatch } from '../../../hooks/hook';
+import { createGroup } from '../../../store/slices/GroupSlice';
+import { GroupType } from '../../../types/index.dto';
 
-const GroupPage: FC = () => {
+const CreateGroupPage: FC = () => {
   const { t } = useTranslation();
   const [groupName, setGroupName] = useState('');
   const [startDate, setStartDate] = useState('');
@@ -184,4 +184,4 @@ const GroupPage: FC = () => {
   );
 };
 
-export default GroupPage;
+export default CreateGroupPage;

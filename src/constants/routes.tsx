@@ -1,20 +1,22 @@
 import React from 'react';
 import LoginPage from '../pages/loginpage/Loginpage';
-import GroupPage from '../pages/groupPage/GroupPage';
-import CreateMentor from '../pages/createMentorPage/CreateMentor';
-import GroupsPage from '../pages/groupsPage/GroupsPage';
-import AdminMentorsPage from '../pages/mentorsPageAdmin/AdminMentorsPage';
-import GroupPageAdmin from '../pages/adminGroupPage/GroupPageAdmin';
-import AllStudentssupAdmin from '../pages/allStudentsPageForSupAdmin/AllStudentsAdmin';
-import GroupsPageMentor from '../pages/groupsPageMentor/GroupsPageMentor';
-import HomeWorks from '../pages/homeWorksMentor/HomeWorksMentor';
-import StudyPlanMentor from '../pages/studyPlanMentor/StudyPlanMentor';
-import CreateStudentPage from '../pages/studentPage/CreateStudentPage';
-import StudyPlanStudent from '../pages/studyPlanStudent/StudyPlanStudnet';
-import HomeWorksStudent from '../pages/homeWorksStudent/HomeWorksStudent';
+import CreateGroupPage from '../pages/ADMIN/group/CreateGroupPage';
+import CreateMentor from '../pages/ADMIN/mentor/CreateMentorPage';
+import GroupsPage from '../pages/ADMIN/group/GroupsPage';
+import AdminMentorsPage from '../pages/ADMIN/mentor/MentorsPageAdmin';
+import GroupPageAdmin from '../pages/ADMIN/group/GroupDetailPage';
+import AllStudentssupPageAdmin from '../pages/ADMIN/student/AllStudentsPageAdmin';
+import GroupsPageMentor from '../pages/MENTOR/groupsPageMentor/GroupsPageMentor';
+import HomeWorks from '../pages/MENTOR/homeWorksMentor/HomeWorksMentor';
+import StudyPlanMentor from '../pages/MENTOR/studyPlanMentor/StudyPlanMentor';
+import CreateStudentPage from '../pages/ADMIN/student/CreateStudentPage';
+import StudyPlanStudent from '../pages/STUDENT/studyPlanStudent/StudyPlanStudnet';
+import HomeWorksStudent from '../pages/STUDENT/homeWorksStudent/HomeWorksStudent';
 import ComingSoon from '../pages/ComingSoon';
-import StudentsDashboard from '../pages/studentsDashboard/StudentsDashboard';
 import DirectionPage from '../pages/directionPageForAdmin/DirectionPage';
+import StudentsDashboard from '../pages/STUDENT/studentsDashboard/StudentsDashboard';
+import CreateDurationPage from '../pages/ADMIN/duration/CreateDurationPage';
+
 
 export interface RouteType {
   title: string;
@@ -36,7 +38,7 @@ export const adminRoutes: RouteType[] = [
   {
     title: 'Create Group',
     path: '/createGroup',
-    Component: GroupPage,
+    Component: CreateGroupPage,
   },
   {
     title: 'Create Group',
@@ -56,7 +58,7 @@ export const adminRoutes: RouteType[] = [
   {
     title: 'All Students Page',
     path: '/students',
-    Component: AllStudentssupAdmin,
+    Component: AllStudentssupPageAdmin,
   },
   {
     title: 'Student detail page',
@@ -64,17 +66,23 @@ export const adminRoutes: RouteType[] = [
     Component: ComingSoon,
   },
   {
+
     title: 'Direction page',
     path: '/direction',
     Component: DirectionPage,
+  },
+  {
+    title: 'Create Duration page',
+    path: '/duration/create',
+    Component: CreateDurationPage,
   },
 ];
 
 export const mentorRoutes: RouteType[] = [
   {
-    title: 'Main Page with some info for mentor',
+    title: 'Student Book Page',
     path: '/',
-    Component: ComingSoon,
+    Component: GroupsPageMentor,
   },
   {
     title: 'Home works Page',
@@ -85,11 +93,6 @@ export const mentorRoutes: RouteType[] = [
     title: 'Study plan Page',
     path: '/study-plan',
     Component: StudyPlanMentor,
-  },
-  {
-    title: 'Student Book Page',
-    path: '/studentbook',
-    Component: GroupsPageMentor,
   },
   {
     title: 'Student Book Detail Page',

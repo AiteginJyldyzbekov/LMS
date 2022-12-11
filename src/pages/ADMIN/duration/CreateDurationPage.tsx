@@ -11,9 +11,9 @@ import {
 } from '@mui/material';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import MainPageContainer from '../../components/mainPageContainer/MainPageContainer';
+import MainPageContainer from '../../../components/mainPageContainer/MainPageContainer';
 
-const DurationPageAdmin: React.FC = () => {
+const CreateDurationPage: React.FC = () => {
   const [groupName, setGroupName] = useState<string>('');
   const [direction, setDirection] = useState<string>('');
 
@@ -71,4 +71,4 @@ const DurationPageAdmin: React.FC = () => {
   );
 };
 
-export default DurationPageAdmin;
+export default CreateDurationPage;

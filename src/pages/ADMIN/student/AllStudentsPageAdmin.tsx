@@ -1,14 +1,14 @@
 import { TableCell, TableRow } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import PageContainer from '../../components/PageContainer/PageContainer';
-import TableContainer from '../../components/TableContainer/TableContainer';
-import StudentsTable from '../../components/Tables/Studentstable';
-import { useAppDispatch } from '../../hooks/hook';
-import { useSelectorAllStudents } from '../../store/selectors';
-import { getAllStudents } from '../../store/slices/AllStudentsSlice';
+import PageContainer from '../../../components/PageContainer/PageContainer';
+import TableContainer from '../../../components/TableContainer/TableContainer';
+import StudentsTable from '../../../components/Tables/Studentstable';
+import { useAppDispatch } from '../../../hooks/hook';
+import { useSelectorAllStudents } from '../../../store/selectors';
+import { getAllStudents } from '../../../store/slices/AllStudentsSlice';
 
-const AllStudentssupAdmin: React.FC = () => {
+const AllStudentsPageAdmin: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorAllStudents();
   const d = useAppDispatch();
@@ -46,4 +46,4 @@ const AllStudentssupAdmin: React.FC = () => {
   );
 };
 
-export default AllStudentssupAdmin;
+export default AllStudentsPageAdmin;
