@@ -1,9 +1,9 @@
 import React, { useMemo } from 'react';
 import { TableRow, TableCell } from '@mui/material';
 import { useTranslation } from 'react-i18next';
-import PageContainer from '../../components/PageContainer/PageContainer';
-import TableContainer from '../../components/TableContainer/TableContainer';
-import DirectionTable from '../../components/Tables/DirectionTable';
+import PageContainer from '../../../components/PageContainer/PageContainer';
+import TableContainer from '../../../components/TableContainer/TableContainer';
+import DirectionTable from '../../../components/Tables/DirectionTable';
 
 export interface Result {
   id: number;

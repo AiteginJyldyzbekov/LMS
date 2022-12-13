@@ -13,7 +13,7 @@ import CreateStudentPage from '../pages/ADMIN/student/CreateStudentPage';
 import StudyPlanStudent from '../pages/STUDENT/studyPlanStudent/StudyPlanStudnet';
 import HomeWorksStudent from '../pages/STUDENT/homeWorksStudent/HomeWorksStudent';
 import ComingSoon from '../pages/ComingSoon';
-import DirectionPage from '../pages/directionPageForAdmin/DirectionPage';
+import DirectionPage from '../pages/ADMIN/duration/DirectionPage';
 import StudentsDashboard from '../pages/STUDENT/studentsDashboard/StudentsDashboard';
 import CreateDurationPage from '../pages/ADMIN/duration/CreateDurationPage';
 

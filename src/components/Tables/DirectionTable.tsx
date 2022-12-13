@@ -4,7 +4,7 @@ import EditOffIcon from '@mui/icons-material/EditOff';
 import { useNavigate } from 'react-router-dom';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import TableCellContainer from './TableCellContainer';
-import { Result } from '../../pages/directionPageForAdmin/DirectionPage';
+import { Result } from '../../pages/ADMIN/duration/DirectionPage';
 
 const DirectionTable: React.FC<Result> = ({
   id,
