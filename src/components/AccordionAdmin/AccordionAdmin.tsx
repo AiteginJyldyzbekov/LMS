@@ -142,7 +142,8 @@ const AccordionAdmin: React.FC<HomeWorksProps> = ({ title, text }) => {
           >
             {t('HomeWorksAdmin.details')}
           </Button>
-          {edit ? (
+
+          {edit && (
             <Button
               onClick={() => setEdit(false)}
               sx={{
@@ -156,8 +157,6 @@ const AccordionAdmin: React.FC<HomeWorksProps> = ({ title, text }) => {
             >
               {t('CreateMentor.save')}
             </Button>
-          ) : (
-            ''
           )}
         </Grid>
       </Accordion>
