@@ -142,6 +142,9 @@
     "profile": "Профиль",
     "yourProgress": "Твой прогресс"
   },
+  "HomeWorksAdmin": {
+    "details": "Детали"
+},
   "DirectionPage": {
     "title": "Направление",
     "id": "ID",

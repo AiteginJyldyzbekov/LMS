@@ -135,7 +135,10 @@
     "yourCourses": "Your Courses",
     "lessonsLeft": "Lessons left",
     "profile": "Profile",
-    "yourProgress": "Your Progress"
+    "yourProgress":"Your Progress"
+  },
+  "HomeWorksAdmin": {
+    "details": "Details"
   },
   "DirectionPage": {
     "title": "Direction",
