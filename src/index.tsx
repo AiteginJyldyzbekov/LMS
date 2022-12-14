@@ -9,6 +9,7 @@ import store from './store';
 import App from './App';
 import theme from './theme';
 import './i18n/i18next';
+import 'react-quill/dist/quill.snow.css';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

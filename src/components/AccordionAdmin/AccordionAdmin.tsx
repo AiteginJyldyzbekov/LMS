@@ -13,7 +13,6 @@ import { Box, Divider, Grid, IconButton, Button } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import ReactQuill from 'react-quill';
 import useStyles from './AccordionAdmin.styles';
-import 'react-quill/dist/quill.snow.css';
 
 const Accordion = styled((props: AccordionProps) => (
   <MuiAccordion disableGutters elevation={0} square {...props} />
