@@ -8,6 +8,7 @@
     "Student_book": "Student Book",
     "Study_plan": "Study Plan",
     "Home_works": "Home Works",
+    "Direction": "Direction",
     "Dashboard": "Dashboard"
   },
   "LoginPage": {
@@ -138,5 +139,13 @@
   },
   "HomeWorksAdmin": {
     "details": "Details"
+  },
+  "DirectionPage": {
+    "title": "Direction",
+    "id": "ID",
+    "groups": "Group",
+    "count": "Number of students",
+    "addDirection": "+Add Direction",
+    "name": "Name"
   }
 }

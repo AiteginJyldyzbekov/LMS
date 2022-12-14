@@ -12,7 +12,7 @@ import { LoadingStatus } from '../../types/types';
 interface Props {
   Header: React.ReactNode;
   Body: React.ReactNode;
-  isLoading: LoadingStatus | boolean;
+  isLoading?: LoadingStatus | boolean;
   isFilter?: boolean;
 }
 const TableContainer: React.FC<Props> = ({

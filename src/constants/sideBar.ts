@@ -4,6 +4,7 @@ import GroupIcon from '@mui/icons-material/Group';
 import BookIcon from '@mui/icons-material/Book';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import HomeWorkIcon from '@mui/icons-material/HomeWork';
+import DirectionsIcon from '@mui/icons-material/Directions';
 import { SideBarLink } from '../types/types';
 
 export const admin: SideBarLink[] = [
@@ -24,6 +25,12 @@ export const admin: SideBarLink[] = [
     Icon: GroupIcon,
     path: '/students',
     id: 2,
+  },
+  {
+    title: 'SideBar.Direction',
+    Icon: DirectionsIcon,
+    path: '/direction',
+    id: 3,
   },
 ];
 
