@@ -139,6 +139,9 @@
     "yourCourses": "Твои курсы",
     "lessonsLeft": "уроков",
     "profile": "Профиль",
-    "yourProgress":"Твой прогресс"
+    "yourProgress": "Твой прогресс"
+  },
+  "HomeWorksAdmin": {
+    "details": "Детали"
   }
 }

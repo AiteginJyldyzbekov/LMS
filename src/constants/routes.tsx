@@ -15,6 +15,7 @@ import HomeWorksStudent from '../pages/STUDENT/homeWorksStudent/HomeWorksStudent
 import ComingSoon from '../pages/ComingSoon';
 import StudentsDashboard from '../pages/STUDENT/studentsDashboard/StudentsDashboard';
 import CreateDurationPage from '../pages/ADMIN/duration/CreateDurationPage';
+import HomeWorksAdmin from '../pages/ADMIN/home-works/HomeWorks';
 
 export interface RouteType {
   title: string;
@@ -67,6 +68,11 @@ export const adminRoutes: RouteType[] = [
     title: 'Create Duration page',
     path: '/duration/create',
     Component: CreateDurationPage,
+  },
+  {
+    title: 'Home Works page',
+    path: '/home-works',
+    Component: HomeWorksAdmin,
   },
 ];
 

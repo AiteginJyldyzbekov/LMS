@@ -135,5 +135,8 @@
     "lessonsLeft": "Lessons left",
     "profile": "Profile",
     "yourProgress":"Your Progress"
+  },
+  "HomeWorksAdmin": {
+    "details": "Details"
   }
 }
