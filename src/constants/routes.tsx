@@ -13,6 +13,7 @@ import CreateStudentPage from '../pages/ADMIN/student/CreateStudentPage';
 import StudyPlanStudent from '../pages/STUDENT/studyPlanStudent/StudyPlanStudnet';
 import HomeWorksStudent from '../pages/STUDENT/homeWorksStudent/HomeWorksStudent';
 import ComingSoon from '../pages/ComingSoon';
+import DirectionPage from '../pages/ADMIN/duration/DirectionPage';
 import StudentsDashboard from '../pages/STUDENT/studentsDashboard/StudentsDashboard';
 import CreateDurationPage from '../pages/ADMIN/duration/CreateDurationPage';
 
@@ -62,6 +63,11 @@ export const adminRoutes: RouteType[] = [
     title: 'Student detail page',
     path: '/student/:id',
     Component: ComingSoon,
+  },
+  {
+    title: 'Direction page',
+    path: '/direction',
+    Component: DirectionPage,
   },
   {
     title: 'Create Duration page',

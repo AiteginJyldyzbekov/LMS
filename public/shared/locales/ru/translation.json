@@ -8,6 +8,7 @@
     "Student_book": "Учебник",
     "Study_plan": "Учебный план",
     "Home_works": "Домашние задания",
+    "Direction": "Направление",
     "Dashboard": "Dashboard"
   },
   "LoginPage": {
@@ -139,6 +140,14 @@
     "yourCourses": "Твои курсы",
     "lessonsLeft": "уроков",
     "profile": "Профиль",
-    "yourProgress":"Твой прогресс"
+    "yourProgress": "Твой прогресс"
+  },
+  "DirectionPage": {
+    "title": "Направление",
+    "id": "ID",
+    "groups": "Группа",
+    "count": "Количество Студентов",
+    "addDirection": "+Добавить Направление",
+    "name": "Имя"
   }
 }
