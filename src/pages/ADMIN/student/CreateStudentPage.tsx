@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Button,
   FormControl,
@@ -16,6 +16,28 @@ import useStyles from './StudentPage.style';
 const CreateStudentPage: React.FC = () => {
   const classes = useStyles();
   const { t } = useTranslation();
+
+  const [pass, setPass] = useState('');
+
+  useEffect(() => {
+    generatePass();
+  }, []);
+
+  const generatePass = () => {
+    const numberChars = '0123456789';
+    const upperChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowerChars = 'abcdefghijklmnopqrstuvwxyz';
+    const allChars = numberChars + upperChars + lowerChars;
+
+    let randomString = '';
+
+    for (let i = 0; i < 12; i++) {
+      const randomNumber = Math.floor(Math.random() * allChars.length);
+      randomString += allChars[randomNumber];
+    }
+    setPass(randomString);
+  };
+
   return (
     <MainPageContainer isGoBack>
       <div className={classes.container}>
@@ -29,6 +51,12 @@ const CreateStudentPage: React.FC = () => {
               label={item.placeholder}
             />
           ))}
+          <TextField
+            sx={{ width: '40%' }}
+            id="outlined-basic"
+            label="Generate password"
+            value={pass}
+          />
           <FormControl sx={{ m: 1, width: '35%' }}>
             <InputLabel id="demo-multiple-name-label">
               {t('StudentPage.status')}

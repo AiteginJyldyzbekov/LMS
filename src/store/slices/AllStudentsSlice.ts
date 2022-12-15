@@ -9,6 +9,19 @@ export const getAllStudents = createAsyncThunk('students', async () => {
   return response;
 });
 
+export const createStudent = createAsyncThunk(
+  'students/createStundet',
+  async (student: StudentType, { rejectWithValue }) => {
+    const response = await Api.student.createStudent(student as any);
+
+    if (!response.statusText) {
+      return rejectWithValue("Can't add mentor. Server error.");
+    }
+
+    return response.data;
+  }
+);
+
 const initialState: SliceDataType<StudentType[]> = {
   loading: LoadingStatus.idle,
   result: [],
