@@ -10,9 +10,9 @@ export const getAllStudents = createAsyncThunk('students', async () => {
 });
 
 export const createStudent = createAsyncThunk(
-  'students/createStundet',
+  'students/createStudent',
   async (student: StudentType, { rejectWithValue }) => {
-    const response = await Api.student.createStudent(student as any);
+    const response = await Api.student.createStudent(student as StudentType);
 
     if (!response.statusText) {
       return rejectWithValue("Can't add mentor. Server error.");
@@ -22,10 +22,22 @@ export const createStudent = createAsyncThunk(
   }
 );
 
-const initialState: SliceDataType<StudentType[]> = {
-  loading: LoadingStatus.idle,
-  result: [],
-  error: null,
+interface StateType {
+  allStudents: SliceDataType<StudentType[]>;
+  createStudent: SliceDataType<StudentType | null>;
+}
+
+const initialState: StateType = {
+  allStudents: {
+    loading: LoadingStatus.idle,
+    result: [],
+    error: null,
+  },
+  createStudent: {
+    loading: LoadingStatus.idle,
+    result: null,
+    error: null,
+  }
 };
 
 const StudentSlice = createSlice({
@@ -34,15 +46,26 @@ const StudentSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getAllStudents.pending, (state) => {
-      state.loading = LoadingStatus.pending;
+      state.allStudents.loading = LoadingStatus.pending;
     });
     builder.addCase(getAllStudents.fulfilled, (state, action) => {
-      state.loading = LoadingStatus.succeeded;
-      state.result = action.payload;
+      state.allStudents.loading = LoadingStatus.succeeded;
+      state.allStudents.result = action.payload;
     });
     builder.addCase(getAllStudents.rejected, (state, action) => {
-      state.loading = LoadingStatus.failed;
-      state.error = action.error;
+      state.allStudents.loading = LoadingStatus.failed;
+      state.allStudents.error = action.error;
+    });
+    builder.addCase(createStudent.pending, (state) => {
+      state.createStudent.loading = LoadingStatus.pending;
+    });
+    builder.addCase(createStudent.fulfilled, (state, action) => {
+      state.createStudent.loading = LoadingStatus.succeeded;
+      state.createStudent.result = action.payload;
+    });
+    builder.addCase(createStudent.rejected, (state, action) => {
+      state.createStudent.loading = LoadingStatus.failed;
+      state.createStudent.error = action.error;
     });
   },
 });
