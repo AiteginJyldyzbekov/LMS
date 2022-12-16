@@ -37,7 +37,7 @@ const initialState: StateType = {
     loading: LoadingStatus.idle,
     result: null,
     error: null,
-  }
+  },
 };
 
 const StudentSlice = createSlice({

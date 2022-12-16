@@ -40,15 +40,3 @@ export interface StudentType {
   id: number;
   point: number | string;
 }
-
-// export interface GroupOneType {
-//   createdAd: string;
-//   name: string;
-//   direction: string;
-//   startDate: Date;
-//   duration: number;
-//   mentor: string;
-//   days: string | [];
-//   status: string;
-//   students: [];
-// }

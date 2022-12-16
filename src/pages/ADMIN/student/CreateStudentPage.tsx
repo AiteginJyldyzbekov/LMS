@@ -10,17 +10,12 @@ import {
 } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import MainPageContainer from '../../../components/mainPageContainer/MainPageContainer';
 import useStyles from './StudentPage.style';
 import { useAppDispatch } from '../../../hooks/hook';
 import { createStudent } from '../../../store/slices/AllStudentsSlice';
 import { StudentType } from '../../../types/index.dto';
-import { useNavigate } from 'react-router-dom';
-
-import dayjs, { Dayjs } from 'dayjs';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { CalendarPicker } from '@mui/x-date-pickers/CalendarPicker';
 
 const CreateStudentPage: React.FC = () => {
   const classes = useStyles();
@@ -48,8 +43,8 @@ const CreateStudentPage: React.FC = () => {
     age,
     price,
     createdAt: date,
-    status
-  }
+    status,
+  };
 
   const handleCreate = () => {
     if (name.length > 0) {
@@ -59,15 +54,13 @@ const CreateStudentPage: React.FC = () => {
     } else {
       setError(1);
     }
-  }
+  };
 
   const searchRegExp = /\//g;
-
-  const newDate = new Date().toLocaleDateString("en-US");
-  const today = newDate.replace(searchRegExp, '-')
-  const splitDate = today.split("-");
-  const finalDate = [splitDate[2], splitDate[0], splitDate[1]].join('-')
-
+  const newDate = new Date().toLocaleDateString('en-US');
+  const today = newDate.replace(searchRegExp, '-');
+  const splitDate = today.split('-');
+  const finalDate = [splitDate[2], splitDate[0], splitDate[1]].join('-');
 
   const generatePass = () => {
     const numberChars = '0123456789';
@@ -147,15 +140,16 @@ const CreateStudentPage: React.FC = () => {
             value={pass}
           />
           <FormControl sx={{ m: 1, width: '35%' }}>
-            <InputLabel
-              id="demo-multiple-name-label">
+            <InputLabel id="demo-multiple-name-label">
               {t('StudentPage.status')}
             </InputLabel>
             <Select
               onChange={(e: SelectChangeEvent<string>) => {
                 setStatus(e.target.value);
               }}
-              labelId="demo-multiple-name-label" id="demo-multiple-name">
+              labelId="demo-multiple-name-label"
+              id="demo-multiple-name"
+            >
               <MenuItem />
             </Select>
           </FormControl>
@@ -172,6 +166,7 @@ const CreateStudentPage: React.FC = () => {
                 fontSize: '12px',
               },
             }}
+            color={error === 0 ? 'primary' : 'error'}
           >
             {t('StudentPage.save')}
           </Button>
