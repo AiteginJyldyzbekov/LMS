@@ -23,12 +23,12 @@ export const createStudent = createAsyncThunk(
 );
 
 interface StateType {
-  allStudents: SliceDataType<StudentType[]>;
+  students: SliceDataType<StudentType[]>;
   createStudent: SliceDataType<StudentType | null>;
 }
 
 const initialState: StateType = {
-  allStudents: {
+  students: {
     loading: LoadingStatus.idle,
     result: [],
     error: null,
@@ -46,15 +46,15 @@ const StudentSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getAllStudents.pending, (state) => {
-      state.allStudents.loading = LoadingStatus.pending;
+      state.students.loading = LoadingStatus.pending;
     });
     builder.addCase(getAllStudents.fulfilled, (state, action) => {
-      state.allStudents.loading = LoadingStatus.succeeded;
-      state.allStudents.result = action.payload;
+      state.students.loading = LoadingStatus.succeeded;
+      state.students.result = action.payload;
     });
     builder.addCase(getAllStudents.rejected, (state, action) => {
-      state.allStudents.loading = LoadingStatus.failed;
-      state.allStudents.error = action.error;
+      state.students.loading = LoadingStatus.failed;
+      state.students.error = action.error;
     });
     builder.addCase(createStudent.pending, (state) => {
       state.createStudent.loading = LoadingStatus.pending;

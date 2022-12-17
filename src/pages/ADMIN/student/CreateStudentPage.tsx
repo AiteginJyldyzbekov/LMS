@@ -46,7 +46,8 @@ const CreateStudentPage: React.FC = () => {
     status,
   };
 
-  const handleCreate = () => {
+  const handleCreate = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     if (name.length > 0) {
       dispatch(createStudent(student as unknown as StudentType));
       navigate('/');
@@ -83,7 +84,7 @@ const CreateStudentPage: React.FC = () => {
 
   return (
     <MainPageContainer isGoBack>
-      <div className={classes.container}>
+      <form onSubmit={(e) => handleCreate(e)} className={classes.container}>
         <h1 className={classes.title}>{t('StudentPage.title')}</h1>
         <div className={classes.inputsContainer}>
           <TextField
@@ -156,7 +157,7 @@ const CreateStudentPage: React.FC = () => {
         </div>
         <div className={classes.btnsContainer}>
           <Button
-            onClick={() => handleCreate()}
+            type="submit"
             variant="outlined"
             sx={{
               width: '15%',
@@ -193,7 +194,7 @@ const CreateStudentPage: React.FC = () => {
             {t('StudentPage.delete')}
           </Button>
         </div>
-      </div>
+      </form>
     </MainPageContainer>
   );
 };
