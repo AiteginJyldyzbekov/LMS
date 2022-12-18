@@ -143,8 +143,8 @@
   "DirectionPage": {
     "title": "Direction",
     "id": "ID",
-    "groups": "Group",
-    "count": "Number of students",
+    "groups": "Group Quantity",
+    "count": "Student Quantity",
     "addDirection": "+Add Direction",
     "name": "Name"
   }

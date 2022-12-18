@@ -4,13 +4,13 @@ import EditOffIcon from '@mui/icons-material/EditOff';
 import { useNavigate } from 'react-router-dom';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import TableCellContainer from './TableCellContainer';
-import { Result } from '../../pages/ADMIN/duration/DirectionPage';
+import { DirectionType } from '../../types/index.dto';
 
-const DirectionTable: React.FC<Result> = ({
+const DirectionTable: React.FC<DirectionType> = ({
   id,
-  group,
-  countOfStudents,
   name,
+  studentQuantity,
+  groupQuantity,
 }) => {
   const navigate = useNavigate();
   return (
@@ -19,9 +19,9 @@ const DirectionTable: React.FC<Result> = ({
         {id}
       </TableCell>
       <TableCell scope="row">{name}</TableCell>
-      <TableCell scope="row">{group}</TableCell>
-      <TableCell sx={{ paddingLeft: '7%' }} align="left">
-        {countOfStudents}
+      <TableCell sx={{ paddingLeft: '5%' }} >{groupQuantity}</TableCell>
+      <TableCell sx={{ paddingLeft: '6%' }} align="left">
+        {studentQuantity}
       </TableCell>
       <TableCell align="right">
         <IconButton color="error" onClick={(e) => e.stopPropagation()}>

@@ -41,6 +41,14 @@ export interface StudentType {
   point: number | string;
 }
 
+export interface DirectionType {
+  createdAt?: string;
+  name: string;
+  studentQuantity: number;
+  groupQuantity: number;
+  id: string;
+}
+
 // export interface GroupOneType {
 //   createdAd: string;
 //   name: string;

@@ -1,51 +1,26 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { TableRow, TableCell } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import PageContainer from '../../../components/PageContainer/PageContainer';
 import TableContainer from '../../../components/TableContainer/TableContainer';
 import DirectionTable from '../../../components/Tables/DirectionTable';
-
-export interface Result {
-  id: number;
-  name: string;
-  group: string;
-  countOfStudents: number;
-}
+import { useAppDispatch } from '../../../hooks/hook';
+import { useSelectorDirections } from '../../../store/selectors';
+import { getAllDirection } from '../../../store/slices/DirectionSlice';
 
 const DirectionPage: React.FC = () => {
   const { t } = useTranslation();
-  const result: Result[] = [
-    {
-      id: 1,
-      name: 'Anuars',
-      group: 'Frontend',
-      countOfStudents: 25,
-    },
-    {
-      id: 2,
-      name: 'Amans',
-      group: 'Backend',
-      countOfStudents: 20,
-    },
-    {
-      id: 3,
-      name: 'Ulans',
-      group: 'Disign UI/UX',
-      countOfStudents: 1,
-    },
-    {
-      id: 4,
-      name: 'Azizis',
-      group: 'Disign UI/UX',
-      countOfStudents: 1,
-    },
-  ];
+  const { result, loading } = useSelectorDirections();
+
+  useEffect(() => {
+    d(getAllDirection());
+  }, [])
 
   const renderList = useMemo(
     () => result.map((item) => <DirectionTable key={item.id} {...item} />),
     [result]
   );
-
+  const d = useAppDispatch();
   return (
     <PageContainer
       name={t('DirectionPage.title')}
@@ -53,6 +28,7 @@ const DirectionPage: React.FC = () => {
       btnText={t('DirectionPage.addDirection')}
     >
       <TableContainer
+        isLoading={loading}
         Header={
           <TableRow>
             <TableCell>{t('DirectionPage.id')}</TableCell>
