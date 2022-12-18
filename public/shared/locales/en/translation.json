@@ -146,6 +146,7 @@
     "groups": "Group Quantity",
     "count": "Student Quantity",
     "addDirection": "+Add Direction",
-    "name": "Name"
+    "name": "Name",
+    "detail": "Detail"
   }
 }

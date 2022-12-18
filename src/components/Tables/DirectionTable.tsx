@@ -19,7 +19,7 @@ const DirectionTable: React.FC<DirectionType> = ({
         {id}
       </TableCell>
       <TableCell scope="row">{name}</TableCell>
-      <TableCell sx={{ paddingLeft: '5%' }} >{groupQuantity}</TableCell>
+      <TableCell sx={{ paddingLeft: '5%' }}>{groupQuantity}</TableCell>
       <TableCell sx={{ paddingLeft: '6%' }} align="left">
         {studentQuantity}
       </TableCell>

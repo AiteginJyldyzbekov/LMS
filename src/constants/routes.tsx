@@ -79,7 +79,7 @@ export const adminRoutes: RouteType[] = [
   {
     title: 'Detail Direction',
     path: '/direction/:id',
-    Component: DirectionDetailPage
+    Component: DirectionDetailPage,
   },
   {
     title: 'Home Works page',

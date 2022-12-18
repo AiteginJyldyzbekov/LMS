@@ -7,7 +7,7 @@ const Api = {
   group: new GroupService(),
   student: new StudentService(),
   mentor: new MentorService(),
-  direction: new DirectionService()
+  direction: new DirectionService(),
 };
 
 export default Api;

@@ -14,7 +14,7 @@ const DirectionPage: React.FC = () => {
 
   useEffect(() => {
     d(getAllDirection());
-  }, [])
+  }, []);
 
   const renderList = useMemo(
     () => result.map((item) => <DirectionTable key={item.id} {...item} />),
