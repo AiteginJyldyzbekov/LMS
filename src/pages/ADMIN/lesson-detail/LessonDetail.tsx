@@ -60,9 +60,9 @@ const LessonDetail: React.FC = () => {
           Дополнительные материалы
         </Typography>
         <div className={classes.additional}>
-          {list.map((card, index) => (
+          {list.map((card) => (
             <div
-              key={`${card.id}_${index}`}
+              key={card.id}
               className={classes.card}
               style={{ background: card.bg_color }}
             >
