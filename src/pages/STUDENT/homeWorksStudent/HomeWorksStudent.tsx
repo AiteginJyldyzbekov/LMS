@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import AccordionStudent from '../../../components/AccordionStudent/AccordionStudent';
+import AccordionAdmin from '../../../components/AccordionAdmin/AccordionAdmin';
 import MainPageContainer from '../../../components/mainPageContainer/MainPageContainer';
 
 const HomeWorksStudent: React.FC = () => {
@@ -10,27 +10,22 @@ const HomeWorksStudent: React.FC = () => {
     {
       title: 'Home work 1',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
-      completed: true,
     },
     {
       title: 'Home work 2',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
-      completed: true,
     },
     {
       title: 'Home work 3',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
-      completed: true,
     },
     {
       title: 'Home work 4',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
-      completed: false,
     },
     {
       title: 'Home work 5',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
-      completed: false,
     },
   ];
   return (
@@ -48,11 +43,7 @@ const HomeWorksStudent: React.FC = () => {
           {t('HomeWorks.title')}
         </Typography>
         {data.map((item) => (
-          <AccordionStudent
-            title={item.title}
-            text={item.text}
-            completed={item.completed}
-          />
+          <AccordionAdmin title={item.title} text={item.text} />
         ))}
       </MainPageContainer>
     </div>
