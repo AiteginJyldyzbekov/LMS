@@ -135,7 +135,7 @@
     "yourCourses": "Your Courses",
     "lessonsLeft": "Lessons left",
     "profile": "Profile",
-    "yourProgress":"Your Progress"
+    "yourProgress": "Your Progress"
   },
   "HomeWorksAdmin": {
     "details": "Details"
@@ -147,5 +147,12 @@
     "count": "Number of students",
     "addDirection": "+Add Direction",
     "name": "Name"
+  },
+  "lessonDetails": {
+    "title": "Material for the lesson",
+    "courseInfo": "design, 4 flow",
+    "lessonTheme": "Lesson №3. Composition",
+    "lessonDesc": "Composition is the visual organization of design elements when all objects and elements are in harmony with each other and their environment... more",
+    "additional": "Additional materials"
   }
 }

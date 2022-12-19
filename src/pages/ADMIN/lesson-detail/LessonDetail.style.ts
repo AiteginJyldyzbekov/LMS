@@ -31,10 +31,12 @@ const useStyles = makeStyles(() => ({
     justifyContent: 'space-between',
     alignItems: 'center',
     cursor: 'pointer',
+    textAlign: 'left',
   },
   additional: {
     display: 'flex',
     gap: '20px',
+    flexWrap: 'wrap',
     marginBottom: '100px',
   },
   card: {
