@@ -135,7 +135,7 @@
     "yourCourses": "Your Courses",
     "lessonsLeft": "Lessons left",
     "profile": "Profile",
-    "yourProgress":"Your Progress"
+    "yourProgress": "Your Progress"
   },
   "HomeWorksAdmin": {
     "details": "Details"
@@ -147,6 +147,7 @@
     "count": "Student Quantity",
     "addDirection": "+Add Direction",
     "name": "Name",
-    "detail": "Detail"
+    "detail": "Detail",
+    "homeWorks": "Home Works"
   }
 }

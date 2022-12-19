@@ -1,15 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
-import { Grid, Typography, Button } from '@mui/material';
+import { Grid, Button } from '@mui/material';
 import { useAppDispatch } from '../../../hooks/hook';
-import { useSelectorDirection } from '../../../store/selectors';
 import { getDirection } from '../../../store/slices/DirectionSlice';
 import AccordionDirection from '../../../components/AccordionAdmin/AccordionDirection';
+import MainPageContainer from '../../../components/mainPageContainer/MainPageContainer';
 
 const DirectionDetailPage: React.FC = () => {
   const { t } = useTranslation();
-  const { result } = useSelectorDirection();
   const d = useAppDispatch();
   type ParamsType = {
     id: string;
@@ -42,49 +41,73 @@ const DirectionDetailPage: React.FC = () => {
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
     },
   ];
+  const [isToggle, setToggle] = useState<boolean>(false);
 
   return (
-    <Grid
-      container
-      direction="column"
-      justifyContent="center"
-      alignItems="center"
-      sx={{
-        textAlign: 'center',
-      }}
-    >
+    <MainPageContainer isGoBack>
       <Grid
         container
-        direction="row"
+        direction="column"
         justifyContent="center"
         alignItems="center"
-        sx={{ gap: '55px', margin: '4% 0' }}
+        sx={{
+          textAlign: 'center',
+        }}
+        gap={5}
       >
-        <Typography variant="h5">{t('DirectionPage.detail')}</Typography>
-        <Typography variant="h5">{result?.name}</Typography>
-      </Grid>
-      <Grid
-        container
-        gap={2}
-        direction="row"
-        justifyContent="center"
-        alignItems="start"
-      >
-        <Grid item xs={10} sm={4} sx={{ width: '30%' }}>
-          {data.map((item) => (
-            <AccordionDirection title={item.title} text={item.text} />
-          ))}
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          sx={{ gap: '55px' }}
+        >
+          {isToggle ? (
+            <>
+              <Button variant="contained" onClick={() => setToggle(true)}>
+                {t('DirectionPage.detail')}
+              </Button>
+              <Button variant="outlined" onClick={() => setToggle(false)}>
+                {t('DirectionPage.homeWorks')}
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button variant="outlined" onClick={() => setToggle(true)}>
+                {t('DirectionPage.detail')}
+              </Button>
+              <Button variant="contained" onClick={() => setToggle(false)}>
+                {t('DirectionPage.homeWorks')}
+              </Button>
+            </>
+          )}
         </Grid>
-        <Grid item xs={10} sm={4} sx={{ width: '30%' }}>
-          {data.map((item) => (
-            <AccordionDirection title={item.title} text={item.text} />
-          ))}
+        <Grid
+          container
+          gap={2}
+          direction="row"
+          justifyContent="center"
+          alignItems="start"
+        >
+          {isToggle ? (
+            <Grid item xs={8} sm={7} sx={{ width: '30%' }}>
+              {data.map((item) => (
+                <AccordionDirection title={item.title} text={item.text} />
+              ))}
+            </Grid>
+          ) : (
+            <Grid item xs={8} sm={7} sx={{ width: '30%' }}>
+              {data.map((item) => (
+                <AccordionDirection title={item.title} text={item.text} />
+              ))}
+            </Grid>
+          )}
         </Grid>
+        <Button variant="contained" sx={{ width: '55%' }}>
+          {t('DirectionPage.addDirection')}
+        </Button>
       </Grid>
-      <Button variant="contained" sx={{ width: '61%' }}>
-        {t('DirectionPage.addDirection')}
-      </Button>
-    </Grid>
+    </MainPageContainer>
   );
 };
 
