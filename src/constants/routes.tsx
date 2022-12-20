@@ -81,11 +81,6 @@ export const adminRoutes: RouteType[] = [
     path: '/home-works',
     Component: HomeWorksAdmin,
   },
-  {
-    title: 'Lesson detail page',
-    path: '/lesson-detail',
-    Component: LessonDetail,
-  },
 ];
 
 export const mentorRoutes: RouteType[] = [
@@ -126,6 +121,11 @@ export const studentRoutes: RouteType[] = [
     title: 'Home Works Page',
     path: '/home-works',
     Component: HomeWorksStudent,
+  },
+  {
+    title: 'Lesson detail page',
+    path: '/lesson/:id',
+    Component: LessonDetail,
   },
 ];
 

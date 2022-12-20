@@ -32,7 +32,9 @@ const LessonDetail: React.FC = () => {
       <section className={classes.container}>
         <div className={classes.titles}>
           <Typography variant="h4">{t('lessonDetails.title')}</Typography>
-          <Typography variant="h5">{t('lessonDetails.courseInfo')}</Typography>
+          <Typography variant="h5">
+            design, 4 {t('lessonDetails.courseInfo')}
+          </Typography>
         </div>
         <img src={img} alt="as" />
         {/* TODO: dynamic src and change img to iframe */}
@@ -43,8 +45,14 @@ const LessonDetail: React.FC = () => {
           src="https://www.youtube.com/watch?v=4PUHBL1vMNY&t=2902s"
         /> */}
         <div className={classes.lesson_description}>
-          <Typography variant="h5">{t('lessonDetails.lessonTheme')}</Typography>
-          <Typography>{t('lessonDetails.lessonDesc')}</Typography>
+          <Typography variant="h5">
+            {t('lessonDetails.lessonTheme')} №3.Композиция
+          </Typography>
+          <Typography>
+            Композиция – это визуальная организация элементов дизайна, когда все
+            объекты и элементы находятся в гармонии друг с другом и окружающей
+            их средой... далее
+          </Typography>
         </div>
         <button className={classes.lesson_download}>
           {/* TODO: here will be link to download pdf file */}
