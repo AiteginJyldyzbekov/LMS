@@ -17,6 +17,7 @@ import DirectionPage from '../pages/ADMIN/duration/DirectionPage';
 import StudentsDashboard from '../pages/STUDENT/studentsDashboard/StudentsDashboard';
 import CreateDurationPage from '../pages/ADMIN/duration/CreateDurationPage';
 import HomeWorksAdmin from '../pages/ADMIN/home-works/HomeWorks';
+import LessonDetail from '../pages/ADMIN/lesson-detail/LessonDetail';
 
 export interface RouteType {
   title: string;
@@ -120,6 +121,11 @@ export const studentRoutes: RouteType[] = [
     title: 'Home Works Page',
     path: '/home-works',
     Component: HomeWorksStudent,
+  },
+  {
+    title: 'Lesson detail page',
+    path: '/lesson/:id',
+    Component: LessonDetail,
   },
 ];
 
