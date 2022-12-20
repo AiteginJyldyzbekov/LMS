@@ -150,9 +150,8 @@
   },
   "lessonDetails": {
     "title": "Material for the lesson",
-    "courseInfo": "design, 4 flow",
-    "lessonTheme": "Lesson №3. Composition",
-    "lessonDesc": "Composition is the visual organization of design elements when all objects and elements are in harmony with each other and their environment... more",
+    "courseInfo": "flow",
+    "lessonTheme": "Lesson",
     "additional": "Additional materials"
   }
 }
