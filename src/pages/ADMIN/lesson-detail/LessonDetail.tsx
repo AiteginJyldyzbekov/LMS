@@ -1,14 +1,16 @@
 /* eslint-disable react/button-has-type */
-import React from 'react';
+import React, { useMemo, useState, useEffect } from 'react';
 import { Typography } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 import MainPageContainer from '../../../components/mainPageContainer/MainPageContainer';
 import useStyles from './LessonDetail.style';
 import img from '../../../assests/Group 6.png';
 import DownloadSVG from '../../../assests/download.svg';
+import LessonDetailsSkeleton from '../../../components/LessonDetailsSkeleton/LessonDetailsSkeleton';
 
 const LessonDetail: React.FC = () => {
   const { t } = useTranslation();
+  const [isLoading, setIsLoading] = useState(true);
   const classes = useStyles();
   const list = [
     {
@@ -27,6 +29,30 @@ const LessonDetail: React.FC = () => {
       name: 'ui.kit',
     },
   ];
+  // TODO: delete after integration with backend (temp solution)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+  const renderCards = useMemo(
+    () =>
+      list.map((card) => (
+        <div
+          key={card.id}
+          className={classes.card}
+          style={{ background: card.bg_color }}
+        >
+          {card.name}
+        </div>
+      )),
+    [list]
+  );
+  if (isLoading) {
+    return <LessonDetailsSkeleton />;
+  }
   return (
     <MainPageContainer isGoBack>
       <section className={classes.container}>
@@ -63,20 +89,11 @@ const LessonDetail: React.FC = () => {
           </Typography>
           <img src={DownloadSVG} alt="download icon" />
         </button>
+
         <Typography variant="h5" sx={{ marginLeft: '30px' }}>
           {t('lessonDetails.additional')}
         </Typography>
-        <div className={classes.additional}>
-          {list.map((card) => (
-            <div
-              key={card.id}
-              className={classes.card}
-              style={{ background: card.bg_color }}
-            >
-              {card.name}
-            </div>
-          ))}
-        </div>
+        <div className={classes.additional}>{renderCards}</div>
       </section>
     </MainPageContainer>
   );
