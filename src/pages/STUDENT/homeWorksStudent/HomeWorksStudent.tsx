@@ -17,25 +17,25 @@ const HomeWorksStudent: React.FC = () => {
       title: 'Home work 2',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
       completed: true,
-      id: 1,
+      id: 2,
     },
     {
       title: 'Home work 3',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
       completed: true,
-      id: 1,
+      id: 3,
     },
     {
       title: 'Home work 4',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
       completed: false,
-      id: 1,
+      id: 4,
     },
     {
       title: 'Home work 5',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
       completed: false,
-      id: 1,
+      id: 5,
     },
   ];
   return (
