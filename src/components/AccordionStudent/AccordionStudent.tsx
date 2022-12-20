@@ -76,7 +76,7 @@ const AccordionStudent: React.FC<AccordionStudentProps> = ({
             justifyContent: 'flex-end',
           }}
         >
-          <Link to={`/lesson/:${id}`} className={classes.link}>
+          <Link to={`/lesson/${id}`} className={classes.link}>
             <Button
               variant="outlined"
               sx={{
