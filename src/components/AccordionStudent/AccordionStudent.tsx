@@ -1,8 +1,9 @@
 import * as React from 'react';
 import { useState } from 'react';
 import Typography from '@mui/material/Typography';
-import { Box, Button, Divider } from '@mui/material';
+import { Box, Button, Divider, Grid } from '@mui/material';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import icon from '../../../public/images/accordionStudent/success_icon.png';
 import {
   AccordionDetails,
@@ -15,11 +16,13 @@ interface AccordionStudentProps {
   title: string;
   text: string;
   completed: boolean;
+  id: number;
 }
 const AccordionStudent: React.FC<AccordionStudentProps> = ({
   title,
   text,
   completed,
+  id,
 }) => {
   const [expanded, setExpanded] = useState<string | false>(false);
   const classes = useStyles();
@@ -67,18 +70,26 @@ const AccordionStudent: React.FC<AccordionStudentProps> = ({
             width: '100%',
           }}
         />
-        <Button
-          variant="outlined"
+        <Grid
           sx={{
-            margin: '10px',
-            marginLeft: '10px',
-            '@media (max-width: 310px)': {
-              width: '90%',
-            },
+            display: 'flex',
+            justifyContent: 'flex-end',
           }}
         >
-          {t('HomeWorksAdmin.details')}
-        </Button>
+          <Link to={`/lesson/:${id}`} className={classes.link}>
+            <Button
+              variant="outlined"
+              sx={{
+                margin: '10px',
+                '@media (max-width: 310px)': {
+                  width: '90%',
+                },
+              }}
+            >
+              {t('HomeWorksAdmin.details')}
+            </Button>
+          </Link>
+        </Grid>
       </Accordion>
     </div>
   );
