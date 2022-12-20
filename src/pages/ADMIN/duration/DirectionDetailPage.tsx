@@ -60,23 +60,39 @@ const DirectionDetailPage: React.FC = () => {
           direction="row"
           justifyContent="center"
           alignItems="center"
-          sx={{ gap: '55px' }}
+          sx={{ gap: '20px' }}
         >
           {isToggle ? (
             <>
-              <Button variant="contained" onClick={() => setToggle(true)}>
+              <Button
+                variant="contained"
+                size="large"
+                onClick={() => setToggle(true)}
+              >
                 {t('DirectionPage.detail')}
               </Button>
-              <Button variant="outlined" onClick={() => setToggle(false)}>
+              <Button
+                variant="outlined"
+                size="large"
+                onClick={() => setToggle(false)}
+              >
                 {t('DirectionPage.homeWorks')}
               </Button>
             </>
           ) : (
             <>
-              <Button variant="outlined" onClick={() => setToggle(true)}>
+              <Button
+                variant="outlined"
+                size="large"
+                onClick={() => setToggle(true)}
+              >
                 {t('DirectionPage.detail')}
               </Button>
-              <Button variant="contained" onClick={() => setToggle(false)}>
+              <Button
+                variant="contained"
+                size="large"
+                onClick={() => setToggle(false)}
+              >
                 {t('DirectionPage.homeWorks')}
               </Button>
             </>
@@ -88,22 +104,23 @@ const DirectionDetailPage: React.FC = () => {
           direction="row"
           justifyContent="center"
           alignItems="start"
+          sx={{ width: '100%' }}
         >
           {isToggle ? (
-            <Grid item xs={8} sm={7} sx={{ width: '30%' }}>
+            <Grid item sx={{ width: '100%' }}>
               {data.map((item) => (
                 <AccordionDirection title={item.title} text={item.text} />
               ))}
             </Grid>
           ) : (
-            <Grid item xs={8} sm={7} sx={{ width: '30%' }}>
+            <Grid item sx={{ width: '100%' }}>
               {data.map((item) => (
                 <AccordionDirection title={item.title} text={item.text} />
               ))}
             </Grid>
           )}
         </Grid>
-        <Button variant="contained" sx={{ width: '55%' }}>
+        <Button variant="contained" size="large" sx={{ width: '100%' }}>
           {t('DirectionPage.addDirection')}
         </Button>
       </Grid>
