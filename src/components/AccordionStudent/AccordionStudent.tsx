@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { useState } from 'react';
 import Typography from '@mui/material/Typography';
-import { Box } from '@mui/material';
+import { Box, Button, Divider } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 import icon from '../../../public/images/accordionStudent/success_icon.png';
 import {
   AccordionDetails,
   AccordionSummary,
   Accordion,
 } from './AccordionStudentStyled';
-
 import useStyles from './AccordionStudent.styles';
 
 interface AccordionStudentProps {
@@ -26,6 +26,7 @@ const AccordionStudent: React.FC<AccordionStudentProps> = ({
   const handleChange = (panel: string, newExpanded: boolean) => {
     setExpanded(newExpanded ? panel : false);
   };
+  const { t } = useTranslation();
 
   return (
     <div>
@@ -61,6 +62,23 @@ const AccordionStudent: React.FC<AccordionStudentProps> = ({
         <AccordionDetails>
           <Typography>{text}</Typography>
         </AccordionDetails>
+        <Divider
+          sx={{
+            width: '100%',
+          }}
+        />
+        <Button
+          variant="outlined"
+          sx={{
+            margin: '10px',
+            marginLeft: '10px',
+            '@media (max-width: 310px)': {
+              width: '90%',
+            },
+          }}
+        >
+          {t('HomeWorksAdmin.details')}
+        </Button>
       </Accordion>
     </div>
   );
