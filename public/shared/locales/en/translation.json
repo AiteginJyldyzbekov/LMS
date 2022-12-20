@@ -135,7 +135,7 @@
     "yourCourses": "Your Courses",
     "lessonsLeft": "Lessons left",
     "profile": "Profile",
-    "yourProgress":"Your Progress"
+    "yourProgress": "Your Progress"
   },
   "HomeWorksAdmin": {
     "details": "Details"
@@ -147,5 +147,11 @@
     "count": "Number of students",
     "addDirection": "+Add Direction",
     "name": "Name"
+  },
+  "lessonDetails": {
+    "title": "Material for the lesson",
+    "courseInfo": "flow",
+    "lessonTheme": "Lesson",
+    "additional": "Additional materials"
   }
 }
