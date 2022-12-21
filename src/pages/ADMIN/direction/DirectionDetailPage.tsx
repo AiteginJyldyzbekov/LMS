@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Grid, Button } from '@mui/material';
@@ -42,6 +42,14 @@ const DirectionDetailPage: React.FC = () => {
     },
   ];
   const [isToggle, setToggle] = useState<boolean>(false);
+
+  const renderAccardion = useMemo(
+    () =>
+      data.map((item) => (
+        <AccordionDirection title={item.title} text={item.text} />
+      )),
+    [data]
+  );
 
   return (
     <MainPageContainer isGoBack>
@@ -108,15 +116,11 @@ const DirectionDetailPage: React.FC = () => {
         >
           {isToggle ? (
             <Grid item sx={{ width: '100%' }}>
-              {data.map((item) => (
-                <AccordionDirection title={item.title} text={item.text} />
-              ))}
+              {renderAccardion}
             </Grid>
           ) : (
             <Grid item sx={{ width: '100%' }}>
-              {data.map((item) => (
-                <AccordionDirection title={item.title} text={item.text} />
-              ))}
+              {renderAccardion}
             </Grid>
           )}
         </Grid>
