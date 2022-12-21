@@ -149,5 +149,11 @@
     "name": "Name",
     "detail": "Detail",
     "homeWorks": "Home Works"
+  },
+  "lessonDetails": {
+    "title": "Material for the lesson",
+    "courseInfo": "flow",
+    "lessonTheme": "Lesson",
+    "additional": "Additional materials"
   }
 }

@@ -144,7 +144,7 @@
   },
   "HomeWorksAdmin": {
     "details": "Детали"
-},
+  },
   "DirectionPage": {
     "title": "Направление",
     "id": "ID",
@@ -154,5 +154,11 @@
     "name": "Имя",
     "detail": "Подробнее",
     "homeWorks": "Домашняя Работа"
+  },
+  "lessonDetails": {
+    "title": "Материал к уроку",
+    "courseInfo": "поток",
+    "lessonTheme": "Урок",
+    "additional": "Дополнительные материалы"
   }
 }

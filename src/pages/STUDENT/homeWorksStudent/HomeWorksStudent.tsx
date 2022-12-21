@@ -1,7 +1,7 @@
 import { Typography } from '@mui/material';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import AccordionMentor from '../../../components/AccordionMentor/AccordionMentor';
+import AccordionStudent from '../../../components/AccordionStudent/AccordionStudent';
 import MainPageContainer from '../../../components/mainPageContainer/MainPageContainer';
 
 const HomeWorksStudent: React.FC = () => {
@@ -10,22 +10,32 @@ const HomeWorksStudent: React.FC = () => {
     {
       title: 'Home work 1',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
+      completed: true,
+      id: 1,
     },
     {
       title: 'Home work 2',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
+      completed: true,
+      id: 2,
     },
     {
       title: 'Home work 3',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
+      completed: true,
+      id: 3,
     },
     {
       title: 'Home work 4',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
+      completed: false,
+      id: 4,
     },
     {
       title: 'Home work 5',
       text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod congue mi vitae sollicitudin.',
+      completed: false,
+      id: 5,
     },
   ];
   return (
@@ -43,7 +53,12 @@ const HomeWorksStudent: React.FC = () => {
           {t('HomeWorks.title')}
         </Typography>
         {data.map((item) => (
-          <AccordionMentor title={item.title} text={item.text} />
+          <AccordionStudent
+            title={item.title}
+            text={item.text}
+            completed={item.completed}
+            id={item.id}
+          />
         ))}
       </MainPageContainer>
     </div>
