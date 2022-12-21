@@ -6,14 +6,14 @@ import TableContainer from '../../../components/TableContainer/TableContainer';
 import DirectionTable from '../../../components/Tables/DirectionTable';
 import { useAppDispatch } from '../../../hooks/hook';
 import { useSelectorDirections } from '../../../store/selectors';
-import { getAllCourses } from '../../../store/slices/DirectionSlice';
+import { getDirections } from '../../../store/slices/DirectionSlice';
 
 const DirectionPage: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorDirections();
 
   useEffect(() => {
-    d(getAllCourses());
+    d(getDirections());
   }, []);
 
   const renderList = useMemo(

@@ -4,8 +4,8 @@ import { DirectionType } from '../../types/index.dto';
 import { LoadingStatus } from '../../types/types';
 import { SliceDataType } from '../types';
 
-export const getAllCourses = createAsyncThunk(
-  'direction/getAllCourses',
+export const getDirections = createAsyncThunk(
+  'direction/getDirections',
   async () => {
     const response = await Api.direction.getAll();
     return response;
@@ -42,14 +42,14 @@ const DirectionSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getAllCourses.pending, (state) => {
+    builder.addCase(getDirections.pending, (state) => {
       state.direction.loading = LoadingStatus.pending;
     });
-    builder.addCase(getAllCourses.fulfilled, (state, action) => {
+    builder.addCase(getDirections.fulfilled, (state, action) => {
       state.direction.loading = LoadingStatus.succeeded;
       state.direction.result = action.payload;
     });
-    builder.addCase(getAllCourses.rejected, (state, action) => {
+    builder.addCase(getDirections.rejected, (state, action) => {
       state.direction.loading = LoadingStatus.failed;
       state.direction.error = action.error;
     });
