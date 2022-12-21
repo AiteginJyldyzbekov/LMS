@@ -58,6 +58,7 @@ const HomeWorksStudent: React.FC = () => {
             text={item.text}
             completed={item.completed}
             id={item.id}
+            isHomeWork
           />
         ))}
       </MainPageContainer>

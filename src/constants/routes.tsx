@@ -123,6 +123,11 @@ export const studentRoutes: RouteType[] = [
     Component: HomeWorksStudent,
   },
   {
+    title: 'Home Works Page',
+    path: '/home-work/:id',
+    Component: ComingSoon,
+  },
+  {
     title: 'Lesson detail page',
     path: '/lesson/:id',
     Component: LessonDetail,
