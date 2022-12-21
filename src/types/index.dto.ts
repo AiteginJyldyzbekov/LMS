@@ -48,15 +48,3 @@ export interface DirectionType {
   groupQuantity: number;
   id: string;
 }
-
-// export interface GroupOneType {
-//   createdAd: string;
-//   name: string;
-//   direction: string;
-//   startDate: Date;
-//   duration: number;
-//   mentor: string;
-//   days: string | [];
-//   status: string;
-//   students: [];
-// }

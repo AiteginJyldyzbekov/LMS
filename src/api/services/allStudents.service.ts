@@ -7,6 +7,14 @@ class StudentService {
     const responce: AxiosResponse<[StudentType]> = await http.get('students');
     return responce.data;
   }
+
+  async createStudent(data: StudentType) {
+    const responce: AxiosResponse<StudentType> = await http.post(
+      'students',
+      data
+    );
+    return responce;
+  }
 }
 
 export default StudentService;

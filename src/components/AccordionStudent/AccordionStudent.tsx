@@ -15,14 +15,16 @@ import useStyles from './AccordionStudent.styles';
 interface AccordionStudentProps {
   title: string;
   text: string;
-  completed: boolean;
+  completed?: boolean;
   id: number;
+  isHomeWork?: boolean;
 }
 const AccordionStudent: React.FC<AccordionStudentProps> = ({
   title,
   text,
-  completed,
+  completed = false,
   id,
+  isHomeWork,
 }) => {
   const [expanded, setExpanded] = useState<string | false>(false);
   const classes = useStyles();
@@ -76,7 +78,10 @@ const AccordionStudent: React.FC<AccordionStudentProps> = ({
             justifyContent: 'flex-end',
           }}
         >
-          <Link to={`/lesson/${id}`} className={classes.link}>
+          <Link
+            to={isHomeWork ? `/home-work/${id}` : `/lesson/${id}`}
+            className={classes.link}
+          >
             <Button
               variant="outlined"
               sx={{

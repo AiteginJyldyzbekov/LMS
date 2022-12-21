@@ -20,7 +20,4 @@ export const inputsData: { placeholder: string }[] = [
   {
     placeholder: 'Start Date',
   },
-  {
-    placeholder: 'Auto Generated Password',
-  },
 ];
