@@ -12,7 +12,7 @@ export const useSelectorGroup = () =>
   useAppSelector((state) => state.group.detailGroup);
 
 export const useSelectorDirections = () =>
-  useAppSelector((state) => state.direction.direction);
+  useAppSelector((state) => state.direction.directions);
 
 export const useSelectorDirection = () =>
   useAppSelector((state) => state.direction.detailDirection);

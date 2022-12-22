@@ -21,11 +21,11 @@ export const getDirection = createAsyncThunk(
 );
 
 interface StateType {
-  direction: SliceDataType<DirectionType[]>;
+  directions: SliceDataType<DirectionType[]>;
   detailDirection: SliceDataType<DirectionType | null>;
 }
 const initialState: StateType = {
-  direction: {
+  directions: {
     loading: LoadingStatus.idle,
     result: [],
     error: null,
@@ -43,15 +43,15 @@ const DirectionSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(getDirections.pending, (state) => {
-      state.direction.loading = LoadingStatus.pending;
+      state.directions.loading = LoadingStatus.pending;
     });
     builder.addCase(getDirections.fulfilled, (state, action) => {
-      state.direction.loading = LoadingStatus.succeeded;
-      state.direction.result = action.payload;
+      state.directions.loading = LoadingStatus.succeeded;
+      state.directions.result = action.payload;
     });
     builder.addCase(getDirections.rejected, (state, action) => {
-      state.direction.loading = LoadingStatus.failed;
-      state.direction.error = action.error;
+      state.directions.loading = LoadingStatus.failed;
+      state.directions.error = action.error;
     });
     builder.addCase(getDirection.pending, (state) => {
       state.detailDirection.loading = LoadingStatus.pending;

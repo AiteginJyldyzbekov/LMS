@@ -51,6 +51,57 @@ const DirectionDetailPage: React.FC = () => {
     [data]
   );
 
+  const renderMenu = useMemo(() => {
+    if (isToggle) {
+      return (
+        <Grid item sx={{ width: '100%' }}>
+          {renderAccardion}
+        </Grid>
+      );
+    }
+    return (
+      <Grid item sx={{ width: '100%' }}>
+        {renderAccardion}
+      </Grid>
+    );
+  }, [isToggle]);
+
+  const renderButtons = useMemo(() => {
+    if (isToggle) {
+      return (
+        <>
+          <Button
+            variant="contained"
+            size="large"
+            onClick={() => setToggle(true)}
+          >
+            {t('DirectionPage.detail')}
+          </Button>
+          <Button
+            variant="outlined"
+            size="large"
+            onClick={() => setToggle(false)}
+          >
+            {t('DirectionPage.homeWorks')}
+          </Button>
+        </>
+      );
+    }
+    return (
+      <>
+        <Button variant="outlined" size="large" onClick={() => setToggle(true)}>
+          {t('DirectionPage.detail')}
+        </Button>
+        <Button
+          variant="contained"
+          size="large"
+          onClick={() => setToggle(false)}
+        >
+          {t('DirectionPage.homeWorks')}
+        </Button>
+      </>
+    );
+  }, [isToggle]);
   return (
     <MainPageContainer isGoBack>
       <Grid
@@ -70,41 +121,7 @@ const DirectionDetailPage: React.FC = () => {
           alignItems="center"
           sx={{ gap: '20px' }}
         >
-          {isToggle ? (
-            <>
-              <Button
-                variant="contained"
-                size="large"
-                onClick={() => setToggle(true)}
-              >
-                {t('DirectionPage.detail')}
-              </Button>
-              <Button
-                variant="outlined"
-                size="large"
-                onClick={() => setToggle(false)}
-              >
-                {t('DirectionPage.homeWorks')}
-              </Button>
-            </>
-          ) : (
-            <>
-              <Button
-                variant="outlined"
-                size="large"
-                onClick={() => setToggle(true)}
-              >
-                {t('DirectionPage.detail')}
-              </Button>
-              <Button
-                variant="contained"
-                size="large"
-                onClick={() => setToggle(false)}
-              >
-                {t('DirectionPage.homeWorks')}
-              </Button>
-            </>
-          )}
+          {renderButtons}
         </Grid>
         <Grid
           container
@@ -114,15 +131,7 @@ const DirectionDetailPage: React.FC = () => {
           alignItems="start"
           sx={{ width: '100%' }}
         >
-          {isToggle ? (
-            <Grid item sx={{ width: '100%' }}>
-              {renderAccardion}
-            </Grid>
-          ) : (
-            <Grid item sx={{ width: '100%' }}>
-              {renderAccardion}
-            </Grid>
-          )}
+          {renderMenu}
         </Grid>
         <Button variant="contained" size="large" sx={{ width: '100%' }}>
           {t('DirectionPage.addDirection')}

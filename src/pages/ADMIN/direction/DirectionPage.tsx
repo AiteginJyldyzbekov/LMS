@@ -7,6 +7,7 @@ import DirectionTable from '../../../components/Tables/DirectionTable';
 import { useAppDispatch } from '../../../hooks/hook';
 import { useSelectorDirections } from '../../../store/selectors';
 import { getDirections } from '../../../store/slices/DirectionSlice';
+import { DirectionType } from '../../../types/index.dto';
 
 const DirectionPage: React.FC = () => {
   const { t } = useTranslation();
@@ -17,7 +18,10 @@ const DirectionPage: React.FC = () => {
   }, []);
 
   const renderList = useMemo(
-    () => result.map((item) => <DirectionTable key={item.id} {...item} />),
+    () =>
+      result.map((item: DirectionType) => (
+        <DirectionTable key={item.id} {...item} />
+      )),
     [result]
   );
   const d = useAppDispatch();
