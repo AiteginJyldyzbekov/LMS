@@ -11,10 +11,10 @@ import { getAllStudents } from '../../../store/slices/AllStudentsSlice';
 const AllStudentsPageAdmin: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorAllStudents();
-  const d = useAppDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    d(getAllStudents());
+    dispatch(getAllStudents());
   }, []);
 
   const renderList = useMemo(

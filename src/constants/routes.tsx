@@ -13,10 +13,11 @@ import CreateStudentPage from '../pages/ADMIN/student/CreateStudentPage';
 import StudyPlanStudent from '../pages/STUDENT/studyPlanStudent/StudyPlanStudnet';
 import HomeWorksStudent from '../pages/STUDENT/homeWorksStudent/HomeWorksStudent';
 import ComingSoon from '../pages/ComingSoon';
-import DirectionPage from '../pages/ADMIN/duration/DirectionPage';
+import DirectionPage from '../pages/ADMIN/direction/DirectionPage';
 import StudentsDashboard from '../pages/STUDENT/studentsDashboard/StudentsDashboard';
-import CreateDurationPage from '../pages/ADMIN/duration/CreateDurationPage';
+import CreateDurationPage from '../pages/ADMIN/direction/CreateDurationPage';
 import HomeWorksAdmin from '../pages/ADMIN/home-works/HomeWorks';
+import DirectionDetailPage from '../pages/ADMIN/direction/DirectionDetailPage';
 import LessonDetail from '../pages/STUDENT/lesson-detail/LessonDetail';
 
 export interface RouteType {
@@ -75,6 +76,11 @@ export const adminRoutes: RouteType[] = [
     title: 'Create Duration page',
     path: '/duration/create',
     Component: CreateDurationPage,
+  },
+  {
+    title: 'Detail Direction',
+    path: '/direction/:id',
+    Component: DirectionDetailPage,
   },
   {
     title: 'Home Works page',
