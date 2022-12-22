@@ -13,7 +13,7 @@ import { StudentType } from '../../../types/index.dto';
 const GroupPageDetail: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorGroup();
-  const d = useAppDispatch();
+  const dispatch = useAppDispatch();
 
   type ParamsType = {
     id: string;
@@ -22,7 +22,7 @@ const GroupPageDetail: React.FC = () => {
   const { id } = useParams() as ParamsType;
 
   useEffect(() => {
-    d(getGroup(id));
+    dispatch(getGroup(id));
   }, []);
 
   const studentsArr = result?.students;

@@ -11,10 +11,10 @@ import { getMentors } from '../../../store/slices/MentorSlice';
 const AdminMentorsPage: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorMentors();
-  const d = useAppDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    d(getMentors());
+    dispatch(getMentors());
   }, []);
 
   const renderList = useMemo(

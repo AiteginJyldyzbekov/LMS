@@ -12,9 +12,10 @@ import { DirectionType } from '../../../types/index.dto';
 const DirectionPage: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorDirections();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    d(getDirections());
+    dispatch(getDirections());
   }, []);
 
   const renderList = useMemo(
@@ -24,7 +25,7 @@ const DirectionPage: React.FC = () => {
       )),
     [result]
   );
-  const d = useAppDispatch();
+
   return (
     <PageContainer
       name={t('DirectionPage.title')}

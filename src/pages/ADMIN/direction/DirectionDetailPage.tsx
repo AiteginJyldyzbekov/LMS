@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Grid, Button } from '@mui/material';
@@ -9,14 +9,14 @@ import MainPageContainer from '../../../components/mainPageContainer/MainPageCon
 
 const DirectionDetailPage: React.FC = () => {
   const { t } = useTranslation();
-  const d = useAppDispatch();
+  const dispatch = useAppDispatch();
   type ParamsType = {
     id: string;
   };
   const { id } = useParams() as ParamsType;
 
   useEffect(() => {
-    d(getDirection(id));
+    dispatch(getDirection(id));
   }, []);
 
   const data = [
@@ -51,7 +51,7 @@ const DirectionDetailPage: React.FC = () => {
     [data]
   );
 
-  const renderMenu = useMemo(() => {
+  const renderMenu = useCallback(() => {
     if (isToggle) {
       return (
         <Grid item sx={{ width: '100%' }}>
@@ -66,7 +66,7 @@ const DirectionDetailPage: React.FC = () => {
     );
   }, [isToggle]);
 
-  const renderButtons = useMemo(() => {
+  const renderButtons = useCallback(() => {
     if (isToggle) {
       return (
         <>
@@ -121,7 +121,7 @@ const DirectionDetailPage: React.FC = () => {
           alignItems="center"
           sx={{ gap: '20px' }}
         >
-          {renderButtons}
+          {renderButtons()}
         </Grid>
         <Grid
           container
@@ -131,7 +131,7 @@ const DirectionDetailPage: React.FC = () => {
           alignItems="start"
           sx={{ width: '100%' }}
         >
-          {renderMenu}
+          {renderMenu()}
         </Grid>
         <Button variant="contained" size="large" sx={{ width: '100%' }}>
           {t('DirectionPage.addDirection')}
