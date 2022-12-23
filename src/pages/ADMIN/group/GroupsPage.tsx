@@ -11,10 +11,10 @@ import { getAllGroups } from '../../../store/slices/GroupSlice';
 const GroupsPage: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorGroups();
-  const d = useAppDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    d(getAllGroups());
+    dispatch(getAllGroups());
   }, []);
 
   const renderList = useMemo(
