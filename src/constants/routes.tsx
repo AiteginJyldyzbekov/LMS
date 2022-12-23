@@ -74,7 +74,7 @@ export const adminRoutes: RouteType[] = [
   },
   {
     title: 'Create Duration page',
-    path: '/duration/create',
+    path: '/direction/create',
     Component: CreateDurationPage,
   },
   {

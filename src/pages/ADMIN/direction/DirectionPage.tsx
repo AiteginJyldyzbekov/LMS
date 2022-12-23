@@ -29,7 +29,7 @@ const DirectionPage: React.FC = () => {
   return (
     <PageContainer
       name={t('DirectionPage.title')}
-      puth="/direction"
+      puth="/direction/create"
       btnText={t('DirectionPage.addDirection')}
     >
       <TableContainer
