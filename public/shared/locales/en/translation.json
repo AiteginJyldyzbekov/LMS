@@ -147,8 +147,9 @@
     "count": "Student Quantity",
     "addDirection": "+Add Direction",
     "name": "Name",
-    "detail": "Detail",
-    "homeWorks": "Home Works"
+    "detail": "Study Plan",
+    "homeWorks": "Home Works",
+    "add":"+Add"
   },
   "lessonDetails": {
     "title": "Material for the lesson",
