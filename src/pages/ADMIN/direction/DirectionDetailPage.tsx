@@ -134,7 +134,7 @@ const DirectionDetailPage: React.FC = () => {
           {renderMenu()}
         </Grid>
         <Button variant="contained" size="large" sx={{ width: '100%' }}>
-          {t('DirectionPage.addDirection')}
+          {t('DirectionPage.add')}
         </Button>
       </Grid>
     </MainPageContainer>
