@@ -41,6 +41,8 @@ const GroupPageDetail: React.FC = () => {
       puth="/createStudent"
       btnText={t('AdminGroup.btnText')}
       isGoBack
+      isDetail
+      isDetailId={id}
     >
       <Grid
         sx={{
@@ -79,8 +81,6 @@ const GroupPageDetail: React.FC = () => {
             <TableCell align="center">{t('AdminGroup.mail')}</TableCell>
             <TableCell align="center">{t('AdminGroup.points')}</TableCell>
             <TableCell align="right">{t('AdminGroup.date')}</TableCell>
-            <TableCell align="right" />
-            <TableCell align="right" />
           </TableRow>
         }
         Body={renderList}

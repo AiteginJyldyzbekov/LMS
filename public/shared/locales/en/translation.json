@@ -68,7 +68,8 @@
     "amount": "Amount",
     "duration": "Duration",
     "addGroup": "+Add group",
-    "status": "Status"
+    "status": "Status",
+    "change": "Change Group"
   },
   "Mentors": {
     "title": "Mentors",
