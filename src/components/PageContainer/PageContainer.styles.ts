@@ -9,6 +9,7 @@ const useStyles = makeStyles(() => ({
   },
   content_wrapper: {
     marginTop: '30px',
+    marginBottom: '30px',
     '@media (max-width: 1200px)': {
       paddingRight: '40px',
       paddingLeft: '40px',
