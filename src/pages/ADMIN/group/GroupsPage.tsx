@@ -40,7 +40,6 @@ const GroupsPage: React.FC = () => {
             <TableCell align="right">{t('Groups.amount')}</TableCell>
             <TableCell align="right">{t('Groups.duration')}</TableCell>
             <TableCell align="right">{t('Groups.status')}</TableCell>
-            <TableCell align="right" />
           </TableRow>
         }
         Body={renderList}
