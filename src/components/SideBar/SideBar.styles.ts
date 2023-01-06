@@ -2,12 +2,12 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
   container: {
-    height: '100vh',
     position: 'sticky',
     top: 0,
     left: 0,
     right: 0,
     zIndex: 99,
+    width: "100%"
   },
   wrapper: {
     minWidth: '180px',
@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
   },
   active_wrapper: {
     minHeight: '100vh',
-    background: 'rgba(145, 158, 171, 0.16)',
+    background: 'rgba(145, 158, 171, 0.16)'
   },
   content_wrapper: {
     display: 'flex',
@@ -87,6 +87,8 @@ const useStyles = makeStyles(() => ({
   '@media (max-width: 1200px)': {
     container: {
       position: 'absolute',
+      top: '0',
+      width: '50%'
     },
     wrapper: {
       position: 'fixed',
@@ -96,6 +98,7 @@ const useStyles = makeStyles(() => ({
     },
     active_wrapper: {
       position: 'fixed',
+      background: '#F4F4F4',
       top: '0',
       left: '0',
       transition: '700ms',
@@ -110,7 +113,6 @@ const useStyles = makeStyles(() => ({
     },
     arrow_container: {
       width: '100%',
-      background: '#F4F4F4',
       display: 'flex',
       justifyContent: 'flex-end',
       alignItems: 'center',
