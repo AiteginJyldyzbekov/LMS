@@ -47,8 +47,9 @@ const RoleCard: React.FC<SideBarProps> = ({ role }) => {
           {role.map(({ title, Icon, path, id }) => (
             <Link
               to={path}
-              className={`${classes.card_content} ${path === pathname && classes.active_card
-                }`}
+              className={`${classes.card_content} ${
+                path === pathname && classes.active_card
+              }`}
               key={id}
             >
               <div className={classes.icon_container}>

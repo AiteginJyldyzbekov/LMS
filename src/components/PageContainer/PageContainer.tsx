@@ -37,11 +37,16 @@ const PageContainer: React.FC<PageContainerProps> = ({
         </Button>
       )}
       <div className={classes.wrapper}>
-        <Typography variant="h5" sx={{
-          '@media (max-width: 768px)': {
-            fontSize: '20px',
-          }
-        }}>{name}</Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            '@media (max-width: 768px)': {
+              fontSize: '20px',
+            },
+          }}
+        >
+          {name}
+        </Typography>
         <Grid>
           {isDetail && (
             <Link
@@ -64,15 +69,18 @@ const PageContainer: React.FC<PageContainerProps> = ({
                   sx={{
                     '@media (max-width: 768px)': {
                       fontSize: '12px',
-                    }
-                  }}>{btnText}</Typography>
+                    },
+                  }}
+                >
+                  {btnText}
+                </Typography>
               </Button>
             )}
           </Link>
         </Grid>
       </div>
       <div className={classes.content_wrapper}>{children}</div>
-    </div >
+    </div>
   );
 };
 

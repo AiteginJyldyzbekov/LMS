@@ -7,7 +7,7 @@ const useStyles = makeStyles(() => ({
     left: 0,
     right: 0,
     zIndex: 99,
-    width: "100%"
+    width: '100%',
   },
   wrapper: {
     minWidth: '180px',
@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
   },
   active_wrapper: {
     minHeight: '100vh',
-    background: 'rgba(145, 158, 171, 0.16)'
+    background: 'rgba(145, 158, 171, 0.16)',
   },
   content_wrapper: {
     display: 'flex',
@@ -88,7 +88,7 @@ const useStyles = makeStyles(() => ({
     container: {
       position: 'absolute',
       top: '0',
-      width: '50%'
+      width: '50%',
     },
     wrapper: {
       position: 'fixed',
