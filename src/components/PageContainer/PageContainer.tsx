@@ -27,10 +27,7 @@ const PageContainer: React.FC<PageContainerProps> = ({
   const classes = useStyles();
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const detailNavigate = (e: React.SyntheticEvent): void => {
-    e.preventDefault();
-    navigate(`/createStudent?id=${isDetailId}`);
-  };
+
   return (
     <div className={classes.container}>
       {isGoBack && (
@@ -43,14 +40,18 @@ const PageContainer: React.FC<PageContainerProps> = ({
         <Typography variant="h5">{name}</Typography>
         <Grid>
           {isDetail && (
-            <Button
-              onClick={detailNavigate}
-              sx={{ marginRight: '10px' }}
-              variant="contained"
-              size="large"
+            <Link
+              to={`/createGroup?id=${isDetailId}`}
+              style={{ textDecoration: 'none' }}
             >
-              {t('Groups.change')}
-            </Button>
+              <Button
+                sx={{ marginRight: '10px' }}
+                variant="contained"
+                size="large"
+              >
+                {t('Groups.change')}
+              </Button>
+            </Link>
           )}
           <Link to={puth} style={{ textDecoration: 'none' }}>
             {btnText && (
