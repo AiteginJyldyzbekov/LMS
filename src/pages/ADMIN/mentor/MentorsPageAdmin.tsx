@@ -30,6 +30,7 @@ const AdminMentorsPage: React.FC = () => {
     >
       <TableContainer
         isLoading={loading}
+        isSearch
         Header={
           <TableRow>
             <TableCell>{t('Mentors.id')}</TableCell>

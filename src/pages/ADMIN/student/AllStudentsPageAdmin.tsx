@@ -27,6 +27,7 @@ const AllStudentsPageAdmin: React.FC = () => {
       <TableContainer
         isLoading={loading}
         isFilter
+        isSearch
         Header={
           <TableRow>
             <TableCell align="left">{t('AllStudents.studentsId')}</TableCell>

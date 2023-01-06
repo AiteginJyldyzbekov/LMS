@@ -14,12 +14,14 @@ interface Props {
   Body: React.ReactNode;
   isLoading?: LoadingStatus | boolean;
   isFilter?: boolean;
+  isSearch?: boolean;
 }
 const TableContainer: React.FC<Props> = ({
   Header,
   Body,
   isLoading,
   isFilter,
+  isSearch,
 }) => {
   const render = () => {
     if (
@@ -39,21 +41,18 @@ const TableContainer: React.FC<Props> = ({
   };
   return (
     <TableWrapper component={Paper}>
-      <Grid
-        container
-        sx={{ padding: '15px' }}
-        alignItems="center"
-        justifyContent="space-between"
-      >
-        <Grid>
-          <TextField
-            label="Search"
-            placeholder="Search..."
-            variant="outlined"
-            sx={{ width: '250px' }}
-            size="small"
-          />
-        </Grid>
+      <Grid container alignItems="center" justifyContent="space-between">
+        {isSearch && (
+          <Grid sx={{ padding: '15px' }}>
+            <TextField
+              label="Search"
+              placeholder="Search..."
+              variant="outlined"
+              sx={{ width: '250px' }}
+              size="small"
+            />
+          </Grid>
+        )}
         <Grid item alignSelf="right">
           {isFilter && (
             <IconButton color="primary">
