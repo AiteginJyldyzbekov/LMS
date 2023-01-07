@@ -72,7 +72,6 @@ const GroupPageDetail: React.FC = () => {
       </Grid>
       <TableContainer
         isLoading={loading}
-        isSearch
         Header={
           <TableRow>
             <TableCell>{t('AdminGroup.id')}</TableCell>

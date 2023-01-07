@@ -31,7 +31,6 @@ const GroupsPage: React.FC = () => {
       <TableContainer
         isLoading={loading}
         isFilter
-        isSearch
         Header={
           <TableRow>
             <TableCell>{t('Groups.id')}</TableCell>

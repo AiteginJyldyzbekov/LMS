@@ -34,7 +34,6 @@ const DirectionPage: React.FC = () => {
     >
       <TableContainer
         isLoading={loading}
-        isSearch
         Header={
           <TableRow>
             <TableCell>{t('DirectionPage.id')}</TableCell>

@@ -21,7 +21,7 @@ const TableContainer: React.FC<Props> = ({
   Body,
   isLoading,
   isFilter,
-  isSearch,
+  isSearch = true,
 }) => {
   const render = () => {
     if (
