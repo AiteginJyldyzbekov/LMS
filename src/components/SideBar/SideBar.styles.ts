@@ -118,10 +118,19 @@ const useStyles = makeStyles(() => ({
       alignItems: 'center',
     },
     modal_icons: {
-      width: '25px',
-      height: '25px',
+      width: '30px',
+      height: '30px',
       marginTop: '15px',
-      marginRight: '15px',
+    },
+  },
+  '@media (max-width: 585px)': {
+    active_wrapper: {
+      width: '40%',
+    },
+  },
+  '@media (max-width: 470px)': {
+    active_wrapper: {
+      width: '60%',
     },
   },
 }));
