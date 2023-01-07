@@ -1,4 +1,4 @@
-import { Grid, TableCell, TableRow, Typography } from '@mui/material';
+import { Grid, TableCell, TableRow } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
@@ -9,6 +9,7 @@ import { useAppDispatch } from '../../../hooks/hook';
 import { useSelectorGroup } from '../../../store/selectors';
 import { getGroup } from '../../../store/slices/GroupSlice';
 import { StudentType } from '../../../types/index.dto';
+import GroupInformation from './GroupInformation';
 
 const GroupPageDetail: React.FC = () => {
   const { t } = useTranslation();
@@ -49,7 +50,7 @@ const GroupPageDetail: React.FC = () => {
           marginBottom: '20px',
         }}
       >
-        <Typography
+        {/* <Typography
           textAlign="left"
           component="p"
           sx={{
@@ -68,7 +69,8 @@ const GroupPageDetail: React.FC = () => {
           }}
         >
           {t('AdminGroup.mentor')}: {result?.direction}
-        </Typography>
+        </Typography> */}
+        <GroupInformation />
       </Grid>
       <TableContainer
         isLoading={loading}

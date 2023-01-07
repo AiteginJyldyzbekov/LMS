@@ -16,6 +16,12 @@ export interface IDays {
   name: string;
 }
 
+export interface IInfo {
+  id: number;
+  title: string;
+  res: string;
+}
+
 export interface ApiError {
   status?: number | string;
   message: string;
