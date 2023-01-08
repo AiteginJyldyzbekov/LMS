@@ -1,5 +1,6 @@
 import React from 'react';
 import { TableCell } from '@mui/material';
+import dayjs from 'dayjs';
 import TableCellContainer from './TableCellContainer';
 import { GroupType } from '../../types/index.dto';
 
@@ -19,7 +20,9 @@ const GroupTable: React.FC<Props> = ({
     </TableCell>
     <TableCell scope="row">{name}</TableCell>
     <TableCell align="left">{direction}</TableCell>
-    <TableCell align="right">{startDate?.toString() || ''}</TableCell>
+    <TableCell align="right">
+      {dayjs(startDate?.toString()).format('DD.MM.YYYY HH:mm') || ''}
+    </TableCell>
     <TableCell align="right">{quantity}</TableCell>
     <TableCell align="right">{duration}</TableCell>
     <TableCell align="right">{status}</TableCell>
