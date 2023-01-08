@@ -157,5 +157,15 @@
     "courseInfo": "flow",
     "lessonTheme": "Lesson",
     "additional": "Additional materials"
+  },
+  "infoBlock": {
+    "title": "Mentor's details",
+    "btnText": "Update mentor's data",
+    "department": "Department",
+    "lastName": "Last Name",
+    "email": "E-mail",
+    "phoneNumber": "Phone number",
+    "firstName": "First Name",
+    "status": "Status"
   }
 }

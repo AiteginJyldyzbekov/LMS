@@ -162,5 +162,15 @@
     "courseInfo": "поток",
     "lessonTheme": "Урок",
     "additional": "Дополнительные материалы"
+  },
+  "infoBlock": {
+    "title": "Данные ментора",
+    "btnText": "Изменить ментора",
+    "department": "Направление",
+    "lastName": "Фамилия",
+    "email": "Почта",
+    "phoneNumber": "Номер телефона",
+    "firstName": "Имя",
+    "status": "Статус"
   }
 }

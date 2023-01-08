@@ -19,6 +19,7 @@ import CreateDurationPage from '../pages/ADMIN/direction/CreateDurationPage';
 import HomeWorksAdmin from '../pages/ADMIN/home-works/HomeWorks';
 import DirectionDetailPage from '../pages/ADMIN/direction/DirectionDetailPage';
 import LessonDetail from '../pages/STUDENT/lesson-detail/LessonDetail';
+import MentorDataPage from '../pages/ADMIN/mentor/MentorDataPage';
 
 export interface RouteType {
   title: string;
@@ -86,6 +87,11 @@ export const adminRoutes: RouteType[] = [
     title: 'Home Works page',
     path: '/home-works',
     Component: HomeWorksAdmin,
+  },
+  {
+    title: 'Mentor Data Page',
+    path: '/mentor/:id',
+    Component: MentorDataPage,
   },
 ];
 
