@@ -16,7 +16,7 @@ const MentorsTable: React.FC<Props> = ({
 }) => {
   const navigate = useNavigate();
   return (
-    <TableCellContainer path="/mentor/1">
+    <TableCellContainer path={`/mentor/${id}`}>
       <TableCell component="th" scope="row">
         {id}
       </TableCell>

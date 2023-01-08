@@ -20,6 +20,7 @@ import HomeWorksAdmin from '../pages/ADMIN/home-works/HomeWorks';
 import DirectionDetailPage from '../pages/ADMIN/direction/DirectionDetailPage';
 import LessonDetail from '../pages/STUDENT/lesson-detail/LessonDetail';
 import MentorDataPage from '../pages/ADMIN/mentor/MentorDataPage';
+import EditMentor from '../pages/ADMIN/mentor/EditMentor';
 
 export interface RouteType {
   title: string;
@@ -93,6 +94,11 @@ export const adminRoutes: RouteType[] = [
     path: '/mentor/:id',
     Component: MentorDataPage,
   },
+  {
+    title: 'Edit Mentor data Page',
+    path: 'editMentor/:id',
+    Component: EditMentor,
+  }
 ];
 
 export const mentorRoutes: RouteType[] = [
