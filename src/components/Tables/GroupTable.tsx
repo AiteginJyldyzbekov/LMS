@@ -78,7 +78,6 @@ const GroupTable: React.FC<Props> = ({
     >
       {status}
     </TableCell>
-
   </TableCellContainer>
 );
 export default GroupTable;
