@@ -17,66 +17,12 @@ const GroupTable: React.FC<Props> = ({
     <TableCell component="th" scope="row">
       {id}
     </TableCell>
-    <TableCell
-      scope="row"
-      sx={{
-        '@media (max-width: 768px)': {
-          fontSize: '12px',
-        },
-      }}
-    >
-      {name}
-    </TableCell>
-    <TableCell
-      align="left"
-      sx={{
-        '@media (max-width: 768px)': {
-          fontSize: '12px',
-        },
-      }}
-    >
-      {direction}
-    </TableCell>
-    <TableCell
-      align="right"
-      sx={{
-        '@media (max-width: 768px)': {
-          fontSize: '12px',
-        },
-      }}
-    >
-      {startDate?.toString() || ''}
-    </TableCell>
-    <TableCell
-      align="right"
-      sx={{
-        '@media (max-width: 768px)': {
-          fontSize: '12px',
-        },
-      }}
-    >
-      {quantity}
-    </TableCell>
-    <TableCell
-      align="right"
-      sx={{
-        '@media (max-width: 768px)': {
-          fontSize: '12px',
-        },
-      }}
-    >
-      {duration}
-    </TableCell>
-    <TableCell
-      align="right"
-      sx={{
-        '@media (max-width: 768px)': {
-          fontSize: '12px',
-        },
-      }}
-    >
-      {status}
-    </TableCell>
+    <TableCell scope="row">{name}</TableCell>
+    <TableCell align="left">{direction}</TableCell>
+    <TableCell align="right">{startDate?.toString() || ''}</TableCell>
+    <TableCell align="right">{quantity}</TableCell>
+    <TableCell align="right">{duration}</TableCell>
+    <TableCell align="right">{status}</TableCell>
   </TableCellContainer>
 );
 export default GroupTable;
