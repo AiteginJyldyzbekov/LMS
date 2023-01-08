@@ -150,13 +150,22 @@
     "name": "Name",
     "detail": "Study Plan",
     "homeWorks": "Home Works",
-    "add":"+Add"
+    "add": "+Add"
   },
   "lessonDetails": {
     "title": "Material for the lesson",
     "courseInfo": "flow",
     "lessonTheme": "Lesson",
     "additional": "Additional materials"
+  },
+  "GroupDetail": {
+    "direction": "Direction",
+    "groupName": "Group Name",
+    "status": "Status",
+    "timetable": "TimeTable",
+    "start:": "Start",
+    "mentor": "Mentor",
+    "duration": "Duration in Mounth"
   },
   "infoBlock": {
     "title": "Mentor's details",

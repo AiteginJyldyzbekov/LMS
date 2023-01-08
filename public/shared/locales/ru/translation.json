@@ -155,13 +155,22 @@
     "name": "Имя",
     "detail": "Учебный План",
     "homeWorks": "Домашняя Работа",
-    "add" : "+Добавить"
+    "add": "+Добавить"
   },
   "lessonDetails": {
     "title": "Материал к уроку",
     "courseInfo": "поток",
     "lessonTheme": "Урок",
     "additional": "Дополнительные материалы"
+  },
+  "GroupDetail": {
+    "direction": "Направление",
+    "groupName": "Имя Группы",
+    "status": "Статус",
+    "timetable": "Расписание",
+    "start": "Старт",
+    "mentor": "Ментор",
+    "duration": "Длительность в Месяцах"
   },
   "infoBlock": {
     "title": "Данные ментора",
