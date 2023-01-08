@@ -1,6 +1,5 @@
 import React from 'react';
 import { TableCell } from '@mui/material';
-import dayjs from 'dayjs';
 import TableCellContainer from './TableCellContainer';
 import { GroupType } from '../../types/index.dto';
 
