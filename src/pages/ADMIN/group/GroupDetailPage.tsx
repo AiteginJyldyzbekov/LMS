@@ -50,26 +50,6 @@ const GroupPageDetail: React.FC = () => {
           marginBottom: '20px',
         }}
       >
-        {/* <Typography
-          textAlign="left"
-          component="p"
-          sx={{
-            fontSize: '20px',
-            fontWeight: '400',
-          }}
-        >
-          {t('AdminGroup.group')}: {result?.name}
-        </Typography>
-        <Typography
-          textAlign="left"
-          component="p"
-          sx={{
-            fontSize: '20px',
-            fontWeight: '400',
-          }}
-        >
-          {t('AdminGroup.mentor')}: {result?.direction}
-        </Typography> */}
         <GroupInformation />
       </Grid>
       <TableContainer

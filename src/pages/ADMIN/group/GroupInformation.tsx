@@ -5,6 +5,28 @@ import { info } from '../../../constants/GroupInformation';
 
 const GroupInformation: React.FC = () => {
   const { t } = useTranslation();
+  const renderInfo = React.useMemo(
+    () =>
+      info.map((item) => (
+        <Grid key={item.id}>
+          <Typography component="p">{t(item.title)}:</Typography>
+          <Grid
+            sx={{
+              width: '200px',
+              height: '30px',
+              border: '1px solid rgba(224, 224, 224, 1)',
+              borderRadius: '3px',
+              paddingLeft: '15px',
+              display: 'flex',
+              alignItems: 'center',
+            }}
+          >
+            <Typography>{t(item.res)}</Typography>
+          </Grid>
+        </Grid>
+      )),
+    [info]
+  );
   return (
     <Grid container>
       <Grid
@@ -13,24 +35,7 @@ const GroupInformation: React.FC = () => {
         md={5}
         sx={{ width: '40%', display: 'flex', flexWrap: 'wrap', gap: '15px' }}
       >
-        {info.map((item) => (
-          <Grid key={item.id}>
-            <Typography component="p">{t(item.title)}:</Typography>
-            <Grid
-              sx={{
-                width: '200px',
-                height: '30px',
-                border: '1px solid rgba(224, 224, 224, 1)',
-                borderRadius: '3px',
-                paddingLeft: '15px',
-                display: 'flex',
-                alignItems: 'center',
-              }}
-            >
-              <Typography>{t(item.res)}</Typography>
-            </Grid>
-          </Grid>
-        ))}
+        {renderInfo}
       </Grid>
     </Grid>
   );
