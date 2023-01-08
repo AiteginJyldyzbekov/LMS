@@ -14,7 +14,7 @@ export interface SideBarLink {
 export interface IInfo {
   id: number;
   title: string;
-  res: string;
+  dataItem: string;
 }
 
 export interface IDays {

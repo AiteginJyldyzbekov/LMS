@@ -18,7 +18,7 @@ const InfoBlock: React.FC<IProps> = ({ info }) => {
         <Grid key={item.id}>
           <Typography component="p">{t(item.title)}:</Typography>
           <Grid className={classes.dataItem}>
-            <Typography>{t(item.res)}</Typography>
+            <Typography>{t(item.dataItem)}</Typography>
           </Grid>
         </Grid>
       )),

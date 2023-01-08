@@ -98,7 +98,7 @@ export const adminRoutes: RouteType[] = [
     title: 'Edit Mentor data Page',
     path: 'editMentor/:id',
     Component: EditMentor,
-  }
+  },
 ];
 
 export const mentorRoutes: RouteType[] = [
