@@ -4,6 +4,7 @@ export const info: IInfo[] = [
   {
     id: 1,
     title: 'infoBlock.department',
+
     dataItem: 'Front-End',
   },
   {
