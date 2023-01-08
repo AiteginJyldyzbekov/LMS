@@ -37,7 +37,16 @@ const PageContainer: React.FC<PageContainerProps> = ({
         </Button>
       )}
       <div className={classes.wrapper}>
-        <Typography variant="h5">{name}</Typography>
+        <Typography
+          variant="h5"
+          sx={{
+            '@media (max-width: 768px)': {
+              fontSize: '20px',
+            },
+          }}
+        >
+          {name}
+        </Typography>
         <Grid>
           {isDetail && (
             <Link
@@ -56,7 +65,15 @@ const PageContainer: React.FC<PageContainerProps> = ({
           <Link to={puth} style={{ textDecoration: 'none' }}>
             {btnText && (
               <Button variant="contained" size="large">
-                {btnText}
+                <Typography
+                  sx={{
+                    '@media (max-width: 768px)': {
+                      fontSize: '12px',
+                    },
+                  }}
+                >
+                  {btnText}
+                </Typography>
               </Button>
             )}
           </Link>
