@@ -171,5 +171,15 @@
     "start": "Старт",
     "mentor": "Ментор",
     "duration": "Длительность в Месяцах"
+  },
+  "infoBlock": {
+    "title": "Данные ментора",
+    "btnText": "Изменить ментора",
+    "department": "Направление",
+    "lastName": "Фамилия",
+    "email": "Почта",
+    "phoneNumber": "Номер телефона",
+    "firstName": "Имя",
+    "status": "Статус"
   }
 }

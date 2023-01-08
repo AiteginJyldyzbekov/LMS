@@ -55,6 +55,7 @@ const GroupsPageMentor: React.FC = () => {
       >
         <TableContainer
           isLoading={false}
+          isSearch={false}
           Header={
             <TableRow>
               <TableCell>{t('GroupsPageMentor.id')}</TableCell>

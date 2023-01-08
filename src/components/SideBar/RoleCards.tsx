@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import WestIcon from '@mui/icons-material/West';
+import CloseIcon from '@mui/icons-material/Close';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import useStyles from './SideBar.styles';
@@ -29,7 +29,7 @@ const RoleCard: React.FC<SideBarProps> = ({ role }) => {
       </div>
       <div className={isActive ? classes.active_wrapper : classes.wrapper}>
         <div className={classes.arrow_container}>
-          <WestIcon
+          <CloseIcon
             className={classes.modal_icons}
             onClick={() => setIsActive(!isActive)}
             onKeyDown={() => setIsActive(!isActive)}

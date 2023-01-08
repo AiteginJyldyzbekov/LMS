@@ -37,7 +37,7 @@ const AllStudentsPageAdmin: React.FC = () => {
             <TableCell align="center">{t('AllStudents.mail')}</TableCell>
             <TableCell align="center">{t('AllStudents.age')}</TableCell>
             <TableCell align="center">{t('AllStudents.point')}</TableCell>
-            <TableCell align="center" />
+            {/* <TableCell align="center" /> */}
           </TableRow>
         }
         Body={renderList}
