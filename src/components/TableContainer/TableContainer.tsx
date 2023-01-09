@@ -53,7 +53,7 @@ const TableContainer: React.FC<Props> = ({
             />
           </Grid>
         )}
-        <Grid item alignSelf="right">
+        <Grid item alignSelf="right" paddingRight={2}>
           {isFilter && (
             <IconButton color="primary">
               <FilterListIcon />
