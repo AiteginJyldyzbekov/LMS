@@ -153,5 +153,15 @@
     "courseInfo": "flow",
     "lessonTheme": "Lesson",
     "additional": "Additional materials"
+  },
+  "StudentData": {
+    "title": "Student Data",
+    "change": "Change Student",
+    "direction": "direction",
+    "surname": "Surname",
+    "mail": "Mail",
+    "number": "Number",
+    "name": "Name",
+    "status":  "Status"
   }
 }

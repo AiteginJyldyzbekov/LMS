@@ -10,7 +10,7 @@ import { useSelectorGroup } from '../../../store/selectors';
 import { getGroup } from '../../../store/slices/GroupSlice';
 import { StudentType } from '../../../types/index.dto';
 
-const GroupPageDetail: React.FC = () => {
+const   GroupPageDetail: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorGroup();
   const d = useAppDispatch();

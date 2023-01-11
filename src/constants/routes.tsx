@@ -18,6 +18,7 @@ import StudentsDashboard from '../pages/STUDENT/studentsDashboard/StudentsDashbo
 import CreateDurationPage from '../pages/ADMIN/duration/CreateDurationPage';
 import HomeWorksAdmin from '../pages/ADMIN/home-works/HomeWorks';
 import LessonDetail from '../pages/STUDENT/lesson-detail/LessonDetail';
+import StudentInfoPage from '../pages/ADMIN/studentInfo/StudentInfoPage';
 
 export interface RouteType {
   title: string;
@@ -64,7 +65,7 @@ export const adminRoutes: RouteType[] = [
   {
     title: 'Student detail page',
     path: '/student/:id',
-    Component: ComingSoon,
+    Component: StudentInfoPage,
   },
   {
     title: 'Direction page',
@@ -81,6 +82,11 @@ export const adminRoutes: RouteType[] = [
     path: '/home-works',
     Component: HomeWorksAdmin,
   },
+  {
+    title: 'Change student page',
+    path: '/changeStudent',
+    Component: ComingSoon
+  }
 ];
 
 export const mentorRoutes: RouteType[] = [
