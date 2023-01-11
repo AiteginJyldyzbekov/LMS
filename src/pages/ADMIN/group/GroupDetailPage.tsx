@@ -11,7 +11,7 @@ import { getGroup } from '../../../store/slices/GroupSlice';
 import { StudentType } from '../../../types/index.dto';
 import GroupInformation from './GroupInformation';
 
-const   GroupPageDetail: React.FC = () => {
+const GroupPageDetail: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorGroup();
   const dispatch = useAppDispatch();

@@ -103,8 +103,8 @@ export const adminRoutes: RouteType[] = [
   {
     title: 'Change student page',
     path: '/changeStudent',
-    Component: ComingSoon
-  }
+    Component: ComingSoon,
+  },
 ];
 
 export const mentorRoutes: RouteType[] = [
