@@ -4,6 +4,7 @@ import AuthSlice from './slices/AuthSlice';
 import GroupSlice from './slices/GroupSlice';
 import rootSlice from './slices/RootSlice';
 import MentorSlice from './slices/MentorSlice';
+import DirectionSlice from './slices/DirectionSlice';
 
 const store = configureStore({
   reducer: {
@@ -12,6 +13,7 @@ const store = configureStore({
     group: GroupSlice,
     mentor: MentorSlice,
     student: StudentSlice,
+    direction: DirectionSlice,
   },
 });
 

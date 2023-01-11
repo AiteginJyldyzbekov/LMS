@@ -5,10 +5,24 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     paddingRight: '60px',
     paddingLeft: '60px',
-    marginTop: '30px',
+    marginTop: '50px',
+    top: 0,
+    '@media (max-width: 1200px)': {
+      paddingRight: '30px',
+      paddingLeft: '30px',
+    },
+    '@media (max-width: 768px)': {
+      paddingRight: '15px',
+      paddingLeft: '15px',
+    },
+    '@media (max-width: 320px)': {
+      paddingRight: '10px',
+      paddingLeft: '10px',
+    },
   },
   content_wrapper: {
     marginTop: '30px',
+    marginBottom: '30px',
     '@media (max-width: 1200px)': {
       paddingRight: '40px',
       paddingLeft: '40px',

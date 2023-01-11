@@ -1,4 +1,4 @@
-import { Grid, TableCell, TableRow, Typography } from '@mui/material';
+import { Grid, TableCell, TableRow } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
@@ -9,11 +9,12 @@ import { useAppDispatch } from '../../../hooks/hook';
 import { useSelectorGroup } from '../../../store/selectors';
 import { getGroup } from '../../../store/slices/GroupSlice';
 import { StudentType } from '../../../types/index.dto';
+import GroupInformation from './GroupInformation';
 
 const   GroupPageDetail: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorGroup();
-  const d = useAppDispatch();
+  const dispatch = useAppDispatch();
 
   type ParamsType = {
     id: string;
@@ -22,7 +23,7 @@ const   GroupPageDetail: React.FC = () => {
   const { id } = useParams() as ParamsType;
 
   useEffect(() => {
-    d(getGroup(id));
+    dispatch(getGroup(id));
   }, []);
 
   const studentsArr = result?.students;
@@ -41,32 +42,15 @@ const   GroupPageDetail: React.FC = () => {
       puth="/createStudent"
       btnText={t('AdminGroup.btnText')}
       isGoBack
+      isDetail
+      isDetailId={id}
     >
       <Grid
         sx={{
           marginBottom: '20px',
         }}
       >
-        <Typography
-          textAlign="left"
-          component="p"
-          sx={{
-            fontSize: '20px',
-            fontWeight: '400',
-          }}
-        >
-          {t('AdminGroup.group')}: {result?.name}
-        </Typography>
-        <Typography
-          textAlign="left"
-          component="p"
-          sx={{
-            fontSize: '20px',
-            fontWeight: '400',
-          }}
-        >
-          {t('AdminGroup.mentor')}: {result?.direction}
-        </Typography>
+        <GroupInformation />
       </Grid>
       <TableContainer
         isLoading={loading}
@@ -79,8 +63,6 @@ const   GroupPageDetail: React.FC = () => {
             <TableCell align="center">{t('AdminGroup.mail')}</TableCell>
             <TableCell align="center">{t('AdminGroup.points')}</TableCell>
             <TableCell align="right">{t('AdminGroup.date')}</TableCell>
-            <TableCell align="right" />
-            <TableCell align="right" />
           </TableRow>
         }
         Body={renderList}

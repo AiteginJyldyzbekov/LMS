@@ -1,16 +1,21 @@
-import { TableCell, TableRow } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import TableRow from '@mui/material/TableRow';
+import TableCell from '@mui/material/TableCell';
+import { useParams } from 'react-router-dom';
+import InfoBlock from '../../../components/InfoBlock/InfoBlock';
+import { info } from '../../../constants/infoBlock';
 import PageContainer from '../../../components/PageContainer/PageContainer';
-import TableContainer from '../../../components/TableContainer/TableContainer';
 import GroupTable from '../../../components/Tables/GroupTable';
-import { useAppDispatch } from '../../../hooks/hook';
 import { useSelectorGroups } from '../../../store/selectors';
+import TableContainer from '../../../components/TableContainer/TableContainer';
 import { getAllGroups } from '../../../store/slices/GroupSlice';
+import { useAppDispatch } from '../../../hooks/hook';
 
-const GroupsPage: React.FC = () => {
+const MentorDataPage: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorGroups();
+  const { id } = useParams();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -24,10 +29,11 @@ const GroupsPage: React.FC = () => {
 
   return (
     <PageContainer
-      name={t('Groups.title')}
-      puth="/createGroup"
-      btnText={t('Groups.addGroup')}
+      name={t('infoBlock.title')}
+      btnText={t('infoBlock.btnText')}
+      puth={`/editMentor/${id}`}
     >
+      <InfoBlock info={info} />
       <TableContainer
         isLoading={loading}
         isFilter
@@ -47,5 +53,4 @@ const GroupsPage: React.FC = () => {
     </PageContainer>
   );
 };
-
-export default GroupsPage;
+export default MentorDataPage;

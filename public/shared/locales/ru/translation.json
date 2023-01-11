@@ -73,7 +73,8 @@
     "amount": "Количество",
     "duration": "Длительность",
     "addGroup": "+Добавить группу",
-    "status": "Статус"
+    "status": "Статус",
+    "change": "Изменить Группу"
   },
   "Mentors": {
     "title": "Ментора",
@@ -148,16 +149,38 @@
   "DirectionPage": {
     "title": "Направление",
     "id": "ID",
-    "groups": "Группа",
+    "groups": "Количество Групп",
     "count": "Количество Студентов",
     "addDirection": "+Добавить Направление",
-    "name": "Имя"
+    "name": "Имя",
+    "detail": "Учебный План",
+    "homeWorks": "Домашняя Работа",
+    "add": "+Добавить"
   },
   "lessonDetails": {
     "title": "Материал к уроку",
     "courseInfo": "поток",
     "lessonTheme": "Урок",
     "additional": "Дополнительные материалы"
+  },
+  "GroupDetail": {
+    "direction": "Направление",
+    "groupName": "Имя Группы",
+    "status": "Статус",
+    "timetable": "Расписание",
+    "start": "Старт",
+    "mentor": "Ментор",
+    "duration": "Длительность в Месяцах"
+  },
+  "infoBlock": {
+    "title": "Данные ментора",
+    "btnText": "Изменить ментора",
+    "department": "Направление",
+    "lastName": "Фамилия",
+    "email": "Почта",
+    "phoneNumber": "Номер телефона",
+    "firstName": "Имя",
+    "status": "Статус"
   },
   "StudentData": {
     "title": "Данные студента",

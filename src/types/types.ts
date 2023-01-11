@@ -11,9 +11,21 @@ export interface SideBarLink {
   id: number;
 }
 
+export interface IInfo {
+  id: number;
+  title: string;
+  dataItem: string;
+}
+
 export interface IDays {
   id: number;
   name: string;
+}
+
+export interface GroupInfo {
+  id: number;
+  title: string;
+  information: string;
 }
 
 export interface ApiError {

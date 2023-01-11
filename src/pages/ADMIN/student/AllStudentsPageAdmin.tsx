@@ -11,10 +11,10 @@ import { getAllStudents } from '../../../store/slices/AllStudentsSlice';
 const AllStudentsPageAdmin: React.FC = () => {
   const { t } = useTranslation();
   const { result, loading } = useSelectorAllStudents();
-  const d = useAppDispatch();
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
-    d(getAllStudents());
+    dispatch(getAllStudents());
   }, []);
 
   const renderList = useMemo(
@@ -37,7 +37,7 @@ const AllStudentsPageAdmin: React.FC = () => {
             <TableCell align="center">{t('AllStudents.mail')}</TableCell>
             <TableCell align="center">{t('AllStudents.age')}</TableCell>
             <TableCell align="center">{t('AllStudents.point')}</TableCell>
-            <TableCell align="center" />
+            {/* <TableCell align="center" /> */}
           </TableRow>
         }
         Body={renderList}
