@@ -1,7 +1,7 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import PageContainer from '../../../components/PageContainer/PageContainer';
 import InfoBlock from '../../../components/InfoBlock/InfoBlock';
-import { useTranslation } from 'react-i18next';
 import { info } from '../../../constants/infoBlock';
 
 const StudentInfoPage: React.FC = () => {
