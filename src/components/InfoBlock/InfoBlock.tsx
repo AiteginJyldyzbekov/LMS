@@ -28,7 +28,7 @@ const InfoBlock: React.FC<IProps> = ({ info }) => {
     <Grid container sx={{ marginBottom: '50px' }}>
       <Grid
         item
-        xl={8}
+        xl={12}
         lg={12}
         xs={12}
         md={12}
