@@ -176,5 +176,15 @@
     "phoneNumber": "Phone number",
     "firstName": "First Name",
     "status": "Status"
+  },
+  "StudentData": {
+    "title": "Student Data",
+    "change": "Change Student",
+    "direction": "direction",
+    "surname": "Surname",
+    "mail": "Mail",
+    "number": "Number",
+    "name": "Name",
+    "status":  "Status"
   }
 }
