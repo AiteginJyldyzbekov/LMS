@@ -1,11 +1,11 @@
 import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(() => ({
-  successIcon: {
-    height: '30px',
+  bg: {
+    background: 'rgba(34, 36, 41, 1)',
   },
-  link: {
-    textDecoration: 'none',
+  wrapper: {
+    color: 'white',
   },
 }));
 

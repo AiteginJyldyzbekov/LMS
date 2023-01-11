@@ -1,10 +1,10 @@
 import React, { ReactNode } from 'react';
 import Page from '../components/Page/Page';
+import StudentPage from '../components/Page/StudentPage';
 import {
   adminRoutes,
   mentorRoutes,
   notAuthRoutes,
-  RouteType,
   studentRoutes,
 } from '../constants/routes';
 import { UserRole } from '../types/types';
@@ -14,15 +14,14 @@ const useRoutes = (): ReactNode => {
   const { data, isAuth } = useAppSelector((state) => state.auth);
   const role = data?.role; // 'mentor' | 'student' | 'admin'
 
-  const renderContainerRout = (routes: RouteType[]) => <Page routes={routes} />;
-
-  if (!isAuth) return renderContainerRout(notAuthRoutes);
+  if (!isAuth) return <Page routes={notAuthRoutes} />;
   if (role) {
-    if (role === UserRole.admin) return renderContainerRout(adminRoutes);
-    if (role === UserRole.mentor) return renderContainerRout(mentorRoutes);
-    if (role === UserRole.student) return renderContainerRout(studentRoutes);
+    if (role === UserRole.admin) return <Page routes={adminRoutes} />;
+    if (role === UserRole.mentor) return <Page routes={mentorRoutes} />;
+    if (role === UserRole.student)
+      return <StudentPage routes={studentRoutes} />;
   }
-  return renderContainerRout(notAuthRoutes);
+  return <Page routes={notAuthRoutes} />;
 };
 
 export default useRoutes;

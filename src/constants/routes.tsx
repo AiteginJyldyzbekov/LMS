@@ -10,18 +10,15 @@ import GroupsPageMentor from '../pages/MENTOR/groupsPageMentor/GroupsPageMentor'
 import HomeWorks from '../pages/MENTOR/homeWorksMentor/HomeWorksMentor';
 import StudyPlanMentor from '../pages/MENTOR/studyPlanMentor/StudyPlanMentor';
 import CreateStudentPage from '../pages/ADMIN/student/CreateStudentPage';
-import StudyPlanStudent from '../pages/STUDENT/studyPlanStudent/StudyPlanStudnet';
-import HomeWorksStudent from '../pages/STUDENT/homeWorksStudent/HomeWorksStudent';
 import ComingSoon from '../pages/ComingSoon';
 import DirectionPage from '../pages/ADMIN/direction/DirectionPage';
-import StudentsDashboard from '../pages/STUDENT/studentsDashboard/StudentsDashboard';
 import CreateDurationPage from '../pages/ADMIN/direction/CreateDurationPage';
 import HomeWorksAdmin from '../pages/ADMIN/home-works/HomeWorks';
 import DirectionDetailPage from '../pages/ADMIN/direction/DirectionDetailPage';
-import LessonDetail from '../pages/STUDENT/lesson-detail/LessonDetail';
 import MentorDataPage from '../pages/ADMIN/mentor/MentorDataPage';
 import EditMentor from '../pages/ADMIN/mentor/EditMentor';
 import StudentInfoPage from '../pages/ADMIN/studentInfo/StudentInfoPage';
+import Dashboard from '../pages/STUDENT/Dashboard/Dashboard';
 
 export interface RouteType {
   title: string;
@@ -132,19 +129,14 @@ export const mentorRoutes: RouteType[] = [
 
 export const studentRoutes: RouteType[] = [
   {
-    title: 'Home Page',
+    title: 'Home Page | Dashboard',
     path: '/',
-    Component: StudentsDashboard,
+    Component: Dashboard,
   },
   {
     title: 'Study Plan Page',
     path: '/study-plan',
-    Component: StudyPlanStudent,
-  },
-  {
-    title: 'Home Works Page',
-    path: '/home-works',
-    Component: HomeWorksStudent,
+    Component: ComingSoon,
   },
   {
     title: 'Home Works Page',
@@ -154,7 +146,7 @@ export const studentRoutes: RouteType[] = [
   {
     title: 'Lesson detail page',
     path: '/lesson/:id',
-    Component: LessonDetail,
+    Component: ComingSoon,
   },
 ];
 
