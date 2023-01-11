@@ -181,5 +181,15 @@
     "phoneNumber": "Номер телефона",
     "firstName": "Имя",
     "status": "Статус"
+  },
+  "StudentData": {
+    "title": "Данные студента",
+    "change": "Изменение студента",
+    "direction": "Направления",
+    "surname": "Фамилия",
+    "mail": "Почта",
+    "number": "Номер",
+    "name": "Имя",
+    "status":  "Статус"
   }
 }

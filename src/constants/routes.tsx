@@ -21,6 +21,7 @@ import DirectionDetailPage from '../pages/ADMIN/direction/DirectionDetailPage';
 import LessonDetail from '../pages/STUDENT/lesson-detail/LessonDetail';
 import MentorDataPage from '../pages/ADMIN/mentor/MentorDataPage';
 import EditMentor from '../pages/ADMIN/mentor/EditMentor';
+import StudentInfoPage from '../pages/ADMIN/studentInfo/StudentInfoPage';
 
 export interface RouteType {
   title: string;
@@ -67,7 +68,7 @@ export const adminRoutes: RouteType[] = [
   {
     title: 'Student detail page',
     path: '/student/:id',
-    Component: ComingSoon,
+    Component: StudentInfoPage,
   },
   {
     title: 'Direction page',
@@ -98,6 +99,11 @@ export const adminRoutes: RouteType[] = [
     title: 'Edit Mentor data Page',
     path: 'editMentor/:id',
     Component: EditMentor,
+  },
+  {
+    title: 'Change student page',
+    path: '/changeStudent',
+    Component: ComingSoon,
   },
 ];
 
