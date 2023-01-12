@@ -37,8 +37,6 @@ const AdminMentorsPage: React.FC = () => {
             <TableCell>{t('Mentors.name')}</TableCell>
             <TableCell align="center">{t('Mentors.surname')}</TableCell>
             <TableCell align="center">{t('Mentors.number')}</TableCell>
-            <TableCell align="right" />
-            <TableCell align="right" />
           </TableRow>
         }
         Body={renderList}
