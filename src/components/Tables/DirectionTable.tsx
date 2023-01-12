@@ -1,8 +1,5 @@
 import React from 'react';
-import { IconButton, TableCell } from '@mui/material';
-import EditOffIcon from '@mui/icons-material/EditOff';
-import { useNavigate } from 'react-router-dom';
-import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import { TableCell } from '@mui/material';
 import TableCellContainer from './TableCellContainer';
 import { DirectionType } from '../../types/index.dto';
 
@@ -12,7 +9,6 @@ const DirectionTable: React.FC<DirectionType> = ({
   studentQuantity,
   groupQuantity,
 }) => {
-  const navigate = useNavigate();
   return (
     <TableCellContainer path={`/direction/${id}`}>
       <TableCell component="th" scope="row">
