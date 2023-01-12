@@ -40,7 +40,6 @@ const DirectionPage: React.FC = () => {
             <TableCell>{t('DirectionPage.name')}</TableCell>
             <TableCell>{t('DirectionPage.groups')}</TableCell>
             <TableCell>{t('DirectionPage.count')}</TableCell>
-            <TableCell align="right" />
           </TableRow>
         }
         Body={renderList}

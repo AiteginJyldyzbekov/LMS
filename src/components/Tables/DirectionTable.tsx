@@ -23,20 +23,6 @@ const DirectionTable: React.FC<DirectionType> = ({
       <TableCell sx={{ paddingLeft: '6%' }} align="left">
         {studentQuantity}
       </TableCell>
-      <TableCell align="right">
-        <IconButton color="error" onClick={(e) => e.stopPropagation()}>
-          <DeleteForeverIcon />
-        </IconButton>
-        <IconButton
-          onClick={(e) => {
-            e.stopPropagation();
-            navigate(`/editDirection?id=${id}`);
-          }}
-          color="primary"
-        >
-          <EditOffIcon />
-        </IconButton>
-      </TableCell>
     </TableCellContainer>
   );
 };
