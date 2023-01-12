@@ -8,19 +8,17 @@ const DirectionTable: React.FC<DirectionType> = ({
   name,
   studentQuantity,
   groupQuantity,
-}) => {
-  return (
-    <TableCellContainer path={`/direction/${id}`}>
-      <TableCell component="th" scope="row">
-        {id}
-      </TableCell>
-      <TableCell scope="row">{name}</TableCell>
-      <TableCell sx={{ paddingLeft: '5%' }}>{groupQuantity}</TableCell>
-      <TableCell sx={{ paddingLeft: '6%' }} align="left">
-        {studentQuantity}
-      </TableCell>
-    </TableCellContainer>
-  );
-};
+}) => (
+  <TableCellContainer path={`/direction/${id}`}>
+    <TableCell component="th" scope="row">
+      {id}
+    </TableCell>
+    <TableCell scope="row">{name}</TableCell>
+    <TableCell sx={{ paddingLeft: '5%' }}>{groupQuantity}</TableCell>
+    <TableCell sx={{ paddingLeft: '6%' }} align="left">
+      {studentQuantity}
+    </TableCell>
+  </TableCellContainer>
+);
 
 export default DirectionTable;
