@@ -1,7 +1,5 @@
 import React from 'react';
-import { IconButton, TableCell } from '@mui/material';
-import EditOffIcon from '@mui/icons-material/EditOff';
-import { useNavigate } from 'react-router-dom';
+import { TableCell } from '@mui/material';
 import TableCellContainer from './TableCellContainer';
 import { MentorType } from '../../types/index.dto';
 
@@ -14,7 +12,6 @@ const MentorsTable: React.FC<Props> = ({
   lastName,
   phoneNumber,
 }) => {
-  const navigate = useNavigate();
   return (
     <TableCellContainer path={`/mentor/${id}`}>
       <TableCell component="th" scope="row">
@@ -24,18 +21,6 @@ const MentorsTable: React.FC<Props> = ({
       <TableCell align="left">{name}</TableCell>
       <TableCell align="center">{lastName}</TableCell>
       <TableCell align="center">{phoneNumber}</TableCell>
-      <TableCell align="right" />
-      <TableCell align="right">
-        <IconButton
-          onClick={(e) => {
-            e.stopPropagation();
-            navigate(`/createMentor?id=${id}`);
-          }}
-          color="primary"
-        >
-          <EditOffIcon />
-        </IconButton>
-      </TableCell>
     </TableCellContainer>
   );
 };
