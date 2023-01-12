@@ -11,18 +11,16 @@ const MentorsTable: React.FC<Props> = ({
   name,
   lastName,
   phoneNumber,
-}) => {
-  return (
-    <TableCellContainer path={`/mentor/${id}`}>
-      <TableCell component="th" scope="row">
-        {id}
-      </TableCell>
-      <TableCell scope="row">{direction}</TableCell>
-      <TableCell align="left">{name}</TableCell>
-      <TableCell align="center">{lastName}</TableCell>
-      <TableCell align="center">{phoneNumber}</TableCell>
-    </TableCellContainer>
-  );
-};
+}) => (
+  <TableCellContainer path={`/mentor/${id}`}>
+    <TableCell component="th" scope="row">
+      {id}
+    </TableCell>
+    <TableCell scope="row">{direction}</TableCell>
+    <TableCell align="left">{name}</TableCell>
+    <TableCell align="center">{lastName}</TableCell>
+    <TableCell align="center">{phoneNumber}</TableCell>
+  </TableCellContainer>
+);
 
 export default MentorsTable;
