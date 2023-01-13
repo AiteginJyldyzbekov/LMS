@@ -38,7 +38,6 @@ const GroupPageDetail: React.FC = () => {
 
   return (
     <PageContainer
-      name=""
       puth="/createStudent"
       btnText={t('AdminGroup.btnText')}
       isGoBack
