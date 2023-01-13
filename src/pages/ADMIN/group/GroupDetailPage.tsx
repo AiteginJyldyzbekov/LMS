@@ -1,4 +1,4 @@
-import { Grid, TableCell, TableRow } from '@mui/material';
+import { Grid, TableCell, TableRow, Typography } from '@mui/material';
 import React, { useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
@@ -38,7 +38,7 @@ const GroupPageDetail: React.FC = () => {
 
   return (
     <PageContainer
-      name={t('AdminGroup.title')}
+      name=""
       puth="/createStudent"
       btnText={t('AdminGroup.btnText')}
       isGoBack
@@ -52,6 +52,14 @@ const GroupPageDetail: React.FC = () => {
       >
         <GroupInformation />
       </Grid>
+      <Typography
+        variant="h5"
+        sx={{
+          textAlign: 'center',
+        }}
+      >
+        {t('AdminGroup.title')}
+      </Typography>
       <TableContainer
         isLoading={loading}
         Header={
