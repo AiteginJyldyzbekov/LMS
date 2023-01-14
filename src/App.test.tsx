@@ -8,4 +8,3 @@ describe('App tests', () => {
     // expect(component.getByText(/Solid Academy/)).toBeInTheDocument();
   });
 });
-  

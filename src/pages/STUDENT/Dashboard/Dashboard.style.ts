@@ -15,22 +15,6 @@ export const useStyles = makeStyles(() => ({
     display: 'flex',
     justifyContent: 'space-between',
   },
-  coin: {
-    width: '45%',
-    background: '#2C2E34 !important',
-    boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25) !important',
-    borderRadius: '12px !important',
-    display: 'flex',
-    justifyContent: 'center',
-  },
-  donut: {
-    width: '45%',
-    background: '#2C2E34 !important',
-    boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25) !important',
-    borderRadius: '12px !important',
-    display: 'flex',
-    justifyContent: 'center',
-  },
   score: {
     display: 'flex',
     flexDirection: 'column',
