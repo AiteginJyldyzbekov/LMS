@@ -31,11 +31,19 @@ const Dashboard: React.FC = () => {
     },
     {
       techName: 'JS',
-      completedPercent: 46,
+      completedPercent: 76,
     },
     {
       techName: 'TS',
-      completedPercent: 46,
+      completedPercent: 26,
+    },
+    {
+      techName: 'HTML',
+      completedPercent: 56,
+    },
+    {
+      techName: 'Next JS',
+      completedPercent: 99,
     },
     {
       techName: 'HTML',
@@ -53,7 +61,7 @@ const Dashboard: React.FC = () => {
             greetTxt="Сегодня отличный вечер, чтобы узнать новое или закрепить знания на практике."
           />
           <StudentProgressBar
-            completedPercent={49}
+            completedPercent={12}
             level="noob"
             levelIcon={img}
           />
