@@ -7,8 +7,6 @@ interface IStackProgress {
 }
 
 const StudentProgress: React.FC<IStackProgress> = ({ stack }) => {
-  // TODO: remove log and map the stack array to display the progress
-  console.log(stack);
   const styles = useStyles();
   const renderStack = useMemo(
     () =>
