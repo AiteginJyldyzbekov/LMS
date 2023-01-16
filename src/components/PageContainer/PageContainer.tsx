@@ -7,7 +7,7 @@ import useStyles from './PageContainer.styles';
 
 interface PageContainerProps {
   children: React.ReactNode | string;
-  name: string;
+  name?: string;
   puth: string;
   btnText?: string;
   isGoBack?: boolean;
