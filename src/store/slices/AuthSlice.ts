@@ -1,17 +1,19 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface AuthState {
   isPending: boolean;
   isAuth: boolean;
   // TODO: replace type with BE responce
   data: null | {
-    email: string;
+    email?: string;
     role: string;
-    token: string;
+    token?: string;
   };
   error: null;
 }
 
+// TODO: remove after auth logic
+const role = localStorage.getItem('role');
 const initialState: AuthState = {
   isPending: false,
   isAuth: true,
@@ -27,9 +29,13 @@ const initialState: AuthState = {
 const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {},
+  reducers: {
+    setRole: (state, action: PayloadAction<string>) => {
+      state.data = { ...state.data, role: action.payload };
+    },
+  },
 });
 
-export const root = authSlice.actions;
+export const authActions = authSlice.actions;
 
 export default authSlice.reducer;
