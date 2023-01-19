@@ -6,7 +6,7 @@ import TableHead from '@mui/material/TableHead';
 import Paper from '@mui/material/Paper';
 import { Grid, IconButton, TextField } from '@mui/material';
 import FilterListIcon from '@mui/icons-material/FilterList';
-import TableSkeletons from '../tableSkeletons/TableSkeletons';
+import TableSkeletons from '../../skeletons/tableSkeletons/TableSkeletons';
 import { LoadingStatus } from '../../types/types';
 
 interface Props {
