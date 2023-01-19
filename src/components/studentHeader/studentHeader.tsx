@@ -1,21 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import useStyles from './studentHeader.style';
 import notification from '../../../public/images/StudentHeader/Notification.svg';
 import vector from '../../../public/images/StudentHeader/Vector.svg';
 import restangle from '../../../public/images/StudentHeader/Rectangle.svg';
-import { useTranslation } from 'react-i18next';
 
-function StudentHeader() {
+const StudentHeader = () => {
   const css = useStyles();
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   return (
     <div className={css.header__container}>
-      <input className={css.input} placeholder={t("HeaderStudent.placeholder")} type="text" />
+      <input
+        className={css.input}
+        placeholder={t('HeaderStudent.placeholder')}
+        type="text"
+      />
       <div className={css.discount}>
-        <p>
-          {t("HeaderStudent.title")}
-        </p>
+        <p>{t('HeaderStudent.title')}</p>
       </div>
       <div className={css.input__wrapper}>
         <Link className={css.back__links} to="/helpPage">
@@ -30,6 +32,6 @@ function StudentHeader() {
       </div>
     </div>
   );
-}
+};
 
 export default StudentHeader;
