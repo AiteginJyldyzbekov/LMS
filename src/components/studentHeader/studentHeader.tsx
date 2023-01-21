@@ -6,7 +6,7 @@ import notification from '../../../public/images/StudentHeader/Notification.svg'
 import vector from '../../../public/images/StudentHeader/Vector.svg';
 import restangle from '../../../public/images/StudentHeader/Rectangle.svg';
 
-const StudentHeader = () => {
+const StudentHeader: React.FC = () => {
   const css = useStyles();
   const { t } = useTranslation();
   return (
