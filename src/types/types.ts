@@ -46,3 +46,7 @@ export type Loading =
   | LoadingStatus.failed
   | LoadingStatus.succeeded
   | LoadingStatus.failed;
+export interface IStack {
+  techName: string;
+  completedPercent: number;
+}

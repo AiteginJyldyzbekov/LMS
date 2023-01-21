@@ -12,7 +12,7 @@ module.exports = ({ mode } = { mode: 'production' }) => {
       mode,
       entry: './src/index.tsx',
       devServer: {
-        hot: true,
+        // hot: true,
         open: true,
         static: {
           directory: path.join(__dirname, 'dist'),
