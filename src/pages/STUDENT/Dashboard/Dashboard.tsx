@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Grid, Box } from '@mui/material';
+import StudentHeader from '../../../components/studentHeader/studentHeader';
 import Calendar from '../../../components/Calendar/Calendar';
 import GreetCard from '../../../components/GreetCard/GreetCard';
 import OnBoarding from '../../../components/OnBoarding/OnBoarding';
 import StudentProgress from '../../../components/StudentProgress/StudentProgress';
 import StudentProgressBar from '../../../components/StudentProgressBar/StudentProgressBar';
-import StudentHeader from '../../../components/studentHeader/studentHeader';
 import { useStyles } from './Dashboard.style';
 import img from '../../../assests/levelIcon.svg';
 import points from '../../../assests/points.svg';
@@ -43,42 +43,43 @@ const Dashboard: React.FC = () => {
     },
   ];
   return (
-    <>
+    <div>
       {isLoading ? (
         <DashboardSkeleton />
       ) : (
         <>
-        <StudentHeader />
-        <Grid className={styles.wrapper}>
-          <GreetCard
-            name="Улан"
-            greetTxt="Сегодня отличный вечер, чтобы узнать новое или закрепить знания на практике."
-          />
-          <StudentProgressBar
-            completedPercent={49}
-            level="noob"
-            levelIcon={img}
-          />
-          <Calendar />
-          <StudentProgress stack={stack} />
-          <OnBoarding />
-          <Box className={styles.scores}>
-            <PaperStyled>
-              <div className={styles.score}>
-                <img src={points} alt="points" />
-                <p>23 points</p>
-              </div>
-            </PaperStyled>
-            <PaperStyled>
-              <div className={styles.score}>
-                <img src={coin} alt="coin" />
-                <p>23 points</p>
-              </div>
-            </PaperStyled>
-          </Box>
-        </Grid></>
+          <StudentHeader />
+          <Grid className={styles.wrapper}>
+            <GreetCard
+              name="Улан"
+              greetTxt="Сегодня отличный вечер, чтобы узнать новое или закрепить знания на практике."
+            />
+            <StudentProgressBar
+              completedPercent={49}
+              level="noob"
+              levelIcon={img}
+            />
+            <Calendar />
+            <StudentProgress stack={stack} />
+            <OnBoarding />
+            <Box className={styles.scores}>
+              <PaperStyled>
+                <div className={styles.score}>
+                  <img src={points} alt="points" />
+                  <p>23 points</p>
+                </div>
+              </PaperStyled>
+              <PaperStyled>
+                <div className={styles.score}>
+                  <img src={coin} alt="coin" />
+                  <p>23 points</p>
+                </div>
+              </PaperStyled>
+            </Box>
+          </Grid>
+        </>
       )}
-    </>
+    </div>
   );
 };
 
