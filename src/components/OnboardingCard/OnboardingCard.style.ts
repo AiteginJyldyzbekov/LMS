@@ -1,6 +1,8 @@
+import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import { SliderCard } from '../../types/types';
 
-export const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles<Theme, SliderCard>(() => ({
   onBoard_card: {
     display: 'inline-block',
     position: 'relative',
@@ -18,14 +20,31 @@ export const useStyles = makeStyles(() => ({
       position: 'absolute',
       top: 0,
       left: 0,
-      background: 'transparent',
-      backgroundImage: 'linear-gradient(to left, #11de93, #0e7ad6)',
       opacity: 0.8,
       borderRadius: '12px',
     },
   },
   onBoard_text: {
-    margin: 'auto',
-    verticalAlign: 'center',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    height: '100%',
+    '& h6': {
+      fontStyle: 'normal',
+      fontWeight: '500',
+      fontSize: '24px',
+      lineHeight: '28px',
+      color: '#FFFFFF',
+      borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
+      paddingBottom: "5px",
+    },
+    '& p': {
+      fontStyle: 'normal',
+      fontWeight: '400',
+      fontSize: '16px',
+      lineHeight: '21px',
+      color: '#C6C6C6',
+      marginTop: "10px"
+    },
   },
 }));

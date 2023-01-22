@@ -7,6 +7,7 @@ import Arrow from '../../../public/images/onBoardingSlider/Arrow.svg';
 import SecondArrow from '../../../public/images/onBoardingSlider/SecondArrow.svg';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { SliderCards } from '../../constants/SliderCards';
 
 const SampleNextArrow: React.FC = (props: any) => {
   const { className, style, onClick } = props;
@@ -78,10 +79,15 @@ const OnBoarding = () => {
       <Typography variant="h4">Onboarding</Typography>
       <br />
       <Slider className={styles.wrapper} {...settings}>
-        <OnboardingCard />
-        <OnboardingCard />
-        <OnboardingCard />
-        <OnboardingCard />
+        {SliderCards.map((item) => (
+          <OnboardingCard
+            key={item.id}
+            title={item.title}
+            information={item.information}
+            img={item.img}
+            id={item.id}
+          />
+        ))}
       </Slider>
     </div>
   );
