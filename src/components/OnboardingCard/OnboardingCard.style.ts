@@ -1,8 +1,6 @@
-import { Theme } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { SliderCard } from '../../types/types';
 
-export const useStyles = makeStyles<Theme, SliderCard>(() => ({
+export const useStyles = makeStyles(() => ({
   onBoard_card: {
     display: 'inline-block',
     position: 'relative',
@@ -35,8 +33,8 @@ export const useStyles = makeStyles<Theme, SliderCard>(() => ({
       fontSize: '24px',
       lineHeight: '28px',
       color: '#FFFFFF',
-      borderBottom: "2px solid rgba(255, 255, 255, 0.3)",
-      paddingBottom: "5px",
+      borderBottom: '2px solid rgba(255, 255, 255, 0.3)',
+      paddingBottom: '5px',
     },
     '& p': {
       fontStyle: 'normal',
@@ -44,7 +42,7 @@ export const useStyles = makeStyles<Theme, SliderCard>(() => ({
       fontSize: '16px',
       lineHeight: '21px',
       color: '#C6C6C6',
-      marginTop: "10px"
+      marginTop: '10px',
     },
   },
 }));

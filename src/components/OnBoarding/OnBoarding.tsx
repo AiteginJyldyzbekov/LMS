@@ -80,13 +80,7 @@ const OnBoarding = () => {
       <br />
       <Slider className={styles.wrapper} {...settings}>
         {SliderCards.map((item) => (
-          <OnboardingCard
-            key={item.id}
-            title={item.title}
-            information={item.information}
-            img={item.img}
-            id={item.id}
-          />
+          <OnboardingCard key={item.id} {...item} />
         ))}
       </Slider>
     </div>

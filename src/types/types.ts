@@ -31,7 +31,7 @@ export interface SliderCard {
   id: number;
   title: string;
   information: string;
-  img: any;
+  img: string;
 }
 
 export interface ApiError {

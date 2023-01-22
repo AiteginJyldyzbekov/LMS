@@ -1,23 +1,27 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 import { useStyles } from './OnboardingCard.style';
-import { SliderCard } from '../../types/types';
 
-const OnboardingCard = (props: SliderCard) => {
-  const styleProps: any = { back: props.img };
-  const styles = useStyles(styleProps);
+interface IProps {
+  title: string;
+  information: string;
+  img: string;
+}
+
+const OnboardingCard: React.FC<IProps> = ({ title, information, img }) => {
+  const styles = useStyles();
   return (
     <div
       className={styles.onBoard_card}
       style={{
-        background: `url(${props.img})`,
+        background: `url(${img})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
       }}
     >
       <div className={styles.onBoard_text}>
-        <Typography variant="h6">{props.title}</Typography>
-        <Typography>{props.information}</Typography>
+        <Typography variant="h6">{title}</Typography>
+        <Typography>{information}</Typography>
       </div>
     </div>
   );
