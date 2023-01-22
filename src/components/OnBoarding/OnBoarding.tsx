@@ -1,8 +1,8 @@
 import React from 'react';
 import { Typography } from '@mui/material';
+import Slider from 'react-slick';
 import OnboardingCard from '../OnboardingCard/OnboardingCard';
 import { useStyles } from './OnBoarding.style';
-import Slider from 'react-slick';
 import Arrow from '../../../public/images/onBoardingSlider/Arrow.svg';
 import SecondArrow from '../../../public/images/onBoardingSlider/SecondArrow.svg';
 import 'slick-carousel/slick/slick.css';
