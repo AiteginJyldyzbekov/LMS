@@ -8,10 +8,11 @@ import SecondArrow from '../../../public/images/onBoardingSlider/SecondArrow.svg
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-function SampleNextArrow(props: any) {
+const SampleNextArrow: React.FC = (props: any) => {
   const { className, style, onClick } = props;
   return (
-    <div
+    <button
+      type="button"
       className={className}
       style={{
         ...style,
@@ -28,14 +29,17 @@ function SampleNextArrow(props: any) {
         backgroundPosition: 'center',
       }}
       onClick={onClick}
-    />
+    >
+      {' '}
+    </button>
   );
-}
+};
 
-function SamplePrevArrow(props: any) {
+const SamplePrevArrow: React.FC = (props: any) => {
   const { className, style, onClick } = props;
   return (
-    <div
+    <button
+      type="button"
       className={className}
       style={{
         ...style,
@@ -52,9 +56,11 @@ function SamplePrevArrow(props: any) {
         backgroundPosition: 'center',
       }}
       onClick={onClick}
-    />
+    >
+      {' '}
+    </button>
   );
-}
+};
 
 const OnBoarding = () => {
   const styles = useStyles();
