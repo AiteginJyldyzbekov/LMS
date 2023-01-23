@@ -55,5 +55,5 @@ export interface NavBar {
   icon: any;
   title: string;
   alt: string;
-  path:string;
+  path: string;
 }
