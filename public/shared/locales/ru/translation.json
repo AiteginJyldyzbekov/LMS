@@ -191,5 +191,13 @@
     "number": "Номер",
     "name": "Имя",
     "status":  "Статус"
+  },
+  "NavbarStudent": {
+    "main": "Главная",
+    "stady": "Учеба",
+    "reting": "Рейтинг",
+    "practicum": "Практика",
+    "career": "Карьера",
+    "batle": "Сражение"
   }
 }

@@ -186,5 +186,13 @@
     "number": "Number",
     "name": "Name",
     "status":  "Status"
+  },
+  "NavbarStudent": {
+    "main": "Main",
+    "stady": "Stady",
+    "reting": "Reting",
+    "practicum": "Practicum",
+    "career": "Career",
+    "batle": "Batle"
   }
 }

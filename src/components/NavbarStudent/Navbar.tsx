@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import logo from '../../../public/images/navbarStudent/logo.svg';
 import { MenuStudents } from '../../constants/NavbarStudent';
 import { useStyles } from './Navbar.style';
@@ -7,6 +8,7 @@ import { useStyles } from './Navbar.style';
 const Navbar: React.FC = () => {
   const styles = useStyles();
   const location = useLocation();
+  const { t } = useTranslation();
 
   const renderActive = (path: string) => {
     if (location.pathname === path) {
@@ -28,14 +30,14 @@ const Navbar: React.FC = () => {
                 location.pathname === path ? styles.icon_activ : styles.icon
               }
               src={icon}
-              alt={alt}
+              alt={t(alt)}
             />
             <h5
               className={
                 location.pathname === path ? styles.title_activ : styles.title
               }
             >
-              {title}
+              {t(title)}
             </h5>
           </Link>
         ))}
