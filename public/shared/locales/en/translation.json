@@ -194,5 +194,9 @@
     "practicum": "Practicum",
     "career": "Career",
     "batle": "Batle"
+  },
+  "HeaderStudent": {
+    "title": "Refer a friend and get 60% off your next course from Solid",
+    "placeholder": "Search..."
   }
 }
