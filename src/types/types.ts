@@ -50,3 +50,10 @@ export interface IStack {
   techName: string;
   completedPercent: number;
 }
+
+export interface NavBar {
+  icon: any;
+  title: string;
+  alt: string;
+  path:string;
+}
