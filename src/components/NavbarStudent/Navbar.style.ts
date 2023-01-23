@@ -15,7 +15,7 @@ export const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     paddingTop: '25px',
-    height:'70%'
+    height: '70%',
   },
   path: {
     width: '65px',
@@ -28,10 +28,12 @@ export const useStyles = makeStyles(() => ({
     margin: '20px 0 0 0',
   },
   icon: {
-    filter:'invert(56%) sepia(0%) saturate(10%) hue-rotate(219deg) brightness(97%) contrast(91%)'
+    filter:
+      'invert(56%) sepia(0%) saturate(10%) hue-rotate(219deg) brightness(97%) contrast(91%)',
   },
   icon_activ: {
-    filter:'invert(100%) sepia(1%) saturate(7498%) hue-rotate(58deg) brightness(116%) contrast(101%)'
+    filter:
+      'invert(100%) sepia(1%) saturate(7498%) hue-rotate(58deg) brightness(116%) contrast(101%)',
   },
   title: {
     fontWeight: '300',
