@@ -27,6 +27,12 @@ export interface GroupInfo {
   title: string;
   information: string;
 }
+export interface SliderCard {
+  id: number;
+  title: string;
+  information: string;
+  img: string;
+}
 
 export interface ApiError {
   status?: number | string;
