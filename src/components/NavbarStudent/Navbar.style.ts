@@ -9,37 +9,37 @@ export const useStyles = makeStyles(() => ({
     alignItems: 'center',
   },
   logo: {
-    width:'100%',
-    height:'16%',
-    textAlign:'center',
-    paddingTop:'30%'
+    width: '100%',
+    height: '16%',
+    textAlign: 'center',
+    paddingTop: '30%',
   },
   navbar: {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
-    alignItems:'center',
-    justifyContent:'space-between',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     height: '64%',
   },
   path: {
     width: '60%',
     height: '15%',
-    display:'flex',
-    flexDirection:'column',
-    alignItems:'center',
-    paddingTop:'10%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingTop: '10%',
     textDecoration: 'none',
     color: 'inherit',
     backgroundColor: 'transparent',
   },
   icon: {
-    width:'50%',
+    width: '50%',
     filter:
       'invert(56%) sepia(0%) saturate(10%) hue-rotate(219deg) brightness(97%) contrast(91%)',
   },
   icon_activ: {
-    width:'50%',
+    width: '50%',
     filter:
       'invert(100%) sepia(1%) saturate(7498%) hue-rotate(58deg) brightness(116%) contrast(101%)',
   },
@@ -62,5 +62,5 @@ export const useStyles = makeStyles(() => ({
     backgroundColor: 'transparent',
     cursor: 'pointer',
     background: 'linear-gradient(135deg, #BD4E1B 0%, #FD04EC 100%)',
-  }
+  },
 }));
