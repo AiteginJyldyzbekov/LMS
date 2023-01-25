@@ -23,7 +23,7 @@ const Navbar: React.FC = () => {
         <img src={logo} alt="logotype" />
       </div>
       <div className={styles.navbar}>
-        {MenuStudents.map(({ title, icon, alt, path }) => (
+        {MenuStudents.map(({ title, icon, alt, path }, index) => (
           <Link className={styles.path + renderActive(path)} to={path}>
             <img
               className={
@@ -33,6 +33,7 @@ const Navbar: React.FC = () => {
               alt={t(alt)}
             />
             <h5
+              id={index === 0 ? "firstTitle" : ''}
               className={
                 location.pathname === path ? styles.title_activ : styles.title
               }
