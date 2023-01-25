@@ -48,20 +48,20 @@ export const useStyles = makeStyles(() => ({
     fontSize: '12px',
     lineHeight: '14px',
     color: '#898989',
-    paddingTop:'10%',
+    paddingTop: '10%',
     '@media (max-width: 1200px)': {
       paddingTop: '0',
-    }
+    },
   },
   title_activ: {
     fontWeight: '300',
     fontSize: '12px',
     lineHeight: '14px',
     color: '#fff',
-    paddingTop:'10%',
+    paddingTop: '10%',
     '@media (max-width: 1200px)': {
       paddingTop: '0',
-    }
+    },
   },
   active: {
     width: '60%',
