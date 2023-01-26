@@ -185,6 +185,10 @@
     "mail": "Mail",
     "number": "Number",
     "name": "Name",
-    "status":  "Status"
+    "status": "Status"
+  },
+  "HeaderStudent": {
+    "title": "Refer a friend and get 60% off your next course from Solid",
+    "placeholder": "Search..."
   }
 }

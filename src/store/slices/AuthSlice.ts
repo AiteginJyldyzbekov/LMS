@@ -20,7 +20,7 @@ const initialState: AuthState = {
   // TODO: remove object when BE side will be ready
   data: {
     email: 'lms@gmail.com',
-    role: role || 'admin',
+    role: role || 'student',
     token: '',
   },
   error: null,
