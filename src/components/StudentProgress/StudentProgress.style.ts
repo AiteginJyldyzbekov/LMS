@@ -15,6 +15,15 @@ export const useStyles = makeStyles(() => ({
     backgroundColor: '#222429',
     height: '25px',
     borderRadius: '32px',
+    position: 'relative',
+    '&  p': {
+      position: 'absolute',
+      left: '50%',
+      right: 0,
+      top: 1,
+      bottom: 0,
+      margin: 'auto',
+    },
   },
   progress: {
     display: 'flex',

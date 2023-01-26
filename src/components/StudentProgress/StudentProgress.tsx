@@ -20,9 +20,8 @@ const StudentProgress: React.FC<IStackProgress> = ({ stack }) => {
             <div
               className={styles.progress}
               style={{ width: `${(item.completedPercent / 100) * 100}%` }}
-            >
-              <p style={{ margin: 'auto' }}>{item.completedPercent}%</p>
-            </div>
+            />
+            <p>{item.completedPercent}%</p>
           </div>
         </div>
       )),
