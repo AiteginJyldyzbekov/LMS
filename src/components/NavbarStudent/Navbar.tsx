@@ -20,12 +20,13 @@ const Navbar: React.FC = () => {
   return (
     <div className={styles.navbar_students}>
       <div className={styles.logo}>
-        <img src={logo} alt="logotype" />
+        <img className={styles.logotype} src={logo} alt="logotype" />
       </div>
       <div className={styles.navbar}>
         {MenuStudents.map(({ title, icon, alt, path }, index) => (
           <Link className={styles.path + renderActive(path)} to={path}>
             <img
+              id={index === 2 ? 'thirdIcon' : ''}
               className={
                 location.pathname === path ? styles.icon_activ : styles.icon
               }

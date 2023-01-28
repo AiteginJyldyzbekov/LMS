@@ -10,9 +10,22 @@ export const useStyles = makeStyles(() => ({
   },
   logo: {
     width: '100%',
-    height: '16%',
+    height: '12%',
     textAlign: 'center',
-    paddingTop: '30%',
+    paddingTop: '15%',
+    border: '1px solid green',
+    '@media (max-width: 1500px)': {
+      height: '13%',
+    },
+    '@media (max-width: 1300px)': {
+      paddingTop: '20%',
+    },
+  },
+  logotype: {
+    width: '28%',
+    '@media (max-width: 1500px)': {
+      width: '25%',
+    },
   },
   navbar: {
     width: '100%',
@@ -20,7 +33,11 @@ export const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-between',
-    height: '64%',
+    height: '58%',
+    border: '1px solid red',
+    '@media (max-width: 1500px)': {
+      height: '57%',
+    },
   },
   path: {
     width: '60%',
@@ -28,39 +45,58 @@ export const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    paddingTop: '10%',
     textDecoration: 'none',
     color: 'inherit',
+    paddingTop: '3%',
     backgroundColor: 'transparent',
+    '@media (max-width: 1500px)': {
+      height: '15%',
+      width: '58%',
+      padding: '0',
+    },
+    '@media (max-width: 1300px)': {
+      height: '13%',
+      width: '60%',
+    },
   },
   icon: {
     width: '50%',
+    paddingTop: '10%',
     filter:
       'invert(56%) sepia(0%) saturate(10%) hue-rotate(219deg) brightness(97%) contrast(91%)',
+    '@media (max-width: 1500px)': {
+      width: '40%',
+      paddingTop: '8%',
+    },
   },
   icon_activ: {
     width: '50%',
+    paddingTop: '10%',
     filter:
       'invert(100%) sepia(1%) saturate(7498%) hue-rotate(58deg) brightness(116%) contrast(101%)',
+    '@media (max-width: 1500px)': {
+      width: '40%',
+      paddingTop: '8%',
+    },
   },
   title: {
     fontWeight: '300',
-    fontSize: '12px',
+    fontSize: '14px',
     lineHeight: '14px',
     color: '#898989',
     paddingTop: '10%',
-    '@media (max-width: 1200px)': {
-      paddingTop: '0',
+    '@media (max-width: 1500px)': {
+      fontSize: '12px',
     },
   },
   title_activ: {
     fontWeight: '300',
-    fontSize: '12px',
+    fontSize: '14px',
     lineHeight: '14px',
     color: '#fff',
     paddingTop: '10%',
-    '@media (max-width: 1200px)': {
-      paddingTop: '0',
+    '@media (max-width: 1500px)': {
+      fontSize: '12px',
     },
   },
   active: {
@@ -70,5 +106,13 @@ export const useStyles = makeStyles(() => ({
     backgroundColor: 'transparent',
     cursor: 'pointer',
     background: 'linear-gradient(135deg, #BD4E1B 0%, #FD04EC 100%)',
+    '@media (max-width: 1500px)': {
+      height: '16%',
+      width: '60%',
+    },
+    '@media (max-width: 1300px)': {
+      height: '13%',
+      width: '60%',
+    },
   },
 }));
