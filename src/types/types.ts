@@ -52,7 +52,7 @@ export interface IStack {
 }
 
 export interface NavBar {
-  icon: any;
+  icon: string;
   title: string;
   alt: string;
   path: string;

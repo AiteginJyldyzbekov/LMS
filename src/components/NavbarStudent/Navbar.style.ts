@@ -4,6 +4,7 @@ export const useStyles = makeStyles(() => ({
   navbar_students: {
     borderRight: '1px solid #616161',
     height: '100vh',
+    width: '90%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -34,12 +35,12 @@ export const useStyles = makeStyles(() => ({
     justifyContent: 'space-between',
     height: '58%',
     '@media (max-width: 1500px)': {
-      height: '70%',
+      height: '67%',
     },
   },
   path: {
     width: '60%',
-    height: '15%',
+    height: '14%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -48,46 +49,38 @@ export const useStyles = makeStyles(() => ({
     backgroundColor: 'transparent',
     '@media (max-width: 1500px)': {
       height: '15%',
-      width: '60%',
-    },
-    '@media (max-width: 1300px)': {
-      height: '13%',
-      width: '60%',
+      width: '68%',
     },
   },
   active: {
     width: '60%',
-    height: '15%',
+    height: '14%',
     borderRadius: '12px',
     backgroundColor: 'transparent',
     cursor: 'pointer',
     background: 'linear-gradient(135deg, #BD4E1B 0%, #FD04EC 100%)',
     '@media (max-width: 1500px)': {
       height: '15%',
-      width: '60%',
-    },
-    '@media (max-width: 1300px)': {
-      height: '13%',
-      width: '60%',
+      width: '68%',
     },
   },
   icon: {
-    width: '50%',
-    paddingTop: '10%',
+    width: '40%',
+    paddingTop: '15%',
     filter:
       'invert(56%) sepia(0%) saturate(10%) hue-rotate(219deg) brightness(97%) contrast(91%)',
     '@media (max-width: 1500px)': {
-      width: '40%',
+      width: '36%',
       paddingTop: '12%',
     },
   },
   icon_activ: {
-    width: '50%',
-    paddingTop: '10%',
+    width: '40%',
+    paddingTop: '15%',
     filter:
       'invert(100%) sepia(1%) saturate(7498%) hue-rotate(58deg) brightness(116%) contrast(101%)',
     '@media (max-width: 1500px)': {
-      width: '40%',
+      width: '36%',
       paddingTop: '12%',
     },
   },
@@ -96,7 +89,7 @@ export const useStyles = makeStyles(() => ({
     fontSize: '14px',
     lineHeight: '14px',
     color: '#898989',
-    paddingTop: '10%',
+    paddingTop: '12%',
     '@media (max-width: 1500px)': {
       fontSize: '12px',
     },
@@ -106,7 +99,7 @@ export const useStyles = makeStyles(() => ({
     fontSize: '14px',
     lineHeight: '14px',
     color: '#fff',
-    paddingTop: '10%',
+    paddingTop: '12%',
     '@media (max-width: 1500px)': {
       fontSize: '12px',
     },

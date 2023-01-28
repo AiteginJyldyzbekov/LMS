@@ -17,13 +17,13 @@ export const MenuStudents: NavBar[] = [
     icon: stady,
     title: 'NavbarStudent.stady',
     alt: 'NavbarStudent.stady',
-    path: '/stady',
+    path: '/study',
   },
   {
     icon: reting,
     title: 'NavbarStudent.reting',
     alt: 'NavbarStudent.reting',
-    path: '/reting',
+    path: '/rating',
   },
   {
     icon: practicum,
@@ -41,6 +41,6 @@ export const MenuStudents: NavBar[] = [
     icon: batle,
     title: 'NavbarStudent.batle',
     alt: 'NavbarStudent.batle',
-    path: '/batle',
+    path: '/battle',
   },
 ];
