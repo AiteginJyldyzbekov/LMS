@@ -8,7 +8,7 @@ export const useStyles = makeStyles(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    position:'fixed'
+    position: 'fixed',
   },
   logo: {
     width: '100%',
