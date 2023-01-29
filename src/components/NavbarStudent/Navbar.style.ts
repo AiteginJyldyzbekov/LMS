@@ -4,10 +4,11 @@ export const useStyles = makeStyles(() => ({
   navbar_students: {
     borderRight: '1px solid #616161',
     height: '100vh',
-    width: '90%',
+    width: '7%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    position:'fixed'
   },
   logo: {
     width: '100%',
@@ -51,6 +52,10 @@ export const useStyles = makeStyles(() => ({
       height: '15%',
       width: '68%',
     },
+    '@media (max-width: 1300px)': {
+      height: '12%',
+      width: '70%',
+    },
   },
   active: {
     width: '60%',
@@ -63,6 +68,10 @@ export const useStyles = makeStyles(() => ({
       height: '15%',
       width: '68%',
     },
+    '@media (max-width: 1300px)': {
+      height: '12%',
+      width: '70%',
+    },
   },
   icon: {
     width: '40%',
@@ -73,6 +82,9 @@ export const useStyles = makeStyles(() => ({
       width: '36%',
       paddingTop: '12%',
     },
+    '@media (max-width: 1300px)': {
+      paddingTop: '14%',
+    },
   },
   icon_activ: {
     width: '40%',
@@ -82,6 +94,9 @@ export const useStyles = makeStyles(() => ({
     '@media (max-width: 1500px)': {
       width: '36%',
       paddingTop: '12%',
+    },
+    '@media (max-width: 1300px)': {
+      paddingTop: '14%',
     },
   },
   title: {
