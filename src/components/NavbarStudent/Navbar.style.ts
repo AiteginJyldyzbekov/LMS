@@ -16,10 +16,8 @@ export const useStyles = makeStyles(() => ({
     textAlign: 'center',
     paddingTop: '15%',
     '@media (max-width: 1500px)': {
-      height: '13%',
-    },
-    '@media (max-width: 1300px)': {
-      paddingTop: '20%',
+      height: '14%',
+      paddingTop: '18%',
     },
   },
   logotype: {
@@ -36,12 +34,15 @@ export const useStyles = makeStyles(() => ({
     justifyContent: 'space-between',
     height: '58%',
     '@media (max-width: 1500px)': {
-      height: '67%',
+      height: '66%',
+    },
+    '@media (max-width: 1300px)': {
+      height: '60%',
     },
   },
   path: {
-    width: '60%',
-    height: '14%',
+    width: '59%',
+    height: '13%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -49,33 +50,33 @@ export const useStyles = makeStyles(() => ({
     color: 'inherit',
     backgroundColor: 'transparent',
     '@media (max-width: 1500px)': {
-      height: '15%',
       width: '68%',
+      height: '14%',
     },
     '@media (max-width: 1300px)': {
-      height: '12%',
       width: '70%',
+      height: '13%',
     },
   },
   active: {
-    width: '60%',
-    height: '14%',
+    width: '59%',
+    height: '13%',
     borderRadius: '12px',
     backgroundColor: 'transparent',
-    cursor: 'pointer',
     background: 'linear-gradient(135deg, #BD4E1B 0%, #FD04EC 100%)',
+    boxShadow: '0px 0px 4px #B9208C',
     '@media (max-width: 1500px)': {
-      height: '15%',
       width: '68%',
+      height: '14%',
     },
     '@media (max-width: 1300px)': {
-      height: '12%',
       width: '70%',
+      height: '13%',
     },
   },
   icon: {
     width: '40%',
-    paddingTop: '15%',
+    paddingTop: '16%',
     filter:
       'invert(56%) sepia(0%) saturate(10%) hue-rotate(219deg) brightness(97%) contrast(91%)',
     '@media (max-width: 1500px)': {
@@ -83,12 +84,12 @@ export const useStyles = makeStyles(() => ({
       paddingTop: '12%',
     },
     '@media (max-width: 1300px)': {
-      paddingTop: '14%',
+      paddingTop: '15%',
     },
   },
   icon_activ: {
     width: '40%',
-    paddingTop: '15%',
+    paddingTop: '16%',
     filter:
       'invert(100%) sepia(1%) saturate(7498%) hue-rotate(58deg) brightness(116%) contrast(101%)',
     '@media (max-width: 1500px)': {
@@ -96,7 +97,7 @@ export const useStyles = makeStyles(() => ({
       paddingTop: '12%',
     },
     '@media (max-width: 1300px)': {
-      paddingTop: '14%',
+      paddingTop: '15%',
     },
   },
   title: {
@@ -104,7 +105,7 @@ export const useStyles = makeStyles(() => ({
     fontSize: '14px',
     lineHeight: '14px',
     color: '#898989',
-    paddingTop: '12%',
+    paddingTop: '13%',
     '@media (max-width: 1500px)': {
       fontSize: '12px',
     },
@@ -114,7 +115,7 @@ export const useStyles = makeStyles(() => ({
     fontSize: '14px',
     lineHeight: '14px',
     color: '#fff',
-    paddingTop: '12%',
+    paddingTop: '13%',
     '@media (max-width: 1500px)': {
       fontSize: '12px',
     },
