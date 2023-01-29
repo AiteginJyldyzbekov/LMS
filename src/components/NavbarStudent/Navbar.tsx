@@ -34,7 +34,6 @@ const Navbar: React.FC = () => {
               alt={t(alt)}
             />
             <h5
-              // id={index === 0 ? 'firstTitle' : ''}
               className={
                 location.pathname === path ? styles.title_activ : styles.title
               }
