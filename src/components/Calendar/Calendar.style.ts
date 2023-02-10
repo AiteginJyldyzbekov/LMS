@@ -63,13 +63,13 @@ export const useStyles = makeStyles(() => ({
     '.MuiDayPicker-weekDayLabel': {
       color: 'white !important',
       '&:nth-last-child(1)': {
-        color: '#FF5F5F',
+        color: '#FF5F5F !important',
       },
       '&:nth-last-child(-n+2)': {
-        color: '#FF5F5F',
+        color: '#FF5F5F !important',
       },
     },
-    '.css-dxmyjx-MuiButtonBase-root-MuiPickersDay-root.Mui-selected': {
+    '.MuiPickersDay-root.Mui-selected': {
       background: '#6B9AFF !important',
       borderRadius: '7px !important',
       '&:nth-last-child(1)': {
@@ -83,47 +83,29 @@ export const useStyles = makeStyles(() => ({
         borderRadius: '7px !important',
       },
     },
-    '.css-sf5t6v-PrivatePickersSlideTransition-root-MuiDayPicker-slideTransition':
-      {
-        overflowX: 'visible !important',
-      },
-    '.css-dxmyjx-MuiButtonBase-root-MuiPickersDay-root': {
+    '.MuiDayPicker-slideTransition': {
+      overflowX: 'visible !important',
+    },
+    '.MuiPickersDay-root': {
       backgroundColor: '#2C2E34 !important',
     },
-    '.css-1d1d7bu-MuiButtonBase-root-MuiPickersDay-root.Mui-selected': {
-      background: '#6B9AFF !important',
-      borderRadius: '7px !important',
-      '&:nth-last-child(1)': {
-        color: 'white !important',
-        background: '#FF00F5 !important',
-        borderRadius: '7px !important',
-      },
-      '&:nth-last-child(-n+2)': {
-        color: 'white !important',
-        background: '#FF00F5 !important',
-        borderRadius: '7px !important',
-      },
-    },
-    '.css-1d1d7bu-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected)': {
+    '.MuiPickersDay-root:not(.Mui-selected)': {
       border: 'none !important',
     },
-    '.css-1d1d7bu-MuiButtonBase-root-MuiPickersDay-root': {
-      background: 'none !important',
-    },
-    '.css-i4bv87-MuiSvgIcon-root': {
+    '.MuiSvgIcon-root': {
       color: 'white !important',
       width: '100% !important',
       display: 'flex !important',
     },
-    '.css-1tkx1wf-MuiSvgIcon-root-MuiPickersCalendarHeader-switchViewIcon': {
+    '.MuiPickersCalendarHeader-switchViewIcon': {
       display: 'none !important',
     },
-    '.css-9reuh9-MuiPickersArrowSwitcher-root ': {
+    '.MuiPickersArrowSwitcher-root ': {
       width: '100% !important',
       display: 'flex !important',
       justifyContent: 'space-between !important',
     },
-    '.css-10fao8b-MuiPickersCalendarHeader-labelContainer': {
+    '.MuiPickersCalendarHeader-labelContainer': {
       position: 'absolute !important',
       margin: '0',
       top: '50%',
@@ -131,10 +113,10 @@ export const useStyles = makeStyles(() => ({
       marginRight: '-50%',
       transform: 'translate(-50%, -50%)',
     },
-    '.css-nk89i7-MuiPickersCalendarHeader-root': {
+    '.MuiPickersCalendarHeader-root': {
       position: 'relative !important',
     },
-    '.css-dplwbx-MuiPickersCalendarHeader-label': {
+    '.MuiPickersCalendarHeader-label': {
       marginRight: '0 !important',
       fontStyle: 'normal',
       fontWeight: '500',
@@ -143,7 +125,7 @@ export const useStyles = makeStyles(() => ({
       textAlign: 'center',
       color: '#FFFFFF',
     },
-    '.css-1dk40rm-MuiButtonBase-root-MuiPickersDay-root': {
+    '.MuiPickersDay-dayOutsideMonth': {
       color: '#565656 !important',
       '&:nth-last-child(1)': {
         color: '#565656 !important',
@@ -152,7 +134,7 @@ export const useStyles = makeStyles(() => ({
         color: '#565656 !important',
       },
     },
-    '.css-1dk40rm-MuiButtonBase-root-MuiPickersDay-root.Mui-selected': {
+    '.MuiPickersDay-dayOutsideMonth.Mui-selected': {
       background: 'none !important',
       color: '#565656 !important',
     },
