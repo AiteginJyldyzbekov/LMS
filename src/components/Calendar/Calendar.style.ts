@@ -152,9 +152,9 @@ export const useStyles = makeStyles(() => ({
         color: '#565656 !important',
       },
     },
-    ".css-1dk40rm-MuiButtonBase-root-MuiPickersDay-root.Mui-selected": {
-      background: "none !important",
-      color: "#565656 !important"
-    }
+    '.css-1dk40rm-MuiButtonBase-root-MuiPickersDay-root.Mui-selected': {
+      background: 'none !important',
+      color: '#565656 !important',
+    },
   },
 }));
