@@ -45,7 +45,7 @@ export const useStyles = makeStyles(() => ({
         border: 'none',
         background: 'none',
         cursor: 'pointer',
-        color: "white",
+        color: 'white',
         '&:nth-last-child(1)': {
           color: '#FF5F5F',
         },
@@ -143,14 +143,18 @@ export const useStyles = makeStyles(() => ({
       textAlign: 'center',
       color: '#FFFFFF',
     },
-    ".css-1dk40rm-MuiButtonBase-root-MuiPickersDay-root": {
-      color: "#565656 !important",
+    '.css-1dk40rm-MuiButtonBase-root-MuiPickersDay-root': {
+      color: '#565656 !important',
       '&:nth-last-child(1)': {
         color: '#565656 !important',
       },
       '&:nth-last-child(-n+2)': {
         color: '#565656 !important',
       },
+    },
+    ".css-1dk40rm-MuiButtonBase-root-MuiPickersDay-root.Mui-selected": {
+      background: "none !important",
+      color: "#565656 !important"
     }
   },
 }));

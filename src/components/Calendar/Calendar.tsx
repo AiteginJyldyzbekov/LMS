@@ -1,5 +1,4 @@
 import React from 'react';
-import { useStyles } from './Calendar.style';
 import dayjs, { Dayjs } from 'dayjs';
 import { CalendarPicker } from '@mui/x-date-pickers/CalendarPicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
@@ -8,6 +7,7 @@ import 'dayjs/locale/ru';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { deDE } from '@mui/x-date-pickers';
 import Grid from '@mui/material/Grid';
+import { useStyles } from './Calendar.style';
 
 const Calendar = () => {
   const styles = useStyles();
@@ -36,7 +36,7 @@ const Calendar = () => {
             <CalendarPicker
               date={date}
               onChange={(newDate) => setDate(newDate)}
-              showDaysOutsideCurrentMonth={true}
+              showDaysOutsideCurrentMonth
             />
           </Grid>
         </LocalizationProvider>
