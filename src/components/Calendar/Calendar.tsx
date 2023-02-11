@@ -37,7 +37,9 @@ const Calendar = () => {
               date={date}
               onChange={(newDate) => setDate(newDate)}
               showDaysOutsideCurrentMonth
-              dayOfWeekFormatter={(day: any) => day.charAt(0).toUpperCase() + day.charAt(1).toLowerCase()}
+              dayOfWeekFormatter={(day: any) =>
+                day.charAt(0).toUpperCase() + day.charAt(1).toLowerCase()
+              }
             />
           </Grid>
         </LocalizationProvider>
