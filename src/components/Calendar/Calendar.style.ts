@@ -115,6 +115,9 @@ export const useStyles = makeStyles(() => ({
     },
     '.MuiPickersCalendarHeader-root': {
       position: 'relative !important',
+      minHeight: '39px !important',
+      bottom: '5px',
+      left: "-6px",
     },
     '.MuiPickersCalendarHeader-label': {
       marginRight: '0 !important',
