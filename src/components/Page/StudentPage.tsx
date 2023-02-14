@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { RouteType } from '../../constants/routes';
 import NotFoundPage from '../../pages/404/NotFoundPage';
 import useStyles from './StudentPage.styles';
+import Navbar from '../NavbarStudent/Navbar';
 
 interface PropsTypes {
   routes: RouteType[];
@@ -20,7 +21,7 @@ const StudentPage: React.FC<PropsTypes> = ({ routes }) => {
     <div className={styles.wrapper}>
       <Grid container>
         <Grid item xs={0} md={1}>
-          SideBar
+          <Navbar />
         </Grid>
         <Grid item md={11}>
           <Routes>

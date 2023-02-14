@@ -27,6 +27,12 @@ export interface GroupInfo {
   title: string;
   information: string;
 }
+export interface SliderCard {
+  id: number;
+  title: string;
+  information: string;
+  img: string;
+}
 
 export interface ApiError {
   status?: number | string;
@@ -46,3 +52,14 @@ export type Loading =
   | LoadingStatus.failed
   | LoadingStatus.succeeded
   | LoadingStatus.failed;
+export interface IStack {
+  techName: string;
+  completedPercent: number;
+}
+
+export interface NavBar {
+  icon: string;
+  title: string;
+  alt: string;
+  path: string;
+}

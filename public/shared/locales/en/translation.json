@@ -186,5 +186,17 @@
     "number": "Number",
     "name": "Name",
     "status":  "Status"
+  },
+  "NavbarStudent": {
+    "main": "Main",
+    "stady": "Study",
+    "reting": "Rating",
+    "practicum": "Practicum",
+    "career": "Career",
+    "batle": "Battle"
+  },
+  "HeaderStudent": {
+    "title": "Refer a friend and get 60% off your next course from Solid",
+    "placeholder": "Search..."
   }
 }
