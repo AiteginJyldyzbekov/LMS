@@ -6,6 +6,9 @@ export const useStyles = makeStyles(() => ({
     boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25)',
     borderRadius: '12px',
     gridArea: 'c',
+    '@media (min-width:1620px)': { height: '488px' },
+    '@media (min-width:1720px)': { height: '542px' },
+    '@media (min-width:1820px)': { height: '566px' },
   },
   $M: {
     color: 'red',
@@ -59,6 +62,9 @@ export const useStyles = makeStyles(() => ({
       display: 'flex',
       flexDirection: 'column',
       justifyContent: 'space-around',
+      '@media (min-width:1620px)': { minHeight: '385.99px !important' },
+      '@media (min-width:1720px)': { minHeight: '440.99px !important' },
+      '@media (min-width:1820px)': { minHeight: '465.99px !important' },
     },
     '.MuiDayPicker-weekDayLabel': {
       color: 'white !important',

@@ -4,6 +4,7 @@ export const useStyles = makeStyles(() => ({
   greet_card: {
     display: 'flex',
     flexDirection: 'column',
+    justifyContent: 'center',
     background: '#2C2E34',
     boxShadow: '0px 0px 4px rgba(0, 0, 0, 0.25)',
     borderRadius: '12px',

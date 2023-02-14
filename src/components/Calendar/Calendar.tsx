@@ -37,7 +37,7 @@ const Calendar = () => {
               date={date}
               onChange={(newDate) => setDate(newDate)}
               showDaysOutsideCurrentMonth
-              dayOfWeekFormatter={(day: any) =>
+              dayOfWeekFormatter={(day: string) =>
                 day.charAt(0).toUpperCase() + day.charAt(1).toLowerCase()
               }
             />

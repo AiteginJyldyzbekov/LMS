@@ -10,6 +10,7 @@ export const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     padding: '25px',
     gap: '20px',
+    justifyContent: 'space-around',
   },
   progress_item: {
     backgroundColor: '#222429',
