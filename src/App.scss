@@ -1,3 +1,17 @@
 #thirdIcon {
   padding: 18% 0 8% 0;
 }
+#firstMap {
+  display: block;
+  display: flex;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: #222429;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #2C2E34;
+  border-radius: 20px;
+}

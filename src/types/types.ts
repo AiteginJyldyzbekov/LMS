@@ -71,4 +71,6 @@ export interface Course {
   lessons: string;
   coins: number;
   path: string;
+  progress: number;
+  level: string;
 }

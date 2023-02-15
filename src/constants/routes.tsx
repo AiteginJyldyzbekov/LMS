@@ -20,7 +20,6 @@ import EditMentor from '../pages/ADMIN/mentor/EditMentor';
 import StudentInfoPage from '../pages/ADMIN/studentInfo/StudentInfoPage';
 import Dashboard from '../pages/STUDENT/Dashboard/Dashboard';
 import Study from '../pages/STUDENT/Study/Study';
-import Courses from '../components/StudentStudy/Courses/Courses';
 
 export interface RouteType {
   title: string;
@@ -139,11 +138,6 @@ export const studentRoutes: RouteType[] = [
     title: 'Study',
     path: '/study',
     Component: Study,
-  },
-  {
-    title: 'Course',
-    path: '/study/course',
-    Component: Courses,
   },
   {
     title: 'Study Plan Page',

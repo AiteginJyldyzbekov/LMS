@@ -198,5 +198,10 @@
   "HeaderStudent": {
     "title": "Refer a friend and get 60% off your next course from Solid",
     "placeholder": "Search..."
+  },
+  "CourseStudent": {
+    "description": "Today is a great evening to learn new things or consolidate knowledge in practice.",
+    "lessons": "15 lessons",
+    "level":"Easy"
   }
 }
