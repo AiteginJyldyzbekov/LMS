@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import React, { useEffect, useState, useMemo } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useStyles } from './RoutesStudy.style';
 import { CourseStudent } from '../../../constants/CourseStudent';
+import CourseCard from '../Course/CourseCard';
 
 interface IRoutes {
   courses: boolean;
@@ -18,16 +19,33 @@ const RoutesStudy: React.FC = () => {
     recommended: false,
   });
   const [searchParams, setSearchParams] = useSearchParams();
-  const qp = searchParams.get('course')
+  const qp = searchParams.get('course');
   useEffect(() => {
     setActive({
       courses: qp === null,
       additional: qp === 'additional',
       recommended: qp === 'recomendation',
     });
-  }, [qp])
+  }, [qp]);
+  const courses = useMemo(
+    () =>
+      CourseStudent.map((item) => (
+        <CourseCard
+          path={item.path}
+          courseName={item.courseName}
+          iconCss={item.iconCss}
+          description={item.description}
+          progress={item.progress}
+          lessons={item.lessons}
+          iconCoin={item.iconCoin}
+          level={item.level}
+          coins={item.coins}
+        />
+      )),
+    [CourseStudent]
+  );
   return (
-    <div className={styles.navigation_container}>
+    <div>
       <div className={styles.navigation}>
         <button
           type="button"
@@ -57,66 +75,7 @@ const RoutesStudy: React.FC = () => {
           {t('CourseStudent.recommended')}
         </button>
       </div>
-      <div className={styles.course}>
-        {CourseStudent.map(
-          (
-            {
-              iconCss,
-              iconCoin,
-              courseName,
-              description,
-              lessons,
-              coins,
-              path,
-              progress,
-              level,
-            },
-            index
-          ) => (
-            <Link className={styles.routs} to={path}>
-              <div className={styles.inside}>
-                <div className={styles.title_image}>
-                  <h2 className={styles.title}>{courseName}</h2>
-                  <div className={styles.white_back}>
-                    <img className={styles.icon} src={iconCss} alt="iconCss" />
-                  </div>
-                </div>
-                <div className={styles.paragraf}>
-                  <p className={styles.description}>{t(description)}</p>
-                  <div className={styles.info}>
-                    <div
-                      id={index === 0 ? 'firstMap' : ''}
-                      className={styles.progress}
-                    >
-                      <div className={styles.progress_procent} />
-                      <span className={styles.procent}>{progress}%</span>
-                    </div>
-                    <div className={styles.info_container}>
-                      <div className={styles.lessons}>
-                        <p className={styles.info_title}>{t(lessons)}</p>
-                      </div>
-                      <div className={styles.coin}>
-                        <img
-                          className={styles.coin_image}
-                          src={iconCoin}
-                          alt="coin"
-                        />
-                        <span className={styles.info_title}> + {coins}</span>
-                      </div>
-                      <div
-                        id={index === 0 ? 'firstMap' : ''}
-                        className={styles.level}
-                      >
-                        <p className={styles.info_title}>{t(level)}</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          )
-        )}
-      </div>
+      <div className={styles.course}>{courses}</div>
     </div>
   );
 };
