@@ -20,10 +20,10 @@ const StudentPage: React.FC<PropsTypes> = ({ routes }) => {
   return (
     <div className={styles.wrapper}>
       <Grid container>
-        <Grid item xs={0} md={1}>
+        <Grid item width="7.313rem">
           <Navbar />
         </Grid>
-        <Grid item md={11}>
+        <Grid item width="calc(100% - 7.313rem)">
           <Routes>
             {routes.map(renderComponent)}
             <Route path="*" element={<NotFoundPage />} />
