@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useStyles } from './RoutesStudy.style';
@@ -18,19 +18,20 @@ const RoutesStudy: React.FC = () => {
     recommended: false,
   });
   const [searchParams, setSearchParams] = useSearchParams();
-  console.log(searchParams); // don't delete it will throw an error
+  const qp = searchParams.get('course')
+  useEffect(() => {
+    setActive({
+      courses: qp === null,
+      additional: qp === 'additional',
+      recommended: qp === 'recomendation',
+    });
+  }, [qp])
   return (
     <div className={styles.navigation_container}>
       <div className={styles.navigation}>
         <button
           type="button"
           onClick={() => {
-            setActive({
-              ...active,
-              courses: true,
-              additional: false,
-              recommended: false,
-            });
             setSearchParams({});
           }}
           className={active.courses === true ? styles.active : styles.frame}
@@ -40,12 +41,6 @@ const RoutesStudy: React.FC = () => {
         <button
           type="button"
           onClick={() => {
-            setActive({
-              ...active,
-              courses: false,
-              additional: true,
-              recommended: false,
-            });
             setSearchParams({ course: 'additional' });
           }}
           className={active.additional === true ? styles.active : styles.frame}
@@ -55,12 +50,6 @@ const RoutesStudy: React.FC = () => {
         <button
           type="button"
           onClick={() => {
-            setActive({
-              ...active,
-              courses: false,
-              additional: false,
-              recommended: true,
-            });
             setSearchParams({ course: 'recomendation' });
           }}
           className={active.recommended === true ? styles.active : styles.frame}
