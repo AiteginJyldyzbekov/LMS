@@ -4,7 +4,7 @@ export const useStyles = makeStyles(() => ({
   navbar_students: {
     borderRight: '1px solid #616161',
     height: '100vh',
-    width: '117px',
+    width: '7.313rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -25,73 +25,44 @@ export const useStyles = makeStyles(() => ({
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'space-between',
-    height: '58%',
-    '@media (max-width: 1500px)': {
-      height: '68%',
-    },
   },
   path: {
-    width: '75px',
-    height: '75px',
+    width: '60px',
+    height: '60px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    justifyContent: 'space-between',
     textDecoration: 'none',
     color: 'inherit',
     backgroundColor: 'transparent',
-    '@media (max-width: 1500px)': {
-      width: '60px',
-      height: '60px',
-    },
+    marginBottom: 27,
+    padding: '10px 0 8px 0',
   },
   active: {
-    width: '75px',
-    height: '75px',
     borderRadius: '12px',
     backgroundColor: 'transparent',
     background: 'linear-gradient(135deg, #BD4E1B 0%, #FD04EC 100%)',
     boxShadow: '0px 0px 4px #B9208C',
-    '@media (max-width: 1500px)': {
-      width: '60px',
-      height: '60px',
-    },
   },
   icon: {
-    width: '50%',
-    paddingTop: '8px',
+    height: '22px',
     filter:
       'invert(56%) sepia(0%) saturate(10%) hue-rotate(219deg) brightness(97%) contrast(91%)',
-    '@media (max-width: 1500px)': {
-      width: '40%',
-    },
   },
   icon_activ: {
-    width: '50%',
-    paddingTop: '8px',
+    height: '22px',
     filter:
       'invert(100%) sepia(1%) saturate(7498%) hue-rotate(58deg) brightness(116%) contrast(101%)',
-    '@media (max-width: 1500px)': {
-      width: '40%',
-    },
   },
   title: {
     fontWeight: '300',
-    fontSize: '14px',
-    lineHeight: '14px',
+    fontSize: '12px',
     color: '#898989',
-    paddingTop: '7px',
-    '@media (max-width: 1500px)': {
-      fontSize: '12px',
-    },
   },
   title_activ: {
     fontWeight: '300',
-    fontSize: '14px',
-    lineHeight: '14px',
+    fontSize: '12px',
     color: '#fff',
-    paddingTop: '7px',
-    '@media (max-width: 1500px)': {
-      fontSize: '12px',
-    },
   },
 }));
