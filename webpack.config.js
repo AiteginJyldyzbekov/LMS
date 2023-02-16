@@ -14,14 +14,18 @@ module.exports = ({ mode } = { mode: 'production' }) => {
       devServer: {
         // hot: true,
         open: true,
+        compress: true,
         static: {
           directory: path.join(__dirname, 'dist'),
+          watch: {
+            ignored: [/node_modules/, /__mocks__/, /.github/, /.husky/, /dist/, /coverage/],
+          },
         },
         historyApiFallback: true,
       },
       resolve: {
         alias: {
-          '@': path.resolve(__dirname, 'src/'),
+          "@pages": path.resolve(__dirname, 'src/pages/*'),
         },
         extensions: ['.ts', '.js', '.tsx', '.css', '.scss'],
       },
