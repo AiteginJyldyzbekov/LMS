@@ -19,6 +19,7 @@ import MentorDataPage from '../pages/ADMIN/mentor/MentorDataPage';
 import EditMentor from '../pages/ADMIN/mentor/EditMentor';
 import StudentInfoPage from '../pages/ADMIN/studentInfo/StudentInfoPage';
 import Dashboard from '../pages/STUDENT/Dashboard/Dashboard';
+import Study from '../pages/STUDENT/Study/Study';
 
 export interface RouteType {
   title: string;
@@ -132,6 +133,11 @@ export const studentRoutes: RouteType[] = [
     title: 'Home Page | Dashboard',
     path: '/',
     Component: Dashboard,
+  },
+  {
+    title: 'Study',
+    path: '/study',
+    Component: Study,
   },
   {
     title: 'Study Plan Page',

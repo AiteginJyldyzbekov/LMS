@@ -63,3 +63,14 @@ export interface NavBar {
   alt: string;
   path: string;
 }
+export interface Course {
+  iconCss: string;
+  iconCoin: string;
+  courseName: string;
+  description: string;
+  lessons: string;
+  coins: number;
+  path: string;
+  progress: number;
+  level: string;
+}
