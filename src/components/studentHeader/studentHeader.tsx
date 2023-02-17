@@ -17,7 +17,7 @@ const StudentHeader: React.FC = () => {
         type="text"
       />
       <div className={css.discount}>
-        <p>{t('HeaderStudent.title')}</p>
+        <p title={t('HeaderStudent.title')}>{t('HeaderStudent.title')}</p>
       </div>
       <div className={css.input__wrapper}>
         <Link className={css.back__links} to="/helpPage">

@@ -21,6 +21,12 @@ export const useStyles = makeStyles(() => ({
     width: '300px',
     height: '5px',
     borderRadius: '20px',
+    '@media (min-width:1720px)': {
+      width: '400px',
+    },
+    '@media (min-width:1820px)': {
+      width: '460px',
+    },
   },
   progress_bar: {
     display: 'flex',
@@ -44,12 +50,23 @@ export const useStyles = makeStyles(() => ({
     fontWeight: 500,
     fontSize: '20px',
     lineHeight: '23px',
+    '@media (min-width:1720px)': {
+      fontSize: '24px',
+    },
+    '@media (min-width:1820px)': {
+      fontSize: '26px',
+    },
   },
   completed: {
     fontWeight: 500,
     fontSize: '14px',
     lineHeight: '16px',
-
     color: '#BFBFBF',
+    '@media (min-width:1720px)': {
+      fontSize: '16px',
+    },
+    '@media (min-width:1820px)': {
+      fontSize: '18px',
+    },
   },
 }));

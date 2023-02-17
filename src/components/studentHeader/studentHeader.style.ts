@@ -16,12 +16,18 @@ const useStyles = makeStyles(() => ({
       lineHeight: '15px',
       letterSpacing: '0.03em',
       color: '#FFFFFF',
+      '@media (max-width: 1320px)': {
+        textOverflow: 'ellipsis',
+        whiteSpace: 'nowrap',
+        overflow: 'hidden',
+        width: '380px',
+      },
     },
   },
   input__wrapper: {
     gridArea: 'w',
     display: 'flex',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     alignItems: 'center',
     '& a:last-child': {
       display: 'flex',
@@ -41,10 +47,10 @@ const useStyles = makeStyles(() => ({
     width: '100%',
     display: 'grid',
     gridTemplateRows: '40px',
-    gridTemplateColumns: '1fr 1fr 0.4fr',
+    gridTemplateColumns: '1fr 0.9fr 180px',
     gridTemplateAreas: "'i d w'",
     columnGap: '20px',
-    padding: '17px 20px',
+    padding: '20px 0',
   },
   input: {
     gridArea: 'i',

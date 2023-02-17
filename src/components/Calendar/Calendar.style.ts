@@ -49,6 +49,16 @@ export const useStyles = makeStyles(() => ({
         background: 'none',
         cursor: 'pointer',
         color: 'white',
+        '@media (min-width:1720px)': {
+          width: '40px',
+          height: '40px',
+          fontSize: '18px',
+        },
+        '@media (min-width:1820px)': {
+          width: '42px',
+          height: '42px',
+          fontSize: '20px',
+        },
         '&:nth-last-child(1)': {
           color: '#FF5F5F',
         },
@@ -65,9 +75,18 @@ export const useStyles = makeStyles(() => ({
       '@media (min-width:1620px)': { minHeight: '385.99px !important' },
       '@media (min-width:1720px)': { minHeight: '440.99px !important' },
       '@media (min-width:1820px)': { minHeight: '465.99px !important' },
+      '@media (max-width:1620px)': {
+        minHeight: '308.90px !important',
+      },
+      '@media (max-width:1360px)': {
+        minHeight: '280.90px !important',
+      },
     },
     '.MuiDayPicker-weekDayLabel': {
       color: 'white !important',
+      '@media (min-width:1720px)': {
+        fontSize: '20px !important',
+      },
       '&:nth-last-child(1)': {
         color: '#FF5F5F !important',
       },
@@ -117,7 +136,7 @@ export const useStyles = makeStyles(() => ({
       top: '50%',
       left: '50%',
       marginRight: '-50%',
-      transform: 'translate(-50%, -50%)',
+      transform: 'translate(-45%, -50%)',
     },
     '.MuiPickersCalendarHeader-root': {
       position: 'relative !important',
@@ -133,6 +152,12 @@ export const useStyles = makeStyles(() => ({
       lineHeight: '23px',
       textAlign: 'center',
       color: '#FFFFFF',
+      '@media (min-width:1720px)': {
+        fontSize: '22px',
+      },
+      '@media (min-width:1820px)': {
+        fontSize: '24px',
+      },
     },
     '.MuiPickersDay-dayOutsideMonth': {
       color: '#565656 !important',

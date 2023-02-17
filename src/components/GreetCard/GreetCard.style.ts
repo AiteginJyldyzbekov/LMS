@@ -19,6 +19,12 @@ export const useStyles = makeStyles(() => ({
     fontSize: '32px',
     lineHeight: '38px',
     color: '#FFFFFF',
+    '@media (min-width:1720px)': {
+      fontSize: '45px',
+    },
+    '@media (min-width:1820px)': {
+      fontSize: '50px',
+    },
   },
   dailyMotivation: {
     fontFamily: 'Roboto',
@@ -27,5 +33,12 @@ export const useStyles = makeStyles(() => ({
     fontSize: '16px',
     lineHeight: '23px',
     color: '#C0C0C0',
+    '@media (min-width:1720px)': {
+      fontSize: '18px',
+      padding: '10px 0',
+    },
+    '@media (min-width:1820px)': {
+      fontSize: '20px',
+    },
   },
 }));
