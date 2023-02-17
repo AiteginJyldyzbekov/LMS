@@ -55,7 +55,7 @@ const Dashboard: React.FC = () => {
       {isLoading ? (
         <DashboardSkeleton />
       ) : (
-        <>
+        <div className={styles.container}>
           <StudentHeader />
           <Grid className={styles.wrapper}>
             <GreetCard
@@ -85,7 +85,7 @@ const Dashboard: React.FC = () => {
               </PaperStyled>
             </Box>
           </Grid>
-        </>
+        </div>
       )}
     </div>
   );

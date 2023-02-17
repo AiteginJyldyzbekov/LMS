@@ -4,16 +4,25 @@ export const useStyles = makeStyles(() => ({
   wrapper: {
     display: 'grid',
     gridTemplateAreas: '"g c p " "s c p" "d c p" "o o o"',
-    gridTemplateRows: '1fr 0.8fr 0.8fr 2fr',
     gridTemplateColumns: '0.7fr 0.7fr 0.5fr',
-    padding: '20px',
     gap: '20px',
     columnGap: '30px',
+    '@media (max-width:1360px)': {
+      gridTemplateRows: '120px 120px 100px',
+    },
   },
   scores: {
     gridArea: 'd',
     display: 'flex',
     justifyContent: 'space-between',
+    '& img': {
+      '@media (min-width:1720px)': {
+        width: '40px',
+      },
+      '@media (min-width:1820px)': {
+        width: '45px',
+      },
+    },
   },
   score: {
     display: 'flex',
@@ -25,5 +34,15 @@ export const useStyles = makeStyles(() => ({
     lineHeight: '16px',
     color: '#A7A7A7',
     gap: '10px',
+    '@media (min-width:1720px)': {
+      fontSize: '18px',
+    },
+    '@media (min-width:1820px)': {
+      fontSize: '20px',
+    },
+  },
+  container: {
+    width: '95%',
+    margin: '0 auto',
   },
 }));
