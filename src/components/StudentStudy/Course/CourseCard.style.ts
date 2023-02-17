@@ -7,6 +7,7 @@ export const useStyles = makeStyles(() => ({
     backgroundColor: '#2C2E34',
     borderRadius: '12px',
     marginBottom: '26px',
+    cursor: 'pointer',
   },
   inside: {
     margin: '7%',
