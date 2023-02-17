@@ -3,7 +3,6 @@ import { makeStyles } from '@mui/styles';
 export const useStyles = makeStyles(() => ({
   navigation: {
     display: 'flex',
-    marginLeft: '20px',
     alignItems: 'center',
     borderRadius: '7px',
   },
@@ -53,7 +52,7 @@ export const useStyles = makeStyles(() => ({
     },
   },
   course: {
-    margin: '20px 32px 0 20px',
+    margin: '20px 0 0 0',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
