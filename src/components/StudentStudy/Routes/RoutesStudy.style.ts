@@ -52,7 +52,7 @@ export const useStyles = makeStyles(() => ({
     },
   },
   course: {
-    margin: '20px 0 0 0',
+    marginTop: '20px',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'space-between',
